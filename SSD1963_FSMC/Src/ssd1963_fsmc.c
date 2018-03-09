@@ -24,26 +24,6 @@ inline static void LCD_Send_Dat(uint16_t dat)
 	DAT = dat;
 }
 
-//inline static void LCD_Send_Reg(uint16_t cmd, uint16_t dat)
-//{	
-//	CMD = cmd;	
-//	DAT = dat;
-//}
-
-//inline static uint16_t LCD_Read_Data()
-//{
-//	uint16_t data = DAT;
-//	return data;	
-//}
-
-//inline static uint16_t LCD_Read_Reg(uint16_t reg_addr)
-//{
-//	volatile uint16_t data = 0;
-//	LCD_Send_Cmd(reg_addr);
-//	data = LCD_Read_Data();
-//	return data;
-//}
-
 inline static void LCD_Window(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2)
 {
 	LCD_Send_Cmd(LCD_COLUMN_ADDR);
