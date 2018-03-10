@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"ili9325_fsmc\startup_stm32f103xe.o"
+"ili9325_fsmc\system_stm32f1xx.o"
+"ili9325_fsmc\stm32f1xx_hal_rcc_ex.o"
+"ili9325_fsmc\stm32f1xx_hal_sram.o"
+"ili9325_fsmc\stm32f1xx_hal_tim_ex.o"
+"ili9325_fsmc\stm32f1xx_hal_dma.o"
+"ili9325_fsmc\stm32f1xx_hal_cortex.o"
+"ili9325_fsmc\stm32f1xx_hal_pwr.o"
+"ili9325_fsmc\stm32f1xx_hal.o"
+"ili9325_fsmc\stm32f1xx_hal_gpio.o"
+"ili9325_fsmc\stm32f1xx_ll_fsmc.o"
+"ili9325_fsmc\stm32f1xx_hal_gpio_ex.o"
+"ili9325_fsmc\stm32f1xx_hal_rcc.o"
+"ili9325_fsmc\stm32f1xx_hal_uart.o"
+"ili9325_fsmc\stm32f1xx_hal_tim.o"
+"ili9325_fsmc\stm32f1xx_hal_flash_ex.o"
+"ili9325_fsmc\stm32f1xx_hal_flash.o"
+"ili9325_fsmc\stm32f1xx_it.o"
+"ili9325_fsmc\main.o"
+"ili9325_fsmc\stm32f1xx_hal_msp.o"
+"ili9325_fsmc\ili9325_fsmc.o"
+--library_type=microlib --strict --scatter "ILI9325_FSMC\ILI9325_FSMC.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "ILI9325_FSMC.map" -o ILI9325_FSMC\ILI9325_FSMC.axf
