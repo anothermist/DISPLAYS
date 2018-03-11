@@ -953,7 +953,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5A77194F)
 I (../Inc/ssd1963_fsmc.h)(0x5AA17004)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599EDB3C)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-I (../Inc/xpt2046.h)(0x5A854A51)
+I (../Inc/xpt2046.h)(0x5AA47E9E)
 I (../Inc/fonts/Dmd8x7Clock.h)(0x5A9E76B5)
 I (../Inc/fonts/Dmd13x20Clock.h)(0x5A9E76A6)
 I (../Inc/fonts/FreeMono9pt7b.h)(0x5A9DAEA2)
@@ -1089,8 +1089,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A77194F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5A77194F)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599EDB3C)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-F (..\Src\xpt2046.c)(0x5A8549E9)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SSD1963_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1963_fsmc\xpt2046.o --omf_browse ssd1963_fsmc\xpt2046.crf --depend ssd1963_fsmc\xpt2046.d)
-I (../Inc/xpt2046.h)(0x5A854A51)
+F (..\Src\xpt2046.c)(0x5AA47E9E)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SSD1963_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1963_fsmc\xpt2046.o --omf_browse ssd1963_fsmc\xpt2046.crf --depend ssd1963_fsmc\xpt2046.d)
+I (../Inc/xpt2046.h)(0x5AA47E9E)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A77194F)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5A8C2ED7)
 I (../Inc/main.h)(0x5A9E778D)

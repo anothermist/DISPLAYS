@@ -10,12 +10,13 @@
 #include "stm32f1xx_hal_spi.h"
 #include "stm32f1xx_hal_rcc.h"
 
-#define	XPT2046_SPI 			hspi3
+#define	XPT2046_SPI 			hspi1
 #define	XPT2046_NSS_SOFT	0
 #define	XPT2046_NSS_PORT 	GPIOA
 #define	XPT2046_NSS_PIN 	GPIO_PIN_15
 
-#define	XPT2046_MIRROR 	1
+#define	XPT2046_MIRROR_X 	1
+#define	XPT2046_MIRROR_Y 	0
 
 #define	XPT2046_ADDR_I 	0x80
 #define	XPT2046_ADDR_X 	0xD0

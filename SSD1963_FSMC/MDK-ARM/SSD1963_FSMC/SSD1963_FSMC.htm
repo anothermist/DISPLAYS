@@ -3,7 +3,7 @@
 <title>Static Call Graph - [SSD1963_FSMC\SSD1963_FSMC.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image SSD1963_FSMC\SSD1963_FSMC.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Fri Mar 09 23:50:16 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sun Mar 11 07:56:11 2018
 <BR><P>
 <H3>Maximum Stack Usage =        244 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1087,6 +1087,17 @@ Global Symbols
 
 <P><STRONG><a name="[d9]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
+<P><STRONG><a name="[c8]"></a>getRaw</STRONG> (Thumb, 84 bytes, Stack size 24 bytes, xpt2046.o(i.getRaw))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = getRaw &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Transmit
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getY
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getX
+</UL>
+
 <P><STRONG><a name="[c9]"></a>getX</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, xpt2046.o(i.getX))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = getX &rArr; getRaw &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
@@ -1139,7 +1150,14 @@ Global Symbols
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
-</UL><P>
+</UL>
+<P><STRONG><a name="[ca]"></a>map</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, xpt2046.o(i.map))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = map
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getY
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getX
+</UL>
+<P>
 <H3>
 Local Symbols
 </H3>
@@ -1335,24 +1353,6 @@ Local Symbols
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Send_Cmd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Rect_Fill
-</UL>
-
-<P><STRONG><a name="[c8]"></a>getRaw</STRONG> (Thumb, 84 bytes, Stack size 24 bytes, xpt2046.o(i.getRaw))
-<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = getRaw &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
-</UL>
-<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Transmit
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-</UL>
-<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getY
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getX
-</UL>
-
-<P><STRONG><a name="[ca]"></a>map</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, xpt2046.o(i.map))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = map
-</UL>
-<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getY
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getX
 </UL>
 <P>
 <H3>

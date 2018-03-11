@@ -16,10 +16,13 @@
 "ili9325_fsmc\stm32f1xx_hal_tim.o"
 "ili9325_fsmc\stm32f1xx_hal_flash_ex.o"
 "ili9325_fsmc\stm32f1xx_hal_flash.o"
+"ili9325_fsmc\stm32f1xx_hal_spi.o"
+"ili9325_fsmc\stm32f1xx_hal_spi_ex.o"
 "ili9325_fsmc\stm32f1xx_it.o"
 "ili9325_fsmc\main.o"
 "ili9325_fsmc\stm32f1xx_hal_msp.o"
 "ili9325_fsmc\ili9325_fsmc.o"
+"ili9325_fsmc\xpt2046.o"
 --library_type=microlib --strict --scatter "ILI9325_FSMC\ILI9325_FSMC.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
