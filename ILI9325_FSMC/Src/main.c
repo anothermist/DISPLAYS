@@ -170,8 +170,8 @@ int main(void)
 	HAL_TIM_Base_Start(&htim1);
 	HAL_TIM_Base_Start_IT(&htim1);
 
-		LCD_Init();
-//	XPT2046_Init();
+	LCD_Init();
+	XPT2046_Init();
 
 //	uint8_t uartTransmit[] = "UART OK\r\n";
 //	HAL_UART_Transmit(&huart1, uartTransmit, sizeof(uartTransmit), 100);
@@ -179,7 +179,7 @@ int main(void)
 	LCD_Rect_Fill(0, 0, 320, 240, BLUE);
 	LCD_Rect_Fill(1, 1, 318, 238, BLACK);
 		
-//	HAL_Delay(1000);
+//	HAL_Delay(250);
 	LCD_Rect_Fill(0, 0, 160, 128, BLACK);
 	for(uint8_t x = 8; x <= 160; x += 8)
 	{
@@ -228,8 +228,6 @@ int main(void)
 
   /* USER CODE BEGIN 3 */
 		if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_6) == GPIO_PIN_SET) touchIRQ = 1;
-		else touchIRQ = 0;
-		
 		
 		if (touchIRQ) 
 		{
@@ -237,13 +235,14 @@ int main(void)
 		touchY = getY();
 //		LCD_Pixel(touchX, touchY, WHITE);
 		LCD_Rect_Fill(touchY, touchX, 1, 1, WHITE);		
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
 		touchX = 0;
 		touchY = 0;
 		touchIRQ = 0;
-		}
+		} else 
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
 		
-	if (millis / 1000 % 2 == 0) HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET);
+	if (millis / 1000 % 2 == 0) HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
 	else HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);	
   }
   /* USER CODE END 3 */
@@ -406,7 +405,7 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin : TOUCH_IRQ_Pin */
   GPIO_InitStruct.Pin = TOUCH_IRQ_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(TOUCH_IRQ_GPIO_Port, &GPIO_InitStruct);
 

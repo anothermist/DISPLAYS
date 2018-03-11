@@ -198,7 +198,7 @@ void SysTick_Handler(void)
 void TIM1_BRK_IRQHandler(void)
 {
   /* USER CODE BEGIN TIM1_BRK_IRQn 0 */
- HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_6);
+
   /* USER CODE END TIM1_BRK_IRQn 0 */
   HAL_TIM_IRQHandler(&htim1);
   /* USER CODE BEGIN TIM1_BRK_IRQn 1 */

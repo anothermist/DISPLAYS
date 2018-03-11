@@ -49,6 +49,20 @@
 
 /* Private define ------------------------------------------------------------*/
 
+#define KEY_1_Pin GPIO_PIN_3
+#define KEY_1_GPIO_Port GPIOE
+#define KEY_0_Pin GPIO_PIN_4
+#define KEY_0_GPIO_Port GPIOE
+#define LED_A_Pin GPIO_PIN_6
+#define LED_A_GPIO_Port GPIOA
+#define LED_B_Pin GPIO_PIN_7
+#define LED_B_GPIO_Port GPIOA
+#define SD_CMD_Pin GPIO_PIN_2
+#define SD_CMD_GPIO_Port GPIOD
+#define TOUCH_IRQ_Pin GPIO_PIN_3
+#define TOUCH_IRQ_GPIO_Port GPIOD
+#define TOUCH_IRQ_EXTI_IRQn EXTI3_IRQn
+
 /* ########################## Assert Selection ############################## */
 /**
   * @brief Uncomment the line below to expanse the "assert_param" macro in the 

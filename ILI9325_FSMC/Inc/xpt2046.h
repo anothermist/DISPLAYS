@@ -13,7 +13,7 @@
 #define	XPT2046_SPI 			hspi1
 #define	XPT2046_NSS_SOFT	0
 #define	XPT2046_NSS_PORT 	GPIOA
-#define	XPT2046_NSS_PIN 	GPIO_PIN_15
+#define	XPT2046_NSS_PIN 	GPIO_PIN_4
 
 #define	XPT2046_MIRROR_X 	1
 #define	XPT2046_MIRROR_Y 	0
@@ -27,7 +27,7 @@
 #define OUT_MIN_X	0
 #define OUT_MAX_X	239
 
-#define RAW_MIN_Y	400
+#define RAW_MIN_Y	200
 #define RAW_MAX_Y	3750
 #define OUT_MIN_Y	0
 #define OUT_MAX_Y	319
