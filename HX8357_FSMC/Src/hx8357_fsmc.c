@@ -51,8 +51,9 @@ void LCD_Pixel(uint16_t x, uint16_t y, uint32_t color24)
 void LCD_Rect_Fill(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint32_t color24)
 {
 	uint32_t i = 0;
+	uint32_t j = (uint32_t) w * (uint32_t) h;
 	LCD_Window(y, x, y + h - 1, x + w - 1);
-	for (i = 0; i < w * h; i++) LCD_Send_Dat(H24_RGB565(0, color24));
+	for (i = 0; i < j; i++) LCD_Send_Dat(H24_RGB565(1, color24));
 }
 
 void LCD_Line(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint8_t size, uint32_t color24)

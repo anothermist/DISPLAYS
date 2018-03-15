@@ -3,9 +3,9 @@
 <title>Static Call Graph - [SSD1963_FSMC\SSD1963_FSMC.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image SSD1963_FSMC\SSD1963_FSMC.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Mar 12 02:08:39 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Thu Mar 15 22:54:38 2018
 <BR><P>
-<H3>Maximum Stack Usage =        244 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        252 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 main &rArr; LCD_Rect_Round_Fill &rArr; LCD_Circle_Fill_Helper &rArr; LCD_Line &rArr; LCD_Rect_Fill &rArr; H24_RGB565
 <P>
@@ -873,7 +873,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
 </UL>
 <P><STRONG><a name="[a9]"></a>LCD_Circle</STRONG> (Thumb, 336 bytes, Stack size 40 bytes, ssd1963_fsmc.o(i.LCD_Circle))
-<BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = LCD_Circle &rArr; LCD_Rect_Fill &rArr; H24_RGB565
+<BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = LCD_Circle &rArr; LCD_Rect_Fill &rArr; H24_RGB565
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Rect_Fill
 </UL>
@@ -881,7 +881,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[aa]"></a>LCD_Circle_Fill_Helper</STRONG> (Thumb, 328 bytes, Stack size 56 bytes, ssd1963_fsmc.o(i.LCD_Circle_Fill_Helper))
-<BR><BR>[Stack]<UL><LI>Max Depth = 172<LI>Call Chain = LCD_Circle_Fill_Helper &rArr; LCD_Line &rArr; LCD_Rect_Fill &rArr; H24_RGB565
+<BR><BR>[Stack]<UL><LI>Max Depth = 180<LI>Call Chain = LCD_Circle_Fill_Helper &rArr; LCD_Line &rArr; LCD_Rect_Fill &rArr; H24_RGB565
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Line
 </UL>
@@ -889,7 +889,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[ac]"></a>LCD_Circle_Helper</STRONG> (Thumb, 282 bytes, Stack size 48 bytes, ssd1963_fsmc.o(i.LCD_Circle_Helper))
-<BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = LCD_Circle_Helper &rArr; LCD_Rect_Fill &rArr; H24_RGB565
+<BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = LCD_Circle_Helper &rArr; LCD_Rect_Fill &rArr; H24_RGB565
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Rect_Fill
 </UL>
@@ -897,7 +897,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[ad]"></a>LCD_Ellipse</STRONG> (Thumb, 680 bytes, Stack size 72 bytes, ssd1963_fsmc.o(i.LCD_Ellipse))
-<BR><BR>[Stack]<UL><LI>Max Depth = 188<LI>Call Chain = LCD_Ellipse &rArr; LCD_Line &rArr; LCD_Rect_Fill &rArr; H24_RGB565
+<BR><BR>[Stack]<UL><LI>Max Depth = 196<LI>Call Chain = LCD_Ellipse &rArr; LCD_Line &rArr; LCD_Rect_Fill &rArr; H24_RGB565
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Rect_Fill
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Line
@@ -906,7 +906,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[ae]"></a>LCD_Font</STRONG> (Thumb, 164 bytes, Stack size 72 bytes, ssd1963_fsmc.o(i.LCD_Font))
-<BR><BR>[Stack]<UL><LI>Max Depth = 212<LI>Call Chain = LCD_Font &rArr; LCD_Char &rArr; LCD_Rect_Fill &rArr; H24_RGB565
+<BR><BR>[Stack]<UL><LI>Max Depth = 220<LI>Call Chain = LCD_Font &rArr; LCD_Char &rArr; LCD_Rect_Fill &rArr; H24_RGB565
 </UL>
 <BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Char
@@ -925,7 +925,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[ab]"></a>LCD_Line</STRONG> (Thumb, 146 bytes, Stack size 48 bytes, ssd1963_fsmc.o(i.LCD_Line))
-<BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = LCD_Line &rArr; LCD_Rect_Fill &rArr; H24_RGB565
+<BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = LCD_Line &rArr; LCD_Rect_Fill &rArr; H24_RGB565
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Rect_Fill
 </UL>
@@ -938,15 +938,15 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[b3]"></a>LCD_Rect</STRONG> (Thumb, 100 bytes, Stack size 40 bytes, ssd1963_fsmc.o(i.LCD_Rect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 156<LI>Call Chain = LCD_Rect &rArr; LCD_Line &rArr; LCD_Rect_Fill &rArr; H24_RGB565
+<BR><BR>[Stack]<UL><LI>Max Depth = 164<LI>Call Chain = LCD_Rect &rArr; LCD_Line &rArr; LCD_Rect_Fill &rArr; H24_RGB565
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Line
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a8]"></a>LCD_Rect_Fill</STRONG> (Thumb, 74 bytes, Stack size 32 bytes, ssd1963_fsmc.o(i.LCD_Rect_Fill))
-<BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = LCD_Rect_Fill &rArr; H24_RGB565
+<P><STRONG><a name="[a8]"></a>LCD_Rect_Fill</STRONG> (Thumb, 74 bytes, Stack size 40 bytes, ssd1963_fsmc.o(i.LCD_Rect_Fill))
+<BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = LCD_Rect_Fill &rArr; H24_RGB565
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Window
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Send_Dat
@@ -962,7 +962,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[b6]"></a>LCD_Rect_Round</STRONG> (Thumb, 288 bytes, Stack size 40 bytes, ssd1963_fsmc.o(i.LCD_Rect_Round))
-<BR><BR>[Stack]<UL><LI>Max Depth = 156<LI>Call Chain = LCD_Rect_Round &rArr; LCD_Circle_Helper &rArr; LCD_Rect_Fill &rArr; H24_RGB565
+<BR><BR>[Stack]<UL><LI>Max Depth = 164<LI>Call Chain = LCD_Rect_Round &rArr; LCD_Circle_Helper &rArr; LCD_Rect_Fill &rArr; H24_RGB565
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Circle_Helper
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Line
@@ -971,7 +971,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[b7]"></a>LCD_Rect_Round_Fill</STRONG> (Thumb, 108 bytes, Stack size 40 bytes, ssd1963_fsmc.o(i.LCD_Rect_Round_Fill))
-<BR><BR>[Stack]<UL><LI>Max Depth = 212<LI>Call Chain = LCD_Rect_Round_Fill &rArr; LCD_Circle_Fill_Helper &rArr; LCD_Line &rArr; LCD_Rect_Fill &rArr; H24_RGB565
+<BR><BR>[Stack]<UL><LI>Max Depth = 220<LI>Call Chain = LCD_Rect_Round_Fill &rArr; LCD_Circle_Fill_Helper &rArr; LCD_Line &rArr; LCD_Rect_Fill &rArr; H24_RGB565
 </UL>
 <BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Circle_Fill_Helper
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Rect_Fill
@@ -980,7 +980,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[b8]"></a>LCD_Triangle</STRONG> (Thumb, 72 bytes, Stack size 48 bytes, ssd1963_fsmc.o(i.LCD_Triangle))
-<BR><BR>[Stack]<UL><LI>Max Depth = 164<LI>Call Chain = LCD_Triangle &rArr; LCD_Line &rArr; LCD_Rect_Fill &rArr; H24_RGB565
+<BR><BR>[Stack]<UL><LI>Max Depth = 172<LI>Call Chain = LCD_Triangle &rArr; LCD_Line &rArr; LCD_Rect_Fill &rArr; H24_RGB565
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Line
 </UL>
@@ -1117,7 +1117,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[5b]"></a>main</STRONG> (Thumb, 826 bytes, Stack size 32 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 244<LI>Call Chain = main &rArr; LCD_Rect_Round_Fill &rArr; LCD_Circle_Fill_Helper &rArr; LCD_Line &rArr; LCD_Rect_Fill &rArr; H24_RGB565
+<BR><BR>[Stack]<UL><LI>Max Depth = 252<LI>Call Chain = main &rArr; LCD_Rect_Round_Fill &rArr; LCD_Circle_Fill_Helper &rArr; LCD_Line &rArr; LCD_Rect_Fill &rArr; H24_RGB565
 </UL>
 <BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
@@ -1328,7 +1328,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[a7]"></a>LCD_Char</STRONG> (Thumb, 208 bytes, Stack size 72 bytes, ssd1963_fsmc.o(i.LCD_Char))
-<BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = LCD_Char &rArr; LCD_Rect_Fill &rArr; H24_RGB565
+<BR><BR>[Stack]<UL><LI>Max Depth = 148<LI>Call Chain = LCD_Char &rArr; LCD_Rect_Fill &rArr; H24_RGB565
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Rect_Fill
 </UL>
