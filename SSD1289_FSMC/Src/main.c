@@ -185,7 +185,7 @@ int main(void)
 	LCD_Rect_Fill(0, 0, 320, 240, BLUE);
 	LCD_Rect_Fill(1, 1, 318, 238, BLACK);
 	
-	HAL_Delay(1000);
+	HAL_Delay(250);
 	LCD_Rect_Fill(0, 0, 160, 128, BLACK);
 	for(uint8_t x = 8; x <= 160; x += 8)
 	{

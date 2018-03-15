@@ -7,7 +7,7 @@ uint16_t LCD_Column_Start = 0;
 uint16_t cacheMemIndexRow = 0;
 uint16_t cacheMemIndexCol = 0;
 
-inline uint16_t RGB(uint8_t r, uint8_t g, uint8_t b)
+uint16_t RGB(uint8_t r, uint8_t g, uint8_t b)
 {
 	return ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | (b >> 3);
 }

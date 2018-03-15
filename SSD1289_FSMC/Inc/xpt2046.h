@@ -1,5 +1,5 @@
-#ifndef XPT2046_H_
-#define XPT2046_H_
+#ifndef _XPT2046_H_
+#define _XPT2046_H_
 
 #ifdef __cplusplus
  extern "C" {
@@ -42,4 +42,4 @@ uint16_t getY(void);
 }
 #endif
 
-#endif /* XPT2046_H_ */
+#endif /* _XPT2046_H_ */
