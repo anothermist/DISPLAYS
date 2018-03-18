@@ -21,11 +21,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   8 .debug_frame  00000594  00000000  00000000  0000bb3c  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    000014e5  00000000  00000000  0000c0d0  2**0
+  9 .debug_str    0000150a  00000000  00000000  0000c0d0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    000049b7  00000000  00000000  0000d5b5  2**0
+ 10 .debug_loc    000049b7  00000000  00000000  0000d5da  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000158  00000000  00000000  00011f6c  2**0
+ 11 .debug_ranges 00000158  00000000  00000000  00011f91  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -943,12 +943,6 @@ int main(void)
 
 000019ee <LCD_Rect_Fill>:
     19ee:	9f 92       	push	r9
-			if (byte & (1 << (bit_pos % 8))) LCD_Send_Dat(H24_RGB565(0, color24_set));
-			else LCD_Send_Dat(H24_RGB565(0, color24_unset));
-			bit_pos++;
-		}
-	}
-}
     19f0:	af 92       	push	r10
     19f2:	bf 92       	push	r11
     19f4:	cf 92       	push	r12
@@ -3738,10 +3732,6 @@ int main(void)
     2fa6:	08 95       	ret
 
 00002fa8 <LCD_Init>:
-
-void LCD_Init(void)
-{
-	REG_PART_1_DDR = 0xFF; REG_PART_2_DDR = 0xFF; COMMAND_DDR = 0xFF;
     2fa8:	8f ef       	ldi	r24, 0xFF	; 255
     2faa:	84 bb       	out	0x14, r24	; 20
     2fac:	81 bb       	out	0x11, r24	; 17
@@ -3755,33 +3745,14 @@ void LCD_Init(void)
     2fbc:	e1 f7       	brne	.-8      	; 0x2fb6 <LCD_Init+0xe>
     2fbe:	00 c0       	rjmp	.+0      	; 0x2fc0 <LCD_Init+0x18>
     2fc0:	00 00       	nop
-	_delay_ms(100);
-	if (LCD_RT_SOFT) LCD_RT_S
     2fc2:	dc 9a       	sbi	0x1b, 4	; 27
-	LCD_CS_S
-}
-
-inline static void LCD_Send_Reg(uint16_t cmd, uint16_t dat)
-{
-	LCD_CS_U
     2fc4:	db 98       	cbi	0x1b, 3	; 27
-	else return ((r / 8) << 11) | ((g / 4) << 5) | (b / 8);
-}
-
-inline static void LCD_Send_Cmd(uint16_t cmd)
-{
-	LCD_RS_U
     2fc6:	d8 98       	cbi	0x1b, 0	; 27
-	LCD_RD_S
     2fc8:	da 9a       	sbi	0x1b, 2	; 27
-	LCD_CS_U
     2fca:	db 98       	cbi	0x1b, 3	; 27
-	REG_PART_1_PORT = (cmd & 0x00FF);
     2fcc:	87 e0       	ldi	r24, 0x07	; 7
     2fce:	85 bb       	out	0x15, r24	; 21
-	REG_PART_2_PORT = (cmd & 0xFF00) >> 8;
     2fd0:	12 ba       	out	0x12, r1	; 18
-	LCD_WR_U
     2fd2:	d9 98       	cbi	0x1b, 1	; 27
 	#else
 		//round up by default
@@ -3793,241 +3764,102 @@ inline static void LCD_Send_Cmd(uint16_t cmd)
     2fd6:	9a 95       	dec	r25
     2fd8:	f1 f7       	brne	.-4      	; 0x2fd6 <LCD_Init+0x2e>
     2fda:	00 c0       	rjmp	.+0      	; 0x2fdc <LCD_Init+0x34>
-	_delay_us(5);
-	LCD_WR_S
     2fdc:	d9 9a       	sbi	0x1b, 1	; 27
-	LCD_CS_S
     2fde:	db 9a       	sbi	0x1b, 3	; 27
-}
-
-inline static void LCD_Send_Dat(uint16_t dat)
-{
-	LCD_RS_S
     2fe0:	d8 9a       	sbi	0x1b, 0	; 27
-	LCD_RD_S
     2fe2:	da 9a       	sbi	0x1b, 2	; 27
-	LCD_CS_U
     2fe4:	db 98       	cbi	0x1b, 3	; 27
-	REG_PART_1_PORT = (dat & 0x00FF);
     2fe6:	91 e2       	ldi	r25, 0x21	; 33
     2fe8:	95 bb       	out	0x15, r25	; 21
-	REG_PART_2_PORT = (dat & 0xFF00) >> 8;
     2fea:	12 ba       	out	0x12, r1	; 18
-	LCD_WR_U
     2fec:	d9 98       	cbi	0x1b, 1	; 27
     2fee:	2a e1       	ldi	r18, 0x1A	; 26
     2ff0:	2a 95       	dec	r18
     2ff2:	f1 f7       	brne	.-4      	; 0x2ff0 <LCD_Init+0x48>
     2ff4:	00 c0       	rjmp	.+0      	; 0x2ff6 <LCD_Init+0x4e>
-	_delay_us(5);
-	LCD_WR_S
     2ff6:	d9 9a       	sbi	0x1b, 1	; 27
-	LCD_CS_S
     2ff8:	db 9a       	sbi	0x1b, 3	; 27
-inline static void LCD_Send_Reg(uint16_t cmd, uint16_t dat)
-{
-	LCD_CS_U
-	LCD_Send_Cmd(cmd);
-	LCD_Send_Dat(dat);
-	LCD_CS_S
     2ffa:	db 9a       	sbi	0x1b, 3	; 27
-	LCD_CS_S
-}
-
-inline static void LCD_Send_Reg(uint16_t cmd, uint16_t dat)
-{
-	LCD_CS_U
     2ffc:	db 98       	cbi	0x1b, 3	; 27
-	else return ((r / 8) << 11) | ((g / 4) << 5) | (b / 8);
-}
-
-inline static void LCD_Send_Cmd(uint16_t cmd)
-{
-	LCD_RS_U
     2ffe:	d8 98       	cbi	0x1b, 0	; 27
-	LCD_RD_S
     3000:	da 9a       	sbi	0x1b, 2	; 27
-	LCD_CS_U
     3002:	db 98       	cbi	0x1b, 3	; 27
-	REG_PART_1_PORT = (cmd & 0x00FF);
     3004:	15 ba       	out	0x15, r1	; 21
-	REG_PART_2_PORT = (cmd & 0xFF00) >> 8;
     3006:	12 ba       	out	0x12, r1	; 18
-	LCD_WR_U
     3008:	d9 98       	cbi	0x1b, 1	; 27
     300a:	3a e1       	ldi	r19, 0x1A	; 26
     300c:	3a 95       	dec	r19
     300e:	f1 f7       	brne	.-4      	; 0x300c <LCD_Init+0x64>
     3010:	00 c0       	rjmp	.+0      	; 0x3012 <LCD_Init+0x6a>
-	_delay_us(5);
-	LCD_WR_S
     3012:	d9 9a       	sbi	0x1b, 1	; 27
-	LCD_CS_S
     3014:	db 9a       	sbi	0x1b, 3	; 27
-}
-
-inline static void LCD_Send_Dat(uint16_t dat)
-{
-	LCD_RS_S
     3016:	d8 9a       	sbi	0x1b, 0	; 27
-	LCD_RD_S
     3018:	da 9a       	sbi	0x1b, 2	; 27
-	LCD_CS_U
     301a:	db 98       	cbi	0x1b, 3	; 27
-	REG_PART_1_PORT = (dat & 0x00FF);
     301c:	91 e0       	ldi	r25, 0x01	; 1
     301e:	95 bb       	out	0x15, r25	; 21
-	REG_PART_2_PORT = (dat & 0xFF00) >> 8;
     3020:	12 ba       	out	0x12, r1	; 18
-	LCD_WR_U
     3022:	d9 98       	cbi	0x1b, 1	; 27
     3024:	9a e1       	ldi	r25, 0x1A	; 26
     3026:	9a 95       	dec	r25
     3028:	f1 f7       	brne	.-4      	; 0x3026 <LCD_Init+0x7e>
     302a:	00 c0       	rjmp	.+0      	; 0x302c <LCD_Init+0x84>
-	_delay_us(5);
-	LCD_WR_S
     302c:	d9 9a       	sbi	0x1b, 1	; 27
-	LCD_CS_S
     302e:	db 9a       	sbi	0x1b, 3	; 27
-inline static void LCD_Send_Reg(uint16_t cmd, uint16_t dat)
-{
-	LCD_CS_U
-	LCD_Send_Cmd(cmd);
-	LCD_Send_Dat(dat);
-	LCD_CS_S
     3030:	db 9a       	sbi	0x1b, 3	; 27
-	LCD_CS_S
-}
-
-inline static void LCD_Send_Reg(uint16_t cmd, uint16_t dat)
-{
-	LCD_CS_U
     3032:	db 98       	cbi	0x1b, 3	; 27
-	else return ((r / 8) << 11) | ((g / 4) << 5) | (b / 8);
-}
-
-inline static void LCD_Send_Cmd(uint16_t cmd)
-{
-	LCD_RS_U
     3034:	d8 98       	cbi	0x1b, 0	; 27
-	LCD_RD_S
     3036:	da 9a       	sbi	0x1b, 2	; 27
-	LCD_CS_U
     3038:	db 98       	cbi	0x1b, 3	; 27
-	REG_PART_1_PORT = (cmd & 0x00FF);
     303a:	85 bb       	out	0x15, r24	; 21
-	REG_PART_2_PORT = (cmd & 0xFF00) >> 8;
     303c:	12 ba       	out	0x12, r1	; 18
-	LCD_WR_U
     303e:	d9 98       	cbi	0x1b, 1	; 27
     3040:	2a e1       	ldi	r18, 0x1A	; 26
     3042:	2a 95       	dec	r18
     3044:	f1 f7       	brne	.-4      	; 0x3042 <LCD_Init+0x9a>
     3046:	00 c0       	rjmp	.+0      	; 0x3048 <LCD_Init+0xa0>
-	_delay_us(5);
-	LCD_WR_S
     3048:	d9 9a       	sbi	0x1b, 1	; 27
-	LCD_CS_S
     304a:	db 9a       	sbi	0x1b, 3	; 27
-}
-
-inline static void LCD_Send_Dat(uint16_t dat)
-{
-	LCD_RS_S
     304c:	d8 9a       	sbi	0x1b, 0	; 27
-	LCD_RD_S
     304e:	da 9a       	sbi	0x1b, 2	; 27
-	LCD_CS_U
     3050:	db 98       	cbi	0x1b, 3	; 27
-	REG_PART_1_PORT = (dat & 0x00FF);
     3052:	93 e2       	ldi	r25, 0x23	; 35
     3054:	95 bb       	out	0x15, r25	; 21
-	REG_PART_2_PORT = (dat & 0xFF00) >> 8;
     3056:	12 ba       	out	0x12, r1	; 18
-	LCD_WR_U
     3058:	d9 98       	cbi	0x1b, 1	; 27
     305a:	3a e1       	ldi	r19, 0x1A	; 26
     305c:	3a 95       	dec	r19
     305e:	f1 f7       	brne	.-4      	; 0x305c <LCD_Init+0xb4>
     3060:	00 c0       	rjmp	.+0      	; 0x3062 <LCD_Init+0xba>
-	_delay_us(5);
-	LCD_WR_S
     3062:	d9 9a       	sbi	0x1b, 1	; 27
-	LCD_CS_S
     3064:	db 9a       	sbi	0x1b, 3	; 27
-inline static void LCD_Send_Reg(uint16_t cmd, uint16_t dat)
-{
-	LCD_CS_U
-	LCD_Send_Cmd(cmd);
-	LCD_Send_Dat(dat);
-	LCD_CS_S
     3066:	db 9a       	sbi	0x1b, 3	; 27
-	LCD_CS_S
-}
-
-inline static void LCD_Send_Reg(uint16_t cmd, uint16_t dat)
-{
-	LCD_CS_U
     3068:	db 98       	cbi	0x1b, 3	; 27
-	else return ((r / 8) << 11) | ((g / 4) << 5) | (b / 8);
-}
-
-inline static void LCD_Send_Cmd(uint16_t cmd)
-{
-	LCD_RS_U
     306a:	d8 98       	cbi	0x1b, 0	; 27
-	LCD_RD_S
     306c:	da 9a       	sbi	0x1b, 2	; 27
-	LCD_CS_U
     306e:	db 98       	cbi	0x1b, 3	; 27
-	REG_PART_1_PORT = (cmd & 0x00FF);
     3070:	90 e1       	ldi	r25, 0x10	; 16
     3072:	95 bb       	out	0x15, r25	; 21
-	REG_PART_2_PORT = (cmd & 0xFF00) >> 8;
     3074:	12 ba       	out	0x12, r1	; 18
-	LCD_WR_U
     3076:	d9 98       	cbi	0x1b, 1	; 27
     3078:	9a e1       	ldi	r25, 0x1A	; 26
     307a:	9a 95       	dec	r25
     307c:	f1 f7       	brne	.-4      	; 0x307a <LCD_Init+0xd2>
     307e:	00 c0       	rjmp	.+0      	; 0x3080 <LCD_Init+0xd8>
-	_delay_us(5);
-	LCD_WR_S
     3080:	d9 9a       	sbi	0x1b, 1	; 27
-	LCD_CS_S
     3082:	db 9a       	sbi	0x1b, 3	; 27
-}
-
-inline static void LCD_Send_Dat(uint16_t dat)
-{
-	LCD_RS_S
     3084:	d8 9a       	sbi	0x1b, 0	; 27
-	LCD_RD_S
     3086:	da 9a       	sbi	0x1b, 2	; 27
-	LCD_CS_U
     3088:	db 98       	cbi	0x1b, 3	; 27
-	REG_PART_1_PORT = (dat & 0x00FF);
     308a:	15 ba       	out	0x15, r1	; 21
-	REG_PART_2_PORT = (dat & 0xFF00) >> 8;
     308c:	12 ba       	out	0x12, r1	; 18
-	LCD_WR_U
     308e:	d9 98       	cbi	0x1b, 1	; 27
     3090:	2a e1       	ldi	r18, 0x1A	; 26
     3092:	2a 95       	dec	r18
     3094:	f1 f7       	brne	.-4      	; 0x3092 <LCD_Init+0xea>
     3096:	00 c0       	rjmp	.+0      	; 0x3098 <LCD_Init+0xf0>
-	_delay_us(5);
-	LCD_WR_S
     3098:	d9 9a       	sbi	0x1b, 1	; 27
-	LCD_CS_S
     309a:	db 9a       	sbi	0x1b, 3	; 27
-inline static void LCD_Send_Reg(uint16_t cmd, uint16_t dat)
-{
-	LCD_CS_U
-	LCD_Send_Cmd(cmd);
-	LCD_Send_Dat(dat);
-	LCD_CS_S
     309c:	db 9a       	sbi	0x1b, 3	; 27
 	#else
 		//round up by default
@@ -4044,29 +3876,12 @@ inline static void LCD_Send_Reg(uint16_t cmd, uint16_t dat)
     30aa:	e1 f7       	brne	.-8      	; 0x30a4 <LCD_Init+0xfc>
     30ac:	00 c0       	rjmp	.+0      	; 0x30ae <LCD_Init+0x106>
     30ae:	00 00       	nop
-	LCD_CS_S
-}
-
-inline static void LCD_Send_Reg(uint16_t cmd, uint16_t dat)
-{
-	LCD_CS_U
     30b0:	db 98       	cbi	0x1b, 3	; 27
-	else return ((r / 8) << 11) | ((g / 4) << 5) | (b / 8);
-}
-
-inline static void LCD_Send_Cmd(uint16_t cmd)
-{
-	LCD_RS_U
     30b2:	d8 98       	cbi	0x1b, 0	; 27
-	LCD_RD_S
     30b4:	da 9a       	sbi	0x1b, 2	; 27
-	LCD_CS_U
     30b6:	db 98       	cbi	0x1b, 3	; 27
-	REG_PART_1_PORT = (cmd & 0x00FF);
     30b8:	85 bb       	out	0x15, r24	; 21
-	REG_PART_2_PORT = (cmd & 0xFF00) >> 8;
     30ba:	12 ba       	out	0x12, r1	; 18
-	LCD_WR_U
     30bc:	d9 98       	cbi	0x1b, 1	; 27
 	#else
 		//round up by default
@@ -4078,178 +3893,78 @@ inline static void LCD_Send_Cmd(uint16_t cmd)
     30c0:	3a 95       	dec	r19
     30c2:	f1 f7       	brne	.-4      	; 0x30c0 <LCD_Init+0x118>
     30c4:	00 c0       	rjmp	.+0      	; 0x30c6 <LCD_Init+0x11e>
-	_delay_us(5);
-	LCD_WR_S
     30c6:	d9 9a       	sbi	0x1b, 1	; 27
-	LCD_CS_S
     30c8:	db 9a       	sbi	0x1b, 3	; 27
-}
-
-inline static void LCD_Send_Dat(uint16_t dat)
-{
-	LCD_RS_S
     30ca:	d8 9a       	sbi	0x1b, 0	; 27
-	LCD_RD_S
     30cc:	da 9a       	sbi	0x1b, 2	; 27
-	LCD_CS_U
     30ce:	db 98       	cbi	0x1b, 3	; 27
-	REG_PART_1_PORT = (dat & 0x00FF);
     30d0:	83 e3       	ldi	r24, 0x33	; 51
     30d2:	85 bb       	out	0x15, r24	; 21
-	REG_PART_2_PORT = (dat & 0xFF00) >> 8;
     30d4:	12 ba       	out	0x12, r1	; 18
-	LCD_WR_U
     30d6:	d9 98       	cbi	0x1b, 1	; 27
     30d8:	8a e1       	ldi	r24, 0x1A	; 26
     30da:	8a 95       	dec	r24
     30dc:	f1 f7       	brne	.-4      	; 0x30da <LCD_Init+0x132>
     30de:	00 c0       	rjmp	.+0      	; 0x30e0 <LCD_Init+0x138>
-	_delay_us(5);
-	LCD_WR_S
     30e0:	d9 9a       	sbi	0x1b, 1	; 27
-	LCD_CS_S
     30e2:	db 9a       	sbi	0x1b, 3	; 27
-inline static void LCD_Send_Reg(uint16_t cmd, uint16_t dat)
-{
-	LCD_CS_U
-	LCD_Send_Cmd(cmd);
-	LCD_Send_Dat(dat);
-	LCD_CS_S
     30e4:	db 9a       	sbi	0x1b, 3	; 27
-	LCD_CS_S
-}
-
-inline static void LCD_Send_Reg(uint16_t cmd, uint16_t dat)
-{
-	LCD_CS_U
     30e6:	db 98       	cbi	0x1b, 3	; 27
-	else return ((r / 8) << 11) | ((g / 4) << 5) | (b / 8);
-}
-
-inline static void LCD_Send_Cmd(uint16_t cmd)
-{
-	LCD_RS_U
     30e8:	d8 98       	cbi	0x1b, 0	; 27
-	LCD_RD_S
     30ea:	da 9a       	sbi	0x1b, 2	; 27
-	LCD_CS_U
     30ec:	db 98       	cbi	0x1b, 3	; 27
-	REG_PART_1_PORT = (cmd & 0x00FF);
     30ee:	81 e1       	ldi	r24, 0x11	; 17
     30f0:	85 bb       	out	0x15, r24	; 21
-	REG_PART_2_PORT = (cmd & 0xFF00) >> 8;
     30f2:	12 ba       	out	0x12, r1	; 18
-	LCD_WR_U
     30f4:	d9 98       	cbi	0x1b, 1	; 27
     30f6:	9a e1       	ldi	r25, 0x1A	; 26
     30f8:	9a 95       	dec	r25
     30fa:	f1 f7       	brne	.-4      	; 0x30f8 <LCD_Init+0x150>
     30fc:	00 c0       	rjmp	.+0      	; 0x30fe <LCD_Init+0x156>
-	_delay_us(5);
-	LCD_WR_S
     30fe:	d9 9a       	sbi	0x1b, 1	; 27
-	LCD_CS_S
     3100:	db 9a       	sbi	0x1b, 3	; 27
-}
-
-inline static void LCD_Send_Dat(uint16_t dat)
-{
-	LCD_RS_S
     3102:	d8 9a       	sbi	0x1b, 0	; 27
-	LCD_RD_S
     3104:	da 9a       	sbi	0x1b, 2	; 27
-	LCD_CS_U
     3106:	db 98       	cbi	0x1b, 3	; 27
-	REG_PART_1_PORT = (dat & 0x00FF);
     3108:	88 e3       	ldi	r24, 0x38	; 56
     310a:	85 bb       	out	0x15, r24	; 21
-	REG_PART_2_PORT = (dat & 0xFF00) >> 8;
     310c:	88 e6       	ldi	r24, 0x68	; 104
     310e:	82 bb       	out	0x12, r24	; 18
-	LCD_WR_U
     3110:	d9 98       	cbi	0x1b, 1	; 27
     3112:	2a e1       	ldi	r18, 0x1A	; 26
     3114:	2a 95       	dec	r18
     3116:	f1 f7       	brne	.-4      	; 0x3114 <LCD_Init+0x16c>
     3118:	00 c0       	rjmp	.+0      	; 0x311a <LCD_Init+0x172>
-	_delay_us(5);
-	LCD_WR_S
     311a:	d9 9a       	sbi	0x1b, 1	; 27
-	LCD_CS_S
     311c:	db 9a       	sbi	0x1b, 3	; 27
-inline static void LCD_Send_Reg(uint16_t cmd, uint16_t dat)
-{
-	LCD_CS_U
-	LCD_Send_Cmd(cmd);
-	LCD_Send_Dat(dat);
-	LCD_CS_S
     311e:	db 9a       	sbi	0x1b, 3	; 27
-	LCD_CS_S
-}
-
-inline static void LCD_Send_Reg(uint16_t cmd, uint16_t dat)
-{
-	LCD_CS_U
     3120:	db 98       	cbi	0x1b, 3	; 27
-	else return ((r / 8) << 11) | ((g / 4) << 5) | (b / 8);
-}
-
-inline static void LCD_Send_Cmd(uint16_t cmd)
-{
-	LCD_RS_U
     3122:	d8 98       	cbi	0x1b, 0	; 27
-	LCD_RD_S
     3124:	da 9a       	sbi	0x1b, 2	; 27
-	LCD_CS_U
     3126:	db 98       	cbi	0x1b, 3	; 27
-	REG_PART_1_PORT = (cmd & 0x00FF);
     3128:	82 e0       	ldi	r24, 0x02	; 2
     312a:	85 bb       	out	0x15, r24	; 21
-	REG_PART_2_PORT = (cmd & 0xFF00) >> 8;
     312c:	12 ba       	out	0x12, r1	; 18
-	LCD_WR_U
     312e:	d9 98       	cbi	0x1b, 1	; 27
     3130:	3a e1       	ldi	r19, 0x1A	; 26
     3132:	3a 95       	dec	r19
     3134:	f1 f7       	brne	.-4      	; 0x3132 <LCD_Init+0x18a>
     3136:	00 c0       	rjmp	.+0      	; 0x3138 <LCD_Init+0x190>
-	_delay_us(5);
-	LCD_WR_S
     3138:	d9 9a       	sbi	0x1b, 1	; 27
-	LCD_CS_S
     313a:	db 9a       	sbi	0x1b, 3	; 27
-}
-
-inline static void LCD_Send_Dat(uint16_t dat)
-{
-	LCD_RS_S
     313c:	d8 9a       	sbi	0x1b, 0	; 27
-	LCD_RD_S
     313e:	da 9a       	sbi	0x1b, 2	; 27
-	LCD_CS_U
     3140:	db 98       	cbi	0x1b, 3	; 27
-	REG_PART_1_PORT = (dat & 0x00FF);
     3142:	15 ba       	out	0x15, r1	; 21
-	REG_PART_2_PORT = (dat & 0xFF00) >> 8;
     3144:	86 e0       	ldi	r24, 0x06	; 6
     3146:	82 bb       	out	0x12, r24	; 18
-	LCD_WR_U
     3148:	d9 98       	cbi	0x1b, 1	; 27
     314a:	8a e1       	ldi	r24, 0x1A	; 26
     314c:	8a 95       	dec	r24
     314e:	f1 f7       	brne	.-4      	; 0x314c <LCD_Init+0x1a4>
     3150:	00 c0       	rjmp	.+0      	; 0x3152 <LCD_Init+0x1aa>
-	_delay_us(5);
-	LCD_WR_S
     3152:	d9 9a       	sbi	0x1b, 1	; 27
-	LCD_CS_S
     3154:	db 9a       	sbi	0x1b, 3	; 27
-inline static void LCD_Send_Reg(uint16_t cmd, uint16_t dat)
-{
-	LCD_CS_U
-	LCD_Send_Cmd(cmd);
-	LCD_Send_Dat(dat);
-	LCD_CS_S
     3156:	db 9a       	sbi	0x1b, 3	; 27
 	#else
 		//round up by default
