@@ -932,12 +932,12 @@ END GROUP
  .debug_frame   0x00000000      0x648 ili9341.o
  .debug_frame   0x00000648       0x24 main.o
 
-.debug_str      0x00000000     0x167b
+.debug_str      0x00000000     0x16a0
  *(.debug_str)
  .debug_str     0x00000000      0x208 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_str     0x00000208      0x515 ili9341.o
                                 0x570 (size before relaxing)
- .debug_str     0x0000071d      0xf5e main.o
+ .debug_str     0x0000071d      0xf83 main.o
                                0x1207 (size before relaxing)
 
 .debug_loc      0x00000000     0x3a87

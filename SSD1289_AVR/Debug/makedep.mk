@@ -6,3 +6,5 @@ main.c
 
 ssd1289.c
 
+xpt2046.c
+

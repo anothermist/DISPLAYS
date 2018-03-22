@@ -61,7 +61,7 @@
 int main(void)
 {
 	LCD_Init();
-	_delay_ms(100);
+	XPT2046_Init();
 	
 	LCD_Rect_Fill(0, 0, 320, 240, MAGENTA);
 	LCD_Rect_Fill(1, 1, 318, 238, BLACK);
@@ -70,20 +70,20 @@ int main(void)
 	LCD_Rect_Fill(0, 0, 160, 128, BLACK);
 	for(uint8_t x = 8; x <= 160; x += 8)
 	{
-		LCD_Line(0, 0, x, 128, 1, GREEN);
+	LCD_Line(0, 0, x, 128, 1, GREEN);
 	}
 	for(uint8_t y = 8; y <= 128; y += 8) {
-		LCD_Line(0, 0, 160, y, 1, GREEN);
+	LCD_Line(0, 0, 160, y, 1, GREEN);
 	}
 	_delay_ms(250);
-
+	
 	uint8_t h = 16;
 	uint8_t w = 20;
 	for(uint8_t i = 0; i < 8; i++)
 	{
-		LCD_Rect(80 - w / 2, 64 - h / 2, w, h, 2, YELLOW);
-		h += 16;
-		w += 20;
+	LCD_Rect(80 - w / 2, 64 - h / 2, w, h, 2, YELLOW);
+	h += 16;
+	w += 20;
 	}
 	_delay_ms(250);
 	LCD_Rect_Fill(0, 0, 160, 128, BLUE);
@@ -107,6 +107,22 @@ int main(void)
 	
 	while (1)
 	{
-
+		if (!(PINB & (1 << XPT2046_IRQ_PIN)))
+		{
+			uint16_t tX = getX();
+			uint16_t tY = getY();
+					
+			if (tX && tY)
+			{
+				LCD_Rect_Fill(2, 205, 180, 30, BLUE_D);				
+				LCD_Pixel(tX, tY, WHITE);
+				
+				char str[3] = { 0 };
+				sprintf(str, "%.3d", tX);
+				LCD_Font(10, 230, str, Serif18, 1, RED);			
+				sprintf(str, "%.3d", tY);
+				LCD_Font(100, 230, str, Serif18, 1, RED);
+			}
+		}
 	}
 }

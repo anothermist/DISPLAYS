@@ -1,7 +1,7 @@
 #ifndef MAIN_H_
 #define MAIN_H_
 
-#define F_CPU 16000000UL
+#define F_CPU 8000000UL
 
 #include <avr/io.h>
 #include <util/delay.h>
@@ -14,6 +14,7 @@
 #include <ctype.h>
 
 #include "ssd1289.h"
+#include "xpt2046.h"
 
 #define Clock8x7			&Dmd8x7Clock
 #define Clock13x20			&Dmd13x20Clock

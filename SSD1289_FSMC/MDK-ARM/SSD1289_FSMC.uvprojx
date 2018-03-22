@@ -311,7 +311,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>4</Optim>
+            <Optim>3</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -336,7 +336,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;                                                  ../Drivers/STM32F4xx_HAL_Driver/Inc;                                                  ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;                                                  ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;                                                  ../Drivers/CMSIS/Include</IncludePath>
+              <IncludePath>../Inc;                                                   ../Drivers/STM32F4xx_HAL_Driver/Inc;                                                   ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;                                                   ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;                                                   ../Drivers/CMSIS/Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -384,16 +384,6 @@
               <FileName>startup_stm32f407xx.s</FileName>
               <FileType>2</FileType>
               <FilePath>startup_stm32f407xx.s</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Drivers/CMSIS</GroupName>
-          <Files>
-            <File>
-              <FileName>system_stm32f4xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/system_stm32f4xx.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -529,6 +519,16 @@
               <FileName>ssd1289_fsmc.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\ssd1289_fsmc.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Drivers/CMSIS</GroupName>
+          <Files>
+            <File>
+              <FileName>system_stm32f4xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..//Src/system_stm32f4xx.c</FilePath>
             </File>
           </Files>
         </Group>
