@@ -61,6 +61,7 @@
 int main(void)
 {
 	LCD_Init();
+	XPT2046_Init();
 	
 	LCD_Rect_Fill(0, 0, 800, 480, BLUE);
 	LCD_Rect_Fill(1, 1, 798, 478, BLACK);
@@ -107,6 +108,22 @@ int main(void)
 	
 	while (1)
 	{
-
+		if (!(PINB & (1 << XPT2046_IRQ_PIN)))
+		{
+			uint16_t tX = getX();
+			uint16_t tY = getY();
+			
+			if (tX && tY)
+			{
+				char str[3] = { 0 };
+				sprintf(str, "%.3d", tX);
+				LCD_Font(10, 230, str, Serif18, 1, RED);
+				sprintf(str, "%.3d", tY);
+				LCD_Font(100, 230, str, Serif18, 1, RED);
+				
+				LCD_Rect_Fill(2, 205, 180, 30, BLUE_D);
+				LCD_Pixel(tX, tY, WHITE);
+			}
+		}
 	}
 }

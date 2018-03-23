@@ -1,6 +1,5 @@
 --cpu=Cortex-M4.fp
 "ssd1289_fsmc\startup_stm32f407xx.o"
-"ssd1289_fsmc\system_stm32f4xx.o"
 "ssd1289_fsmc\stm32f4xx_hal_rcc.o"
 "ssd1289_fsmc\stm32f4xx_hal_dma.o"
 "ssd1289_fsmc\stm32f4xx_hal_pwr.o"
@@ -26,6 +25,7 @@
 "ssd1289_fsmc\main.o"
 "ssd1289_fsmc\xpt2046.o"
 "ssd1289_fsmc\ssd1289_fsmc.o"
+"ssd1289_fsmc\system_stm32f4xx.o"
 --library_type=microlib --strict --scatter "SSD1289_FSMC\SSD1289_FSMC.sct"
 --diag_suppress=L6329 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

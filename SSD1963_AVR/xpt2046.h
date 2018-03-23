@@ -3,22 +3,25 @@
 
 #include "main.h"
 
-#define	XPT2046_MIRROR_X 	1
+#define	XPT2046_MIRROR_X 	0
 #define	XPT2046_MIRROR_Y 	1
 
 #define	XPT2046_ADDR_I 	0x80
-#define	XPT2046_ADDR_X 	0xD0
-#define	XPT2046_ADDR_Y 	0x90
+//#define	XPT2046_ADDR_X 	0xD0
+//#define	XPT2046_ADDR_Y 	0x90
 
-#define RAW_MIN_X	400
-#define RAW_MAX_X	3600
+#define	XPT2046_ADDR_X 	0x90
+#define	XPT2046_ADDR_Y 	0xD0
+
+#define RAW_MIN_X	650
+#define RAW_MAX_X	3100
 #define OUT_MIN_X	0
-#define OUT_MAX_X	239
+#define OUT_MAX_X	479
 
 #define RAW_MIN_Y	550
-#define RAW_MAX_Y	3750
+#define RAW_MAX_Y	3400
 #define OUT_MIN_Y	0
-#define OUT_MAX_Y	319
+#define OUT_MAX_Y	799
 
 #define XPT2046_SPI_DDR DDRB
 #define XPT2046_SPI_PORT PORTB

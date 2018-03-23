@@ -233,8 +233,10 @@ int main(void)
 		{
 		touchX = getX();	
 		touchY = getY();
-//		LCD_Pixel(touchX, touchY, WHITE);
-		LCD_Rect_Fill(touchY, touchX, 1, 1, WHITE);		
+		if (touchX && touchY && touchX != 0x0DB)
+		{
+		LCD_Rect_Fill(touchY, touchX, 1, 1, WHITE);
+		}
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
 		touchX = 0;
 		touchY = 0;

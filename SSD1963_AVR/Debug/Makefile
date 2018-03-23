@@ -38,7 +38,8 @@ SUBDIRS :=
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
 ../main.c \
-../ssd1963.c
+../ssd1963.c \
+../xpt2046.c
 
 
 PREPROCESSING_SRCS += 
@@ -49,19 +50,23 @@ ASM_SRCS +=
 
 OBJS +=  \
 main.o \
-ssd1963.o
+ssd1963.o \
+xpt2046.o
 
 OBJS_AS_ARGS +=  \
 main.o \
-ssd1963.o
+ssd1963.o \
+xpt2046.o
 
 C_DEPS +=  \
 main.d \
-ssd1963.d
+ssd1963.d \
+xpt2046.d
 
 C_DEPS_AS_ARGS +=  \
 main.d \
-ssd1963.d
+ssd1963.d \
+xpt2046.d
 
 OUTPUT_FILE_PATH +=SSD1963_AVR.elf
 
@@ -77,6 +82,8 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+
+
 
 
 

@@ -21,12 +21,13 @@ main.d main.o: .././main.c .././main.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\string.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\ctype.h \
- .././ssd1963.h .././fonts/bitmapImageMono.h .././fonts/Dmd8x7Clock.h \
- .././fonts/Dmd13x20Clock.h .././fonts/FreeMono9pt7b.h \
- .././fonts/FreeMono12pt7b.h .././fonts/FreeMono18pt7b.h \
- .././fonts/FreeMono24pt7b.h .././fonts/FreeMonoBold9pt7b.h \
- .././fonts/FreeMonoBold12pt7b.h .././fonts/FreeMonoBold18pt7b.h \
- .././fonts/FreeMonoBold24pt7b.h .././fonts/FreeMonoBoldOblique9pt7b.h \
+ .././ssd1963.h .././xpt2046.h .././fonts/bitmapImageMono.h \
+ .././fonts/Dmd8x7Clock.h .././fonts/Dmd13x20Clock.h \
+ .././fonts/FreeMono9pt7b.h .././fonts/FreeMono12pt7b.h \
+ .././fonts/FreeMono18pt7b.h .././fonts/FreeMono24pt7b.h \
+ .././fonts/FreeMonoBold9pt7b.h .././fonts/FreeMonoBold12pt7b.h \
+ .././fonts/FreeMonoBold18pt7b.h .././fonts/FreeMonoBold24pt7b.h \
+ .././fonts/FreeMonoBoldOblique9pt7b.h \
  .././fonts/FreeMonoBoldOblique12pt7b.h \
  .././fonts/FreeMonoBoldOblique18pt7b.h \
  .././fonts/FreeMonoBoldOblique24pt7b.h .././fonts/FreeMonoOblique9pt7b.h \
@@ -100,6 +101,8 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\ctype.h:
 
 .././ssd1963.h:
+
+.././xpt2046.h:
 
 .././fonts/bitmapImageMono.h:
 

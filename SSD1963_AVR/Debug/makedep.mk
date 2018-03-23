@@ -6,3 +6,5 @@ main.c
 
 ssd1963.c
 
+xpt2046.c
+

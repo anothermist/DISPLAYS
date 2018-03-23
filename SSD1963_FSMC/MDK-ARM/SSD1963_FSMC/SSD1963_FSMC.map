@@ -758,9 +758,9 @@ Section Cross References
     xpt2046.o(i.getRaw) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive) for HAL_SPI_TransmitReceive
     xpt2046.o(i.getRaw) refers to main.o(.bss) for hspi3
     xpt2046.o(i.getX) refers to xpt2046.o(i.getRaw) for getRaw
-    xpt2046.o(i.getX) refers to xpt2046.o(i.map) for map
+    xpt2046.o(i.getX) refers to xpt2046.o(i.remap) for remap
     xpt2046.o(i.getY) refers to xpt2046.o(i.getRaw) for getRaw
-    xpt2046.o(i.getY) refers to xpt2046.o(i.map) for map
+    xpt2046.o(i.getY) refers to xpt2046.o(i.remap) for remap
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
@@ -1632,11 +1632,11 @@ Image Symbol Table
     i.__scatterload_zeroinit                 0x08003b14   Section       14  handlers.o(i.__scatterload_zeroinit)
     i.getRaw                                 0x08003b24   Section        0  xpt2046.o(i.getRaw)
     i.getX                                   0x08003b7c   Section        0  xpt2046.o(i.getX)
-    i.getY                                   0x08003b9c   Section        0  xpt2046.o(i.getY)
-    i.main                                   0x08003bbc   Section        0  main.o(i.main)
-    i.map                                    0x08003f98   Section        0  xpt2046.o(i.map)
-    .constdata                               0x08003fb0   Section       24  system_stm32f4xx.o(.constdata)
-    .constdata                               0x08003fc8   Section    223476  main.o(.constdata)
+    i.getY                                   0x08003bdc   Section        0  xpt2046.o(i.getY)
+    i.main                                   0x08003c40   Section        0  main.o(i.main)
+    i.remap                                  0x0800401c   Section        0  xpt2046.o(i.remap)
+    .constdata                               0x0800403a   Section       24  system_stm32f4xx.o(.constdata)
+    .constdata                               0x08004054   Section    223476  main.o(.constdata)
     .data                                    0x20000000   Section        4  system_stm32f4xx.o(.data)
     .data                                    0x20000004   Section        9  stm32f4xx_hal.o(.data)
     .data                                    0x20000010   Section        8  stm32f4xx_hal_msp.o(.data)
@@ -1849,179 +1849,179 @@ Image Symbol Table
     __scatterload_null                       0x08003b13   Thumb Code     2  handlers.o(i.__scatterload_null)
     __scatterload_zeroinit                   0x08003b15   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
     getRaw                                   0x08003b25   Thumb Code    84  xpt2046.o(i.getRaw)
-    getX                                     0x08003b7d   Thumb Code    32  xpt2046.o(i.getX)
-    getY                                     0x08003b9d   Thumb Code    32  xpt2046.o(i.getY)
-    main                                     0x08003bbd   Thumb Code   826  main.o(i.main)
-    map                                      0x08003f99   Thumb Code    24  xpt2046.o(i.map)
-    AHBPrescTable                            0x08003fb0   Data          16  system_stm32f4xx.o(.constdata)
-    APBPrescTable                            0x08003fc0   Data           8  system_stm32f4xx.o(.constdata)
-    Dmd8x7ClockBitmaps                       0x08003fc8   Data         161  main.o(.constdata)
-    Dmd8x7ClockGlyphs                        0x0800406a   Data         264  main.o(.constdata)
-    Dmd8x7Clock                              0x08004174   Data          12  main.o(.constdata)
-    Dmd13x20ClockBitmaps                     0x08004180   Data         384  main.o(.constdata)
-    Dmd13x20ClockGlyphs                      0x08004300   Data         392  main.o(.constdata)
-    Dmd13x20Clock                            0x08004488   Data          12  main.o(.constdata)
-    FreeMono9pt7bBitmaps                     0x08004494   Data         844  main.o(.constdata)
-    FreeMono9pt7bGlyphs                      0x080047e0   Data         760  main.o(.constdata)
-    FreeMono9pt7b                            0x08004ad8   Data          12  main.o(.constdata)
-    FreeMono12pt7bBitmaps                    0x08004ae4   Data        1460  main.o(.constdata)
-    FreeMono12pt7bGlyphs                     0x08005098   Data         760  main.o(.constdata)
-    FreeMono12pt7b                           0x08005390   Data          12  main.o(.constdata)
-    FreeMono18pt7bBitmaps                    0x0800539c   Data        3089  main.o(.constdata)
-    FreeMono18pt7bGlyphs                     0x08005fae   Data         760  main.o(.constdata)
-    FreeMono18pt7b                           0x080062a8   Data          12  main.o(.constdata)
-    FreeMono24pt7bBitmaps                    0x080062b4   Data        5658  main.o(.constdata)
-    FreeMono24pt7bGlyphs                     0x080078ce   Data         760  main.o(.constdata)
-    FreeMono24pt7b                           0x08007bc8   Data          12  main.o(.constdata)
-    FreeMonoBold9pt7bBitmaps                 0x08007bd4   Data        1000  main.o(.constdata)
-    FreeMonoBold9pt7bGlyphs                  0x08007fbc   Data         760  main.o(.constdata)
-    FreeMonoBold9pt7b                        0x080082b4   Data          12  main.o(.constdata)
-    FreeMonoBold12pt7bBitmaps                0x080082c0   Data        1730  main.o(.constdata)
-    FreeMonoBold12pt7bGlyphs                 0x08008982   Data         760  main.o(.constdata)
-    FreeMonoBold12pt7b                       0x08008c7c   Data          12  main.o(.constdata)
-    FreeMonoBold18pt7bBitmaps                0x08008c88   Data        3813  main.o(.constdata)
-    FreeMonoBold18pt7bGlyphs                 0x08009b6e   Data         760  main.o(.constdata)
-    FreeMonoBold18pt7b                       0x08009e68   Data          12  main.o(.constdata)
-    FreeMonoBold24pt7bBitmaps                0x08009e74   Data        6797  main.o(.constdata)
-    FreeMonoBold24pt7bGlyphs                 0x0800b902   Data         760  main.o(.constdata)
-    FreeMonoBold24pt7b                       0x0800bbfc   Data          12  main.o(.constdata)
-    FreeMonoBoldOblique9pt7bBitmaps          0x0800bc08   Data        1167  main.o(.constdata)
-    FreeMonoBoldOblique9pt7bGlyphs           0x0800c098   Data         760  main.o(.constdata)
-    FreeMonoBoldOblique9pt7b                 0x0800c390   Data          12  main.o(.constdata)
-    FreeMonoBoldOblique12pt7bBitmaps         0x0800c39c   Data        1966  main.o(.constdata)
-    FreeMonoBoldOblique12pt7bGlyphs          0x0800cb4a   Data         760  main.o(.constdata)
-    FreeMonoBoldOblique12pt7b                0x0800ce44   Data          12  main.o(.constdata)
-    FreeMonoBoldOblique18pt7bBitmaps         0x0800ce50   Data        4256  main.o(.constdata)
-    FreeMonoBoldOblique18pt7bGlyphs          0x0800def0   Data         760  main.o(.constdata)
-    FreeMonoBoldOblique18pt7b                0x0800e1e8   Data          12  main.o(.constdata)
-    FreeMonoBoldOblique24pt7bBitmaps         0x0800e1f4   Data        7635  main.o(.constdata)
-    FreeMonoBoldOblique24pt7bGlyphs          0x0800ffc8   Data         760  main.o(.constdata)
-    FreeMonoBoldOblique24pt7b                0x080102c0   Data          12  main.o(.constdata)
-    FreeMonoOblique9pt7bBitmaps              0x080102cc   Data         982  main.o(.constdata)
-    FreeMonoOblique9pt7bGlyphs               0x080106a2   Data         760  main.o(.constdata)
-    FreeMonoOblique9pt7b                     0x0801099c   Data          12  main.o(.constdata)
-    FreeMonoOblique12pt7bBitmaps             0x080109a8   Data        1707  main.o(.constdata)
-    FreeMonoOblique12pt7bGlyphs              0x08011054   Data         760  main.o(.constdata)
-    FreeMonoOblique12pt7b                    0x0801134c   Data          12  main.o(.constdata)
-    FreeMonoOblique18pt7bBitmaps             0x08011358   Data        3514  main.o(.constdata)
-    FreeMonoOblique18pt7bGlyphs              0x08012112   Data         760  main.o(.constdata)
-    FreeMonoOblique18pt7b                    0x0801240c   Data          12  main.o(.constdata)
-    FreeMonoOblique24pt7bBitmaps             0x08012418   Data        6452  main.o(.constdata)
-    FreeMonoOblique24pt7bGlyphs              0x08013d4c   Data         760  main.o(.constdata)
-    FreeMonoOblique24pt7b                    0x08014044   Data          12  main.o(.constdata)
-    FreeSans9pt7bBitmaps                     0x08014050   Data        1150  main.o(.constdata)
-    FreeSans9pt7bGlyphs                      0x080144ce   Data         760  main.o(.constdata)
-    FreeSans9pt7b                            0x080147c8   Data          12  main.o(.constdata)
-    FreeSans12pt7bBitmaps                    0x080147d4   Data        1969  main.o(.constdata)
-    FreeSans12pt7bGlyphs                     0x08014f86   Data         760  main.o(.constdata)
-    FreeSans12pt7b                           0x08015280   Data          12  main.o(.constdata)
-    FreeSans18pt7bBitmaps                    0x0801528c   Data        4159  main.o(.constdata)
-    FreeSans18pt7bGlyphs                     0x080162cc   Data         760  main.o(.constdata)
-    FreeSans18pt7b                           0x080165c4   Data          12  main.o(.constdata)
-    FreeSans24pt7bBitmaps                    0x080165d0   Data        7464  main.o(.constdata)
-    FreeSans24pt7bGlyphs                     0x080182f8   Data         760  main.o(.constdata)
-    FreeSans24pt7b                           0x080185f0   Data          12  main.o(.constdata)
-    FreeSansBold9pt7bBitmaps                 0x080185fc   Data        1230  main.o(.constdata)
-    FreeSansBold9pt7bGlyphs                  0x08018aca   Data         760  main.o(.constdata)
-    FreeSansBold9pt7b                        0x08018dc4   Data          12  main.o(.constdata)
-    FreeSansBold12pt7bBitmaps                0x08018dd0   Data        2186  main.o(.constdata)
-    FreeSansBold12pt7bGlyphs                 0x0801965a   Data         760  main.o(.constdata)
-    FreeSansBold12pt7b                       0x08019954   Data          12  main.o(.constdata)
-    FreeSansBold18pt7bBitmaps                0x08019960   Data        4503  main.o(.constdata)
-    FreeSansBold18pt7bGlyphs                 0x0801aaf8   Data         760  main.o(.constdata)
-    FreeSansBold18pt7b                       0x0801adf0   Data          12  main.o(.constdata)
-    FreeSansBold24pt7bBitmaps                0x0801adfc   Data        8143  main.o(.constdata)
-    FreeSansBold24pt7bGlyphs                 0x0801cdcc   Data         760  main.o(.constdata)
-    FreeSansBold24pt7b                       0x0801d0c4   Data          12  main.o(.constdata)
-    FreeSansBoldOblique9pt7bBitmaps          0x0801d0d0   Data        1464  main.o(.constdata)
-    FreeSansBoldOblique9pt7bGlyphs           0x0801d688   Data         760  main.o(.constdata)
-    FreeSansBoldOblique9pt7b                 0x0801d980   Data          12  main.o(.constdata)
-    FreeSansBoldOblique12pt7bBitmaps         0x0801d98c   Data        2535  main.o(.constdata)
-    FreeSansBoldOblique12pt7bGlyphs          0x0801e374   Data         760  main.o(.constdata)
-    FreeSansBoldOblique12pt7b                0x0801e66c   Data          12  main.o(.constdata)
-    FreeSansBoldOblique18pt7bBitmaps         0x0801e678   Data        5271  main.o(.constdata)
-    FreeSansBoldOblique18pt7bGlyphs          0x0801fb10   Data         760  main.o(.constdata)
-    FreeSansBoldOblique18pt7b                0x0801fe08   Data          12  main.o(.constdata)
-    FreeSansBoldOblique24pt7bBitmaps         0x0801fe14   Data        9447  main.o(.constdata)
-    FreeSansBoldOblique24pt7bGlyphs          0x080222fc   Data         760  main.o(.constdata)
-    FreeSansBoldOblique24pt7b                0x080225f4   Data          12  main.o(.constdata)
-    FreeSansOblique9pt7bBitmaps              0x08022600   Data        1369  main.o(.constdata)
-    FreeSansOblique9pt7bGlyphs               0x08022b5a   Data         760  main.o(.constdata)
-    FreeSansOblique9pt7b                     0x08022e54   Data          12  main.o(.constdata)
-    FreeSansOblique12pt7bBitmaps             0x08022e60   Data        2362  main.o(.constdata)
-    FreeSansOblique12pt7bGlyphs              0x0802379a   Data         760  main.o(.constdata)
-    FreeSansOblique12pt7b                    0x08023a94   Data          12  main.o(.constdata)
-    FreeSansOblique18pt7bBitmaps             0x08023aa0   Data        4951  main.o(.constdata)
-    FreeSansOblique18pt7bGlyphs              0x08024df8   Data         760  main.o(.constdata)
-    FreeSansOblique18pt7b                    0x080250f0   Data          12  main.o(.constdata)
-    FreeSansOblique24pt7bBitmaps             0x080250fc   Data        8811  main.o(.constdata)
-    FreeSansOblique24pt7bGlyphs              0x08027368   Data         760  main.o(.constdata)
-    FreeSansOblique24pt7b                    0x08027660   Data          12  main.o(.constdata)
-    FreeSerif9pt7bBitmaps                    0x0802766c   Data        1080  main.o(.constdata)
-    FreeSerif9pt7bGlyphs                     0x08027aa4   Data         760  main.o(.constdata)
-    FreeSerif9pt7b                           0x08027d9c   Data          12  main.o(.constdata)
-    FreeSerif12pt7bBitmaps                   0x08027da8   Data        1839  main.o(.constdata)
-    FreeSerif12pt7bGlyphs                    0x080284d8   Data         760  main.o(.constdata)
-    FreeSerif12pt7b                          0x080287d0   Data          12  main.o(.constdata)
-    FreeSerif18pt7bBitmaps                   0x080287dc   Data        3886  main.o(.constdata)
-    FreeSerif18pt7bGlyphs                    0x0802970a   Data         760  main.o(.constdata)
-    FreeSerif18pt7b                          0x08029a04   Data          12  main.o(.constdata)
-    FreeSerif24pt7bBitmaps                   0x08029a10   Data        7010  main.o(.constdata)
-    FreeSerif24pt7bGlyphs                    0x0802b572   Data         760  main.o(.constdata)
-    FreeSerif24pt7b                          0x0802b86c   Data          12  main.o(.constdata)
-    FreeSerifBold9pt7bBitmaps                0x0802b878   Data        1162  main.o(.constdata)
-    FreeSerifBold9pt7bGlyphs                 0x0802bd02   Data         760  main.o(.constdata)
-    FreeSerifBold9pt7b                       0x0802bffc   Data          12  main.o(.constdata)
-    FreeSerifBold12pt7bBitmaps               0x0802c008   Data        1991  main.o(.constdata)
-    FreeSerifBold12pt7bGlyphs                0x0802c7d0   Data         760  main.o(.constdata)
-    FreeSerifBold12pt7b                      0x0802cac8   Data          12  main.o(.constdata)
-    FreeSerifBold18pt7bBitmaps               0x0802cad4   Data        4273  main.o(.constdata)
-    FreeSerifBold18pt7bGlyphs                0x0802db86   Data         760  main.o(.constdata)
-    FreeSerifBold18pt7b                      0x0802de80   Data          12  main.o(.constdata)
-    FreeSerifBold24pt7bBitmaps               0x0802de8c   Data        7847  main.o(.constdata)
-    FreeSerifBold24pt7bGlyphs                0x0802fd34   Data         760  main.o(.constdata)
-    FreeSerifBold24pt7b                      0x0803002c   Data          12  main.o(.constdata)
-    FreeSerifBoldItalic9pt7bBitmaps          0x08030038   Data        1310  main.o(.constdata)
-    FreeSerifBoldItalic9pt7bGlyphs           0x08030556   Data         760  main.o(.constdata)
-    FreeSerifBoldItalic9pt7b                 0x08030850   Data          12  main.o(.constdata)
-    FreeSerifBoldItalic12pt7bBitmaps         0x0803085c   Data        2238  main.o(.constdata)
-    FreeSerifBoldItalic12pt7bGlyphs          0x0803111a   Data         760  main.o(.constdata)
-    FreeSerifBoldItalic12pt7b                0x08031414   Data          12  main.o(.constdata)
-    FreeSerifBoldItalic18pt7bBitmaps         0x08031420   Data        4738  main.o(.constdata)
-    FreeSerifBoldItalic18pt7bGlyphs          0x080326a2   Data         760  main.o(.constdata)
-    FreeSerifBoldItalic18pt7b                0x0803299c   Data          12  main.o(.constdata)
-    FreeSerifBoldItalic24pt7bBitmaps         0x080329a8   Data        8245  main.o(.constdata)
-    FreeSerifBoldItalic24pt7bGlyphs          0x080349de   Data         760  main.o(.constdata)
-    FreeSerifBoldItalic24pt7b                0x08034cd8   Data          12  main.o(.constdata)
-    FreeSerifItalic9pt7bBitmaps              0x08034ce4   Data        1163  main.o(.constdata)
-    FreeSerifItalic9pt7bGlyphs               0x08035170   Data         760  main.o(.constdata)
-    FreeSerifItalic9pt7b                     0x08035468   Data          12  main.o(.constdata)
-    FreeSerifItalic12pt7bBitmaps             0x08035474   Data        1984  main.o(.constdata)
-    FreeSerifItalic12pt7bGlyphs              0x08035c34   Data         760  main.o(.constdata)
-    FreeSerifItalic12pt7b                    0x08035f2c   Data          12  main.o(.constdata)
-    FreeSerifItalic18pt7bBitmaps             0x08035f38   Data        4133  main.o(.constdata)
-    FreeSerifItalic18pt7bGlyphs              0x08036f5e   Data         760  main.o(.constdata)
-    FreeSerifItalic18pt7b                    0x08037258   Data          12  main.o(.constdata)
-    FreeSerifItalic24pt7bBitmaps             0x08037264   Data        7579  main.o(.constdata)
-    FreeSerifItalic24pt7bGlyphs              0x08039000   Data         760  main.o(.constdata)
-    FreeSerifItalic24pt7b                    0x080392f8   Data          12  main.o(.constdata)
-    FreeSevenSegNumBitmaps                   0x08039304   Data        1363  main.o(.constdata)
-    FreeSevenSegNumGlyphs                    0x08039858   Data          80  main.o(.constdata)
-    FreeSevenSegNum                          0x080398a8   Data          12  main.o(.constdata)
-    Org_01Bitmaps                            0x080398b4   Data         271  main.o(.constdata)
-    Org_01Glyphs                             0x080399c4   Data         760  main.o(.constdata)
-    Org_01                                   0x08039cbc   Data          12  main.o(.constdata)
-    PicopixelBitmaps                         0x08039cc8   Data         180  main.o(.constdata)
-    PicopixelGlyphs                          0x08039d7c   Data         760  main.o(.constdata)
-    Picopixel                                0x0803a074   Data          12  main.o(.constdata)
-    Tiny3x3a2pt7bBitmaps                     0x0803a080   Data         142  main.o(.constdata)
-    Tiny3x3a2pt7bGlyphs                      0x0803a10e   Data         760  main.o(.constdata)
-    Tiny3x3a2pt7b                            0x0803a408   Data          12  main.o(.constdata)
-    TomThumbBitmaps                          0x0803a414   Data         418  main.o(.constdata)
-    TomThumbGlyphs                           0x0803a5b6   Data         760  main.o(.constdata)
-    TomThumb                                 0x0803a8b0   Data          12  main.o(.constdata)
-    Region$$Table$$Base                      0x0803a8bc   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0803a8dc   Number         0  anon$$obj.o(Region$$Table)
+    getX                                     0x08003b7d   Thumb Code    78  xpt2046.o(i.getX)
+    getY                                     0x08003bdd   Thumb Code    84  xpt2046.o(i.getY)
+    main                                     0x08003c41   Thumb Code   826  main.o(i.main)
+    remap                                    0x0800401d   Thumb Code    30  xpt2046.o(i.remap)
+    AHBPrescTable                            0x0800403a   Data          16  system_stm32f4xx.o(.constdata)
+    APBPrescTable                            0x0800404a   Data           8  system_stm32f4xx.o(.constdata)
+    Dmd8x7ClockBitmaps                       0x08004054   Data         161  main.o(.constdata)
+    Dmd8x7ClockGlyphs                        0x080040f6   Data         264  main.o(.constdata)
+    Dmd8x7Clock                              0x08004200   Data          12  main.o(.constdata)
+    Dmd13x20ClockBitmaps                     0x0800420c   Data         384  main.o(.constdata)
+    Dmd13x20ClockGlyphs                      0x0800438c   Data         392  main.o(.constdata)
+    Dmd13x20Clock                            0x08004514   Data          12  main.o(.constdata)
+    FreeMono9pt7bBitmaps                     0x08004520   Data         844  main.o(.constdata)
+    FreeMono9pt7bGlyphs                      0x0800486c   Data         760  main.o(.constdata)
+    FreeMono9pt7b                            0x08004b64   Data          12  main.o(.constdata)
+    FreeMono12pt7bBitmaps                    0x08004b70   Data        1460  main.o(.constdata)
+    FreeMono12pt7bGlyphs                     0x08005124   Data         760  main.o(.constdata)
+    FreeMono12pt7b                           0x0800541c   Data          12  main.o(.constdata)
+    FreeMono18pt7bBitmaps                    0x08005428   Data        3089  main.o(.constdata)
+    FreeMono18pt7bGlyphs                     0x0800603a   Data         760  main.o(.constdata)
+    FreeMono18pt7b                           0x08006334   Data          12  main.o(.constdata)
+    FreeMono24pt7bBitmaps                    0x08006340   Data        5658  main.o(.constdata)
+    FreeMono24pt7bGlyphs                     0x0800795a   Data         760  main.o(.constdata)
+    FreeMono24pt7b                           0x08007c54   Data          12  main.o(.constdata)
+    FreeMonoBold9pt7bBitmaps                 0x08007c60   Data        1000  main.o(.constdata)
+    FreeMonoBold9pt7bGlyphs                  0x08008048   Data         760  main.o(.constdata)
+    FreeMonoBold9pt7b                        0x08008340   Data          12  main.o(.constdata)
+    FreeMonoBold12pt7bBitmaps                0x0800834c   Data        1730  main.o(.constdata)
+    FreeMonoBold12pt7bGlyphs                 0x08008a0e   Data         760  main.o(.constdata)
+    FreeMonoBold12pt7b                       0x08008d08   Data          12  main.o(.constdata)
+    FreeMonoBold18pt7bBitmaps                0x08008d14   Data        3813  main.o(.constdata)
+    FreeMonoBold18pt7bGlyphs                 0x08009bfa   Data         760  main.o(.constdata)
+    FreeMonoBold18pt7b                       0x08009ef4   Data          12  main.o(.constdata)
+    FreeMonoBold24pt7bBitmaps                0x08009f00   Data        6797  main.o(.constdata)
+    FreeMonoBold24pt7bGlyphs                 0x0800b98e   Data         760  main.o(.constdata)
+    FreeMonoBold24pt7b                       0x0800bc88   Data          12  main.o(.constdata)
+    FreeMonoBoldOblique9pt7bBitmaps          0x0800bc94   Data        1167  main.o(.constdata)
+    FreeMonoBoldOblique9pt7bGlyphs           0x0800c124   Data         760  main.o(.constdata)
+    FreeMonoBoldOblique9pt7b                 0x0800c41c   Data          12  main.o(.constdata)
+    FreeMonoBoldOblique12pt7bBitmaps         0x0800c428   Data        1966  main.o(.constdata)
+    FreeMonoBoldOblique12pt7bGlyphs          0x0800cbd6   Data         760  main.o(.constdata)
+    FreeMonoBoldOblique12pt7b                0x0800ced0   Data          12  main.o(.constdata)
+    FreeMonoBoldOblique18pt7bBitmaps         0x0800cedc   Data        4256  main.o(.constdata)
+    FreeMonoBoldOblique18pt7bGlyphs          0x0800df7c   Data         760  main.o(.constdata)
+    FreeMonoBoldOblique18pt7b                0x0800e274   Data          12  main.o(.constdata)
+    FreeMonoBoldOblique24pt7bBitmaps         0x0800e280   Data        7635  main.o(.constdata)
+    FreeMonoBoldOblique24pt7bGlyphs          0x08010054   Data         760  main.o(.constdata)
+    FreeMonoBoldOblique24pt7b                0x0801034c   Data          12  main.o(.constdata)
+    FreeMonoOblique9pt7bBitmaps              0x08010358   Data         982  main.o(.constdata)
+    FreeMonoOblique9pt7bGlyphs               0x0801072e   Data         760  main.o(.constdata)
+    FreeMonoOblique9pt7b                     0x08010a28   Data          12  main.o(.constdata)
+    FreeMonoOblique12pt7bBitmaps             0x08010a34   Data        1707  main.o(.constdata)
+    FreeMonoOblique12pt7bGlyphs              0x080110e0   Data         760  main.o(.constdata)
+    FreeMonoOblique12pt7b                    0x080113d8   Data          12  main.o(.constdata)
+    FreeMonoOblique18pt7bBitmaps             0x080113e4   Data        3514  main.o(.constdata)
+    FreeMonoOblique18pt7bGlyphs              0x0801219e   Data         760  main.o(.constdata)
+    FreeMonoOblique18pt7b                    0x08012498   Data          12  main.o(.constdata)
+    FreeMonoOblique24pt7bBitmaps             0x080124a4   Data        6452  main.o(.constdata)
+    FreeMonoOblique24pt7bGlyphs              0x08013dd8   Data         760  main.o(.constdata)
+    FreeMonoOblique24pt7b                    0x080140d0   Data          12  main.o(.constdata)
+    FreeSans9pt7bBitmaps                     0x080140dc   Data        1150  main.o(.constdata)
+    FreeSans9pt7bGlyphs                      0x0801455a   Data         760  main.o(.constdata)
+    FreeSans9pt7b                            0x08014854   Data          12  main.o(.constdata)
+    FreeSans12pt7bBitmaps                    0x08014860   Data        1969  main.o(.constdata)
+    FreeSans12pt7bGlyphs                     0x08015012   Data         760  main.o(.constdata)
+    FreeSans12pt7b                           0x0801530c   Data          12  main.o(.constdata)
+    FreeSans18pt7bBitmaps                    0x08015318   Data        4159  main.o(.constdata)
+    FreeSans18pt7bGlyphs                     0x08016358   Data         760  main.o(.constdata)
+    FreeSans18pt7b                           0x08016650   Data          12  main.o(.constdata)
+    FreeSans24pt7bBitmaps                    0x0801665c   Data        7464  main.o(.constdata)
+    FreeSans24pt7bGlyphs                     0x08018384   Data         760  main.o(.constdata)
+    FreeSans24pt7b                           0x0801867c   Data          12  main.o(.constdata)
+    FreeSansBold9pt7bBitmaps                 0x08018688   Data        1230  main.o(.constdata)
+    FreeSansBold9pt7bGlyphs                  0x08018b56   Data         760  main.o(.constdata)
+    FreeSansBold9pt7b                        0x08018e50   Data          12  main.o(.constdata)
+    FreeSansBold12pt7bBitmaps                0x08018e5c   Data        2186  main.o(.constdata)
+    FreeSansBold12pt7bGlyphs                 0x080196e6   Data         760  main.o(.constdata)
+    FreeSansBold12pt7b                       0x080199e0   Data          12  main.o(.constdata)
+    FreeSansBold18pt7bBitmaps                0x080199ec   Data        4503  main.o(.constdata)
+    FreeSansBold18pt7bGlyphs                 0x0801ab84   Data         760  main.o(.constdata)
+    FreeSansBold18pt7b                       0x0801ae7c   Data          12  main.o(.constdata)
+    FreeSansBold24pt7bBitmaps                0x0801ae88   Data        8143  main.o(.constdata)
+    FreeSansBold24pt7bGlyphs                 0x0801ce58   Data         760  main.o(.constdata)
+    FreeSansBold24pt7b                       0x0801d150   Data          12  main.o(.constdata)
+    FreeSansBoldOblique9pt7bBitmaps          0x0801d15c   Data        1464  main.o(.constdata)
+    FreeSansBoldOblique9pt7bGlyphs           0x0801d714   Data         760  main.o(.constdata)
+    FreeSansBoldOblique9pt7b                 0x0801da0c   Data          12  main.o(.constdata)
+    FreeSansBoldOblique12pt7bBitmaps         0x0801da18   Data        2535  main.o(.constdata)
+    FreeSansBoldOblique12pt7bGlyphs          0x0801e400   Data         760  main.o(.constdata)
+    FreeSansBoldOblique12pt7b                0x0801e6f8   Data          12  main.o(.constdata)
+    FreeSansBoldOblique18pt7bBitmaps         0x0801e704   Data        5271  main.o(.constdata)
+    FreeSansBoldOblique18pt7bGlyphs          0x0801fb9c   Data         760  main.o(.constdata)
+    FreeSansBoldOblique18pt7b                0x0801fe94   Data          12  main.o(.constdata)
+    FreeSansBoldOblique24pt7bBitmaps         0x0801fea0   Data        9447  main.o(.constdata)
+    FreeSansBoldOblique24pt7bGlyphs          0x08022388   Data         760  main.o(.constdata)
+    FreeSansBoldOblique24pt7b                0x08022680   Data          12  main.o(.constdata)
+    FreeSansOblique9pt7bBitmaps              0x0802268c   Data        1369  main.o(.constdata)
+    FreeSansOblique9pt7bGlyphs               0x08022be6   Data         760  main.o(.constdata)
+    FreeSansOblique9pt7b                     0x08022ee0   Data          12  main.o(.constdata)
+    FreeSansOblique12pt7bBitmaps             0x08022eec   Data        2362  main.o(.constdata)
+    FreeSansOblique12pt7bGlyphs              0x08023826   Data         760  main.o(.constdata)
+    FreeSansOblique12pt7b                    0x08023b20   Data          12  main.o(.constdata)
+    FreeSansOblique18pt7bBitmaps             0x08023b2c   Data        4951  main.o(.constdata)
+    FreeSansOblique18pt7bGlyphs              0x08024e84   Data         760  main.o(.constdata)
+    FreeSansOblique18pt7b                    0x0802517c   Data          12  main.o(.constdata)
+    FreeSansOblique24pt7bBitmaps             0x08025188   Data        8811  main.o(.constdata)
+    FreeSansOblique24pt7bGlyphs              0x080273f4   Data         760  main.o(.constdata)
+    FreeSansOblique24pt7b                    0x080276ec   Data          12  main.o(.constdata)
+    FreeSerif9pt7bBitmaps                    0x080276f8   Data        1080  main.o(.constdata)
+    FreeSerif9pt7bGlyphs                     0x08027b30   Data         760  main.o(.constdata)
+    FreeSerif9pt7b                           0x08027e28   Data          12  main.o(.constdata)
+    FreeSerif12pt7bBitmaps                   0x08027e34   Data        1839  main.o(.constdata)
+    FreeSerif12pt7bGlyphs                    0x08028564   Data         760  main.o(.constdata)
+    FreeSerif12pt7b                          0x0802885c   Data          12  main.o(.constdata)
+    FreeSerif18pt7bBitmaps                   0x08028868   Data        3886  main.o(.constdata)
+    FreeSerif18pt7bGlyphs                    0x08029796   Data         760  main.o(.constdata)
+    FreeSerif18pt7b                          0x08029a90   Data          12  main.o(.constdata)
+    FreeSerif24pt7bBitmaps                   0x08029a9c   Data        7010  main.o(.constdata)
+    FreeSerif24pt7bGlyphs                    0x0802b5fe   Data         760  main.o(.constdata)
+    FreeSerif24pt7b                          0x0802b8f8   Data          12  main.o(.constdata)
+    FreeSerifBold9pt7bBitmaps                0x0802b904   Data        1162  main.o(.constdata)
+    FreeSerifBold9pt7bGlyphs                 0x0802bd8e   Data         760  main.o(.constdata)
+    FreeSerifBold9pt7b                       0x0802c088   Data          12  main.o(.constdata)
+    FreeSerifBold12pt7bBitmaps               0x0802c094   Data        1991  main.o(.constdata)
+    FreeSerifBold12pt7bGlyphs                0x0802c85c   Data         760  main.o(.constdata)
+    FreeSerifBold12pt7b                      0x0802cb54   Data          12  main.o(.constdata)
+    FreeSerifBold18pt7bBitmaps               0x0802cb60   Data        4273  main.o(.constdata)
+    FreeSerifBold18pt7bGlyphs                0x0802dc12   Data         760  main.o(.constdata)
+    FreeSerifBold18pt7b                      0x0802df0c   Data          12  main.o(.constdata)
+    FreeSerifBold24pt7bBitmaps               0x0802df18   Data        7847  main.o(.constdata)
+    FreeSerifBold24pt7bGlyphs                0x0802fdc0   Data         760  main.o(.constdata)
+    FreeSerifBold24pt7b                      0x080300b8   Data          12  main.o(.constdata)
+    FreeSerifBoldItalic9pt7bBitmaps          0x080300c4   Data        1310  main.o(.constdata)
+    FreeSerifBoldItalic9pt7bGlyphs           0x080305e2   Data         760  main.o(.constdata)
+    FreeSerifBoldItalic9pt7b                 0x080308dc   Data          12  main.o(.constdata)
+    FreeSerifBoldItalic12pt7bBitmaps         0x080308e8   Data        2238  main.o(.constdata)
+    FreeSerifBoldItalic12pt7bGlyphs          0x080311a6   Data         760  main.o(.constdata)
+    FreeSerifBoldItalic12pt7b                0x080314a0   Data          12  main.o(.constdata)
+    FreeSerifBoldItalic18pt7bBitmaps         0x080314ac   Data        4738  main.o(.constdata)
+    FreeSerifBoldItalic18pt7bGlyphs          0x0803272e   Data         760  main.o(.constdata)
+    FreeSerifBoldItalic18pt7b                0x08032a28   Data          12  main.o(.constdata)
+    FreeSerifBoldItalic24pt7bBitmaps         0x08032a34   Data        8245  main.o(.constdata)
+    FreeSerifBoldItalic24pt7bGlyphs          0x08034a6a   Data         760  main.o(.constdata)
+    FreeSerifBoldItalic24pt7b                0x08034d64   Data          12  main.o(.constdata)
+    FreeSerifItalic9pt7bBitmaps              0x08034d70   Data        1163  main.o(.constdata)
+    FreeSerifItalic9pt7bGlyphs               0x080351fc   Data         760  main.o(.constdata)
+    FreeSerifItalic9pt7b                     0x080354f4   Data          12  main.o(.constdata)
+    FreeSerifItalic12pt7bBitmaps             0x08035500   Data        1984  main.o(.constdata)
+    FreeSerifItalic12pt7bGlyphs              0x08035cc0   Data         760  main.o(.constdata)
+    FreeSerifItalic12pt7b                    0x08035fb8   Data          12  main.o(.constdata)
+    FreeSerifItalic18pt7bBitmaps             0x08035fc4   Data        4133  main.o(.constdata)
+    FreeSerifItalic18pt7bGlyphs              0x08036fea   Data         760  main.o(.constdata)
+    FreeSerifItalic18pt7b                    0x080372e4   Data          12  main.o(.constdata)
+    FreeSerifItalic24pt7bBitmaps             0x080372f0   Data        7579  main.o(.constdata)
+    FreeSerifItalic24pt7bGlyphs              0x0803908c   Data         760  main.o(.constdata)
+    FreeSerifItalic24pt7b                    0x08039384   Data          12  main.o(.constdata)
+    FreeSevenSegNumBitmaps                   0x08039390   Data        1363  main.o(.constdata)
+    FreeSevenSegNumGlyphs                    0x080398e4   Data          80  main.o(.constdata)
+    FreeSevenSegNum                          0x08039934   Data          12  main.o(.constdata)
+    Org_01Bitmaps                            0x08039940   Data         271  main.o(.constdata)
+    Org_01Glyphs                             0x08039a50   Data         760  main.o(.constdata)
+    Org_01                                   0x08039d48   Data          12  main.o(.constdata)
+    PicopixelBitmaps                         0x08039d54   Data         180  main.o(.constdata)
+    PicopixelGlyphs                          0x08039e08   Data         760  main.o(.constdata)
+    Picopixel                                0x0803a100   Data          12  main.o(.constdata)
+    Tiny3x3a2pt7bBitmaps                     0x0803a10c   Data         142  main.o(.constdata)
+    Tiny3x3a2pt7bGlyphs                      0x0803a19a   Data         760  main.o(.constdata)
+    Tiny3x3a2pt7b                            0x0803a494   Data          12  main.o(.constdata)
+    TomThumbBitmaps                          0x0803a4a0   Data         418  main.o(.constdata)
+    TomThumbGlyphs                           0x0803a642   Data         760  main.o(.constdata)
+    TomThumb                                 0x0803a93c   Data          12  main.o(.constdata)
+    Region$$Table$$Base                      0x0803a948   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0803a968   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x20000000   Data           4  system_stm32f4xx.o(.data)
     uwTick                                   0x20000004   Data           4  stm32f4xx_hal.o(.data)
     uwTickPrio                               0x20000008   Data           4  stm32f4xx_hal.o(.data)
@@ -2047,9 +2047,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000189
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0003a904, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0003a990, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0003a8dc, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0003a968, Max: 0x00080000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -2195,26 +2195,27 @@ Memory Map of the image
     0x08003b14   0x08003b14   0x0000000e   Code   RO         4420    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x08003b22   0x08003b22   0x00000002   PAD
     0x08003b24   0x08003b24   0x00000058   Code   RO         4344    i.getRaw            xpt2046.o
-    0x08003b7c   0x08003b7c   0x00000020   Code   RO         4345    i.getX              xpt2046.o
-    0x08003b9c   0x08003b9c   0x00000020   Code   RO         4346    i.getY              xpt2046.o
-    0x08003bbc   0x08003bbc   0x000003dc   Code   RO         3970    i.main              main.o
-    0x08003f98   0x08003f98   0x00000018   Code   RO         4347    i.map               xpt2046.o
-    0x08003fb0   0x08003fb0   0x00000018   Data   RO           15    .constdata          system_stm32f4xx.o
-    0x08003fc8   0x08003fc8   0x000368f4   Data   RO         3972    .constdata          main.o
-    0x0803a8bc   0x0803a8bc   0x00000020   Data   RO         4416    Region$$Table       anon$$obj.o
+    0x08003b7c   0x08003b7c   0x00000060   Code   RO         4345    i.getX              xpt2046.o
+    0x08003bdc   0x08003bdc   0x00000064   Code   RO         4346    i.getY              xpt2046.o
+    0x08003c40   0x08003c40   0x000003dc   Code   RO         3970    i.main              main.o
+    0x0800401c   0x0800401c   0x0000001e   Code   RO         4347    i.remap             xpt2046.o
+    0x0800403a   0x0800403a   0x00000018   Data   RO           15    .constdata          system_stm32f4xx.o
+    0x08004052   0x08004052   0x00000002   PAD
+    0x08004054   0x08004054   0x000368f4   Data   RO         3972    .constdata          main.o
+    0x0803a948   0x0803a948   0x00000020   Data   RO         4416    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0803a8dc, Size: 0x00000618, Max: 0x00020000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0803a968, Size: 0x00000618, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x0803a8dc   0x00000004   Data   RW           16    .data               system_stm32f4xx.o
-    0x20000004   0x0803a8e0   0x00000009   Data   RW         2204    .data               stm32f4xx_hal.o
-    0x2000000d   0x0803a8e9   0x00000003   PAD
-    0x20000010   0x0803a8ec   0x00000008   Data   RW         3866    .data               stm32f4xx_hal_msp.o
-    0x20000018   0x0803a8f4   0x00000010   Data   RW         3973    .data               main.o
+    0x20000000   0x0803a968   0x00000004   Data   RW           16    .data               system_stm32f4xx.o
+    0x20000004   0x0803a96c   0x00000009   Data   RW         2204    .data               stm32f4xx_hal.o
+    0x2000000d   0x0803a975   0x00000003   PAD
+    0x20000010   0x0803a978   0x00000008   Data   RW         3866    .data               stm32f4xx_hal_msp.o
+    0x20000018   0x0803a980   0x00000010   Data   RW         3973    .data               main.o
     0x20000028        -       0x000001ec   Zero   RW         3971    .bss                main.o
-    0x20000214   0x0803a904   0x00000004   PAD
+    0x20000214   0x0803a990   0x00000004   PAD
     0x20000218        -       0x00000400   Zero   RW            1    STACK               startup_stm32f407xx.o
 
 
@@ -2225,11 +2226,11 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-      2384        408     223476         16        492      33394   main.o
+      2384        408     223476         16        492      33402   main.o
       3322          6          0          0          0      14164   ssd1963_fsmc.o
         36          8        392          0       1024        832   startup_stm32f407xx.o
        212         36          0          9          0       4525   stm32f4xx_hal.o
-       348         22          0          0          0      32561   stm32f4xx_hal_cortex.o
+       348         22          0          0          0      32569   stm32f4xx_hal_cortex.o
         40          0          0          0          0       1123   stm32f4xx_hal_dma.o
        552         50          0          0          0       2931   stm32f4xx_hal_gpio.o
        296         10          0          0          0       1899   stm32f4xx_hal_i2c.o
@@ -2244,13 +2245,13 @@ Image component sizes
       1308          8          0          0          0       3700   stm32f4xx_hal_uart.o
        134         22          0          0          0       6025   stm32f4xx_it.o
        232         10          0          0          0       2699   stm32f4xx_ll_fsmc.o
-       100         18         24          4          0     716915   system_stm32f4xx.o
-       228         10          0          0          0       2648   xpt2046.o
+       100         18         24          4          0     716955   system_stm32f4xx.o
+       366         44          0          0          0       2910   xpt2046.o
 
     ----------------------------------------------------------------------
-     15648        858     223924         40       1520     861052   Object Totals
+     15786        892     223926         40       1520     861370   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        10          0          0          3          4          0   (incl. Padding)
+        10          0          2          3          4          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -2291,15 +2292,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     15912        874     223924         40       1520     850168   Grand Totals
-     15912        874     223924         40       1520     850168   ELF Image Totals
-     15912        874     223924         40          0          0   ROM Totals
+     16050        908     223926         40       1520     850586   Grand Totals
+     16050        908     223926         40       1520     850586   ELF Image Totals
+     16050        908     223926         40          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)               239836 ( 234.21kB)
+    Total RO  Size (Code + RO Data)               239976 ( 234.35kB)
     Total RW  Size (RW Data + ZI Data)              1560 (   1.52kB)
-    Total ROM Size (Code + RO Data + RW Data)     239876 ( 234.25kB)
+    Total ROM Size (Code + RO Data + RW Data)     240016 ( 234.39kB)
 
 ==============================================================================
 

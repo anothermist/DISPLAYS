@@ -3,7 +3,7 @@
 <title>Static Call Graph - [SSD1963_FSMC\SSD1963_FSMC.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image SSD1963_FSMC\SSD1963_FSMC.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Thu Mar 15 22:54:38 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sat Mar 24 01:25:37 2018
 <BR><P>
 <H3>Maximum Stack Usage =        252 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1098,19 +1098,19 @@ Global Symbols
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getX
 </UL>
 
-<P><STRONG><a name="[c9]"></a>getX</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, xpt2046.o(i.getX))
+<P><STRONG><a name="[c9]"></a>getX</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, xpt2046.o(i.getX))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = getX &rArr; getRaw &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;map
+<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;remap
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getRaw
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[cb]"></a>getY</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, xpt2046.o(i.getY))
+<P><STRONG><a name="[cb]"></a>getY</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, xpt2046.o(i.getY))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = getY &rArr; getRaw &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;map
+<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;remap
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getRaw
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -1151,10 +1151,8 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[ca]"></a>map</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, xpt2046.o(i.map))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = map
-</UL>
-<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getY
+<P><STRONG><a name="[ca]"></a>remap</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, xpt2046.o(i.remap))
+<BR><BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getY
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getX
 </UL>
 <P>
