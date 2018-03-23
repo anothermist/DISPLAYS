@@ -41,7 +41,7 @@ uint16_t getX(void)
 	if (x > RAW_MIN_X && x < RAW_MAX_X)
 	{
 		x -= RAW_MIN_X;
-		return x = OUT_MAX_X - x / ((RAW_MAX_X - RAW_MIN_X) / OUT_MAX_X);
+		return OUT_MAX_X - x / ((RAW_MAX_X - RAW_MIN_X) / OUT_MAX_X);
 	}
 	else return 0;
 }
@@ -52,7 +52,7 @@ uint16_t getY(void)
 	if (y > RAW_MIN_Y && y < RAW_MAX_Y)
 	{
 		y -= RAW_MIN_Y;
-		return y = OUT_MAX_Y - y / ((RAW_MAX_Y - RAW_MIN_Y) / OUT_MAX_Y);
+		return OUT_MAX_Y - y / ((RAW_MAX_Y - RAW_MIN_Y) / OUT_MAX_Y);
 	}
 	else return 0;
 }

@@ -3,6 +3,9 @@
 
 #include "main.h"
 
+#define	XPT2046_MIRROR_X 	1
+#define	XPT2046_MIRROR_Y 	1
+
 #define	XPT2046_ADDR_I 	0x80
 #define	XPT2046_ADDR_X 	0xD0
 #define	XPT2046_ADDR_Y 	0x90
@@ -37,6 +40,7 @@
 
 void XPT2046_Init(void);
 
+uint16_t getRaw(uint8_t address);
 uint16_t getX(void);
 uint16_t getY(void);
 

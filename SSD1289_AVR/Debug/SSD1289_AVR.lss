@@ -4980,7 +4980,7 @@ uint16_t getX(void)
     45fe:	80 f4       	brcc	.+32     	; 0x4620 <getX+0x30>
 	{
 		x -= RAW_MIN_X;
-		return x = OUT_MAX_X - x / ((RAW_MAX_X - RAW_MIN_X) / OUT_MAX_X);
+		return OUT_MAX_X - x / ((RAW_MAX_X - RAW_MIN_X) / OUT_MAX_X);
     4600:	8c 52       	subi	r24, 0x2C	; 44
     4602:	91 40       	sbci	r25, 0x01	; 1
     4604:	9c 01       	movw	r18, r24
@@ -5021,7 +5021,7 @@ uint16_t getY(void)
     4636:	88 f4       	brcc	.+34     	; 0x465a <getY+0x34>
 	{
 		y -= RAW_MIN_Y;
-		return y = OUT_MAX_Y - y / ((RAW_MAX_Y - RAW_MIN_Y) / OUT_MAX_Y);
+		return OUT_MAX_Y - y / ((RAW_MAX_Y - RAW_MIN_Y) / OUT_MAX_Y);
     4638:	2f 5f       	subi	r18, 0xFF	; 255
     463a:	3f 4f       	sbci	r19, 0xFF	; 255
     463c:	ad ec       	ldi	r26, 0xCD	; 205

@@ -536,7 +536,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x3522
+.text           0x00000000     0x3510
  *(.vectors)
  .vectors       0x00000000       0x54 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega32a/avr5/crtatmega32a.o
                 0x00000000                __vector_default
@@ -661,62 +661,62 @@ END GROUP
                 0x000016c6                __vector_20
                 0x000016ca                . = ALIGN (0x2)
  *(.text.*)
- .text.main     0x000016ca      0x324 main.o
+ .text.main     0x000016ca      0x312 main.o
                 0x000016ca                main
  .text.LCD_Rect_Fill
-                0x000019ee      0x1ca ssd1963.o
-                0x000019ee                LCD_Rect_Fill
+                0x000019dc      0x1ca ssd1963.o
+                0x000019dc                LCD_Rect_Fill
  .text.LCD_Line
-                0x00001bb8      0x156 ssd1963.o
-                0x00001bb8                LCD_Line
+                0x00001ba6      0x156 ssd1963.o
+                0x00001ba6                LCD_Line
  .text.LCD_Triangle
-                0x00001d0e       0x9a ssd1963.o
-                0x00001d0e                LCD_Triangle
+                0x00001cfc       0x9a ssd1963.o
+                0x00001cfc                LCD_Triangle
  .text.LCD_Rect
-                0x00001da8       0x7e ssd1963.o
-                0x00001da8                LCD_Rect
+                0x00001d96       0x7e ssd1963.o
+                0x00001d96                LCD_Rect
  .text.LCD_Ellipse
-                0x00001e26      0x6a8 ssd1963.o
-                0x00001e26                LCD_Ellipse
+                0x00001e14      0x6a8 ssd1963.o
+                0x00001e14                LCD_Ellipse
  .text.LCD_Circle
-                0x000024ce      0x23a ssd1963.o
-                0x000024ce                LCD_Circle
+                0x000024bc      0x23a ssd1963.o
+                0x000024bc                LCD_Circle
  .text.LCD_Circle_Helper
-                0x00002708      0x20c ssd1963.o
-                0x00002708                LCD_Circle_Helper
+                0x000026f6      0x20c ssd1963.o
+                0x000026f6                LCD_Circle_Helper
  .text.LCD_Rect_Round
-                0x00002914      0x178 ssd1963.o
-                0x00002914                LCD_Rect_Round
+                0x00002902      0x178 ssd1963.o
+                0x00002902                LCD_Rect_Round
  .text.LCD_Circle_Fill_Helper
-                0x00002a8c      0x1a4 ssd1963.o
-                0x00002a8c                LCD_Circle_Fill_Helper
+                0x00002a7a      0x1a4 ssd1963.o
+                0x00002a7a                LCD_Circle_Fill_Helper
  .text.LCD_Rect_Round_Fill
-                0x00002c30       0xd6 ssd1963.o
-                0x00002c30                LCD_Rect_Round_Fill
+                0x00002c1e       0xd6 ssd1963.o
+                0x00002c1e                LCD_Rect_Round_Fill
  .text.LCD_Font
-                0x00002d06      0x2a2 ssd1963.o
-                0x00002d06                LCD_Font
+                0x00002cf4      0x2a2 ssd1963.o
+                0x00002cf4                LCD_Font
  .text.LCD_Init
-                0x00002fa8      0x526 ssd1963.o
-                0x00002fa8                LCD_Init
+                0x00002f96      0x526 ssd1963.o
+                0x00002f96                LCD_Init
  .text.libgcc.mul
-                0x000034ce       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
-                0x000034ce                __umulhisi3
+                0x000034bc       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+                0x000034bc                __umulhisi3
  .text.libgcc.mul
-                0x000034ec        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulshisi3.o)
-                0x000034ec                __mulshisi3
-                0x000034f0                __mulohisi3
+                0x000034da        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulshisi3.o)
+                0x000034da                __mulshisi3
+                0x000034de                __mulohisi3
  .text.libgcc.mul
-                0x000034f8       0x14 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
-                0x000034f8                __muluhisi3
+                0x000034e6       0x14 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
+                0x000034e6                __muluhisi3
  .text.avr-libc
-                0x0000350c       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(memcpy_P.o)
-                0x0000350c                memcpy_P
-                0x0000351e                . = ALIGN (0x2)
+                0x000034fa       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(memcpy_P.o)
+                0x000034fa                memcpy_P
+                0x0000350c                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000351e        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x0000351e                _exit
-                0x0000351e                exit
+ .fini9         0x0000350c        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x0000350c                _exit
+                0x0000350c                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -735,11 +735,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000351e        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x0000350c        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00003522                _etext = .
+                0x00003510                _etext = .
 
-.data           0x00800060       0x58 load address 0x00003522
+.data           0x00800060       0x58 load address 0x00003510
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -760,8 +760,8 @@ END GROUP
  *(.bss*)
  *(COMMON)
                 [!provide]                PROVIDE (__bss_end, .)
-                0x00003522                __data_load_start = LOADADDR (.data)
-                0x0000357a                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00003510                __data_load_start = LOADADDR (.data)
+                0x00003568                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x008000b8        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -843,11 +843,11 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x65b9
+.debug_info     0x00000000     0x6580
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega32a/avr5/crtatmega32a.o
- .debug_info    0x000004e6     0x1d48 main.o
- .debug_info    0x0000222e     0x438b ssd1963.o
+ .debug_info    0x000004e6     0x1d0f main.o
+ .debug_info    0x000021f5     0x438b ssd1963.o
 
 .debug_abbrev   0x00000000      0x94d
  *(.debug_abbrev)
@@ -855,29 +855,29 @@ END GROUP
  .debug_abbrev  0x000004a3      0x184 main.o
  .debug_abbrev  0x00000627      0x326 ssd1963.o
 
-.debug_line     0x00000000     0x293a
+.debug_line     0x00000000     0x292e
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x115 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega32a/avr5/crtatmega32a.o
- .debug_line    0x00000115      0x75f main.o
- .debug_line    0x00000874     0x20c6 ssd1963.o
+ .debug_line    0x00000115      0x753 main.o
+ .debug_line    0x00000868     0x20c6 ssd1963.o
 
 .debug_frame    0x00000000      0x5a4
  *(.debug_frame)
  .debug_frame   0x00000000       0x24 main.o
  .debug_frame   0x00000024      0x580 ssd1963.o
 
-.debug_str      0x00000000     0x14ea
+.debug_str      0x00000000     0x150f
  *(.debug_str)
  .debug_str     0x00000000      0x196 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega32a/avr5/crtatmega32a.o
  .debug_str     0x00000196     0x11a6 main.o
                                0x11ec (size before relaxing)
- .debug_str     0x0000133c      0x1ae ssd1963.o
+ .debug_str     0x0000133c      0x1d3 ssd1963.o
                                 0x448 (size before relaxing)
 
-.debug_loc      0x00000000     0x508a
+.debug_loc      0x00000000     0x5042
  *(.debug_loc)
- .debug_loc     0x00000000      0x204 main.o
- .debug_loc     0x00000204     0x4e86 ssd1963.o
+ .debug_loc     0x00000000      0x1bc main.o
+ .debug_loc     0x000001bc     0x4e86 ssd1963.o
 
 .debug_macinfo
  *(.debug_macinfo)

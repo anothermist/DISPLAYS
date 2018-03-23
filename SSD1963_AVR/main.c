@@ -61,12 +61,11 @@
 int main(void)
 {
 	LCD_Init();
-	_delay_ms(100);
 	
 	LCD_Rect_Fill(0, 0, 800, 480, BLUE);
 	LCD_Rect_Fill(1, 1, 798, 478, BLACK);
 	
-	_delay_ms(1000);
+	_delay_ms(250);
 	LCD_Rect_Fill(0, 0, 160, 128, BLACK);
 	for(uint8_t x = 8; x <= 160; x += 8)
 	{
@@ -76,7 +75,7 @@ int main(void)
 		LCD_Line(0, 0, 160, y, 1, GREEN);
 	}
 	_delay_ms(250);
-
+	
 	uint8_t h = 16;
 	uint8_t w = 20;
 	for(uint8_t i = 0; i < 8; i++)
@@ -104,6 +103,7 @@ int main(void)
 	LCD_Ellipse(125, 60, 25, 15, 1, 1, YELLOW);
 	LCD_Font(0, 200, "1234567890", SevenSegNum, 1, RED);
 	LCD_Font(10, 220, "1234567890 TEST FONT", Clock8x7, 1, RED);
+	
 	
 	while (1)
 	{
