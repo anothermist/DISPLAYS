@@ -1,6 +1,6 @@
 #include "xpt2046.h"
 
-static inline float remap(float x, float in_min, float in_max, float out_min, float out_max)
+inline static float remap(float x, float in_min, float in_max, float out_min, float out_max)
 {
 	return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
@@ -41,7 +41,7 @@ uint16_t getRaw(uint8_t address)
 	return ((MSB << 8) | (LSB)) >> 3;
 }
 
-static inline uint16_t X(void)
+inline static uint16_t X(void)
 {
 	uint16_t x;
 	x = (uint16_t) remap(getRaw(XPT2046_ADDR_X), RAW_MIN_X, RAW_MAX_X, OUT_MIN_X, OUT_MAX_X);
@@ -50,7 +50,7 @@ static inline uint16_t X(void)
 	else return 0;
 }
 
-static inline uint16_t Y(void)
+inline static uint16_t Y(void)
 {
 	uint16_t y;
 	y = (uint16_t) remap(getRaw(XPT2046_ADDR_Y), RAW_MIN_Y, RAW_MAX_Y, OUT_MIN_Y, OUT_MAX_Y);
