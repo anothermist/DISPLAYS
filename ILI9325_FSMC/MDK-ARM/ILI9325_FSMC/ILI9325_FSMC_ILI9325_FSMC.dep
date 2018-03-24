@@ -571,7 +571,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5AA1856C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5AA1856C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5AA1856C)
 I (../Inc/stm32f1xx_it.h)(0x5AA581D9)
-F (../Src/main.c)(0x5AB55312)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_ILI9325_FSMC-I"C:\Program Files\Keil\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include"-I"C:\Program Files\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include"-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o ili9325_fsmc\main.o --omf_browse ili9325_fsmc\main.crf --depend ili9325_fsmc\main.d)
+F (../Src/main.c)(0x5AB60757)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_ILI9325_FSMC-I"C:\Program Files\Keil\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include"-I"C:\Program Files\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include"-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o ili9325_fsmc\main.o --omf_browse ili9325_fsmc\main.crf --depend ili9325_fsmc\main.d)
 I (../Inc/main.h)(0x5AA581DA)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5AA1856C)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5AA581D9)
@@ -604,7 +604,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5AA1856C)
 I (../Inc/ili9325_fsmc.h)(0x5AA34F1C)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdlib.h)(0x599EE94C)
 I (C:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x599EE94C)
-I (../Inc/xpt2046.h)(0x5AA57315)
+I (../Inc/xpt2046.h)(0x5AB615FE)
 I (../Inc/fonts/Dmd8x7Clock.h)(0x5A9E76B5)
 I (../Inc/fonts/Dmd13x20Clock.h)(0x5A9E76A6)
 I (../Inc/fonts/FreeMono9pt7b.h)(0x5A9DAEA2)
@@ -723,8 +723,8 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5AA1856C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5AA1856C)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdlib.h)(0x599EE94C)
 I (C:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x599EE94C)
-F (..\Src\xpt2046.c)(0x5AB5538C)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_ILI9325_FSMC-I"C:\Program Files\Keil\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include"-I"C:\Program Files\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include"-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o ili9325_fsmc\xpt2046.o --omf_browse ili9325_fsmc\xpt2046.crf --depend ili9325_fsmc\xpt2046.d)
-I (../Inc/xpt2046.h)(0x5AA57315)
+F (..\Src\xpt2046.c)(0x5AB6166C)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_ILI9325_FSMC-I"C:\Program Files\Keil\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include"-I"C:\Program Files\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include"-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o ili9325_fsmc\xpt2046.o --omf_browse ili9325_fsmc\xpt2046.crf --depend ili9325_fsmc\xpt2046.d)
+I (../Inc/xpt2046.h)(0x5AB615FE)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5AA1856C)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5AA581D9)
 I (../Inc/main.h)(0x5AA581DA)

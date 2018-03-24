@@ -49,7 +49,7 @@
 #define LCD_RT_S LCD_RT_PORT |= (1 << LCD_RT_PIN);
 #define LCD_RT_U LCD_RT_PORT &= ~(1 << LCD_RT_PIN);
 
-#define MIRROR_V 1
+#define MIRROR_V 0
 #define MIRROR_H 0
 
 #define LSHIFT 0

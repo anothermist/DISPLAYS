@@ -3,12 +3,10 @@
 
 #include "main.h"
 
-#define	XPT2046_MIRROR_X 	1
-#define	XPT2046_MIRROR_Y 	1
-
-#define	XPT2046_ADDR_I 	0x80
-#define	XPT2046_ADDR_X 	0xD0
-#define	XPT2046_ADDR_Y 	0x90
+#define	XPT2046_ACCURACY 1
+#define	XPT2046_REVERSED 1
+#define	XPT2046_MIRROR_X 1
+#define	XPT2046_MIRROR_Y 1
 
 #define RAW_MIN_X	400
 #define RAW_MAX_X	3600
@@ -37,6 +35,10 @@
 
 #define XPT2046_CS_S XPT2046_CS_PORT |= (1 << XPT2046_CS_PIN);
 #define XPT2046_CS_U XPT2046_CS_PORT &= ~(1 << XPT2046_CS_PIN);
+
+#define	XPT2046_ADDR_I 	0x80
+#define	XPT2046_ADDR_X 	0xD0
+#define	XPT2046_ADDR_Y 	0x90
 
 void XPT2046_Init(void);
 

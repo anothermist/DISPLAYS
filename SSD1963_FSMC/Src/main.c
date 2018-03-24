@@ -241,8 +241,10 @@ int main(void)
 		{
 		touchX = getX();	
 		touchY = getY();
-//		LCD_Pixel(touchX, touchY, WHITE);
-		LCD_Rect_Fill(touchX, touchY, 2, 2, WHITE);		
+		if (touchX && touchY)
+		{
+		LCD_Rect_Fill(touchX, touchY, 2, 2, WHITE);
+		}
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
 
 		touchX = 0;

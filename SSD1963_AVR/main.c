@@ -115,14 +115,14 @@ int main(void)
 			
 			if (tX && tY)
 			{
+				LCD_Rect_Fill(tX, tY, 2, 2, WHITE);
+				
+				LCD_Rect_Fill(2, 205, 180, 30, BLUE_D);
 				char str[3] = { 0 };
 				sprintf(str, "%.3d", tX);
 				LCD_Font(10, 230, str, Serif18, 1, RED);
 				sprintf(str, "%.3d", tY);
 				LCD_Font(100, 230, str, Serif18, 1, RED);
-				
-				LCD_Rect_Fill(2, 205, 180, 30, BLUE_D);
-				LCD_Pixel(tX, tY, WHITE);
 			}
 		}
 	}

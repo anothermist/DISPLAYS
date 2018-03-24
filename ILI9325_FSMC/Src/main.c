@@ -235,7 +235,7 @@ int main(void)
 		touchY = getY();
 		if (touchX && touchY && touchX != 0x0DB)
 		{
-		LCD_Rect_Fill(touchY, touchX, 1, 1, WHITE);
+		LCD_Rect_Fill(touchX, touchY, 1, 1, WHITE);
 		}
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
 		touchX = 0;

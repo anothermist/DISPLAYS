@@ -912,7 +912,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A77194F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A77194F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A77194F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5A77194F)
-F (../Src/main.c)(0x5AB554A5)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SSD1963_FSMC-I"C:\Program Files\Keil\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include"-I"C:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1963_fsmc\main.o --omf_browse ssd1963_fsmc\main.crf --depend ssd1963_fsmc\main.d)
+F (../Src/main.c)(0x5AB5FD08)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SSD1963_FSMC-I"C:\Program Files\Keil\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include"-I"C:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1963_fsmc\main.o --omf_browse ssd1963_fsmc\main.crf --depend ssd1963_fsmc\main.d)
 I (../Inc/main.h)(0x5AA57DDF)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A77194F)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5A8C2ED7)
@@ -953,7 +953,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5A77194F)
 I (../Inc/ssd1963_fsmc.h)(0x5AA17004)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdlib.h)(0x599EE94C)
 I (C:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x599EE94C)
-I (../Inc/xpt2046.h)(0x5AA98DD7)
+I (../Inc/xpt2046.h)(0x5AB61691)
 I (../Inc/fonts/Dmd8x7Clock.h)(0x5A9E76B5)
 I (../Inc/fonts/Dmd13x20Clock.h)(0x5A9E76A6)
 I (../Inc/fonts/FreeMono9pt7b.h)(0x5A9DAEA2)
@@ -1089,8 +1089,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A77194F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5A77194F)
 I (C:\Program Files\Keil\ARM\ARMCC\include\stdlib.h)(0x599EE94C)
 I (C:\Program Files\Keil\ARM\ARMCC\include\string.h)(0x599EE94C)
-F (..\Src\xpt2046.c)(0x5AB54592)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SSD1963_FSMC-I"C:\Program Files\Keil\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include"-I"C:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1963_fsmc\xpt2046.o --omf_browse ssd1963_fsmc\xpt2046.crf --depend ssd1963_fsmc\xpt2046.d)
-I (../Inc/xpt2046.h)(0x5AA98DD7)
+F (..\Src\xpt2046.c)(0x5AB61691)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SSD1963_FSMC-I"C:\Program Files\Keil\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include"-I"C:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1963_fsmc\xpt2046.o --omf_browse ssd1963_fsmc\xpt2046.crf --depend ssd1963_fsmc\xpt2046.d)
+I (../Inc/xpt2046.h)(0x5AB61691)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A77194F)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5A8C2ED7)
 I (../Inc/main.h)(0x5AA57DDF)
