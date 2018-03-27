@@ -1,11 +1,4 @@
-#include "ST7735.h"
-
-uint16_t LCD_Width = 0;
-uint16_t LCD_Height = 0;
-uint16_t LCD_Row_Start = 0;
-uint16_t LCD_Column_Start = 0;
-uint16_t cacheMemIndexRow = 0;
-uint16_t cacheMemIndexCol = 0;
+#include "st7735.h"
 
 uint16_t RGB(uint8_t r, uint8_t g, uint8_t b)
 {
@@ -50,28 +43,14 @@ inline static void LCD_Data_16(uint16_t word)
 	LCD_S_CS
 }
 
-inline static void LCD_Cursor(uint16_t x, uint16_t y)
-{
-	if ((x > LCD_WIDTH - (CHARS_COLS_LEN + 1)) && (y < LCD_HEIGHT - (CHARS_ROWS_LEN)))
-	{
-		cacheMemIndexRow = y + CHARS_ROWS_LEN;
-		cacheMemIndexCol = x;
-	}
-	else
-	{
-		cacheMemIndexRow = y;
-		cacheMemIndexCol = x;
-	}
-}
-
 inline static void LCD_Window(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2)
 {
 	LCD_Command(CASET);
-	LCD_Data_16(x1);
-	LCD_Data_16(x2);
-	LCD_Command(RASET);
 	LCD_Data_16(y1);
 	LCD_Data_16(y2);
+	LCD_Command(RASET);
+	LCD_Data_16(x1);
+	LCD_Data_16(x2);
 	LCD_Command(RAMWR);
 }
 
@@ -83,22 +62,12 @@ void LCD_Pixel(uint16_t x, uint16_t y, uint32_t color24)
 
 void LCD_Rect_Fill(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint32_t color24)
 {
-	if ((x + w - 1) >= LCD_Width) w = LCD_Width - x;
-	if ((y + h - 1) >= LCD_Height) h = LCD_Height - y;
-	LCD_Window(x, y, x + w - 1, y + h - 1);
-	for (y = h; y > 0; y--)
-	for (x = w; x > 0; x--)
-	LCD_Data_16(H24_RGB565(0, color24));
-}
-/*
-void LCD_Rect_Fill(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint32_t color24)
-{
 	uint32_t i = 0;
 	uint32_t j = (uint32_t) w * (uint32_t) h;
 	LCD_Window(y, x, y + h - 1, x + w - 1);
 	for (i = 0; i < j; i++) LCD_Data_16(H24_RGB565(0, color24));
 }
-*/
+
 void LCD_Line(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint8_t size, uint32_t color24)
 {
 	int deltaX = abs(x2 - x1);
@@ -126,13 +95,6 @@ void LCD_Line(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint8_t size, 
 	}
 }
 
-void LCD_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t x3, uint16_t y3, uint8_t size, uint32_t color24)
-{
-	LCD_Line(x1, y1, x2, y2, size, color24);
-	LCD_Line(x2, y2, x3, y3, size, color24);
-	LCD_Line(x3, y3, x1, y1, size, color24);
-}
-
 void LCD_Rect(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint8_t size, uint32_t color24)
 {
 	LCD_Line(x, y, x + w, y, size, color24);
@@ -140,6 +102,14 @@ void LCD_Rect(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint8_t size, uint
 	LCD_Line(x, y, x, y + h, size, color24);
 	LCD_Line(x + w, y, x + w, y + h, size, color24);
 }
+
+void LCD_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t x3, uint16_t y3, uint8_t size, uint32_t color24)
+{
+	LCD_Line(x1, y1, x2, y2, size, color24);
+	LCD_Line(x2, y2, x3, y3, size, color24);
+	LCD_Line(x3, y3, x1, y1, size, color24);
+}
+
 
 void LCD_Ellipse(int16_t x0, int16_t y0, int16_t rx, int16_t ry, uint8_t fill, uint8_t size, uint32_t color24)
 {
@@ -328,72 +298,6 @@ void LCD_Rect_Round_Fill(uint16_t x, uint16_t y, uint16_t length, uint16_t width
 	LCD_Circle_Fill_Helper(x + r, y + r, r, 2, width - 2 * r - 1, color24);
 }
 
-static void LCD_Ch(char character, uint32_t color24, ESizes size)
-{
-	uint16_t letter, idxCol, idxRow;
-	idxCol = CHARS_COLS_LEN; // last column of character array - 5 columns
-	idxRow = CHARS_ROWS_LEN; // last row of character array - 8 rows / bits
-	if (size == X1)
-	{
-		while (idxCol--)
-		{ // loop through 5 bytes
-			letter = pgm_read_byte(&CHARACTERS[character - 32][idxCol]); // read from ROM memory
-			while (idxRow--) { // loop through 8 bits
-				if ((letter & 0x80) == 0x80) { // check if bit set
-					LCD_Pixel(cacheMemIndexCol + idxCol, cacheMemIndexRow + idxRow, color24);
-				}
-				letter = letter << 1; // byte move to left / next bit
-			}
-			idxRow = CHARS_ROWS_LEN; // fill index row again
-		}
-	} else if (size == X2)
-	{
-		while (idxCol--)
-		{ // loop through 5 bytes
-			letter = pgm_read_byte(&CHARACTERS[character - 32][idxCol]); // read from ROM memory
-			while (idxRow--)
-			{ // loop through 8 bits
-				if ((letter & 0x80) == 0x80)
-				{ // check if bit set
-					LCD_Pixel(cacheMemIndexCol + idxCol, cacheMemIndexRow + (idxRow << 1), color24); // Draw first up pixel; note: (idxRow << 1) - 2x multiplied
-					LCD_Pixel(cacheMemIndexCol + idxCol, cacheMemIndexRow + (idxRow << 1) + 1, color24); // Draw second down pixel
-				}
-				letter = letter << 1; // byte move to left / next bit
-			}
-			idxRow = CHARS_ROWS_LEN; // fill index row again
-		}
-	} else if (size == X3)
-	{
-		while (idxCol--)
-		{ // loop through 5 bytes
-			letter = pgm_read_byte(&CHARACTERS[character - 32][idxCol]); // read from ROM memory
-			while (idxRow--)
-			{ // loop through 8 bits
-				if ((letter & 0x80) == 0x80)
-				{ // check if bit set
-					LCD_Pixel(cacheMemIndexCol + (idxCol << 1), cacheMemIndexRow + (idxRow << 1), color24); // Draw first left up pixel; note: (idxRow << 1) - 2x multiplied
-					LCD_Pixel(cacheMemIndexCol + (idxCol << 1), cacheMemIndexRow + (idxRow << 1) + 1, color24); // Draw second left down pixel
-					LCD_Pixel(cacheMemIndexCol + (idxCol << 1) + 1, cacheMemIndexRow + (idxRow << 1), color24); // Draw third right up pixel
-					LCD_Pixel(cacheMemIndexCol + (idxCol << 1) + 1, cacheMemIndexRow + (idxRow << 1) + 1, color24); // Draw fourth right down pixel
-				}
-				letter = letter << 1; // byte move to left / next bit
-			}
-			idxRow = CHARS_ROWS_LEN; // fill index row again
-		}
-	}
-}
-
-void LCD_String(uint16_t x, uint16_t y, char *str, uint32_t color24, ESizes size)
-{
-	LCD_Cursor(x, y);
-	uint16_t i = 0;
-	while (str[i] != '\0')
-	{
-		LCD_Ch(str[i++], color24, size);
-		LCD_Cursor(cacheMemIndexCol + (CHARS_COLS_LEN + 1) + (size >> 1), cacheMemIndexRow);
-	}
-}
-
 static void LCD_Char(int16_t x, int16_t y, const GFXglyph *glyph, const GFXfont *font, uint8_t size, uint32_t color24)
 {
 	uint8_t  *bitmap = font -> bitmap;
@@ -487,106 +391,6 @@ void LCD_Bitmap_Mono(uint16_t x, uint16_t y, PGM_P bitmap, uint32_t color24_set,
 	}
 }
 
-const uint8_t CHARACTERS[][5] PROGMEM =
-{
-	{ 0x00, 0x00, 0x00, 0x00, 0x00 }, // 20 space
-	{ 0x00, 0x00, 0x5f, 0x00, 0x00 }, // 21 !
-	{ 0x00, 0x07, 0x00, 0x07, 0x00 }, // 22 "
-	{ 0x14, 0x7f, 0x14, 0x7f, 0x14 }, // 23 #
-	{ 0x24, 0x2a, 0x7f, 0x2a, 0x12 }, // 24 $
-	{ 0x23, 0x13, 0x08, 0x64, 0x62 }, // 25 %
-	{ 0x36, 0x49, 0x55, 0x22, 0x50 }, // 26 &
-	{ 0x00, 0x05, 0x03, 0x00, 0x00 }, // 27 '
-	{ 0x00, 0x1c, 0x22, 0x41, 0x00 }, // 28 (
-	{ 0x00, 0x41, 0x22, 0x1c, 0x00 }, // 29 )
-	{ 0x14, 0x08, 0x3e, 0x08, 0x14 }, // 2a *
-	{ 0x08, 0x08, 0x3e, 0x08, 0x08 }, // 2b +
-	{ 0x00, 0x50, 0x30, 0x00, 0x00 }, // 2c ,
-	{ 0x08, 0x08, 0x08, 0x08, 0x08 }, // 2d -
-	{ 0x00, 0x60, 0x60, 0x00, 0x00 }, // 2e .
-	{ 0x20, 0x10, 0x08, 0x04, 0x02 }, // 2f /
-	{ 0x3e, 0x51, 0x49, 0x45, 0x3e }, // 30 0
-	{ 0x00, 0x42, 0x7f, 0x40, 0x00 }, // 31 1
-	{ 0x42, 0x61, 0x51, 0x49, 0x46 }, // 32 2
-	{ 0x21, 0x41, 0x45, 0x4b, 0x31 }, // 33 3
-	{ 0x18, 0x14, 0x12, 0x7f, 0x10 }, // 34 4
-	{ 0x27, 0x45, 0x45, 0x45, 0x39 }, // 35 5
-	{ 0x3c, 0x4a, 0x49, 0x49, 0x30 }, // 36 6
-	{ 0x01, 0x71, 0x09, 0x05, 0x03 }, // 37 7
-	{ 0x36, 0x49, 0x49, 0x49, 0x36 }, // 38 8
-	{ 0x06, 0x49, 0x49, 0x29, 0x1e }, // 39 9
-	{ 0x00, 0x36, 0x36, 0x00, 0x00 }, // 3a :
-	{ 0x00, 0x56, 0x36, 0x00, 0x00 }, // 3b ;
-	{ 0x08, 0x14, 0x22, 0x41, 0x00 }, // 3c <
-	{ 0x14, 0x14, 0x14, 0x14, 0x14 }, // 3d =
-	{ 0x00, 0x41, 0x22, 0x14, 0x08 }, // 3e >
-	{ 0x02, 0x01, 0x51, 0x09, 0x06 }, // 3f ?
-	{ 0x32, 0x49, 0x79, 0x41, 0x3e }, // 40 @
-	{ 0x7e, 0x11, 0x11, 0x11, 0x7e }, // 41 A
-	{ 0x7f, 0x49, 0x49, 0x49, 0x36 }, // 42 B
-	{ 0x3e, 0x41, 0x41, 0x41, 0x22 }, // 43 C
-	{ 0x7f, 0x41, 0x41, 0x22, 0x1c }, // 44 D
-	{ 0x7f, 0x49, 0x49, 0x49, 0x41 }, // 45 E
-	{ 0x7f, 0x09, 0x09, 0x09, 0x01 }, // 46 F
-	{ 0x3e, 0x41, 0x49, 0x49, 0x7a }, // 47 G
-	{ 0x7f, 0x08, 0x08, 0x08, 0x7f }, // 48 H
-	{ 0x00, 0x41, 0x7f, 0x41, 0x00 }, // 49 I
-	{ 0x20, 0x40, 0x41, 0x3f, 0x01 }, // 4a J
-	{ 0x7f, 0x08, 0x14, 0x22, 0x41 }, // 4b K
-	{ 0x7f, 0x40, 0x40, 0x40, 0x40 }, // 4c L
-	{ 0x7f, 0x02, 0x0c, 0x02, 0x7f }, // 4d M
-	{ 0x7f, 0x04, 0x08, 0x10, 0x7f }, // 4e N
-	{ 0x3e, 0x41, 0x41, 0x41, 0x3e }, // 4f O
-	{ 0x7f, 0x09, 0x09, 0x09, 0x06 }, // 50 P
-	{ 0x3e, 0x41, 0x51, 0x21, 0x5e }, // 51 Q
-	{ 0x7f, 0x09, 0x19, 0x29, 0x46 }, // 52 R
-	{ 0x46, 0x49, 0x49, 0x49, 0x31 }, // 53 S
-	{ 0x01, 0x01, 0x7f, 0x01, 0x01 }, // 54 T
-	{ 0x3f, 0x40, 0x40, 0x40, 0x3f }, // 55 U
-	{ 0x1f, 0x20, 0x40, 0x20, 0x1f }, // 56 V
-	{ 0x3f, 0x40, 0x38, 0x40, 0x3f }, // 57 W
-	{ 0x63, 0x14, 0x08, 0x14, 0x63 }, // 58 X
-	{ 0x07, 0x08, 0x70, 0x08, 0x07 }, // 59 Y
-	{ 0x61, 0x51, 0x49, 0x45, 0x43 }, // 5a Z
-	{ 0x00, 0x7f, 0x41, 0x41, 0x00 }, // 5b [
-	{ 0x02, 0x04, 0x08, 0x10, 0x20 }, // 5c backslash
-	{ 0x00, 0x41, 0x41, 0x7f, 0x00 }, // 5d ]
-	{ 0x04, 0x02, 0x01, 0x02, 0x04 }, // 5e ^
-	{ 0x40, 0x40, 0x40, 0x40, 0x40 }, // 5f _
-	{ 0x00, 0x01, 0x02, 0x04, 0x00 }, // 60 `
-	{ 0x20, 0x54, 0x54, 0x54, 0x78 }, // 61 a
-	{ 0x7f, 0x48, 0x44, 0x44, 0x38 }, // 62 b
-	{ 0x38, 0x44, 0x44, 0x44, 0x20 }, // 63 c
-	{ 0x38, 0x44, 0x44, 0x48, 0x7f }, // 64 d
-	{ 0x38, 0x54, 0x54, 0x54, 0x18 }, // 65 e
-	{ 0x08, 0x7e, 0x09, 0x01, 0x02 }, // 66 f
-	{ 0x0c, 0x52, 0x52, 0x52, 0x3e }, // 67 g
-	{ 0x7f, 0x08, 0x04, 0x04, 0x78 }, // 68 h
-	{ 0x00, 0x44, 0x7d, 0x40, 0x00 }, // 69 i
-	{ 0x20, 0x40, 0x44, 0x3d, 0x00 }, // 6a j
-	{ 0x7f, 0x10, 0x28, 0x44, 0x00 }, // 6b k
-	{ 0x00, 0x41, 0x7f, 0x40, 0x00 }, // 6c l
-	{ 0x7c, 0x04, 0x18, 0x04, 0x78 }, // 6d m
-	{ 0x7c, 0x08, 0x04, 0x04, 0x78 }, // 6e n
-	{ 0x38, 0x44, 0x44, 0x44, 0x38 }, // 6f o
-	{ 0x7c, 0x14, 0x14, 0x14, 0x08 }, // 70 p
-	{ 0x08, 0x14, 0x14, 0x14, 0x7c }, // 71 q
-	{ 0x7c, 0x08, 0x04, 0x04, 0x08 }, // 72 r
-	{ 0x48, 0x54, 0x54, 0x54, 0x20 }, // 73 s
-	{ 0x04, 0x3f, 0x44, 0x40, 0x20 }, // 74 t
-	{ 0x3c, 0x40, 0x40, 0x20, 0x7c }, // 75 u
-	{ 0x1c, 0x20, 0x40, 0x20, 0x1c }, // 76 v
-	{ 0x3c, 0x40, 0x30, 0x40, 0x3c }, // 77 w
-	{ 0x44, 0x28, 0x10, 0x28, 0x44 }, // 78 x
-	{ 0x0c, 0x50, 0x50, 0x50, 0x3c }, // 79 y
-	{ 0x44, 0x64, 0x54, 0x4c, 0x44 }, // 7a z
-	{ 0x00, 0x08, 0x36, 0x41, 0x00 }, // 7b {
-	{ 0x00, 0x00, 0x7f, 0x00, 0x00 }, // 7c |
-	{ 0x00, 0x41, 0x36, 0x08, 0x00 }, // 7d }
-	{ 0x10, 0x08, 0x08, 0x10, 0x08 }, // 7e ~
-	{ 0x00, 0x00, 0x00, 0x00, 0x00 }  // 7f
-};
-
 void LCD_SPI(void)
 {
 	LCD_PORT |= (1 << LCD_SCK) | (1 << LCD_MOSI) | (1 << LCD_CS) | (1 << LCD_DC);
@@ -605,185 +409,6 @@ void LCD_Reset(void)
 	LCD_U_RST
 	_delay_ms(150);
 	LCD_S_RST
-}
-
-void LCD_Init()
-{
-	LCD_SPI();
-	LCD_Reset();
-	
-	switch(Type)
-	{
-		case BLUE:
-		LCD_Command_List(LCD_Blue_Init);
-		break;
-
-		case RED_18_GREENTAB:
-		LCD_Command_List(LCD_Red_Init_1);
-		LCD_Command_List(LCD_Red_Init_Green_2);
-		LCD_Command_List(LCD_Red_Init_3);
-		LCD_Column_Start = 2;
-		LCD_Row_Start = 1;
-		LCD_Width = LCD_Default_Width;
-		LCD_Height = LCD_Default_Height_18;
-		break;
-
-		case RED_18_REDTAB:
-		LCD_Command_List(LCD_Red_Init_1);
-		LCD_Command_List(LCD_Red_Init_Red_2);
-		LCD_Command_List(LCD_Red_Init_3);
-		LCD_Width = LCD_Default_Width;
-		LCD_Height = LCD_Default_Height_18;
-		break;
-
-		case RED_18_BLACKTAB:
-		LCD_Command_List(LCD_Red_Init_1);
-		LCD_Command_List(LCD_Red_Init_Red_2);
-		LCD_Command_List(LCD_Red_Init_3);
-		LCD_Command(MADCTL);
-		LCD_Data_8(0xC0);
-		LCD_Width = LCD_Default_Width;
-		LCD_Height = LCD_Default_Height_18;
-		break;
-
-		case RED_144_GREENTAB:
-		LCD_Command_List(LCD_Red_Init_1);
-		LCD_Command_List(LCD_Red_Init_Green_144_2);
-		LCD_Command_List(LCD_Red_Init_3);
-		LCD_Height = LCD_Default_Height_144;
-		LCD_Column_Start = 2;
-		LCD_Row_Start = 3;
-		LCD_Width = LCD_Default_Width;
-		LCD_Height = LCD_Default_Height_144;
-		break;
-	}
-	LCD_Orientation(DEFAULT_ORIENTATION);
-	LCD_Rect_Fill(0, 0, 160, 128, BLACK);
-	LCD_Command(DISPON);
-}
-
-void LCD_Orientation(enum ORIENTATION orientation)
-{
-	LCD_Command(MADCTL);
-
-	switch (orientation)
-	{
-		case PORTRAIT:
-		if(Type == RED_18_BLACKTAB)
-		{
-			LCD_Data_8(MADCTL_MX | MADCTL_MY | MADCTL_RGB);
-		} else
-		{
-			LCD_Data_8(MADCTL_MX | MADCTL_MY | MADCTL_BGR);
-		}
-
-		LCD_Width  = LCD_Default_Width;
-
-		if(Type == RED_144_GREENTAB)
-		{
-			LCD_Height = LCD_Default_Height_144;
-		} else
-		{
-			LCD_Height = LCD_Default_Height_18;
-		}
-		break;
-
-
-		case LANDSCAPE:
-		if(Type == RED_18_BLACKTAB)
-		{
-			LCD_Data_8(MADCTL_MY | MADCTL_MV | MADCTL_RGB);
-		} else
-		{
-			LCD_Data_8(MADCTL_MY | MADCTL_MV | MADCTL_BGR);
-		}
-
-		if(Type == RED_144_GREENTAB)
-		{
-			LCD_Width = LCD_Default_Height_144;
-		} else
-		{
-			LCD_Width = LCD_Default_Height_18;
-		}
-
-		LCD_Height = LCD_Default_Width;
-		break;
-
-		case PORTRAIT_INV:
-		if (Type == RED_18_BLACKTAB)
-		{
-			LCD_Data_8(MADCTL_RGB);
-		} else
-		{
-			LCD_Data_8(MADCTL_BGR);
-		}
-
-		LCD_Width  = LCD_Default_Width;
-
-		if(Type == RED_144_GREENTAB)
-		{
-			LCD_Height = LCD_Default_Height_144;
-		} else
-		{
-			LCD_Height = LCD_Default_Height_18;
-		}
-		break;
-
-		case LANDSCAPE_INV:
-		if (Type == RED_18_BLACKTAB)
-		{
-			LCD_Data_8(MADCTL_MX | MADCTL_MV | MADCTL_RGB);
-		} else
-		{
-			LCD_Data_8(MADCTL_MX | MADCTL_MV | MADCTL_BGR);
-		}
-
-		if (Type == RED_144_GREENTAB)
-		{
-			LCD_Width = LCD_Default_Height_144;
-		} else
-		{
-			LCD_Width = LCD_Default_Height_18;
-		}
-
-		LCD_Height = LCD_Default_Width;
-		break;
-	}
-}
-
-void LCD_Command_List(const uint8_t *addr)
-{
-	uint8_t  cmd_count, arg_count, has_delay;
-
-	cmd_count = pgm_read_byte(addr++);   // Number of commands to follow
-	for(uint8_t cmd_pos = 0; cmd_pos < cmd_count; cmd_pos++)
-	{
-		LCD_Command(pgm_read_byte(addr++)); 	// Read, send command
-		arg_count  = pgm_read_byte(addr++);    		// Number of args to follow
-		has_delay = arg_count & DELAY_FLAG;         // If set, delay follows args
-		arg_count &= ~DELAY_FLAG;                  	// Number of args
-		for(uint8_t arg_pos = 0; arg_pos < arg_count; arg_pos++)
-		{ // For each argument...
-			LCD_Data_8(pgm_read_byte(addr++));  		// Read, send argument
-		}
-
-		if(has_delay)
-		{
-			uint8_t ms;
-			ms = pgm_read_byte(addr++); // Read post-command delay time (ms)
-			if(ms == 255)
-			{  // If 255, delay for 500 ms
-				_delay_ms(500);
-			} else
-			{
-				for(int i = 0; i < ms; i += 5)
-				{
-					_delay_ms(5);
-				}
-			}
-
-		}
-	}
 }
 
 const uint8_t LCD_Blue_Init[] PROGMEM = // Initialization commands for 7735B screens
@@ -931,3 +556,108 @@ const uint8_t LCD_Red_Init_3[] PROGMEM = // Init for 7735R, part 3 (red or green
 	DISPON, DELAY_FLAG, 		//  4: Main screen turn on, no args w/delay
 	100                  		//     100 ms delay
 };
+
+
+void LCD_Command_List(const uint8_t *addr)
+{
+	uint8_t  cmd_count, arg_count, has_delay;
+
+	cmd_count = pgm_read_byte(addr++);   // Number of commands to follow
+	for(uint8_t cmd_pos = 0; cmd_pos < cmd_count; cmd_pos++)
+	{
+		LCD_Command(pgm_read_byte(addr++)); 	// Read, send command
+		arg_count  = pgm_read_byte(addr++);    		// Number of args to follow
+		has_delay = arg_count & DELAY_FLAG;         // If set, delay follows args
+		arg_count &= ~DELAY_FLAG;                  	// Number of args
+		for(uint8_t arg_pos = 0; arg_pos < arg_count; arg_pos++)
+		{ // For each argument...
+			LCD_Data_8(pgm_read_byte(addr++));  		// Read, send argument
+		}
+
+		if(has_delay)
+		{
+			uint8_t ms;
+			ms = pgm_read_byte(addr++); // Read post-command delay time (ms)
+			if(ms == 255)
+			{  // If 255, delay for 500 ms
+				_delay_ms(500);
+			} else
+			{
+				for(int i = 0; i < ms; i += 5)
+				{
+					_delay_ms(5);
+				}
+			}
+
+		}
+	}
+}
+
+void LCD_Orientation(uint8_t type, uint8_t orientation)
+{
+	LCD_Command(MADCTL);
+
+	switch (orientation)
+	{
+		case 0:
+		if(type == 3) LCD_Data_8(MADCTL_MX | MADCTL_MY | MADCTL_RGB);
+		else LCD_Data_8(MADCTL_MX | MADCTL_MY | MADCTL_BGR);
+		break;
+
+		case 1:
+		if(type == 3) LCD_Data_8(MADCTL_MY | MADCTL_MV | MADCTL_RGB);
+		else LCD_Data_8(MADCTL_MY | MADCTL_MV | MADCTL_BGR);
+		break;
+
+		case 2:
+		if (type == 3) LCD_Data_8(MADCTL_RGB);
+		else LCD_Data_8(MADCTL_BGR);
+		break;
+
+		case 3:
+		if (type == 3) LCD_Data_8(MADCTL_MX | MADCTL_MV | MADCTL_RGB);
+		else LCD_Data_8(MADCTL_MX | MADCTL_MV | MADCTL_BGR);
+		break;
+	}
+}
+
+void LCD_Init(uint8_t type, uint8_t orientation)
+{
+	LCD_SPI();
+	LCD_Reset();
+	
+	switch(type)
+	{
+		case 0:
+		LCD_Command_List(LCD_Blue_Init);
+		break;
+
+		case 1:
+		LCD_Command_List(LCD_Red_Init_1);
+		LCD_Command_List(LCD_Red_Init_Green_2);
+		LCD_Command_List(LCD_Red_Init_3);
+		break;
+
+		case 2:
+		LCD_Command_List(LCD_Red_Init_1);
+		LCD_Command_List(LCD_Red_Init_Red_2);
+		LCD_Command_List(LCD_Red_Init_3);
+		break;
+
+		case 3:
+		LCD_Command_List(LCD_Red_Init_1);
+		LCD_Command_List(LCD_Red_Init_Red_2);
+		LCD_Command_List(LCD_Red_Init_3);
+		LCD_Command(MADCTL);
+		LCD_Data_8(0xC0);
+		break;
+		
+		case 4:
+		LCD_Command_List(LCD_Red_Init_1);
+		LCD_Command_List(LCD_Red_Init_Green_144_2);
+		LCD_Command_List(LCD_Red_Init_3);
+		break;
+	}
+	LCD_Command(DISPON);
+	LCD_Orientation(type, orientation);
+}

@@ -1,5 +1,5 @@
-#ifndef _LCD_H_
-#define _LCD_H_
+#ifndef _ST7735_H_
+#define _ST7735_H_
 
 #include "main.h"
 
@@ -17,28 +17,6 @@
 #define LCD_U_CS	LCD_PORT &= ~(1 << LCD_CS);
 #define LCD_S_RST	LCD_PORT |= (1 << LCD_RST);
 #define LCD_U_RST	LCD_PORT &= ~(1 << LCD_RST);
-
-enum DISPLAY_TYPE {
-	BLUE,
-	RED_18_GREENTAB,
-	RED_18_REDTAB,
-	RED_18_BLACKTAB,
-	RED_144_GREENTAB
-};
-
-static const enum DISPLAY_TYPE Type = 2;
-
-#define LCD_HEIGHT 128
-#define LCD_WIDTH  160
-
-#define DEFAULT_ORIENTATION 0
-
-enum ORIENTATION {
-	LANDSCAPE,
-	PORTRAIT,
-	LANDSCAPE_INV,
-	PORTRAIT_INV
-};
 
 #define BLACK 	0x000000 /*   0,   0,   0 */
 #define WHITE 	0xFFFFFF /* 255, 255, 255 */
@@ -62,17 +40,6 @@ enum ORIENTATION {
 #define OLIVE 	0x808000 /* 128, 128,   0 */
 #define LIME 	0xBFFF00 /* 191, 255,   0 */
 
-#define CHARS_COLS_LEN 5
-#define CHARS_ROWS_LEN 8
-
-extern const uint8_t CHARACTERS[][CHARS_COLS_LEN];
-
-typedef enum {
-	X1 = 0x00,
-	X2 = 0x01,
-	X3 = 0x0A
-} ESizes;
-
 typedef struct { // Data stored PER GLYPH
 	uint16_t bitmapOffset;     // Pointer into GFXfont->bitmap
 	uint8_t  width, height;    // Bitmap dimensions in pixels
@@ -90,9 +57,8 @@ typedef struct { // Data stored for FONT AS A WHOLE:
 uint16_t RGB(uint8_t r, uint8_t g, uint8_t b);
 
 void LCD_SPI(void);
-void LCD_Init(void);
-void LCD_Orientation(uint8_t orientation);
-
+void LCD_Init(uint8_t type, uint8_t orientation);
+void LCD_Orientation(uint8_t type, uint8_t orientation);
 void LCD_Pixel(uint16_t x, uint16_t y, uint32_t color24);
 void LCD_Rect_Fill(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint32_t color24);
 void LCD_Line(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint8_t size, uint32_t color24);
@@ -102,21 +68,9 @@ void LCD_Ellipse(int16_t x0, int16_t y0, int16_t rx, int16_t ry, uint8_t fill, u
 void LCD_Circle(uint16_t x, uint16_t y, uint8_t radius, uint8_t fill, uint8_t size, uint32_t color24);
 void LCD_Rect_Round(uint16_t x, uint16_t y, uint16_t length, uint16_t width, uint16_t r, uint8_t size, uint32_t color24);
 void LCD_Rect_Round_Fill(uint16_t x, uint16_t y, uint16_t length, uint16_t width, uint16_t r, uint32_t color24);
-void LCD_String(uint16_t x, uint16_t y, char *str, uint32_t color24, ESizes size);
 void LCD_Font(uint16_t x, uint16_t y, char *text, const GFXfont *p_font, uint8_t size, uint32_t color24);
 void LCD_Bitmap(uint16_t x, uint16_t y, PGM_P bitmap);
 void LCD_Bitmap_Mono(uint16_t x, uint16_t y, PGM_P bitmap, uint32_t color24_set, uint32_t color24_unset);
-
-static const uint8_t LCD_Default_Width = 128;
-static const uint8_t LCD_Default_Height_144 = 128;
-static const uint8_t LCD_Default_Height_18 = 160;
-
-extern const uint8_t LCD_Blue_Init[];
-extern const uint8_t LCD_Red_Init_1[];
-extern const uint8_t LCD_Red_Init_Green_2[];
-extern const uint8_t LCD_Red_Init_Red_2[];
-extern const uint8_t LCD_Red_Init_Green_144_2[];
-extern const uint8_t LCD_Red_Init_3[];
 
 enum LCD_MADCTL_ARGS {
 	MADCTL_MY	= 0x80,	// Mirror Y
@@ -178,4 +132,4 @@ enum LCD_COMMANDS {
 	GMCTRN1	= 0xE1
 };
 
-#endif /* _LCD_H_ */
+#endif /* _ST7735_H_ */
