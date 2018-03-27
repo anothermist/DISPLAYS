@@ -1,7 +1,12 @@
-#ifndef _LCD_H_
-#define _LCD_H_
+#ifndef _ILI9341_H_
+#define _ILI9341_H_
 
 #include "main.h"
+
+#define LCD_HEIGHT 240
+#define LCD_WIDTH  320
+
+#define DEFAULT_ORIENTATION 3
 
 #define LCD_PORT PORTB
 #define LCD_DDR  DDRB
@@ -11,17 +16,12 @@
 #define LCD_SCK	 PB7 // PB5 | PB7
 #define LCD_RST	 0
 
-#define LCD_S_DC	LCD_PORT |= (1 << LCD_DC);
-#define LCD_U_DC	LCD_PORT &= ~(1 << LCD_DC);
-#define LCD_S_CS	LCD_PORT |= (1 << LCD_CS);
-#define LCD_U_CS	LCD_PORT &= ~(1 << LCD_CS);
-#define LCD_S_RST	LCD_PORT |= (1 << LCD_RST);
-#define LCD_U_RST	LCD_PORT &= ~(1 << LCD_RST);
-
-#define LCD_HEIGHT 240
-#define LCD_WIDTH  320
-
-#define DEFAULT_ORIENTATION 3
+#define LCD_DC_S	LCD_PORT |= (1 << LCD_DC);
+#define LCD_DC_U	LCD_PORT &= ~(1 << LCD_DC);
+#define LCD_CS_S	LCD_PORT |= (1 << LCD_CS);
+#define LCD_CS_U	LCD_PORT &= ~(1 << LCD_CS);
+#define LCD_RST_S	LCD_PORT |= (1 << LCD_RST);
+#define LCD_RST_U	LCD_PORT &= ~(1 << LCD_RST);
 
 #define BLACK 	0x000000 /*   0,   0,   0 */
 #define WHITE 	0xFFFFFF /* 255, 255, 255 */
@@ -45,17 +45,6 @@
 #define OLIVE 	0x808000 /* 128, 128,   0 */
 #define LIME 	0xBFFF00 /* 191, 255,   0 */
 
-#define CHARS_COLS_LEN 5
-#define CHARS_ROWS_LEN 8
-
-extern const uint8_t CHARACTERS[][CHARS_COLS_LEN];
-
-typedef enum {
-	X1 = 0x00,
-	X2 = 0x01,
-	X3 = 0x0A
-} ESizes;
-
 typedef struct { // Data stored PER GLYPH
 	uint16_t bitmapOffset;     // Pointer into GFXfont->bitmap
 	uint8_t  width, height;    // Bitmap dimensions in pixels
@@ -70,12 +59,11 @@ typedef struct { // Data stored for FONT AS A WHOLE:
 	uint8_t   yAdvance;    // Newline distance (y axis)
 } GFXfont;
 
-inline uint16_t RGB(uint8_t r, uint8_t g, uint8_t b);
+uint16_t RGB(uint8_t r, uint8_t g, uint8_t b);
 
 void LCD_SPI(void);
 void LCD_Init(void);
 void LCD_Orientation(uint8_t orientation);
-
 void LCD_Pixel(uint16_t x, uint16_t y, uint32_t color24);
 void LCD_Rect_Fill(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint32_t color24);
 void LCD_Line(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint8_t size, uint32_t color24);
@@ -85,10 +73,13 @@ void LCD_Ellipse(int16_t x0, int16_t y0, int16_t rx, int16_t ry, uint8_t fill, u
 void LCD_Circle(uint16_t x, uint16_t y, uint8_t radius, uint8_t fill, uint8_t size, uint32_t color24);
 void LCD_Rect_Round(uint16_t x, uint16_t y, uint16_t length, uint16_t width, uint16_t r, uint8_t size, uint32_t color24);
 void LCD_Rect_Round_Fill(uint16_t x, uint16_t y, uint16_t length, uint16_t width, uint16_t r, uint32_t color24);
-void LCD_String(uint16_t x, uint16_t y, char *str, uint32_t color24, ESizes size);
 void LCD_Font(uint16_t x, uint16_t y, char *text, const GFXfont *p_font, uint8_t size, uint32_t color24);
 void LCD_Bitmap(uint16_t x, uint16_t y, PGM_P bitmap);
 void LCD_Bitmap_Mono(uint16_t x, uint16_t y, PGM_P bitmap, uint32_t color24_set, uint32_t color24_unset);
+
+void LCD_setupScrollArea(uint16_t TFA, uint16_t BFA) ;
+void LCD_scrollAddress(uint16_t VSP);
+int LCD_scrollLine(void);
 
 // The scrolling area must be a integral multiple of TEXT_HEIGHT
 #define TEXT_HEIGHT 16 // Height of text to be printed and scrolled
@@ -187,13 +178,4 @@ void LCD_Bitmap_Mono(uint16_t x, uint16_t y, PGM_P bitmap, uint32_t color24_set,
 #define INTERFACE_CONTROL               0xF6
 #define PUMP_RATIO_CONTROL              0xF7
 
-void LCD_setupScrollArea(uint16_t TFA, uint16_t BFA) ;
-void LCD_scrollAddress(uint16_t VSP);
-int LCD_scrollLine();
-
-void LCD_Init();
-void LCD_Orientation(uint8_t orientation);
-
-void LCD_String_Universal(uint16_t x0, uint16_t y0, uint32_t color24, uint32_t ground24, const unsigned char *font, char *s);
-
-#endif /* _LCD_H_ */
+#endif /* _ILI9341_H_ */

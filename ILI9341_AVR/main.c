@@ -65,18 +65,14 @@ int main(void)
 	LCD_Rect_Fill(0, 0, 320, 240, BLUE);
 	LCD_Rect_Fill(1, 1, 318, 238, BLACK);
 
-	LCD_Bitmap_Mono(16, 4, &bitmapImageMono, BLUE, BLACK);
+	//LCD_Bitmap_Mono(16, 4, &bitmapImageMono, BLUE, BLACK);
 	
-	_delay_ms(500);
-	for(uint8_t x = 8; x <= 160; x += 8)
-	{
-		LCD_Line(0, 0, x, 128, 1, GREEN);
-	}
-	for(uint8_t y = 8; y <= 128; y += 8) {
-		LCD_Line(0, 0, 160, y, 1, GREEN);
-	}
-	_delay_ms(250);
+	_delay_ms(1000);
+	for(uint8_t x = 8; x <= 128; x += 8) LCD_Line(0, 0, x, 128, 1, GREEN);
+	for(uint8_t y = 8; y <= 128; y += 8) LCD_Line(0, 0, 128, y, 1, GREEN);
 
+	_delay_ms(250);
+	
 	uint8_t h = 16;
 	uint8_t w = 20;
 	for(uint8_t i = 0; i < 8; i++)
@@ -86,14 +82,18 @@ int main(void)
 		w += 20;
 	}
 	_delay_ms(250);
+	
+	LCD_Rect_Fill(2, 1, 128, 128, BLUE_D);
+	LCD_Rect_Fill(3, 2, 126, 126, BLACK);
+	
 	LCD_Rect_Fill(0, 0, 160, 128, BLUE);
 	LCD_Rect_Fill(1, 1, 158, 126, BLACK);
 	LCD_Font(5, 40, "This is\n just a Test\nST7735\n", Thumb, 1, YELLOW);
 	LCD_Line(23, 20, 137, 20, 1, MAGENTA);
 	LCD_Line(23, 21, 137, 21, 1, BLUE);
 	LCD_Line(23, 21, 137, 21, 1, BLUE);
-	LCD_String(41, 10, "ST7735 DRIVER", MAGENTA, X1);
-	LCD_String(53, 26, "ATMEGA 328 - 1284", RED, X2);
+	LCD_Font(41, 10, "ST7735 DRIVER", Org, 1, MAGENTA);
+	LCD_Font(35, 35, "AVR-ARM", SerifBold9, 1, RED);
 	LCD_Circle(40, 90, 30, 0, 1, RED);
 	LCD_Circle(45, 90, 20, 1, 1, BLUE);
 	LCD_Triangle(5, 5, 5, 20, 25, 25, 2, BLUE);
@@ -102,10 +102,10 @@ int main(void)
 	LCD_Rect_Round_Fill(80, 100, 60, 25, 10, WHITE);
 	LCD_Ellipse(60, 100, 30, 20, 0, 2, YELLOW);
 	LCD_Ellipse(125, 60, 25, 15, 1, 1, YELLOW);
-	LCD_Font(0, 200, "1234567890", SevenSegNum, 1, RED);
-	LCD_Font(10, 220, "1234567890 TEST FONT", Clock8x7, 1, RED);
+	////LCD_Font(0, 200, "1234567890", SevenSegNum, 1, RED);
+	////LCD_Font(10, 220, "1234567890 TEST FONT", Clock8x7, 1, RED);
 	
-//	LCD_Bitmap(120, 45, &bitmapImage);
+	//	LCD_Bitmap(120, 45, &bitmapImage);
 	
 	while (1)
 	{
@@ -113,4 +113,3 @@ int main(void)
 		//LCD_Rect_Fill(0, 0, 320, 240, BLACK);
 	}
 }
-

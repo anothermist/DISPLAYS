@@ -153,20 +153,20 @@ int main(void)
   MX_GPIO_Init();
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
-	//LCD_Init(2, 3);
-	LCD_Init(3, 2);
+	LCD_Init(2, 3);
+	//LCD_Init(3, 2);
 	
-	LCD_Rect_Fill(2, 1, 128, 128, BLUE_D); HAL_Delay(1000);
-	LCD_Rect_Fill(3, 2, 126, 126, BLACK);
+	//LCD_Rect_Fill(2, 1, 128, 128, BLUE_D);
+	//LCD_Rect_Fill(3, 2, 126, 126, BLACK);
 	
-//	LCD_Rect_Fill(0, 0, 160, 128, BLUE);
-//	LCD_Rect_Fill(1, 1, 158, 126, BLACK);
+	LCD_Rect_Fill(0, 0, 160, 128, BLUE);
+	LCD_Rect_Fill(1, 1, 158, 126, BLACK);
 	
 	//LCD_Bitmap_Mono(16, 4, &bitmapImageMono, BLUE, BLACK);
 	
 	HAL_Delay(1000);
-	for(uint8_t x = 8; x <= 128; x += 8) LCD_Line(0, 0, x, 128, 1, GREEN);
-	for(uint8_t y = 8; y <= 128; y += 8) LCD_Line(0, 0, 128, y, 1, GREEN);
+	for(uint8_t x = 8; x <= LCD_WIDTH; x += 8) LCD_Line(0, 0, x, LCD_HEIGHT, 1, GREEN);
+	for(uint8_t y = 8; y <= LCD_HEIGHT; y += 8) LCD_Line(0, 0, LCD_WIDTH, y, 1, GREEN);
 
 	HAL_Delay(250);
 	
@@ -180,11 +180,11 @@ int main(void)
 	}
 	HAL_Delay(250);
 	
-	LCD_Rect_Fill(2, 1, 128, 128, BLUE_D);
-	LCD_Rect_Fill(3, 2, 126, 126, BLACK);
+	//LCD_Rect_Fill(2, 1, 128, 128, BLUE_D);
+	//LCD_Rect_Fill(3, 2, 126, 126, BLACK);
 	
-//	LCD_Rect_Fill(0, 0, 160, 128, BLUE);
-//	LCD_Rect_Fill(1, 1, 158, 126, BLACK);
+	LCD_Rect_Fill(0, 0, 160, 128, BLUE);
+	LCD_Rect_Fill(1, 1, 158, 126, BLACK);
 	LCD_Font(5, 40, "This is\n just a Test\nST7735\n", Thumb, 1, YELLOW);
 	LCD_Line(23, 20, 137, 20, 1, MAGENTA);
 	LCD_Line(23, 21, 137, 21, 1, BLUE);

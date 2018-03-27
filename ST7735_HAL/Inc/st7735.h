@@ -5,8 +5,6 @@
  extern "C" {
 #endif
 
-#define	LCD_SPI hspi2
-
 #include "stm32f1xx_hal.h"
 #include "stm32f1xx_hal_gpio.h"
 #include "stm32f1xx_hal_rcc.h"
@@ -14,6 +12,11 @@
 
 #include <stdlib.h>
 #include <string.h>
+
+#define	LCD_SPI hspi2
+
+#define LCD_HEIGHT 128
+#define LCD_WIDTH  160
 
 #define SOFT_CS 0
 #define LCD_CS_PORT	 GPIOB

@@ -2,13 +2,6 @@
 
 extern SPI_HandleTypeDef LCD_SPI;
 
-uint16_t LCD_Width = 0;
-uint16_t LCD_Height = 0;
-uint16_t LCD_Row_Start = 0;
-uint16_t LCD_Column_Start = 0;
-uint16_t cacheMemIndexRow = 0;
-uint16_t cacheMemIndexCol = 0;
-
 uint16_t RGB(uint8_t r, uint8_t g, uint8_t b)
 {
 	return ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | (b >> 3);
@@ -27,7 +20,7 @@ inline static void LCD_Command(uint8_t cmd)
 {
 	if (SOFT_CS) LCD_CS_U
 	LCD_DC_U
-	HAL_SPI_Transmit(&LCD_SPI, &cmd, 1, 1);
+	HAL_SPI_Transmit(&LCD_SPI, &cmd, 1, 0);
 	if (SOFT_CS) 	LCD_CS_S
 }
 
@@ -35,7 +28,7 @@ inline static void LCD_Data_8(uint8_t data)
 {
 	if (SOFT_CS) LCD_CS_U
 	LCD_DC_S
-	HAL_SPI_Transmit(&LCD_SPI, &data, 1, 1);
+	HAL_SPI_Transmit(&LCD_SPI, &data, 1, 0);
 	if (SOFT_CS) LCD_CS_S
 }
 
@@ -114,7 +107,6 @@ void LCD_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t x
 	LCD_Line(x2, y2, x3, y3, size, color24);
 	LCD_Line(x3, y3, x1, y1, size, color24);
 }
-
 
 void LCD_Ellipse(int16_t x0, int16_t y0, int16_t rx, int16_t ry, uint8_t fill, uint8_t size, uint32_t color24)
 {
@@ -654,4 +646,5 @@ void LCD_Init(uint8_t type, uint8_t orientation)
 	}
 	LCD_Command(DISPON);
 	LCD_Orientation(type, orientation);
+	LCD_Rect_Fill(1, 1, LCD_WIDTH, LCD_WIDTH, BLACK);
 }

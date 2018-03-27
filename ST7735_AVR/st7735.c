@@ -19,7 +19,7 @@ inline static void LCD_Command(uint8_t cmd)
 	LCD_U_CS
 	LCD_U_DC
 	SPDR = cmd;
-	while(!(SPSR & (1<<SPIF)));
+	while(!(SPSR & (1 << SPIF)));
 	LCD_S_CS
 }
 
@@ -28,7 +28,7 @@ inline static void LCD_Data_8(uint8_t data)
 	LCD_U_CS
 	LCD_S_DC
 	SPDR = data;
-	while(!(SPSR & (1<<SPIF)));
+	while(!(SPSR & (1 << SPIF)));
 	LCD_S_CS
 }
 
@@ -37,9 +37,9 @@ inline static void LCD_Data_16(uint16_t word)
 	LCD_U_CS
 	LCD_S_DC
 	SPDR = (word >> 8) & 0x00FF;
-	while(!(SPSR & (1<<SPIF)));
+	while(!(SPSR & (1 << SPIF)));
 	SPDR = word & 0x00FF;
-	while(!(SPSR & (1<<SPIF)));
+	while(!(SPSR & (1 << SPIF)));
 	LCD_S_CS
 }
 
@@ -396,7 +396,7 @@ void LCD_SPI(void)
 	LCD_PORT |= (1 << LCD_SCK) | (1 << LCD_MOSI) | (1 << LCD_CS) | (1 << LCD_DC);
 	LCD_DDR  |= (1 << LCD_SCK) | (1 << LCD_MOSI) | (1 << LCD_CS) | (1 << LCD_DC);
 	SPCR |= (1 << SPE) | (1 << MSTR);
-	SPSR |= (1 << SPI2X) | (1 << SPR1) | (1 << SPR0);
+	SPSR |= (1 << SPI2X) | (0 << SPR1) | (0 << SPR0);
 }
 
 void LCD_Reset(void)
@@ -660,4 +660,5 @@ void LCD_Init(uint8_t type, uint8_t orientation)
 	}
 	LCD_Command(DISPON);
 	LCD_Orientation(type, orientation);
+	LCD_Rect_Fill(1, 1, LCD_WIDTH, LCD_WIDTH, BLACK);
 }

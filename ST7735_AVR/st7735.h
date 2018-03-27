@@ -3,6 +3,9 @@
 
 #include "main.h"
 
+#define LCD_HEIGHT 128
+#define LCD_WIDTH  160
+
 #define LCD_PORT PORTB
 #define LCD_DDR  DDRB
 #define LCD_DC	 PB3 // PB1 | PB3

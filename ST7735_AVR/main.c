@@ -63,8 +63,8 @@ int main(void)
 	LCD_Init(2, 3);
 	//LCD_Init(3, 2);
 	
-	LCD_Rect_Fill(2, 1, 128, 128, BLUE_D);
-	LCD_Rect_Fill(3, 2, 126, 126, BLACK);
+	//LCD_Rect_Fill(2, 1, 128, 128, BLUE_D);
+	//LCD_Rect_Fill(3, 2, 126, 126, BLACK);
 	
 	LCD_Rect_Fill(0, 0, 160, 128, BLUE);
 	LCD_Rect_Fill(1, 1, 158, 126, BLACK);
@@ -72,8 +72,8 @@ int main(void)
 	//LCD_Bitmap_Mono(16, 4, &bitmapImageMono, BLUE, BLACK);
 	
 	_delay_ms(1000);
-	for(uint8_t x = 8; x <= 128; x += 8) LCD_Line(0, 0, x, 128, 1, GREEN);
-	for(uint8_t y = 8; y <= 128; y += 8) LCD_Line(0, 0, 128, y, 1, GREEN);
+	for(uint8_t x = 8; x <= LCD_WIDTH; x += 8) LCD_Line(0, 0, x, LCD_HEIGHT, 1, GREEN);
+	for(uint8_t y = 8; y <= LCD_HEIGHT; y += 8) LCD_Line(0, 0, LCD_WIDTH, y, 1, GREEN);
 
 	_delay_ms(250);
 	
@@ -87,8 +87,8 @@ int main(void)
 	}
 	_delay_ms(250);
 	
-	LCD_Rect_Fill(2, 1, 128, 128, BLUE_D);
-	LCD_Rect_Fill(3, 2, 126, 126, BLACK);
+	//LCD_Rect_Fill(2, 1, 128, 128, BLUE_D);
+	//LCD_Rect_Fill(3, 2, 126, 126, BLACK);
 	
 	LCD_Rect_Fill(0, 0, 160, 128, BLUE);
 	LCD_Rect_Fill(1, 1, 158, 126, BLACK);

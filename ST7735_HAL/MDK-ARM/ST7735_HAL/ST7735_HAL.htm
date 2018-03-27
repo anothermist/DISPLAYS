@@ -3,7 +3,7 @@
 <title>Static Call Graph - [ST7735_HAL\ST7735_HAL.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ST7735_HAL\ST7735_HAL.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue Mar 27 08:54:51 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Mar 28 03:33:19 2018
 <BR><P>
 <H3>Maximum Stack Usage =        328 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -481,11 +481,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[5d]"></a>LCD_Init</STRONG> (Thumb, 134 bytes, Stack size 16 bytes, st7735.o(i.LCD_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = LCD_Init &rArr; LCD_Command_List &rArr; LCD_Data_8 &rArr; HAL_SPI_Transmit &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<P><STRONG><a name="[5d]"></a>LCD_Init</STRONG> (Thumb, 148 bytes, Stack size 16 bytes, st7735.o(i.LCD_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = LCD_Init &rArr; LCD_Rect_Fill &rArr; LCD_Window &rArr; LCD_Data_16 &rArr; LCD_Data_8 &rArr; HAL_SPI_Transmit &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Data_8
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Command
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Rect_Fill
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Orientation
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Command_List
 </UL>
@@ -532,6 +533,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Char
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Rect_Round_Fill
 <LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Line
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
 <LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Ellipse
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Circle
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -617,7 +619,7 @@ Global Symbols
 
 <P><STRONG><a name="[74]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[35]"></a>main</STRONG> (Thumb, 512 bytes, Stack size 24 bytes, main.o(i.main))
+<P><STRONG><a name="[35]"></a>main</STRONG> (Thumb, 504 bytes, Stack size 24 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 328<LI>Call Chain = main &rArr; LCD_Rect_Round_Fill &rArr; LCD_Circle_Fill_Helper &rArr; LCD_Line &rArr; LCD_Rect_Fill &rArr; LCD_Window &rArr; LCD_Data_16 &rArr; LCD_Data_8 &rArr; HAL_SPI_Transmit &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Triangle
