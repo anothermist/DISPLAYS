@@ -24,10 +24,13 @@ ili9341_hal\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 ili9341_hal\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 ili9341_hal\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 ili9341_hal\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
+ili9341_hal\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
+ili9341_hal\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 ili9341_hal\main.o: ../Inc/ili9341.h
 ili9341_hal\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_fsmc.h
 ili9341_hal\main.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
 ili9341_hal\main.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
+ili9341_hal\main.o: ../Inc/xpt2046.h
 ili9341_hal\main.o: ../Inc/fonts/Dmd8x7Clock.h
 ili9341_hal\main.o: ../Inc/fonts/Dmd13x20Clock.h
 ili9341_hal\main.o: ../Inc/fonts/FreeMono9pt7b.h

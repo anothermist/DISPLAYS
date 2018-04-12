@@ -42,6 +42,7 @@
 
 /* USER CODE BEGIN Includes */
 #include "ili9341.h"
+#include "xpt2046.h"
 
 #include "fonts/Dmd8x7Clock.h"
 #include "fonts/Dmd13x20Clock.h"
@@ -101,17 +102,24 @@
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
+SPI_HandleTypeDef hspi1;
 SPI_HandleTypeDef hspi2;
+
+TIM_HandleTypeDef htim1;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-
+uint8_t touchIRQ = 0;
+uint16_t touchX = 0, touchY = 0;
+uint64_t millis = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_SPI2_Init(void);
+static void MX_SPI1_Init(void);
+static void MX_TIM1_Init(void);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
@@ -152,51 +160,56 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_SPI2_Init();
+  MX_SPI1_Init();
+  MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
+	HAL_TIM_Base_Start(&htim1);
+	HAL_TIM_Base_Start_IT(&htim1);
+	
 	LCD_Init();
-//	XPT2046_Init();
+	XPT2046_Init();
 
 	LCD_Rect_Fill(0, 0, 320, 240, BLUE);
 	LCD_Rect_Fill(1, 1, 318, 238, BLACK);
 	
-	HAL_Delay(250);
-	LCD_Rect_Fill(0, 0, 160, 128, BLACK);
-	for(uint8_t x = 8; x <= 160; x += 8)
-	{
-		LCD_Line(0, 0, x, 128, 1, GREEN);
-	}
-	for(uint8_t y = 8; y <= 128; y += 8) {
-		LCD_Line(0, 0, 160, y, 1, GREEN);
-	}
-	HAL_Delay(250);
+//	HAL_Delay(250);
+//	LCD_Rect_Fill(0, 0, 160, 128, BLACK);
+//	for(uint8_t x = 8; x <= 160; x += 8)
+//	{
+//		LCD_Line(0, 0, x, 128, 1, GREEN);
+//	}
+//	for(uint8_t y = 8; y <= 128; y += 8) {
+//		LCD_Line(0, 0, 160, y, 1, GREEN);
+//	}
+//	HAL_Delay(250);
 
-	uint8_t h = 16;
-	uint8_t w = 20;
-	for(uint8_t i = 0; i < 8; i++)
-	{
-		LCD_Rect(80 - w / 2, 64 - h / 2, w, h, 2, YELLOW);
-		h += 16;
-		w += 20;
-	}
-	HAL_Delay(250);
-	LCD_Rect_Fill(0, 0, 160, 128, BLUE);
-	LCD_Rect_Fill(1, 1, 158, 126, BLACK);
-	LCD_Font(5, 40, "This is\n just a Test\nST7735\n", Thumb, 1, YELLOW);
-	LCD_Line(23, 20, 137, 20, 1, MAGENTA);
-	LCD_Line(23, 21, 137, 21, 1, BLUE);
-	LCD_Line(23, 21, 137, 21, 1, BLUE);
-	LCD_Font(41, 10, "SSD1289 DRIVER", Org, 1, MAGENTA);
-	LCD_Font(45, 35, "STM 32 HAL", SerifBold9, 1, RED);
-	LCD_Circle(40, 90, 30, 0, 1, RED);
-	LCD_Circle(45, 90, 20, 1, 1, BLUE);
-	LCD_Triangle(5, 5, 5, 20, 25, 25, 2, BLUE);
-	LCD_Rect(60, 45, 30, 20, 2, GREEN);
-	LCD_Rect_Round(80, 70, 60, 25, 10, 3, WHITE);
-	LCD_Rect_Round_Fill(80, 100, 60, 25, 10, WHITE);
-	LCD_Ellipse(60, 100, 30, 20, 0, 2, YELLOW);
-	LCD_Ellipse(125, 60, 25, 15, 1, 1, YELLOW);
-	LCD_Font(0, 200, "1234567890", SevenSegNum, 1, RED);
-	LCD_Font(10, 220, "1234567890 TEST FONT", Clock8x7, 1, RED);
+//	uint8_t h = 16;
+//	uint8_t w = 20;
+//	for(uint8_t i = 0; i < 8; i++)
+//	{
+//		LCD_Rect(80 - w / 2, 64 - h / 2, w, h, 2, YELLOW);
+//		h += 16;
+//		w += 20;
+//	}
+//	HAL_Delay(250);
+//	LCD_Rect_Fill(0, 0, 160, 128, BLUE);
+//	LCD_Rect_Fill(1, 1, 158, 126, BLACK);
+//	LCD_Font(5, 40, "This is\n just a Test\nST7735\n", Thumb, 1, YELLOW);
+//	LCD_Line(23, 20, 137, 20, 1, MAGENTA);
+//	LCD_Line(23, 21, 137, 21, 1, BLUE);
+//	LCD_Line(23, 21, 137, 21, 1, BLUE);
+//	LCD_Font(41, 10, "SSD1289 DRIVER", Org, 1, MAGENTA);
+//	LCD_Font(45, 35, "STM 32 HAL", SerifBold9, 1, RED);
+//	LCD_Circle(40, 90, 30, 0, 1, RED);
+//	LCD_Circle(45, 90, 20, 1, 1, BLUE);
+//	LCD_Triangle(5, 5, 5, 20, 25, 25, 2, BLUE);
+//	LCD_Rect(60, 45, 30, 20, 2, GREEN);
+//	LCD_Rect_Round(80, 70, 60, 25, 10, 3, WHITE);
+//	LCD_Rect_Round_Fill(80, 100, 60, 25, 10, WHITE);
+//	LCD_Ellipse(60, 100, 30, 20, 0, 2, YELLOW);
+//	LCD_Ellipse(125, 60, 25, 15, 1, 1, YELLOW);
+//	LCD_Font(0, 200, "1234567890", SevenSegNum, 1, RED);
+//	LCD_Font(10, 220, "1234567890 TEST FONT", Clock8x7, 1, RED);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -207,7 +220,23 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-
+		if ((HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_3) == GPIO_PIN_SET)) touchIRQ = 1;
+		
+		touchIRQ = 1;
+		
+		if (touchIRQ) 
+		{
+		touchX = getX();	
+		touchY = getY();
+		if (touchX && touchY && touchY != 0x0DB)
+		{
+		LCD_Rect_Fill(touchX, touchY, 1, 1, WHITE);
+		}
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
+		touchX = 0;
+		touchY = 0;
+		touchIRQ = 0;
+		}
   }
   /* USER CODE END 3 */
 
@@ -263,6 +292,30 @@ void SystemClock_Config(void)
   HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
 }
 
+/* SPI1 init function */
+static void MX_SPI1_Init(void)
+{
+
+  /* SPI1 parameter configuration*/
+  hspi1.Instance = SPI1;
+  hspi1.Init.Mode = SPI_MODE_MASTER;
+  hspi1.Init.Direction = SPI_DIRECTION_2LINES;
+  hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
+  hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
+  hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
+  hspi1.Init.NSS = SPI_NSS_HARD_OUTPUT;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_256;
+  hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
+  hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
+  hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+  hspi1.Init.CRCPolynomial = 10;
+  if (HAL_SPI_Init(&hspi1) != HAL_OK)
+  {
+    _Error_Handler(__FILE__, __LINE__);
+  }
+
+}
+
 /* SPI2 init function */
 static void MX_SPI2_Init(void)
 {
@@ -287,6 +340,40 @@ static void MX_SPI2_Init(void)
 
 }
 
+/* TIM1 init function */
+static void MX_TIM1_Init(void)
+{
+
+  TIM_ClockConfigTypeDef sClockSourceConfig;
+  TIM_MasterConfigTypeDef sMasterConfig;
+
+  htim1.Instance = TIM1;
+  htim1.Init.Prescaler = 10;
+  htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim1.Init.Period = 7200;
+  htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim1.Init.RepetitionCounter = 0;
+  htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim1) != HAL_OK)
+  {
+    _Error_Handler(__FILE__, __LINE__);
+  }
+
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim1, &sClockSourceConfig) != HAL_OK)
+  {
+    _Error_Handler(__FILE__, __LINE__);
+  }
+
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_UPDATE;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK)
+  {
+    _Error_Handler(__FILE__, __LINE__);
+  }
+
+}
+
 /** Configure pins as 
         * Analog 
         * Input 
@@ -301,11 +388,17 @@ static void MX_GPIO_Init(void)
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOD_CLK_ENABLE();
-  __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LCD_DC_GPIO_Port, LCD_DC_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : TOUCH_IRQ_Pin */
+  GPIO_InitStruct.Pin = TOUCH_IRQ_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(TOUCH_IRQ_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : LCD_DC_Pin */
   GPIO_InitStruct.Pin = LCD_DC_Pin;

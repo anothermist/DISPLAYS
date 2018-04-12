@@ -5,6 +5,7 @@
 "ili9341_hal\main.o"
 "ili9341_hal\stm32f1xx_it.o"
 "ili9341_hal\ili9341.o"
+"ili9341_hal\xpt2046.o"
 "ili9341_hal\stm32f1xx_hal_pwr.o"
 "ili9341_hal\stm32f1xx_hal_gpio_ex.o"
 "ili9341_hal\stm32f1xx_hal_spi.o"

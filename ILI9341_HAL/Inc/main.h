@@ -49,6 +49,8 @@
 
 /* Private define ------------------------------------------------------------*/
 
+#define TOUCH_IRQ_Pin GPIO_PIN_3
+#define TOUCH_IRQ_GPIO_Port GPIOA
 #define LCD_DC_Pin GPIO_PIN_1
 #define LCD_DC_GPIO_Port GPIOB
 
