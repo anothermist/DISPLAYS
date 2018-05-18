@@ -32,27 +32,27 @@
 #define LCD_RST_S	HAL_GPIO_WritePin(LCD_RST_PORT, LCD_RST_PIN, GPIO_PIN_SET);
 #define LCD_RST_U	HAL_GPIO_WritePin(LCD_RST_PORT, LCD_RST_PIN, GPIO_PIN_RESET);
 
-#define BLACK 	0x000000 /*   0,   0,   0 */
-#define WHITE 	0xFFFFFF /* 255, 255, 255 */
-#define RED 		0xFF0000 /* 255,   0,   0 */
-#define BLUE 		0x0000FF /*   0,   0, 255 */
-#define BLUE_D 	0x0000A0 /*   0,   0, 160 */
-#define CYAN 		0x00FFFF /*   0, 255, 255 */
-#define CYAN_D	0x008080 /*   0, 128, 128 */
-#define YELLOW 	0xFFFF00 /* 255, 255,   0 */
+#define BLACK   0x000000 /*   0,   0,   0 */
+#define WHITE   0xFFFFFF /* 255, 255, 255 */
+#define RED     0xFF0000 /* 255,   0,   0 */
+#define BLUE    0x0000FF /*   0,   0, 255 */
+#define BLUE_D  0x0000A0 /*   0,   0, 160 */
+#define CYAN    0x00FFFF /*   0, 255, 255 */
+#define CYAN_D  0x008080 /*   0, 128, 128 */
+#define YELLOW  0xFFFF00 /* 255, 255,   0 */
 #define MAGENTA 0xFF00FF /* 255,   0, 255 */
-#define GREEN 	0x00FF00 /*   0, 255,   0 */
+#define GREEN   0x00FF00 /*   0, 255,   0 */
 #define GREEN_D 0x008000 /*   0, 128,   0 */
-#define PURPLE 	0x800080 /* 128,   0, 128 */
-#define TEAL 		0x008080
-#define NAVY 		0x000080 /*   0,   0, 128 */
-#define SILVER 	0xC0C0C0 /* 192, 192, 192 */
-#define GRAY 		0x808080 /* 128, 128, 128 */
-#define ORANGE 	0xFFA500 /* 255, 165,   0 */
-#define BROWN 	0xA52A2A
-#define MAROON 	0x800000 /* 128,   0,   0 */
-#define OLIVE 	0x808000 /* 128, 128,   0 */
-#define LIME 		0xBFFF00 /* 191, 255,   0 */
+#define PURPLE  0x800080 /* 128,   0, 128 */
+#define TEAL    0x008080 /*   0, 128, 128 */
+#define NAVY    0x000080 /*   0,   0, 128 */
+#define SILVER  0xC0C0C0 /* 192, 192, 192 */
+#define GRAY    0x808080 /* 128, 128, 128 */
+#define ORANGE  0xFFA500 /* 255, 165,   0 */
+#define BROWN   0xA52A2A /* 165, 255,  42 */
+#define MAROON  0x800000 /* 128,   0,   0 */
+#define OLIVE   0x808000 /* 128, 128,   0 */
+#define LIME    0xBFFF00 /* 191, 255,   0 */
 
 typedef struct { // Data stored PER GLYPH
 	uint16_t bitmapOffset;     // Pointer into GFXfont->bitmap
