@@ -21,37 +21,77 @@ main.d main.o: .././main.c .././main.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\string.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\ctype.h \
- .././ili9341.h .././fonts/bitmapImageMono.h .././fonts/Dmd8x7Clock.h \
- .././fonts/Dmd13x20Clock.h .././fonts/FreeMono9pt7b.h \
- .././fonts/FreeMono12pt7b.h .././fonts/FreeMono18pt7b.h \
- .././fonts/FreeMono24pt7b.h .././fonts/FreeMonoBold9pt7b.h \
- .././fonts/FreeMonoBold12pt7b.h .././fonts/FreeMonoBold18pt7b.h \
- .././fonts/FreeMonoBold24pt7b.h .././fonts/FreeMonoBoldOblique9pt7b.h \
- .././fonts/FreeMonoBoldOblique12pt7b.h \
- .././fonts/FreeMonoBoldOblique18pt7b.h \
- .././fonts/FreeMonoBoldOblique24pt7b.h .././fonts/FreeMonoOblique9pt7b.h \
- .././fonts/FreeMonoOblique12pt7b.h .././fonts/FreeMonoOblique18pt7b.h \
- .././fonts/FreeMonoOblique24pt7b.h .././fonts/FreeSans9pt7b.h \
- .././fonts/FreeSans12pt7b.h .././fonts/FreeSans18pt7b.h \
- .././fonts/FreeSans24pt7b.h .././fonts/FreeSansBold9pt7b.h \
- .././fonts/FreeSansBold12pt7b.h .././fonts/FreeSansBold18pt7b.h \
- .././fonts/FreeSansBold24pt7b.h .././fonts/FreeSansBoldOblique9pt7b.h \
- .././fonts/FreeSansBoldOblique12pt7b.h \
- .././fonts/FreeSansBoldOblique18pt7b.h \
- .././fonts/FreeSansBoldOblique24pt7b.h .././fonts/FreeSansOblique9pt7b.h \
- .././fonts/FreeSansOblique12pt7b.h .././fonts/FreeSansOblique18pt7b.h \
- .././fonts/FreeSansOblique24pt7b.h .././fonts/FreeSerif9pt7b.h \
- .././fonts/FreeSerif12pt7b.h .././fonts/FreeSerif18pt7b.h \
- .././fonts/FreeSerif24pt7b.h .././fonts/FreeSerifBold9pt7b.h \
- .././fonts/FreeSerifBold12pt7b.h .././fonts/FreeSerifBold18pt7b.h \
- .././fonts/FreeSerifBold24pt7b.h .././fonts/FreeSerifBoldItalic9pt7b.h \
- .././fonts/FreeSerifBoldItalic12pt7b.h \
- .././fonts/FreeSerifBoldItalic18pt7b.h \
- .././fonts/FreeSerifBoldItalic24pt7b.h .././fonts/FreeSerifItalic9pt7b.h \
- .././fonts/FreeSerifItalic12pt7b.h .././fonts/FreeSerifItalic18pt7b.h \
- .././fonts/FreeSerifItalic24pt7b.h .././fonts/FreeSevenSegNum.h \
- .././fonts/Org_01.h .././fonts/Picopixel.h .././fonts/Tiny3x3a2pt7b.h \
- .././fonts/TomThumb.h
+ .././ili9341.h .././fonts/Font_3x3_Tiny.h \
+ .././fonts/Font_3x5_PicoPixel.h .././fonts/Font_3x5_TomThumb_Extended.h \
+ .././fonts/Font_5x5_Org.h .././fonts/Font_8x8_Sinclair.h \
+ .././fonts/Font_8x8_Sinclair_Inverted.h .././fonts/Font_8x8_Tiny.h \
+ .././fonts/Font_8x9_Myke.h .././fonts/Font_8x12_Default.h \
+ .././fonts/Font_8x16_Retro.h .././fonts/Font_9x18_Mono.h \
+ .././fonts/Font_9x18_Mono_Bold.h \
+ .././fonts/Font_9x18_Mono_Bold_Oblique.h \
+ .././fonts/Font_9x18_Mono_Oblique.h .././fonts/Font_9x22_Sans.h \
+ .././fonts/Font_9x22_Sans_Bold.h \
+ .././fonts/Font_9x22_Sans_Bold_Oblique.h \
+ .././fonts/Font_9x22_Sans_Oblique.h .././fonts/Font_9x22_Serif.h \
+ .././fonts/Font_9x22_Serif_Bold.h \
+ .././fonts/Font_9x22_Serif_Bold_Italic.h \
+ .././fonts/Font_9x22_Serif_Italic.h .././fonts/Font_12x24_Mono.h \
+ .././fonts/Font_12x24_Mono_Bold.h \
+ .././fonts/Font_12x24_Mono_Bold_Oblique.h \
+ .././fonts/Font_12x24_Mono_Oblique.h .././fonts/Font_12x29_Sans.h \
+ .././fonts/Font_12x29_Sans_Bold.h \
+ .././fonts/Font_12x29_Sans_Bold_Oblique.h \
+ .././fonts/Font_12x29_Sans_Oblique.h .././fonts/Font_12x29_Serif.h \
+ .././fonts/Font_12x29_Serif_Bold.h \
+ .././fonts/Font_12x29_Serif_Bold_Italic.h \
+ .././fonts/Font_12x29_Serif_Italic.h .././fonts/Font_16x16_Arial.h \
+ .././fonts/Font_16x16_Arial_Bold.h .././fonts/Font_16x16_Arial_Italic.h \
+ .././fonts/Font_16x16_Default.h .././fonts/Font_16x16_FranklinGothic.h \
+ .././fonts/Font_16x16_Hallfetica.h .././fonts/Font_16x16_Nadianne.h \
+ .././fonts/Font_16x16_Sinclair.h \
+ .././fonts/Font_16x16_Sinclair_Inverted.h \
+ .././fonts/Font_16x16_Swiss_Outline.h \
+ .././fonts/Font_16x22_Matrix_Full.h \
+ .././fonts/Font_16x22_Matrix_Full_Slash.h \
+ .././fonts/Font_16x22_Matrix_Num.h .././fonts/Font_16x24_Arial_Round.h \
+ .././fonts/Font_16x24_OCR.h .././fonts/Font_16x24_Segment_16_Full.h \
+ .././fonts/Font_16x32_Grotesk.h .././fonts/Font_16x32_Grotesk_Bold.h \
+ .././fonts/Font_16x32_Retro.h .././fonts/Font_18x35_Mono.h \
+ .././fonts/Font_18x35_Mono_Bold.h \
+ .././fonts/Font_18x35_Mono_Bold_Oblique.h \
+ .././fonts/Font_18x35_Mono_Oblique.h .././fonts/Font_18x42_Sans.h \
+ .././fonts/Font_18x42_Sans_Bold.h \
+ .././fonts/Font_18x42_Sans_Bold_Oblique.h \
+ .././fonts/Font_18x42_Sans_Oblique.h .././fonts/Font_18x42_Serif.h \
+ .././fonts/Font_18x42_Serif_Bold.h \
+ .././fonts/Font_18x42_Serif_Bold_Italic.h \
+ .././fonts/Font_18x42_Serif_Italic.h .././fonts/Font_24x29_Matrix_Num.h \
+ .././fonts/Font_24x32_Inconsola.h .././fonts/Font_24x32_Ubuntu.h \
+ .././fonts/Font_24x32_Ubuntu_Bold.h \
+ .././fonts/Font_24x36_Segment_16_Full.h .././fonts/Font_24x47_Mono.h \
+ .././fonts/Font_24x47_Mono_Bold.h \
+ .././fonts/Font_24x47_Mono_Bold_Oblique.h \
+ .././fonts/Font_24x47_Mono_Oblique.h .././fonts/Font_24x48_Grotesk.h \
+ .././fonts/Font_24x48_Grotesk_Bold.h .././fonts/Font_24x56_Sans.h \
+ .././fonts/Font_24x56_Sans_Bold.h \
+ .././fonts/Font_24x56_Sans_Bold_Oblique.h \
+ .././fonts/Font_24x56_Sans_Oblique.h .././fonts/Font_24x56_Serif.h \
+ .././fonts/Font_24x56_Serif_Bold.h \
+ .././fonts/Font_24x56_Serif_Bold_Italic.h \
+ .././fonts/Font_24x56_SerifItalic.h .././fonts/Font_32x24_Dingbats.h \
+ .././fonts/Font_32x32_Special.h .././fonts/Font_32x48_Calibri_Bold.h \
+ .././fonts/Font_32x48_Segment_16_Full.h \
+ .././fonts/Font_32x50_Arial_Num_Plus.h \
+ .././fonts/Font_32x50_Matrix_Num.h \
+ .././fonts/Font_32x50_Segment_7_Full.h \
+ .././fonts/Font_32x50_Segment_7_Num_Plus.h \
+ .././fonts/Font_32x50_Segment_16_Full.h \
+ .././fonts/Font_32x52_Segment_18_Full.h .././fonts/Font_32x64_Grotesk.h \
+ .././fonts/Font_32x64_Grotesk_Bold.h \
+ .././fonts/Font_40x60_Segment_16_Full.h .././fonts/Font_48x24_Battery.h \
+ .././fonts/Font_48x72_Segment_16_Num.h \
+ .././fonts/Font_64x96_Segment_16_Num.h \
+ .././fonts/Font_64x100_Segment_7_Num.h
 
 .././main.h:
 
@@ -101,114 +141,204 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 .././ili9341.h:
 
-.././fonts/bitmapImageMono.h:
+.././fonts/Font_3x3_Tiny.h:
 
-.././fonts/Dmd8x7Clock.h:
+.././fonts/Font_3x5_PicoPixel.h:
 
-.././fonts/Dmd13x20Clock.h:
+.././fonts/Font_3x5_TomThumb_Extended.h:
 
-.././fonts/FreeMono9pt7b.h:
+.././fonts/Font_5x5_Org.h:
 
-.././fonts/FreeMono12pt7b.h:
+.././fonts/Font_8x8_Sinclair.h:
 
-.././fonts/FreeMono18pt7b.h:
+.././fonts/Font_8x8_Sinclair_Inverted.h:
 
-.././fonts/FreeMono24pt7b.h:
+.././fonts/Font_8x8_Tiny.h:
 
-.././fonts/FreeMonoBold9pt7b.h:
+.././fonts/Font_8x9_Myke.h:
 
-.././fonts/FreeMonoBold12pt7b.h:
+.././fonts/Font_8x12_Default.h:
 
-.././fonts/FreeMonoBold18pt7b.h:
+.././fonts/Font_8x16_Retro.h:
 
-.././fonts/FreeMonoBold24pt7b.h:
+.././fonts/Font_9x18_Mono.h:
 
-.././fonts/FreeMonoBoldOblique9pt7b.h:
+.././fonts/Font_9x18_Mono_Bold.h:
 
-.././fonts/FreeMonoBoldOblique12pt7b.h:
+.././fonts/Font_9x18_Mono_Bold_Oblique.h:
 
-.././fonts/FreeMonoBoldOblique18pt7b.h:
+.././fonts/Font_9x18_Mono_Oblique.h:
 
-.././fonts/FreeMonoBoldOblique24pt7b.h:
+.././fonts/Font_9x22_Sans.h:
 
-.././fonts/FreeMonoOblique9pt7b.h:
+.././fonts/Font_9x22_Sans_Bold.h:
 
-.././fonts/FreeMonoOblique12pt7b.h:
+.././fonts/Font_9x22_Sans_Bold_Oblique.h:
 
-.././fonts/FreeMonoOblique18pt7b.h:
+.././fonts/Font_9x22_Sans_Oblique.h:
 
-.././fonts/FreeMonoOblique24pt7b.h:
+.././fonts/Font_9x22_Serif.h:
 
-.././fonts/FreeSans9pt7b.h:
+.././fonts/Font_9x22_Serif_Bold.h:
 
-.././fonts/FreeSans12pt7b.h:
+.././fonts/Font_9x22_Serif_Bold_Italic.h:
 
-.././fonts/FreeSans18pt7b.h:
+.././fonts/Font_9x22_Serif_Italic.h:
 
-.././fonts/FreeSans24pt7b.h:
+.././fonts/Font_12x24_Mono.h:
 
-.././fonts/FreeSansBold9pt7b.h:
+.././fonts/Font_12x24_Mono_Bold.h:
 
-.././fonts/FreeSansBold12pt7b.h:
+.././fonts/Font_12x24_Mono_Bold_Oblique.h:
 
-.././fonts/FreeSansBold18pt7b.h:
+.././fonts/Font_12x24_Mono_Oblique.h:
 
-.././fonts/FreeSansBold24pt7b.h:
+.././fonts/Font_12x29_Sans.h:
 
-.././fonts/FreeSansBoldOblique9pt7b.h:
+.././fonts/Font_12x29_Sans_Bold.h:
 
-.././fonts/FreeSansBoldOblique12pt7b.h:
+.././fonts/Font_12x29_Sans_Bold_Oblique.h:
 
-.././fonts/FreeSansBoldOblique18pt7b.h:
+.././fonts/Font_12x29_Sans_Oblique.h:
 
-.././fonts/FreeSansBoldOblique24pt7b.h:
+.././fonts/Font_12x29_Serif.h:
 
-.././fonts/FreeSansOblique9pt7b.h:
+.././fonts/Font_12x29_Serif_Bold.h:
 
-.././fonts/FreeSansOblique12pt7b.h:
+.././fonts/Font_12x29_Serif_Bold_Italic.h:
 
-.././fonts/FreeSansOblique18pt7b.h:
+.././fonts/Font_12x29_Serif_Italic.h:
 
-.././fonts/FreeSansOblique24pt7b.h:
+.././fonts/Font_16x16_Arial.h:
 
-.././fonts/FreeSerif9pt7b.h:
+.././fonts/Font_16x16_Arial_Bold.h:
 
-.././fonts/FreeSerif12pt7b.h:
+.././fonts/Font_16x16_Arial_Italic.h:
 
-.././fonts/FreeSerif18pt7b.h:
+.././fonts/Font_16x16_Default.h:
 
-.././fonts/FreeSerif24pt7b.h:
+.././fonts/Font_16x16_FranklinGothic.h:
 
-.././fonts/FreeSerifBold9pt7b.h:
+.././fonts/Font_16x16_Hallfetica.h:
 
-.././fonts/FreeSerifBold12pt7b.h:
+.././fonts/Font_16x16_Nadianne.h:
 
-.././fonts/FreeSerifBold18pt7b.h:
+.././fonts/Font_16x16_Sinclair.h:
 
-.././fonts/FreeSerifBold24pt7b.h:
+.././fonts/Font_16x16_Sinclair_Inverted.h:
 
-.././fonts/FreeSerifBoldItalic9pt7b.h:
+.././fonts/Font_16x16_Swiss_Outline.h:
 
-.././fonts/FreeSerifBoldItalic12pt7b.h:
+.././fonts/Font_16x22_Matrix_Full.h:
 
-.././fonts/FreeSerifBoldItalic18pt7b.h:
+.././fonts/Font_16x22_Matrix_Full_Slash.h:
 
-.././fonts/FreeSerifBoldItalic24pt7b.h:
+.././fonts/Font_16x22_Matrix_Num.h:
 
-.././fonts/FreeSerifItalic9pt7b.h:
+.././fonts/Font_16x24_Arial_Round.h:
 
-.././fonts/FreeSerifItalic12pt7b.h:
+.././fonts/Font_16x24_OCR.h:
 
-.././fonts/FreeSerifItalic18pt7b.h:
+.././fonts/Font_16x24_Segment_16_Full.h:
 
-.././fonts/FreeSerifItalic24pt7b.h:
+.././fonts/Font_16x32_Grotesk.h:
 
-.././fonts/FreeSevenSegNum.h:
+.././fonts/Font_16x32_Grotesk_Bold.h:
 
-.././fonts/Org_01.h:
+.././fonts/Font_16x32_Retro.h:
 
-.././fonts/Picopixel.h:
+.././fonts/Font_18x35_Mono.h:
 
-.././fonts/Tiny3x3a2pt7b.h:
+.././fonts/Font_18x35_Mono_Bold.h:
 
-.././fonts/TomThumb.h:
+.././fonts/Font_18x35_Mono_Bold_Oblique.h:
+
+.././fonts/Font_18x35_Mono_Oblique.h:
+
+.././fonts/Font_18x42_Sans.h:
+
+.././fonts/Font_18x42_Sans_Bold.h:
+
+.././fonts/Font_18x42_Sans_Bold_Oblique.h:
+
+.././fonts/Font_18x42_Sans_Oblique.h:
+
+.././fonts/Font_18x42_Serif.h:
+
+.././fonts/Font_18x42_Serif_Bold.h:
+
+.././fonts/Font_18x42_Serif_Bold_Italic.h:
+
+.././fonts/Font_18x42_Serif_Italic.h:
+
+.././fonts/Font_24x29_Matrix_Num.h:
+
+.././fonts/Font_24x32_Inconsola.h:
+
+.././fonts/Font_24x32_Ubuntu.h:
+
+.././fonts/Font_24x32_Ubuntu_Bold.h:
+
+.././fonts/Font_24x36_Segment_16_Full.h:
+
+.././fonts/Font_24x47_Mono.h:
+
+.././fonts/Font_24x47_Mono_Bold.h:
+
+.././fonts/Font_24x47_Mono_Bold_Oblique.h:
+
+.././fonts/Font_24x47_Mono_Oblique.h:
+
+.././fonts/Font_24x48_Grotesk.h:
+
+.././fonts/Font_24x48_Grotesk_Bold.h:
+
+.././fonts/Font_24x56_Sans.h:
+
+.././fonts/Font_24x56_Sans_Bold.h:
+
+.././fonts/Font_24x56_Sans_Bold_Oblique.h:
+
+.././fonts/Font_24x56_Sans_Oblique.h:
+
+.././fonts/Font_24x56_Serif.h:
+
+.././fonts/Font_24x56_Serif_Bold.h:
+
+.././fonts/Font_24x56_Serif_Bold_Italic.h:
+
+.././fonts/Font_24x56_SerifItalic.h:
+
+.././fonts/Font_32x24_Dingbats.h:
+
+.././fonts/Font_32x32_Special.h:
+
+.././fonts/Font_32x48_Calibri_Bold.h:
+
+.././fonts/Font_32x48_Segment_16_Full.h:
+
+.././fonts/Font_32x50_Arial_Num_Plus.h:
+
+.././fonts/Font_32x50_Matrix_Num.h:
+
+.././fonts/Font_32x50_Segment_7_Full.h:
+
+.././fonts/Font_32x50_Segment_7_Num_Plus.h:
+
+.././fonts/Font_32x50_Segment_16_Full.h:
+
+.././fonts/Font_32x52_Segment_18_Full.h:
+
+.././fonts/Font_32x64_Grotesk.h:
+
+.././fonts/Font_32x64_Grotesk_Bold.h:
+
+.././fonts/Font_40x60_Segment_16_Full.h:
+
+.././fonts/Font_48x24_Battery.h:
+
+.././fonts/Font_48x72_Segment_16_Num.h:
+
+.././fonts/Font_64x96_Segment_16_Num.h:
+
+.././fonts/Font_64x100_Segment_7_Num.h:

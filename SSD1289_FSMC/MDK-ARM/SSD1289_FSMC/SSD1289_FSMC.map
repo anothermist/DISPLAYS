@@ -632,116 +632,208 @@ Section Cross References
     main.o(i.main) refers to main.o(.bss) for .bss
     main.o(i.main) refers to main.o(.constdata) for .constdata
     main.o(i.main) refers to main.o(.data) for .data
-    main.o(.constdata) refers to main.o(.constdata) for Dmd8x7ClockBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for Dmd8x7ClockGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifBold9pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifBold9pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSevenSegNumBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSevenSegNumGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for Org_01Bitmaps
-    main.o(.constdata) refers to main.o(.constdata) for Org_01Glyphs
-    main.o(.constdata) refers to main.o(.constdata) for TomThumbBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for TomThumbGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for Dmd13x20ClockBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for Dmd13x20ClockGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeMono9pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeMono9pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeMono12pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeMono12pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeMono18pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeMono18pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeMono24pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeMono24pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoBold9pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoBold9pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoBold12pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoBold12pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoBold18pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoBold18pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoBold24pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoBold24pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoBoldOblique9pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoBoldOblique9pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoBoldOblique12pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoBoldOblique12pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoBoldOblique18pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoBoldOblique18pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoBoldOblique24pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoBoldOblique24pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoOblique9pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoOblique9pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoOblique12pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoOblique12pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoOblique18pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoOblique18pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoOblique24pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeMonoOblique24pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSans9pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSans9pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSans12pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSans12pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSans18pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSans18pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSans24pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSans24pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansBold9pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansBold9pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansBold12pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansBold12pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansBold18pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansBold18pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansBold24pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansBold24pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansBoldOblique9pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansBoldOblique9pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansBoldOblique12pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansBoldOblique12pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansBoldOblique18pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansBoldOblique18pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansBoldOblique24pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansBoldOblique24pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansOblique9pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansOblique9pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansOblique12pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansOblique12pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansOblique18pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansOblique18pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansOblique24pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSansOblique24pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerif9pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerif9pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerif12pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerif12pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerif18pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerif18pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerif24pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerif24pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifBold12pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifBold12pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifBold18pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifBold18pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifBold24pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifBold24pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifBoldItalic9pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifBoldItalic9pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifBoldItalic12pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifBoldItalic12pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifBoldItalic18pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifBoldItalic18pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifBoldItalic24pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifBoldItalic24pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifItalic9pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifItalic9pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifItalic12pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifItalic12pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifItalic18pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifItalic18pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifItalic24pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for FreeSerifItalic24pt7bGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for PicopixelBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for PicopixelGlyphs
-    main.o(.constdata) refers to main.o(.constdata) for Tiny3x3a2pt7bBitmaps
-    main.o(.constdata) refers to main.o(.constdata) for Tiny3x3a2pt7bGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_3x3_TinyBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_3x3_TinyGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_3x5_PicoPixelBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_3x5_PicoPixelGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_3x5_TomThumb_ExtendedBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_3x5_TomThumb_ExtendedGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_5x5_OrgBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_5x5_OrgGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_8x12_DefaultBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_8x12_DefaultGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x22_Serif_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x22_Serif_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x50_Segment_7_Num_PlusBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x50_Segment_7_Num_PlusGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_8x8_SinclairBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_8x8_SinclairGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_8x8_Sinclair_InvertedBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_8x8_Sinclair_InvertedGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_8x8_TinyBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_8x8_TinyGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_8x9_MykeBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_8x9_MykeGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_8x16_RetroBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_8x16_RetroGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x18_MonoBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x18_MonoGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x18_Mono_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x18_Mono_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x18_Mono_Bold_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x18_Mono_Bold_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x18_Mono_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x18_Mono_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x22_SansBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x22_SansGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x22_Sans_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x22_Sans_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x22_Sans_Bold_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x22_Sans_Bold_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x22_Sans_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x22_Sans_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x22_SerifBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x22_SerifGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x22_Serif_Bold_ItalicBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x22_Serif_Bold_ItalicGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x22_Serif_ItalicBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9x22_Serif_ItalicGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x24_MonoBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x24_MonoGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x24_Mono_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x24_Mono_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x24_Mono_Bold_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x24_Mono_Bold_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x24_Mono_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x24_Mono_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x29_SansBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x29_SansGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x29_Sans_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x29_Sans_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x29_Sans_Bold_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x29_Sans_Bold_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x29_Sans_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x29_Sans_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x29_SerifBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x29_SerifGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x29_Serif_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x29_Serif_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for FreeSerFont_12x29_Serif_Bold_ItalicBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for FreeSerFont_12x29_Serif_Bold_ItalicGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x29_Serif_ItalicBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12x29_Serif_ItalicGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x16_ArialBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x16_ArialGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x16_Arial_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x16_Arial_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x16_Arial_ItalicBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x16_Arial_ItalicGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x16_DefaultBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x16_DefaultGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x16_FranklinGothicBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x16_FranklinGothicGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x16_HallfeticaBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x16_HallfeticaGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x16_NadianneBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x16_NadianneGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x16_SinclairBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x16_SinclairGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x16_Sinclair_InvertedBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x16_Sinclair_InvertedGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x16_Swiss_OutlineBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x16_Swiss_OutlineGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x22_Matrix_FullBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x22_Matrix_FullGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x22_Matrix_Full_SlashBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x22_Matrix_Full_SlashGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x22_Matrix_NumBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x22_Matrix_NumGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x24_Arial_RoundBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x24_Arial_RoundGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x24_OCRBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x24_OCRGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x24_Segment_16_FullBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x24_Segment_16_FullGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x32_GroteskBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x32_GroteskGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x32_Grotesk_Bold16x32Bitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x32_Grotesk_Bold16x32Glyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x32_RetroBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16x32_RetroGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x35_MonoBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x35_MonoGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x35_Mono_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x35_Mono_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x35_Mono_Bold_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x35_Mono_Bold_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x35_Mono_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x35_Mono_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x42_SansBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x42_SansGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x42_Sans_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x42_Sans_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x42_Sans_Bold_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x42_Sans_Bold_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x42_Sans_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x42_Sans_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x42_SerifBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x42_SerifGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x42_Serif_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x42_Serif_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x42_Serif_Bold_ItalicBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x42_Serif_Bold_ItalicGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x42_Serif_ItalicBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18x42_Serif_ItalicGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x29_Matrix_NumBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x29_Matrix_NumGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x32_InconsolaBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x32_InconsolaGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x32_UbuntuBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x32_UbuntuGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x32_Ubuntu_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x32_Ubuntu_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x36_Segment_16_FullBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x36_Segment_16_FullGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x47_MonoBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x47_MonoGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x47_Mono_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x47_Mono_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x47_Mono_Bold_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x47_Mono_Bold_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x47_Mono_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x47_Mono_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x48_GroteskBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x48_GroteskGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x48_Grotesk_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x48_Grotesk_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x56_SansBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x56_SansGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x56_Sans_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x56_Sans_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x56_Sans_Bold_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x56_Sans_Bold_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x56_Sans_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x56_Sans_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x56_SerifBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x56_SerifGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x56_Serif_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x56_Serif_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x56_Serif_Bold_ItalicBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x56_Serif_Bold_ItalicGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x56_SerifItalicBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24x56_SerifItalicGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x24_DingbatsBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x24_DingbatsGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x32_SpecialBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x32_SpecialGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x48_Calibri_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x48_Calibri_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x48_Segment_16_FullBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x48_Segment_16_FullGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x50_Arial_Num_PlusBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x50_Arial_Num_PlusGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x50_Matrix_NumBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x50_Matrix_NumGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x50_Segment_7_FullBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x50_Segment_7_FullGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x50_Segment_16_FullBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x50_Segment_16_FullGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x52_Segment_18_FullBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x52_Segment_18_FullGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x64_GroteskBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x64_GroteskGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x64_Grotesk_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32x64_Grotesk_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_40x60_Segment_16_FullBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_40x60_Segment_16_FullGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_48x24_BatteryBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_48x24_BatteryGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_48x72_Segment_16_NumBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_48x72_Segment_16_NumGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_64x96_Segment_16_NumBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_64x96_Segment_16_NumGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_64x100_Segment_7_NumBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_64x100_Segment_7_NumGlyphs
     xpt2046.o(i.X) refers to xpt2046.o(i.getRaw) for getRaw
     xpt2046.o(i.X) refers to xpt2046.o(i.remap) for remap
     xpt2046.o(i.XPT2046_Init) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_Transmit) for HAL_SPI_Transmit
@@ -1312,155 +1404,293 @@ Removing Unused input sections from the image.
     Removing main.o(.revsh_text), (4 bytes).
     Removing main.o(.rrx_text), (6 bytes).
     Removing main.o(i._Error_Handler), (2 bytes).
-    Removing main.o(.constdata), (384 bytes).
-    Removing main.o(.constdata), (392 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (844 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (1460 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (3089 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (5658 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (1000 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (1730 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (3813 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (6797 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (1167 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (1966 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (4256 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (7635 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (982 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (1707 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (3514 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (6452 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (1150 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (1969 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (4159 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (7464 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (1230 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (2186 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (4503 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (8143 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (1464 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (2535 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (5271 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (9447 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (1369 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (2362 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (4951 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (8811 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (1080 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (1839 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (3886 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (7010 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (1991 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (4273 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (7847 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (1310 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (2238 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (4738 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (8245 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (1163 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (1984 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (4133 bytes).
-    Removing main.o(.constdata), (760 bytes).
-    Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (7579 bytes).
+    Removing main.o(.constdata), (142 bytes).
     Removing main.o(.constdata), (760 bytes).
     Removing main.o(.constdata), (12 bytes).
     Removing main.o(.constdata), (180 bytes).
     Removing main.o(.constdata), (760 bytes).
     Removing main.o(.constdata), (12 bytes).
-    Removing main.o(.constdata), (142 bytes).
+    Removing main.o(.constdata), (373 bytes).
     Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (482 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (523 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (349 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (801 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (844 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1000 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1167 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (982 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1150 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1230 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1464 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1369 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1080 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1310 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1163 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1460 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1730 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1966 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1707 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1969 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (2186 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (2535 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (2362 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1839 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1991 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (2238 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1984 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (905 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (996 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1021 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1198 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (930 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (937 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1278 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1314 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1807 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1091 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (2395 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (2395 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (335 bytes).
+    Removing main.o(.constdata), (80 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1875 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1820 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (2603 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3304 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3351 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3040 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3089 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3813 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (4256 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3514 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (4159 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (4503 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (5271 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (4951 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3886 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (4273 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (4738 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (4133 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (623 bytes).
+    Removing main.o(.constdata), (80 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3531 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3645 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (4036 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (6202 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (5658 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (6797 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (7635 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (6452 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (7290 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (7575 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (7464 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (8143 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (9447 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (8811 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (7010 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (7847 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (8245 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (7579 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3794 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (10985 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1477 bytes).
+    Removing main.o(.constdata), (80 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (10262 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1565 bytes).
+    Removing main.o(.constdata), (88 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1639 bytes).
+    Removing main.o(.constdata), (80 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (10644 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (9297 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (12526 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (12803 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (13407 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (16558 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1380 bytes).
+    Removing main.o(.constdata), (80 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3535 bytes).
+    Removing main.o(.constdata), (80 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (6167 bytes).
+    Removing main.o(.constdata), (80 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (5396 bytes).
+    Removing main.o(.constdata), (80 bytes).
     Removing main.o(.constdata), (12 bytes).
     Removing xpt2046.o(.rev16_text), (4 bytes).
     Removing xpt2046.o(.revsh_text), (4 bytes).
@@ -1474,7 +1704,7 @@ Removing Unused input sections from the image.
     Removing system_stm32f4xx.o(.rrx_text), (6 bytes).
     Removing system_stm32f4xx.o(i.SystemCoreClockUpdate), (120 bytes).
 
-669 unused section(s) (total 255298 bytes) removed from the image.
+807 unused section(s) (total 474142 bytes) removed from the image.
 
 ==============================================================================
 
@@ -1714,20 +1944,20 @@ Image Symbol Table
     i.main                                   0x08002e80   Section        0  main.o(i.main)
     i.remap                                  0x080031d4   Section        0  xpt2046.o(i.remap)
     remap                                    0x080031d5   Thumb Code    26  xpt2046.o(i.remap)
-    .constdata                               0x080031ee   Section      161  main.o(.constdata)
-    .constdata                               0x08003290   Section      264  main.o(.constdata)
-    .constdata                               0x08003398   Section       60  main.o(.constdata)
-    .constdata                               0x080033d4   Section     1162  main.o(.constdata)
-    .constdata                               0x0800385e   Section      760  main.o(.constdata)
-    .constdata                               0x08003b56   Section     1363  main.o(.constdata)
-    .constdata                               0x080040aa   Section       80  main.o(.constdata)
-    .constdata                               0x080040fa   Section      271  main.o(.constdata)
-    .constdata                               0x0800420a   Section      760  main.o(.constdata)
-    .constdata                               0x08004502   Section      418  main.o(.constdata)
-    .constdata                               0x080046a4   Section      760  main.o(.constdata)
-    .constdata                               0x0800499c   Section        8  xpt2046.o(.constdata)
-    .constdata                               0x080049a4   Section       16  system_stm32f4xx.o(.constdata)
-    .constdata                               0x080049b4   Section        8  system_stm32f4xx.o(.constdata)
+    .constdata                               0x080031ee   Section      904  main.o(.constdata)
+    .constdata                               0x08003576   Section     1632  main.o(.constdata)
+    .constdata                               0x08003bd8   Section       60  main.o(.constdata)
+    .constdata                               0x08003c14   Section      271  main.o(.constdata)
+    .constdata                               0x08003d24   Section      760  main.o(.constdata)
+    .constdata                               0x0800401c   Section      414  main.o(.constdata)
+    .constdata                               0x080041ba   Section      760  main.o(.constdata)
+    .constdata                               0x080044b2   Section     1162  main.o(.constdata)
+    .constdata                               0x0800493c   Section      760  main.o(.constdata)
+    .constdata                               0x08004c34   Section     1395  main.o(.constdata)
+    .constdata                               0x080051a8   Section      104  main.o(.constdata)
+    .constdata                               0x08005210   Section        8  xpt2046.o(.constdata)
+    .constdata                               0x08005218   Section       16  system_stm32f4xx.o(.constdata)
+    .constdata                               0x08005228   Section        8  system_stm32f4xx.o(.constdata)
     .data                                    0x20000000   Section       12  stm32f4xx_hal.o(.data)
     .data                                    0x2000000c   Section        8  stm32f4xx_hal_msp.o(.data)
     FSMC_Initialized                         0x2000000c   Data           4  stm32f4xx_hal_msp.o(.data)
@@ -1937,25 +2167,25 @@ Image Symbol Table
     getX                                     0x08002e31   Thumb Code    36  xpt2046.o(i.getX)
     getY                                     0x08002e59   Thumb Code    36  xpt2046.o(i.getY)
     main                                     0x08002e81   Thumb Code   720  main.o(i.main)
-    Dmd8x7ClockBitmaps                       0x080031ee   Data         161  main.o(.constdata)
-    Dmd8x7ClockGlyphs                        0x08003290   Data         264  main.o(.constdata)
-    Dmd8x7Clock                              0x08003398   Data          12  main.o(.constdata)
-    FreeSerifBold9pt7b                       0x080033a4   Data          12  main.o(.constdata)
-    FreeSevenSegNum                          0x080033b0   Data          12  main.o(.constdata)
-    Org_01                                   0x080033bc   Data          12  main.o(.constdata)
-    TomThumb                                 0x080033c8   Data          12  main.o(.constdata)
-    FreeSerifBold9pt7bBitmaps                0x080033d4   Data        1162  main.o(.constdata)
-    FreeSerifBold9pt7bGlyphs                 0x0800385e   Data         760  main.o(.constdata)
-    FreeSevenSegNumBitmaps                   0x08003b56   Data        1363  main.o(.constdata)
-    FreeSevenSegNumGlyphs                    0x080040aa   Data          80  main.o(.constdata)
-    Org_01Bitmaps                            0x080040fa   Data         271  main.o(.constdata)
-    Org_01Glyphs                             0x0800420a   Data         760  main.o(.constdata)
-    TomThumbBitmaps                          0x08004502   Data         418  main.o(.constdata)
-    TomThumbGlyphs                           0x080046a4   Data         760  main.o(.constdata)
-    AHBPrescTable                            0x080049a4   Data          16  system_stm32f4xx.o(.constdata)
-    APBPrescTable                            0x080049b4   Data           8  system_stm32f4xx.o(.constdata)
-    Region$$Table$$Base                      0x080049bc   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x080049dc   Number         0  anon$$obj.o(Region$$Table)
+    Font_3x5_TomThumb_ExtendedBitmaps        0x080031ee   Data         904  main.o(.constdata)
+    Font_3x5_TomThumb_ExtendedGlyphs         0x08003576   Data        1632  main.o(.constdata)
+    Font_3x5_TomThumb_Extended               0x08003bd8   Data          12  main.o(.constdata)
+    Font_5x5_Org                             0x08003be4   Data          12  main.o(.constdata)
+    Font_8x12_Default                        0x08003bf0   Data          12  main.o(.constdata)
+    Font_9x22_Serif_Bold                     0x08003bfc   Data          12  main.o(.constdata)
+    Font_32x50_Segment_7_Num_Plus            0x08003c08   Data          12  main.o(.constdata)
+    Font_5x5_OrgBitmaps                      0x08003c14   Data         271  main.o(.constdata)
+    Font_5x5_OrgGlyphs                       0x08003d24   Data         760  main.o(.constdata)
+    Font_8x12_DefaultBitmaps                 0x0800401c   Data         414  main.o(.constdata)
+    Font_8x12_DefaultGlyphs                  0x080041ba   Data         760  main.o(.constdata)
+    Font_9x22_Serif_BoldBitmaps              0x080044b2   Data        1162  main.o(.constdata)
+    Font_9x22_Serif_BoldGlyphs               0x0800493c   Data         760  main.o(.constdata)
+    Font_32x50_Segment_7_Num_PlusBitmaps     0x08004c34   Data        1395  main.o(.constdata)
+    Font_32x50_Segment_7_Num_PlusGlyphs      0x080051a8   Data         104  main.o(.constdata)
+    AHBPrescTable                            0x08005218   Data          16  system_stm32f4xx.o(.constdata)
+    APBPrescTable                            0x08005228   Data           8  system_stm32f4xx.o(.constdata)
+    Region$$Table$$Base                      0x08005230   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08005250   Number         0  anon$$obj.o(Region$$Table)
     uwTickFreq                               0x20000000   Data           1  stm32f4xx_hal.o(.data)
     uwTickPrio                               0x20000004   Data           4  stm32f4xx_hal.o(.data)
     uwTick                                   0x20000008   Data           4  stm32f4xx_hal.o(.data)
@@ -1980,29 +2210,29 @@ Memory Map of the image
 
   Image Entry point : 0x08000189
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00004a08, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000527c, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000049dc, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00005250, Max: 0x00080000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x00000188   Data   RO            3    RESET               startup_stm32f407xx.o
-    0x08000188   0x08000188   0x00000000   Code   RO         4154  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000188   0x08000188   0x00000004   Code   RO         4161    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x0800018c   0x0800018c   0x00000004   Code   RO         4164    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x08000190   0x08000190   0x00000000   Code   RO         4166    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x08000190   0x08000190   0x00000000   Code   RO         4168    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x08000190   0x08000190   0x00000008   Code   RO         4169    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x08000198   0x08000198   0x00000000   Code   RO         4171    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x08000198   0x08000198   0x00000000   Code   RO         4173    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x08000198   0x08000198   0x00000004   Code   RO         4162    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000188   0x08000188   0x00000000   Code   RO         4234  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000188   0x08000188   0x00000004   Code   RO         4241    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0800018c   0x0800018c   0x00000004   Code   RO         4244    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000190   0x08000190   0x00000000   Code   RO         4246    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000190   0x08000190   0x00000000   Code   RO         4248    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000190   0x08000190   0x00000008   Code   RO         4249    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08000198   0x08000198   0x00000000   Code   RO         4251    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x08000198   0x08000198   0x00000000   Code   RO         4253    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x08000198   0x08000198   0x00000004   Code   RO         4242    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x0800019c   0x0800019c   0x00000024   Code   RO            4    .text               startup_stm32f407xx.o
-    0x080001c0   0x080001c0   0x00000062   Code   RO         4157    .text               mc_w.l(uldiv.o)
-    0x08000222   0x08000222   0x0000000e   Code   RO         4159    .text               mc_w.l(strlen.o)
-    0x08000230   0x08000230   0x0000001e   Code   RO         4175    .text               mc_w.l(llshl.o)
-    0x0800024e   0x0800024e   0x00000020   Code   RO         4177    .text               mc_w.l(llushr.o)
+    0x080001c0   0x080001c0   0x00000062   Code   RO         4237    .text               mc_w.l(uldiv.o)
+    0x08000222   0x08000222   0x0000000e   Code   RO         4239    .text               mc_w.l(strlen.o)
+    0x08000230   0x08000230   0x0000001e   Code   RO         4255    .text               mc_w.l(llshl.o)
+    0x0800024e   0x0800024e   0x00000020   Code   RO         4257    .text               mc_w.l(llushr.o)
     0x0800026e   0x0800026e   0x00000002   PAD
-    0x08000270   0x08000270   0x00000024   Code   RO         4179    .text               mc_w.l(init.o)
+    0x08000270   0x08000270   0x00000024   Code   RO         4259    .text               mc_w.l(init.o)
     0x08000294   0x08000294   0x00000002   Code   RO         3342    i.BusFault_Handler  stm32f4xx_it.o
     0x08000296   0x08000296   0x00000002   Code   RO         3343    i.DebugMon_Handler  stm32f4xx_it.o
     0x08000298   0x08000298   0x00000006   Code   RO         3344    i.EXTI3_IRQHandler  stm32f4xx_it.o
@@ -2010,7 +2240,7 @@ Memory Map of the image
     0x080002a0   0x080002a0   0x00000040   Code   RO          458    i.FSMC_NORSRAM_Extended_Timing_Init  stm32f4xx_ll_fsmc.o
     0x080002e0   0x080002e0   0x00000054   Code   RO          459    i.FSMC_NORSRAM_Init  stm32f4xx_ll_fsmc.o
     0x08000334   0x08000334   0x00000044   Code   RO          460    i.FSMC_NORSRAM_Timing_Init  stm32f4xx_ll_fsmc.o
-    0x08000378   0x08000378   0x0000002a   Code   RO         3999    i.H24_RGB565        ssd1289_fsmc.o
+    0x08000378   0x08000378   0x0000002a   Code   RO         4082    i.H24_RGB565        ssd1289_fsmc.o
     0x080003a2   0x080003a2   0x00000024   Code   RO          228    i.HAL_DMA_Abort_IT  stm32f4xx_hal_dma.o
     0x080003c6   0x080003c6   0x00000002   PAD
     0x080003c8   0x080003c8   0x00000024   Code   RO         2058    i.HAL_Delay         stm32f4xx_hal.o
@@ -2069,23 +2299,23 @@ Memory Map of the image
     0x0800181c   0x0800181c   0x0000004c   Code   RO         3453    i.HAL_UART_MspInit  stm32f4xx_hal_msp.o
     0x08001868   0x08001868   0x000000ba   Code   RO          609    i.HAL_UART_Transmit  stm32f4xx_hal_uart.o
     0x08001922   0x08001922   0x00000002   Code   RO         3345    i.HardFault_Handler  stm32f4xx_it.o
-    0x08001924   0x08001924   0x000000c2   Code   RO         4000    i.LCD_Char          ssd1289_fsmc.o
-    0x080019e6   0x080019e6   0x00000130   Code   RO         4001    i.LCD_Circle        ssd1289_fsmc.o
-    0x08001b16   0x08001b16   0x000000f4   Code   RO         4002    i.LCD_Circle_Fill_Helper  ssd1289_fsmc.o
-    0x08001c0a   0x08001c0a   0x00000116   Code   RO         4003    i.LCD_Circle_Helper  ssd1289_fsmc.o
-    0x08001d20   0x08001d20   0x000002a8   Code   RO         4004    i.LCD_Ellipse       ssd1289_fsmc.o
-    0x08001fc8   0x08001fc8   0x0000008e   Code   RO         4005    i.LCD_Font          ssd1289_fsmc.o
-    0x08002056   0x08002056   0x0000005c   Code   RO         4006    i.LCD_Init          ssd1289_fsmc.o
-    0x080020b2   0x080020b2   0x0000007a   Code   RO         4007    i.LCD_Line          ssd1289_fsmc.o
-    0x0800212c   0x0800212c   0x00000052   Code   RO         4009    i.LCD_Rect          ssd1289_fsmc.o
+    0x08001924   0x08001924   0x000000c2   Code   RO         4083    i.LCD_Char          ssd1289_fsmc.o
+    0x080019e6   0x080019e6   0x00000130   Code   RO         4084    i.LCD_Circle        ssd1289_fsmc.o
+    0x08001b16   0x08001b16   0x000000f4   Code   RO         4085    i.LCD_Circle_Fill_Helper  ssd1289_fsmc.o
+    0x08001c0a   0x08001c0a   0x00000116   Code   RO         4086    i.LCD_Circle_Helper  ssd1289_fsmc.o
+    0x08001d20   0x08001d20   0x000002a8   Code   RO         4087    i.LCD_Ellipse       ssd1289_fsmc.o
+    0x08001fc8   0x08001fc8   0x0000008e   Code   RO         4088    i.LCD_Font          ssd1289_fsmc.o
+    0x08002056   0x08002056   0x0000005c   Code   RO         4089    i.LCD_Init          ssd1289_fsmc.o
+    0x080020b2   0x080020b2   0x0000007a   Code   RO         4090    i.LCD_Line          ssd1289_fsmc.o
+    0x0800212c   0x0800212c   0x00000052   Code   RO         4092    i.LCD_Rect          ssd1289_fsmc.o
     0x0800217e   0x0800217e   0x00000002   PAD
-    0x08002180   0x08002180   0x00000040   Code   RO         4010    i.LCD_Rect_Fill     ssd1289_fsmc.o
-    0x080021c0   0x080021c0   0x000000de   Code   RO         4011    i.LCD_Rect_Round    ssd1289_fsmc.o
-    0x0800229e   0x0800229e   0x00000064   Code   RO         4012    i.LCD_Rect_Round_Fill  ssd1289_fsmc.o
+    0x08002180   0x08002180   0x00000040   Code   RO         4093    i.LCD_Rect_Fill     ssd1289_fsmc.o
+    0x080021c0   0x080021c0   0x000000de   Code   RO         4094    i.LCD_Rect_Round    ssd1289_fsmc.o
+    0x0800229e   0x0800229e   0x00000064   Code   RO         4095    i.LCD_Rect_Round_Fill  ssd1289_fsmc.o
     0x08002302   0x08002302   0x00000002   PAD
-    0x08002304   0x08002304   0x00000010   Code   RO         4013    i.LCD_Send_Reg      ssd1289_fsmc.o
-    0x08002314   0x08002314   0x00000040   Code   RO         4014    i.LCD_Triangle      ssd1289_fsmc.o
-    0x08002354   0x08002354   0x0000003e   Code   RO         4015    i.LCD_Window        ssd1289_fsmc.o
+    0x08002304   0x08002304   0x00000010   Code   RO         4096    i.LCD_Send_Reg      ssd1289_fsmc.o
+    0x08002314   0x08002314   0x00000040   Code   RO         4097    i.LCD_Triangle      ssd1289_fsmc.o
+    0x08002354   0x08002354   0x0000003e   Code   RO         4098    i.LCD_Window        ssd1289_fsmc.o
     0x08002392   0x08002392   0x00000002   PAD
     0x08002394   0x08002394   0x00000078   Code   RO         3534    i.MX_FSMC_Init      main.o
     0x0800240c   0x0800240c   0x00000148   Code   RO         3535    i.MX_GPIO_Init      main.o
@@ -2106,7 +2336,7 @@ Memory Map of the image
     0x08002758   0x08002758   0x0000000e   Code   RO         3351    i.SysTick_Handler   stm32f4xx_it.o
     0x08002766   0x08002766   0x00000002   PAD
     0x08002768   0x08002768   0x000000ac   Code   RO         3540    i.SystemClock_Config  main.o
-    0x08002814   0x08002814   0x00000054   Code   RO         4120    i.SystemInit        system_stm32f4xx.o
+    0x08002814   0x08002814   0x00000054   Code   RO         4200    i.SystemInit        system_stm32f4xx.o
     0x08002868   0x08002868   0x00000020   Code   RO         3352    i.TIM1_BRK_TIM9_IRQHandler  stm32f4xx_it.o
     0x08002888   0x08002888   0x00000020   Code   RO         3353    i.TIM1_UP_TIM10_IRQHandler  stm32f4xx_it.o
     0x080028a8   0x080028a8   0x000000c0   Code   RO         1305    i.TIM_Base_SetConfig  stm32f4xx_hal_tim.o
@@ -2118,47 +2348,47 @@ Memory Map of the image
     0x080029d4   0x080029d4   0x000002ac   Code   RO          627    i.UART_SetConfig    stm32f4xx_hal_uart.o
     0x08002c80   0x08002c80   0x00000062   Code   RO          629    i.UART_WaitOnFlagUntilTimeout  stm32f4xx_hal_uart.o
     0x08002ce2   0x08002ce2   0x00000002   Code   RO         3354    i.UsageFault_Handler  stm32f4xx_it.o
-    0x08002ce4   0x08002ce4   0x00000050   Code   RO         3940    i.X                 xpt2046.o
-    0x08002d34   0x08002d34   0x00000034   Code   RO         3941    i.XPT2046_Init      xpt2046.o
-    0x08002d68   0x08002d68   0x00000050   Code   RO         3942    i.Y                 xpt2046.o
-    0x08002db8   0x08002db8   0x0000000e   Code   RO         4183    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08002dc6   0x08002dc6   0x00000002   Code   RO         4184    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08002dc8   0x08002dc8   0x0000000e   Code   RO         4185    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08002ce4   0x08002ce4   0x00000050   Code   RO         4023    i.X                 xpt2046.o
+    0x08002d34   0x08002d34   0x00000034   Code   RO         4024    i.XPT2046_Init      xpt2046.o
+    0x08002d68   0x08002d68   0x00000050   Code   RO         4025    i.Y                 xpt2046.o
+    0x08002db8   0x08002db8   0x0000000e   Code   RO         4263    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08002dc6   0x08002dc6   0x00000002   Code   RO         4264    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08002dc8   0x08002dc8   0x0000000e   Code   RO         4265    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x08002dd6   0x08002dd6   0x00000002   PAD
-    0x08002dd8   0x08002dd8   0x00000058   Code   RO         3943    i.getRaw            xpt2046.o
-    0x08002e30   0x08002e30   0x00000028   Code   RO         3944    i.getX              xpt2046.o
-    0x08002e58   0x08002e58   0x00000028   Code   RO         3945    i.getY              xpt2046.o
+    0x08002dd8   0x08002dd8   0x00000058   Code   RO         4026    i.getRaw            xpt2046.o
+    0x08002e30   0x08002e30   0x00000028   Code   RO         4027    i.getX              xpt2046.o
+    0x08002e58   0x08002e58   0x00000028   Code   RO         4028    i.getY              xpt2046.o
     0x08002e80   0x08002e80   0x00000354   Code   RO         3542    i.main              main.o
-    0x080031d4   0x080031d4   0x0000001a   Code   RO         3946    i.remap             xpt2046.o
-    0x080031ee   0x080031ee   0x000000a1   Data   RO         3544    .constdata          main.o
-    0x0800328f   0x0800328f   0x00000001   PAD
-    0x08003290   0x08003290   0x00000108   Data   RO         3545    .constdata          main.o
-    0x08003398   0x08003398   0x0000003c   Data   RO         3546    .constdata          main.o
-    0x080033d4   0x080033d4   0x0000048a   Data   RO         3658    .constdata          main.o
-    0x0800385e   0x0800385e   0x000002f8   Data   RO         3659    .constdata          main.o
-    0x08003b56   0x08003b56   0x00000553   Data   RO         3693    .constdata          main.o
-    0x080040a9   0x080040a9   0x00000001   PAD
-    0x080040aa   0x080040aa   0x00000050   Data   RO         3694    .constdata          main.o
-    0x080040fa   0x080040fa   0x0000010f   Data   RO         3695    .constdata          main.o
-    0x08004209   0x08004209   0x00000001   PAD
-    0x0800420a   0x0800420a   0x000002f8   Data   RO         3696    .constdata          main.o
-    0x08004502   0x08004502   0x000001a2   Data   RO         3703    .constdata          main.o
-    0x080046a4   0x080046a4   0x000002f8   Data   RO         3704    .constdata          main.o
-    0x0800499c   0x0800499c   0x00000008   Data   RO         3947    .constdata          xpt2046.o
-    0x080049a4   0x080049a4   0x00000010   Data   RO         4121    .constdata          system_stm32f4xx.o
-    0x080049b4   0x080049b4   0x00000008   Data   RO         4122    .constdata          system_stm32f4xx.o
-    0x080049bc   0x080049bc   0x00000020   Data   RO         4181    Region$$Table       anon$$obj.o
+    0x080031d4   0x080031d4   0x0000001a   Code   RO         4029    i.remap             xpt2046.o
+    0x080031ee   0x080031ee   0x00000388   Data   RO         3550    .constdata          main.o
+    0x08003576   0x08003576   0x00000660   Data   RO         3551    .constdata          main.o
+    0x08003bd6   0x08003bd6   0x00000002   PAD
+    0x08003bd8   0x08003bd8   0x0000003c   Data   RO         3552    .constdata          main.o
+    0x08003c14   0x08003c14   0x0000010f   Data   RO         3553    .constdata          main.o
+    0x08003d23   0x08003d23   0x00000001   PAD
+    0x08003d24   0x08003d24   0x000002f8   Data   RO         3554    .constdata          main.o
+    0x0800401c   0x0800401c   0x0000019e   Data   RO         3567    .constdata          main.o
+    0x080041ba   0x080041ba   0x000002f8   Data   RO         3568    .constdata          main.o
+    0x080044b2   0x080044b2   0x0000048a   Data   RO         3599    .constdata          main.o
+    0x0800493c   0x0800493c   0x000002f8   Data   RO         3600    .constdata          main.o
+    0x08004c34   0x08004c34   0x00000573   Data   RO         3814    .constdata          main.o
+    0x080051a7   0x080051a7   0x00000001   PAD
+    0x080051a8   0x080051a8   0x00000068   Data   RO         3815    .constdata          main.o
+    0x08005210   0x08005210   0x00000008   Data   RO         4030    .constdata          xpt2046.o
+    0x08005218   0x08005218   0x00000010   Data   RO         4201    .constdata          system_stm32f4xx.o
+    0x08005228   0x08005228   0x00000008   Data   RO         4202    .constdata          system_stm32f4xx.o
+    0x08005230   0x08005230   0x00000020   Data   RO         4261    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080049dc, Size: 0x000005f8, Max: 0x00020000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08005250, Size: 0x000005f8, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x080049dc   0x0000000c   Data   RW         2076    .data               stm32f4xx_hal.o
-    0x2000000c   0x080049e8   0x00000008   Data   RW         3454    .data               stm32f4xx_hal_msp.o
-    0x20000014   0x080049f0   0x00000004   PAD
-    0x20000018   0x080049f4   0x00000010   Data   RW         3705    .data               main.o
-    0x20000028   0x08004a04   0x00000004   Data   RW         4123    .data               system_stm32f4xx.o
+    0x20000000   0x08005250   0x0000000c   Data   RW         2076    .data               stm32f4xx_hal.o
+    0x2000000c   0x0800525c   0x00000008   Data   RW         3454    .data               stm32f4xx_hal_msp.o
+    0x20000014   0x08005264   0x00000004   PAD
+    0x20000018   0x08005268   0x00000010   Data   RW         3843    .data               main.o
+    0x20000028   0x08005278   0x00000004   Data   RW         4203    .data               system_stm32f4xx.o
     0x2000002c        -       0x000001cc   Zero   RW         3543    .bss                main.o
     0x200001f8        -       0x00000400   Zero   RW            1    STACK               startup_stm32f407xx.o
 
@@ -2170,30 +2400,30 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-      1756        226       6059         16        460     726381   main.o
-      2708          8          0          0          0      15568   ssd1289_fsmc.o
+      1756        226       8222         16        460      54010   main.o
+      2708          8          0          0          0      14304   ssd1289_fsmc.o
         36          8        392          0       1024        832   startup_stm32f407xx.o
-       180         28          0         12          0       4485   stm32f4xx_hal.o
-       228         14          0          0          0      31993   stm32f4xx_hal_cortex.o
-        36          0          0          0          0       1191   stm32f4xx_hal_dma.o
-       482         52          0          0          0       3115   stm32f4xx_hal_gpio.o
-       264         10          0          0          0       2959   stm32f4xx_hal_i2c.o
-       592         74          0          8          0       4835   stm32f4xx_hal_msp.o
-      1404         92          0          0          0     711604   stm32f4xx_hal_rcc.o
-      1354          4          0          0          0       7837   stm32f4xx_hal_spi.o
-        86          0          0          0          0       1184   stm32f4xx_hal_sram.o
-      1010         44          0          0          0      11112   stm32f4xx_hal_tim.o
-        84          0          0          0          0       2410   stm32f4xx_hal_tim_ex.o
-      1066          8          0          0          0       4064   stm32f4xx_hal_uart.o
-       112         26          0          0          0       5829   stm32f4xx_it.o
-       216         12          0          0          0       2647   stm32f4xx_ll_fsmc.o
-        84         18         24          4          0       1123   system_stm32f4xx.o
+       180         28          0         12          0       4541   stm32f4xx_hal.o
+       228         14          0          0          0      32057   stm32f4xx_hal_cortex.o
+        36          0          0          0          0       1207   stm32f4xx_hal_dma.o
+       482         52          0          0          0       3147   stm32f4xx_hal_gpio.o
+       264         10          0          0          0       2975   stm32f4xx_hal_i2c.o
+       592         74          0          8          0       4907   stm32f4xx_hal_msp.o
+      1404         92          0          0          0     711748   stm32f4xx_hal_rcc.o
+      1354          4          0          0          0       7909   stm32f4xx_hal_spi.o
+        86          0          0          0          0       1200   stm32f4xx_hal_sram.o
+      1010         44          0          0          0      11240   stm32f4xx_hal_tim.o
+        84          0          0          0          0       2442   stm32f4xx_hal_tim_ex.o
+      1066          8          0          0          0       4104   stm32f4xx_hal_uart.o
+       112         26          0          0          0       5933   stm32f4xx_it.o
+       216         12          0          0          0       2679   stm32f4xx_ll_fsmc.o
+        84         18         24          4          0       1147   system_stm32f4xx.o
        406         54          8          0          0       3770   xpt2046.o
 
     ----------------------------------------------------------------------
-     12126        678       6518         44       1484    1542939   Object Totals
+     12126        678       8682         44       1484     870152   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        22          0          3          4          0          0   (incl. Padding)
+        22          0          4          4          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -2234,15 +2464,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     12390        694       6518         44       1484    1532955   Grand Totals
-     12390        694       6518         44       1484    1532955   ELF Image Totals
-     12390        694       6518         44          0          0   ROM Totals
+     12390        694       8682         44       1484     860168   Grand Totals
+     12390        694       8682         44       1484     860168   ELF Image Totals
+     12390        694       8682         44          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                18908 (  18.46kB)
+    Total RO  Size (Code + RO Data)                21072 (  20.58kB)
     Total RW  Size (RW Data + ZI Data)              1528 (   1.49kB)
-    Total ROM Size (Code + RO Data + RW Data)      18952 (  18.51kB)
+    Total ROM Size (Code + RO Data + RW Data)      21116 (  20.62kB)
 
 ==============================================================================
 

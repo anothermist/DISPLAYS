@@ -8,13 +8,13 @@ ili9341_hal\ili9341.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
 ili9341_hal\ili9341.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 ili9341_hal\ili9341.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
 ili9341_hal\ili9341.o: ../Drivers/CMSIS/Include/core_cm3.h
-ili9341_hal\ili9341.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+ili9341_hal\ili9341.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ili9341_hal\ili9341.o: ../Drivers/CMSIS/Include/core_cmInstr.h
 ili9341_hal\ili9341.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 ili9341_hal\ili9341.o: ../Drivers/CMSIS/Include/core_cmFunc.h
 ili9341_hal\ili9341.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 ili9341_hal\ili9341.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
-ili9341_hal\ili9341.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+ili9341_hal\ili9341.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ili9341_hal\ili9341.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 ili9341_hal\ili9341.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 ili9341_hal\ili9341.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
@@ -28,5 +28,5 @@ ili9341_hal\ili9341.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
 ili9341_hal\ili9341.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 ili9341_hal\ili9341.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 ili9341_hal\ili9341.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_fsmc.h
-ili9341_hal\ili9341.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
-ili9341_hal\ili9341.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
+ili9341_hal\ili9341.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+ili9341_hal\ili9341.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

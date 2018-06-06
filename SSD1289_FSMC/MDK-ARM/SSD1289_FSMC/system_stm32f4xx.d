@@ -2,7 +2,7 @@ ssd1289_fsmc\system_stm32f4xx.o: ..//Src/system_stm32f4xx.c
 ssd1289_fsmc\system_stm32f4xx.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 ssd1289_fsmc\system_stm32f4xx.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
 ssd1289_fsmc\system_stm32f4xx.o: ../Drivers/CMSIS/Include/core_cm4.h
-ssd1289_fsmc\system_stm32f4xx.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+ssd1289_fsmc\system_stm32f4xx.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ssd1289_fsmc\system_stm32f4xx.o: ../Drivers/CMSIS/Include/core_cmInstr.h
 ssd1289_fsmc\system_stm32f4xx.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 ssd1289_fsmc\system_stm32f4xx.o: ../Drivers/CMSIS/Include/core_cmFunc.h
@@ -15,7 +15,7 @@ ssd1289_fsmc\system_stm32f4xx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_h
 ssd1289_fsmc\system_stm32f4xx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 ssd1289_fsmc\system_stm32f4xx.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 ssd1289_fsmc\system_stm32f4xx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-ssd1289_fsmc\system_stm32f4xx.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+ssd1289_fsmc\system_stm32f4xx.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ssd1289_fsmc\system_stm32f4xx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
 ssd1289_fsmc\system_stm32f4xx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
 ssd1289_fsmc\system_stm32f4xx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
