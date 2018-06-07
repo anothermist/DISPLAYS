@@ -343,6 +343,7 @@ void LCD_Font(uint16_t x, uint16_t y, char *text, const GFXfont *p_font, uint8_t
 		}
 	}
 }
+
 void LCD_Init(void)
 {
 	LCD_Send_Reg(0x07, 0);     			// DTE=0, D[1:0]=00, GON=0

@@ -47,581 +47,575 @@ Discarded input sections
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
- .progmem.data.Font_64x100_Segment_7_Num
+ .progmem.data.Font_64_Segment_7_Num
                 0x00000000        0x7 main.o
- .progmem.data.Font_64x100_Segment_7_NumGlyphs
+ .progmem.data.Font_64_Segment_7_NumGlyphs
                 0x00000000       0x46 main.o
- .progmem.data.Font_64x100_Segment_7_NumBitmaps
+ .progmem.data.Font_64_Segment_7_NumBitmaps
                 0x00000000     0x1514 main.o
- .progmem.data.Font_64x96_Segment_16_Num
+ .progmem.data.Font_64_Segment_16_Num
                 0x00000000        0x7 main.o
- .progmem.data.Font_64x96_Segment_16_NumGlyphs
+ .progmem.data.Font_64_Segment_16_NumGlyphs
                 0x00000000       0x46 main.o
- .progmem.data.Font_64x96_Segment_16_NumBitmaps
+ .progmem.data.Font_64_Segment_16_NumBitmaps
                 0x00000000     0x1817 main.o
- .progmem.data.Font_48x72_Segment_16_Num
+ .progmem.data.Font_48_Segment_16_Num
                 0x00000000        0x7 main.o
- .progmem.data.Font_48x72_Segment_16_NumGlyphs
+ .progmem.data.Font_48_Segment_16_NumGlyphs
                 0x00000000       0x46 main.o
- .progmem.data.Font_48x72_Segment_16_NumBitmaps
+ .progmem.data.Font_48_Segment_16_NumBitmaps
                 0x00000000      0xdcf main.o
- .progmem.data.Font_48x24_Battery
+ .progmem.data.Font_48_Battery
                 0x00000000        0x7 main.o
- .progmem.data.Font_48x24_BatteryGlyphs
+ .progmem.data.Font_48_BatteryGlyphs
                 0x00000000       0x46 main.o
- .progmem.data.Font_48x24_BatteryBitmaps
+ .progmem.data.Font_48_BatteryBitmaps
                 0x00000000      0x564 main.o
- .progmem.data.Font_40x60_Segment_16_Full
+ .progmem.data.Font_40_Segment_16_Full
                 0x00000000        0x7 main.o
- .progmem.data.Font_40x60_Segment_16_FullGlyphs
+ .progmem.data.Font_40_Segment_16_FullGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_40x60_Segment_16_FullBitmaps
+ .progmem.data.Font_40_Segment_16_FullBitmaps
                 0x00000000     0x40ae main.o
- .progmem.data.Font_32x64_Grotesk_Bold
+ .progmem.data.Font_32_Grotesk_Bold
                 0x00000000        0x7 main.o
- .progmem.data.Font_32x64_Grotesk_BoldGlyphs
+ .progmem.data.Font_32_Grotesk_BoldGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_32x64_Grotesk_BoldBitmaps
+ .progmem.data.Font_32_Grotesk_BoldBitmaps
                 0x00000000     0x345f main.o
- .progmem.data.Font_32x64_Grotesk
+ .progmem.data.Font_32_Grotesk
                 0x00000000        0x7 main.o
- .progmem.data.Font_32x64_GroteskGlyphs
+ .progmem.data.Font_32_GroteskGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_32x64_GroteskBitmaps
+ .progmem.data.Font_32_GroteskBitmaps
                 0x00000000     0x3203 main.o
- .progmem.data.Font_32x52_Segment_18_Full
+ .progmem.data.Font_32_Segment_18_Full
                 0x00000000        0x7 main.o
- .progmem.data.Font_32x52_Segment_18_FullGlyphs
+ .progmem.data.Font_32_Segment_18_FullGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_32x52_Segment_18_FullBitmaps
+ .progmem.data.Font_32_Segment_18_FullBitmaps
                 0x00000000     0x30ee main.o
- .progmem.data.Font_32x50_Segment_16_Full
+ .progmem.data.Font_32_Segment_16_Full
                 0x00000000        0x7 main.o
- .progmem.data.Font_32x50_Segment_16_FullGlyphs
+ .progmem.data.Font_32_Segment_16_FullGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_32x50_Segment_16_FullBitmaps
+ .progmem.data.Font_32_Segment_16_FullBitmaps
                 0x00000000     0x2451 main.o
- .progmem.data.Font_32x50_Segment_7_Full
+ .progmem.data.Font_32_Segment_7_Full
                 0x00000000        0x7 main.o
- .progmem.data.Font_32x50_Segment_7_FullGlyphs
+ .progmem.data.Font_32_Segment_7_FullGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_32x50_Segment_7_FullBitmaps
+ .progmem.data.Font_32_Segment_7_FullBitmaps
                 0x00000000     0x2994 main.o
- .progmem.data.Font_32x50_Matrix_Num
+ .progmem.data.Font_32_Matrix_Num
                 0x00000000        0x7 main.o
- .progmem.data.Font_32x50_Matrix_NumGlyphs
+ .progmem.data.Font_32_Matrix_NumGlyphs
                 0x00000000       0x46 main.o
- .progmem.data.Font_32x50_Matrix_NumBitmaps
+ .progmem.data.Font_32_Matrix_NumBitmaps
                 0x00000000      0x667 main.o
- .progmem.data.Font_32x50_Arial_Num_Plus
+ .progmem.data.Font_32_Arial_Num_Plus
                 0x00000000        0x7 main.o
- .progmem.data.Font_32x50_Arial_Num_PlusGlyphs
+ .progmem.data.Font_32_Arial_Num_PlusGlyphs
                 0x00000000       0x4d main.o
- .progmem.data.Font_32x50_Arial_Num_PlusBitmaps
+ .progmem.data.Font_32_Arial_Num_PlusBitmaps
                 0x00000000      0x61d main.o
- .progmem.data.Font_32x48_Segment_16_Full
+ .progmem.data.Font_32_Calibri_Bold
                 0x00000000        0x7 main.o
- .progmem.data.Font_32x48_Segment_16_FullGlyphs
-                0x00000000      0x299 main.o
- .progmem.data.Font_32x48_Segment_16_FullBitmaps
-                0x00000000     0x2816 main.o
- .progmem.data.Font_32x48_Calibri_Bold
-                0x00000000        0x7 main.o
- .progmem.data.Font_32x48_Calibri_BoldGlyphs
+ .progmem.data.Font_32_Calibri_BoldGlyphs
                 0x00000000       0x46 main.o
- .progmem.data.Font_32x48_Calibri_BoldBitmaps
+ .progmem.data.Font_32_Calibri_BoldBitmaps
                 0x00000000      0x5c5 main.o
- .progmem.data.Font_32x32_Special
+ .progmem.data.Font_32_Special
                 0x00000000        0x7 main.o
- .progmem.data.Font_32x32_SpecialGlyphs
+ .progmem.data.Font_32_SpecialGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_32x32_SpecialBitmaps
+ .progmem.data.Font_32_SpecialBitmaps
                 0x00000000     0x2ae9 main.o
- .progmem.data.Font_32x24_Dingbats
+ .progmem.data.Font_32_Dingbats
                 0x00000000        0x7 main.o
- .progmem.data.Font_32x24_DingbatsGlyphs
+ .progmem.data.Font_32_DingbatsGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_32x24_DingbatsBitmaps
+ .progmem.data.Font_32_DingbatsBitmaps
                 0x00000000      0xed2 main.o
- .progmem.data.Font_24x56_SerifItalic
+ .progmem.data.Font_24_SerifItalic
                 0x00000000        0x7 main.o
- .progmem.data.Font_24x56_SerifItalicGlyphs
+ .progmem.data.Font_24_SerifItalicGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_24x56_SerifItalicBitmaps
+ .progmem.data.Font_24_SerifItalicBitmaps
                 0x00000000     0x1d9b main.o
- .progmem.data.Font_24x56_Serif_Bold_Italic
+ .progmem.data.Font_24_Serif_Bold_Italic
                 0x00000000        0x7 main.o
- .progmem.data.Font_24x56_Serif_Bold_ItalicGlyphs
+ .progmem.data.Font_24_Serif_Bold_ItalicGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_24x56_Serif_Bold_ItalicBitmaps
+ .progmem.data.Font_24_Serif_Bold_ItalicBitmaps
                 0x00000000     0x2035 main.o
- .progmem.data.Font_24x56_Serif_Bold
+ .progmem.data.Font_24_Serif_Bold
                 0x00000000        0x7 main.o
- .progmem.data.Font_24x56_Serif_BoldGlyphs
+ .progmem.data.Font_24_Serif_BoldGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_24x56_Serif_BoldBitmaps
+ .progmem.data.Font_24_Serif_BoldBitmaps
                 0x00000000     0x1ea7 main.o
- .progmem.data.Font_24x56_Serif
+ .progmem.data.Font_24_Serif
                 0x00000000        0x7 main.o
- .progmem.data.Font_24x56_SerifGlyphs
+ .progmem.data.Font_24_SerifGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_24x56_SerifBitmaps
+ .progmem.data.Font_24_SerifBitmaps
                 0x00000000     0x1b62 main.o
- .progmem.data.Font_24x56_Sans_Oblique
+ .progmem.data.Font_24_Sans_Oblique
                 0x00000000        0x7 main.o
- .progmem.data.Font_24x56_Sans_ObliqueGlyphs
+ .progmem.data.Font_24_Sans_ObliqueGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_24x56_Sans_ObliqueBitmaps
+ .progmem.data.Font_24_Sans_ObliqueBitmaps
                 0x00000000     0x226b main.o
- .progmem.data.Font_24x56_Sans_Bold_Oblique
+ .progmem.data.Font_24_Sans_Bold_Oblique
                 0x00000000        0x7 main.o
- .progmem.data.Font_24x56_Sans_Bold_ObliqueGlyphs
+ .progmem.data.Font_24_Sans_Bold_ObliqueGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_24x56_Sans_Bold_ObliqueBitmaps
+ .progmem.data.Font_24_Sans_Bold_ObliqueBitmaps
                 0x00000000     0x24e7 main.o
- .progmem.data.Font_24x56_Sans_Bold
+ .progmem.data.Font_24_Sans_Bold
                 0x00000000        0x7 main.o
- .progmem.data.Font_24x56_Sans_BoldGlyphs
+ .progmem.data.Font_24_Sans_BoldGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_24x56_Sans_BoldBitmaps
+ .progmem.data.Font_24_Sans_BoldBitmaps
                 0x00000000     0x1fcf main.o
- .progmem.data.Font_24x56_Sans
+ .progmem.data.Font_24_Sans
                 0x00000000        0x7 main.o
- .progmem.data.Font_24x56_SansGlyphs
+ .progmem.data.Font_24_SansGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_24x56_SansBitmaps
+ .progmem.data.Font_24_SansBitmaps
                 0x00000000     0x1d28 main.o
- .progmem.data.Font_24x48_Grotesk_Bold
+ .progmem.data.Font_24_Grotesk_Bold
                 0x00000000        0x7 main.o
- .progmem.data.Font_24x48_Grotesk_BoldGlyphs
+ .progmem.data.Font_24_Grotesk_BoldGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_24x48_Grotesk_BoldBitmaps
+ .progmem.data.Font_24_Grotesk_BoldBitmaps
                 0x00000000     0x1d97 main.o
- .progmem.data.Font_24x48_Grotesk
+ .progmem.data.Font_24_Grotesk
                 0x00000000        0x7 main.o
- .progmem.data.Font_24x48_GroteskGlyphs
+ .progmem.data.Font_24_GroteskGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_24x48_GroteskBitmaps
+ .progmem.data.Font_24_GroteskBitmaps
                 0x00000000     0x1c7a main.o
- .progmem.data.Font_24x47_Mono_Oblique
+ .progmem.data.Font_24_Mono_Oblique
                 0x00000000        0x7 main.o
- .progmem.data.Font_24x47_Mono_ObliqueGlyphs
+ .progmem.data.Font_24_Mono_ObliqueGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_24x47_Mono_ObliqueBitmaps
+ .progmem.data.Font_24_Mono_ObliqueBitmaps
                 0x00000000     0x1934 main.o
- .progmem.data.Font_24x47_Mono_Bold_Oblique
+ .progmem.data.Font_24_Mono_Bold_Oblique
                 0x00000000        0x7 main.o
- .progmem.data.Font_24x47_Mono_Bold_ObliqueGlyphs
+ .progmem.data.Font_24_Mono_Bold_ObliqueGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_24x47_Mono_Bold_ObliqueBitmaps
+ .progmem.data.Font_24_Mono_Bold_ObliqueBitmaps
                 0x00000000     0x1dd3 main.o
- .progmem.data.Font_24x47_Mono_Bold
+ .progmem.data.Font_24_Mono_Bold
                 0x00000000        0x7 main.o
- .progmem.data.Font_24x47_Mono_BoldGlyphs
+ .progmem.data.Font_24_Mono_BoldGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_24x47_Mono_BoldBitmaps
+ .progmem.data.Font_24_Mono_BoldBitmaps
                 0x00000000     0x1a8d main.o
- .progmem.data.Font_24x47_Mono
+ .progmem.data.Font_24_Mono
                 0x00000000        0x7 main.o
- .progmem.data.Font_24x47_MonoGlyphs
+ .progmem.data.Font_24_MonoGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_24x47_MonoBitmaps
+ .progmem.data.Font_24_MonoBitmaps
                 0x00000000     0x161a main.o
- .progmem.data.Font_24x36_Segment_16_Full
+ .progmem.data.Font_24_Segment_16_Full
                 0x00000000        0x7 main.o
- .progmem.data.Font_24x36_Segment_16_FullGlyphs
+ .progmem.data.Font_24_Segment_16_FullGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_24x36_Segment_16_FullBitmaps
+ .progmem.data.Font_24_Segment_16_FullBitmaps
                 0x00000000     0x183a main.o
- .progmem.data.Font_24x32_Ubuntu_Bold
+ .progmem.data.Font_24_Ubuntu_Bold
                 0x00000000        0x7 main.o
- .progmem.data.Font_24x32_Ubuntu_BoldGlyphs
+ .progmem.data.Font_24_Ubuntu_BoldGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_24x32_Ubuntu_BoldBitmaps
+ .progmem.data.Font_24_Ubuntu_BoldBitmaps
                 0x00000000      0xfc4 main.o
- .progmem.data.Font_24x32_Ubuntu
+ .progmem.data.Font_24_Ubuntu
                 0x00000000        0x7 main.o
- .progmem.data.Font_24x32_UbuntuGlyphs
+ .progmem.data.Font_24_UbuntuGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_24x32_UbuntuBitmaps
+ .progmem.data.Font_24_UbuntuBitmaps
                 0x00000000      0xe3d main.o
- .progmem.data.Font_24x32_Inconsola
+ .progmem.data.Font_24_Inconsola
                 0x00000000        0x7 main.o
- .progmem.data.Font_24x32_InconsolaGlyphs
+ .progmem.data.Font_24_InconsolaGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_24x32_InconsolaBitmaps
+ .progmem.data.Font_24_InconsolaBitmaps
                 0x00000000      0xdcb main.o
- .progmem.data.Font_24x29_Matrix_Num
+ .progmem.data.Font_24_Matrix_Num
                 0x00000000        0x7 main.o
- .progmem.data.Font_24x29_Matrix_NumGlyphs
+ .progmem.data.Font_24_Matrix_NumGlyphs
                 0x00000000       0x46 main.o
- .progmem.data.Font_24x29_Matrix_NumBitmaps
+ .progmem.data.Font_24_Matrix_NumBitmaps
                 0x00000000      0x26f main.o
- .progmem.data.Font_18x42_Serif_Italic
+ .progmem.data.Font_18_Serif_Italic
                 0x00000000        0x7 main.o
- .progmem.data.Font_18x42_Serif_ItalicGlyphs
+ .progmem.data.Font_18_Serif_ItalicGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_18x42_Serif_ItalicBitmaps
+ .progmem.data.Font_18_Serif_ItalicBitmaps
                 0x00000000     0x1025 main.o
- .progmem.data.Font_18x42_Serif_Bold_Italic
+ .progmem.data.Font_18_Serif_Bold_Italic
                 0x00000000        0x7 main.o
- .progmem.data.Font_18x42_Serif_Bold_ItalicGlyphs
+ .progmem.data.Font_18_Serif_Bold_ItalicGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_18x42_Serif_Bold_ItalicBitmaps
+ .progmem.data.Font_18_Serif_Bold_ItalicBitmaps
                 0x00000000     0x1282 main.o
- .progmem.data.Font_18x42_Serif_Bold
+ .progmem.data.Font_18_Serif_Bold
                 0x00000000        0x7 main.o
- .progmem.data.Font_18x42_Serif_BoldGlyphs
+ .progmem.data.Font_18_Serif_BoldGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_18x42_Serif_BoldBitmaps
+ .progmem.data.Font_18_Serif_BoldBitmaps
                 0x00000000     0x10b1 main.o
- .progmem.data.Font_18x42_Serif
+ .progmem.data.Font_18_Serif
                 0x00000000        0x7 main.o
- .progmem.data.Font_18x42_SerifGlyphs
+ .progmem.data.Font_18_SerifGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_18x42_SerifBitmaps
+ .progmem.data.Font_18_SerifBitmaps
                 0x00000000      0xf2e main.o
- .progmem.data.Font_18x42_Sans_Oblique
+ .progmem.data.Font_18_Sans_Oblique
                 0x00000000        0x7 main.o
- .progmem.data.Font_18x42_Sans_ObliqueGlyphs
+ .progmem.data.Font_18_Sans_ObliqueGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_18x42_Sans_ObliqueBitmaps
+ .progmem.data.Font_18_Sans_ObliqueBitmaps
                 0x00000000     0x1357 main.o
- .progmem.data.Font_18x42_Sans_Bold_Oblique
+ .progmem.data.Font_18_Sans_Bold_Oblique
                 0x00000000        0x7 main.o
- .progmem.data.Font_18x42_Sans_Bold_ObliqueGlyphs
+ .progmem.data.Font_18_Sans_Bold_ObliqueGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_18x42_Sans_Bold_ObliqueBitmaps
+ .progmem.data.Font_18_Sans_Bold_ObliqueBitmaps
                 0x00000000     0x1497 main.o
- .progmem.data.Font_18x42_Sans_Bold
+ .progmem.data.Font_18_Sans_Bold
                 0x00000000        0x7 main.o
- .progmem.data.Font_18x42_Sans_BoldGlyphs
+ .progmem.data.Font_18_Sans_BoldGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_18x42_Sans_BoldBitmaps
+ .progmem.data.Font_18_Sans_BoldBitmaps
                 0x00000000     0x1197 main.o
- .progmem.data.Font_18x42_Sans
+ .progmem.data.Font_18_Sans
                 0x00000000        0x7 main.o
- .progmem.data.Font_18x42_SansGlyphs
+ .progmem.data.Font_18_SansGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_18x42_SansBitmaps
+ .progmem.data.Font_18_SansBitmaps
                 0x00000000     0x103f main.o
- .progmem.data.Font_18x35_Mono_Oblique
+ .progmem.data.Font_18_Mono_Oblique
                 0x00000000        0x7 main.o
- .progmem.data.Font_18x35_Mono_ObliqueGlyphs
+ .progmem.data.Font_18_Mono_ObliqueGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_18x35_Mono_ObliqueBitmaps
+ .progmem.data.Font_18_Mono_ObliqueBitmaps
                 0x00000000      0xdba main.o
- .progmem.data.Font_18x35_Mono_Bold_Oblique
+ .progmem.data.Font_18_Mono_Bold_Oblique
                 0x00000000        0x7 main.o
- .progmem.data.Font_18x35_Mono_Bold_ObliqueGlyphs
+ .progmem.data.Font_18_Mono_Bold_ObliqueGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_18x35_Mono_Bold_ObliqueBitmaps
+ .progmem.data.Font_18_Mono_Bold_ObliqueBitmaps
                 0x00000000     0x10a0 main.o
- .progmem.data.Font_18x35_Mono_Bold
+ .progmem.data.Font_18_Mono_Bold
                 0x00000000        0x7 main.o
- .progmem.data.Font_18x35_Mono_BoldGlyphs
+ .progmem.data.Font_18_Mono_BoldGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_18x35_Mono_BoldBitmaps
+ .progmem.data.Font_18_Mono_BoldBitmaps
                 0x00000000      0xee5 main.o
- .progmem.data.Font_18x35_Mono
+ .progmem.data.Font_18_Mono
                 0x00000000        0x7 main.o
- .progmem.data.Font_18x35_MonoGlyphs
+ .progmem.data.Font_18_MonoGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_18x35_MonoBitmaps
+ .progmem.data.Font_18_MonoBitmaps
                 0x00000000      0xc11 main.o
- .progmem.data.Font_16x32_Retro
+ .progmem.data.Font_16_Retro
                 0x00000000        0x7 main.o
- .progmem.data.Font_16x32_RetroGlyphs
+ .progmem.data.Font_16_RetroGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_16x32_RetroBitmaps
+ .progmem.data.Font_16_RetroBitmaps
                 0x00000000      0xbe0 main.o
- .progmem.data.Font_16x32_Grotesk_Bold16x32
+ .progmem.data.Font_16_Grotesk_Bold16x32
                 0x00000000        0x7 main.o
- .progmem.data.Font_16x32_Grotesk_Bold16x32Glyphs
+ .progmem.data.Font_16_Grotesk_Bold16x32Glyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_16x32_Grotesk_Bold16x32Bitmaps
+ .progmem.data.Font_16_Grotesk_Bold16x32Bitmaps
                 0x00000000      0xd17 main.o
- .progmem.data.Font_16x32_Grotesk
+ .progmem.data.Font_16_Grotesk
                 0x00000000        0x7 main.o
- .progmem.data.Font_16x32_GroteskGlyphs
+ .progmem.data.Font_16_GroteskGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_16x32_GroteskBitmaps
+ .progmem.data.Font_16_GroteskBitmaps
                 0x00000000      0xce8 main.o
- .progmem.data.Font_16x24_Segment_16_Full
+ .progmem.data.Font_16_Segment_16_Full
                 0x00000000        0x7 main.o
- .progmem.data.Font_16x24_Segment_16_FullGlyphs
+ .progmem.data.Font_16_Segment_16_FullGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_16x24_Segment_16_FullBitmaps
+ .progmem.data.Font_16_Segment_16_FullBitmaps
                 0x00000000      0xa2b main.o
- .progmem.data.Font_16x24_OCR
+ .progmem.data.Font_16_OCR
                 0x00000000        0x7 main.o
- .progmem.data.Font_16x24_OCRGlyphs
+ .progmem.data.Font_16_OCRGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_16x24_OCRBitmaps
+ .progmem.data.Font_16_OCRBitmaps
                 0x00000000      0x71c main.o
- .progmem.data.Font_16x24_Arial_Round
+ .progmem.data.Font_16_Arial_Round
                 0x00000000        0x7 main.o
- .progmem.data.Font_16x24_Arial_RoundGlyphs
+ .progmem.data.Font_16_Arial_RoundGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_16x24_Arial_RoundBitmaps
+ .progmem.data.Font_16_Arial_RoundBitmaps
                 0x00000000      0x753 main.o
- .progmem.data.Font_16x22_Matrix_Num
+ .progmem.data.Font_16_Matrix_Num
                 0x00000000        0x7 main.o
- .progmem.data.Font_16x22_Matrix_NumGlyphs
+ .progmem.data.Font_16_Matrix_NumGlyphs
                 0x00000000       0x46 main.o
- .progmem.data.Font_16x22_Matrix_NumBitmaps
+ .progmem.data.Font_16_Matrix_NumBitmaps
                 0x00000000      0x14f main.o
- .progmem.data.Font_16x22_Matrix_Full_Slash
+ .progmem.data.Font_16_Matrix_Full_Slash
                 0x00000000        0x7 main.o
- .progmem.data.Font_16x22_Matrix_Full_SlashGlyphs
+ .progmem.data.Font_16_Matrix_Full_SlashGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_16x22_Matrix_Full_SlashBitmaps
+ .progmem.data.Font_16_Matrix_Full_SlashBitmaps
                 0x00000000      0x95b main.o
- .progmem.data.Font_16x22_Matrix_Full
+ .progmem.data.Font_16_Matrix_Full
                 0x00000000        0x7 main.o
- .progmem.data.Font_16x22_Matrix_FullGlyphs
+ .progmem.data.Font_16_Matrix_FullGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_16x22_Matrix_FullBitmaps
+ .progmem.data.Font_16_Matrix_FullBitmaps
                 0x00000000      0x95b main.o
- .progmem.data.Font_16x16_Swiss_Outline
+ .progmem.data.Font_16_Swiss_Outline
                 0x00000000        0x7 main.o
- .progmem.data.Font_16x16_Swiss_OutlineGlyphs
+ .progmem.data.Font_16_Swiss_OutlineGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_16x16_Swiss_OutlineBitmaps
+ .progmem.data.Font_16_Swiss_OutlineBitmaps
                 0x00000000      0x443 main.o
- .progmem.data.Font_16x16_Sinclair_Inverted
+ .progmem.data.Font_16_Sinclair_Inverted
                 0x00000000        0x7 main.o
- .progmem.data.Font_16x16_Sinclair_InvertedGlyphs
+ .progmem.data.Font_16_Sinclair_InvertedGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_16x16_Sinclair_InvertedBitmaps
+ .progmem.data.Font_16_Sinclair_InvertedBitmaps
                 0x00000000      0x70f main.o
- .progmem.data.Font_16x16_Sinclair
+ .progmem.data.Font_16_Sinclair
                 0x00000000        0x7 main.o
- .progmem.data.Font_16x16_SinclairGlyphs
+ .progmem.data.Font_16_SinclairGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_16x16_SinclairBitmaps
+ .progmem.data.Font_16_SinclairBitmaps
                 0x00000000      0x522 main.o
- .progmem.data.Font_16x16_Nadianne
+ .progmem.data.Font_16_Nadianne
                 0x00000000        0x7 main.o
- .progmem.data.Font_16x16_NadianneGlyphs
+ .progmem.data.Font_16_NadianneGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_16x16_NadianneBitmaps
+ .progmem.data.Font_16_NadianneBitmaps
                 0x00000000      0x4fe main.o
- .progmem.data.Font_16x16_Hallfetica
+ .progmem.data.Font_16_Hallfetica
                 0x00000000        0x7 main.o
- .progmem.data.Font_16x16_HallfeticaGlyphs
+ .progmem.data.Font_16_HallfeticaGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_16x16_HallfeticaBitmaps
+ .progmem.data.Font_16_HallfeticaBitmaps
                 0x00000000      0x3a9 main.o
- .progmem.data.Font_16x16_FranklinGothic
+ .progmem.data.Font_16_FranklinGothic
                 0x00000000        0x7 main.o
- .progmem.data.Font_16x16_FranklinGothicGlyphs
+ .progmem.data.Font_16_FranklinGothicGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_16x16_FranklinGothicBitmaps
+ .progmem.data.Font_16_FranklinGothicBitmaps
                 0x00000000      0x3a2 main.o
- .progmem.data.Font_16x16_Default
+ .progmem.data.Font_16_Default
                 0x00000000        0x7 main.o
- .progmem.data.Font_16x16_DefaultGlyphs
+ .progmem.data.Font_16_DefaultGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_16x16_DefaultBitmaps
+ .progmem.data.Font_16_DefaultBitmaps
                 0x00000000      0x4ae main.o
- .progmem.data.Font_16x16_Arial_Italic
+ .progmem.data.Font_16_Arial_Italic
                 0x00000000        0x7 main.o
- .progmem.data.Font_16x16_Arial_ItalicGlyphs
+ .progmem.data.Font_16_Arial_ItalicGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_16x16_Arial_ItalicBitmaps
+ .progmem.data.Font_16_Arial_ItalicBitmaps
                 0x00000000      0x3fd main.o
- .progmem.data.Font_16x16_Arial_Bold
+ .progmem.data.Font_16_Arial_Bold
                 0x00000000        0x7 main.o
- .progmem.data.Font_16x16_Arial_BoldGlyphs
+ .progmem.data.Font_16_Arial_BoldGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_16x16_Arial_BoldBitmaps
+ .progmem.data.Font_16_Arial_BoldBitmaps
                 0x00000000      0x3e4 main.o
- .progmem.data.Font_16x16_Arial
+ .progmem.data.Font_16_Arial
                 0x00000000        0x7 main.o
- .progmem.data.Font_16x16_ArialGlyphs
+ .progmem.data.Font_16_ArialGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_16x16_ArialBitmaps
+ .progmem.data.Font_16_ArialBitmaps
                 0x00000000      0x389 main.o
- .progmem.data.Font_12x29_Serif_Italic
+ .progmem.data.Font_12_Serif_Italic
                 0x00000000        0x7 main.o
- .progmem.data.Font_12x29_Serif_ItalicGlyphs
+ .progmem.data.Font_12_Serif_ItalicGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_12x29_Serif_ItalicBitmaps
+ .progmem.data.Font_12_Serif_ItalicBitmaps
                 0x00000000      0x7c0 main.o
- .progmem.data.FreeSerFont_12x29_Serif_Bold_Italic
+ .progmem.data.FreeSerFont_12_Serif_Bold_Italic
                 0x00000000        0x7 main.o
- .progmem.data.FreeSerFont_12x29_Serif_Bold_ItalicGlyphs
+ .progmem.data.FreeSerFont_12_Serif_Bold_ItalicGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.FreeSerFont_12x29_Serif_Bold_ItalicBitmaps
+ .progmem.data.FreeSerFont_12_Serif_Bold_ItalicBitmaps
                 0x00000000      0x8be main.o
- .progmem.data.Font_12x29_Serif_Bold
+ .progmem.data.Font_12_Serif_Bold
                 0x00000000        0x7 main.o
- .progmem.data.Font_12x29_Serif_BoldGlyphs
+ .progmem.data.Font_12_Serif_BoldGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_12x29_Serif_BoldBitmaps
+ .progmem.data.Font_12_Serif_BoldBitmaps
                 0x00000000      0x7c7 main.o
- .progmem.data.Font_12x29_Serif
+ .progmem.data.Font_12_Serif
                 0x00000000        0x7 main.o
- .progmem.data.Font_12x29_SerifGlyphs
+ .progmem.data.Font_12_SerifGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_12x29_SerifBitmaps
+ .progmem.data.Font_12_SerifBitmaps
                 0x00000000      0x72f main.o
- .progmem.data.Font_12x29_Sans_Oblique
+ .progmem.data.Font_12_Sans_Oblique
                 0x00000000        0x7 main.o
- .progmem.data.Font_12x29_Sans_ObliqueGlyphs
+ .progmem.data.Font_12_Sans_ObliqueGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_12x29_Sans_ObliqueBitmaps
+ .progmem.data.Font_12_Sans_ObliqueBitmaps
                 0x00000000      0x93a main.o
- .progmem.data.Font_12x29_Sans_Bold_Oblique
+ .progmem.data.Font_12_Sans_Bold_Oblique
                 0x00000000        0x7 main.o
- .progmem.data.Font_12x29_Sans_Bold_ObliqueGlyphs
+ .progmem.data.Font_12_Sans_Bold_ObliqueGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_12x29_Sans_Bold_ObliqueBitmaps
+ .progmem.data.Font_12_Sans_Bold_ObliqueBitmaps
                 0x00000000      0x9e7 main.o
- .progmem.data.Font_12x29_Sans_Bold
+ .progmem.data.Font_12_Sans_Bold
                 0x00000000        0x7 main.o
- .progmem.data.Font_12x29_Sans_BoldGlyphs
+ .progmem.data.Font_12_Sans_BoldGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_12x29_Sans_BoldBitmaps
+ .progmem.data.Font_12_Sans_BoldBitmaps
                 0x00000000      0x88a main.o
- .progmem.data.Font_12x29_Sans
+ .progmem.data.Font_12_Sans
                 0x00000000        0x7 main.o
- .progmem.data.Font_12x29_SansGlyphs
+ .progmem.data.Font_12_SansGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_12x29_SansBitmaps
+ .progmem.data.Font_12_SansBitmaps
                 0x00000000      0x7b1 main.o
- .progmem.data.Font_12x24_Mono_Oblique
+ .progmem.data.Font_12_Mono_Oblique
                 0x00000000        0x7 main.o
- .progmem.data.Font_12x24_Mono_ObliqueGlyphs
+ .progmem.data.Font_12_Mono_ObliqueGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_12x24_Mono_ObliqueBitmaps
+ .progmem.data.Font_12_Mono_ObliqueBitmaps
                 0x00000000      0x6ab main.o
- .progmem.data.Font_12x24_Mono_Bold_Oblique
+ .progmem.data.Font_12_Mono_Bold_Oblique
                 0x00000000        0x7 main.o
- .progmem.data.Font_12x24_Mono_Bold_ObliqueGlyphs
+ .progmem.data.Font_12_Mono_Bold_ObliqueGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_12x24_Mono_Bold_ObliqueBitmaps
+ .progmem.data.Font_12_Mono_Bold_ObliqueBitmaps
                 0x00000000      0x7ae main.o
- .progmem.data.Font_12x24_Mono_Bold
+ .progmem.data.Font_12_Mono_Bold
                 0x00000000        0x7 main.o
- .progmem.data.Font_12x24_Mono_BoldGlyphs
+ .progmem.data.Font_12_Mono_BoldGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_12x24_Mono_BoldBitmaps
+ .progmem.data.Font_12_Mono_BoldBitmaps
                 0x00000000      0x6c2 main.o
- .progmem.data.Font_12x24_Mono
+ .progmem.data.Font_12_Mono
                 0x00000000        0x7 main.o
- .progmem.data.Font_12x24_MonoGlyphs
+ .progmem.data.Font_12_MonoGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_12x24_MonoBitmaps
+ .progmem.data.Font_12_MonoBitmaps
                 0x00000000      0x5b4 main.o
- .progmem.data.Font_9x22_Serif_Italic
+ .progmem.data.Font_9_Serif_Italic
                 0x00000000        0x7 main.o
- .progmem.data.Font_9x22_Serif_ItalicGlyphs
+ .progmem.data.Font_9_Serif_ItalicGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_9x22_Serif_ItalicBitmaps
+ .progmem.data.Font_9_Serif_ItalicBitmaps
                 0x00000000      0x48b main.o
- .progmem.data.Font_9x22_Serif_Bold_Italic
+ .progmem.data.Font_9_Serif_Bold_Italic
                 0x00000000        0x7 main.o
- .progmem.data.Font_9x22_Serif_Bold_ItalicGlyphs
+ .progmem.data.Font_9_Serif_Bold_ItalicGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_9x22_Serif_Bold_ItalicBitmaps
+ .progmem.data.Font_9_Serif_Bold_ItalicBitmaps
                 0x00000000      0x51e main.o
- .progmem.data.Font_9x22_Serif
+ .progmem.data.Font_9_Serif
                 0x00000000        0x7 main.o
- .progmem.data.Font_9x22_SerifGlyphs
+ .progmem.data.Font_9_SerifGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_9x22_SerifBitmaps
+ .progmem.data.Font_9_SerifBitmaps
                 0x00000000      0x438 main.o
- .progmem.data.Font_9x22_Sans_Oblique
+ .progmem.data.Font_9_Sans_Oblique
                 0x00000000        0x7 main.o
- .progmem.data.Font_9x22_Sans_ObliqueGlyphs
+ .progmem.data.Font_9_Sans_ObliqueGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_9x22_Sans_ObliqueBitmaps
+ .progmem.data.Font_9_Sans_ObliqueBitmaps
                 0x00000000      0x559 main.o
- .progmem.data.Font_9x22_Sans_Bold_Oblique
+ .progmem.data.Font_9_Sans_Bold_Oblique
                 0x00000000        0x7 main.o
- .progmem.data.Font_9x22_Sans_Bold_ObliqueGlyphs
+ .progmem.data.Font_9_Sans_Bold_ObliqueGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_9x22_Sans_Bold_ObliqueBitmaps
+ .progmem.data.Font_9_Sans_Bold_ObliqueBitmaps
                 0x00000000      0x5b8 main.o
- .progmem.data.Font_9x22_Sans_Bold
+ .progmem.data.Font_9_Sans_Bold
                 0x00000000        0x7 main.o
- .progmem.data.Font_9x22_Sans_BoldGlyphs
+ .progmem.data.Font_9_Sans_BoldGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_9x22_Sans_BoldBitmaps
+ .progmem.data.Font_9_Sans_BoldBitmaps
                 0x00000000      0x4ce main.o
- .progmem.data.Font_9x22_Sans
+ .progmem.data.Font_9_Sans
                 0x00000000        0x7 main.o
- .progmem.data.Font_9x22_SansGlyphs
+ .progmem.data.Font_9_SansGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_9x22_SansBitmaps
+ .progmem.data.Font_9_SansBitmaps
                 0x00000000      0x47e main.o
- .progmem.data.Font_9x18_Mono_Oblique
+ .progmem.data.Font_9_Mono_Oblique
                 0x00000000        0x7 main.o
- .progmem.data.Font_9x18_Mono_ObliqueGlyphs
+ .progmem.data.Font_9_Mono_ObliqueGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_9x18_Mono_ObliqueBitmaps
+ .progmem.data.Font_9_Mono_ObliqueBitmaps
                 0x00000000      0x3d6 main.o
- .progmem.data.Font_9x18_Mono_Bold_Oblique
+ .progmem.data.Font_9_Mono_Bold_Oblique
                 0x00000000        0x7 main.o
- .progmem.data.Font_9x18_Mono_Bold_ObliqueGlyphs
+ .progmem.data.Font_9_Mono_Bold_ObliqueGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_9x18_Mono_Bold_ObliqueBitmaps
+ .progmem.data.Font_9_Mono_Bold_ObliqueBitmaps
                 0x00000000      0x48f main.o
- .progmem.data.Font_9x18_Mono_Bold
+ .progmem.data.Font_9_Mono_Bold
                 0x00000000        0x7 main.o
- .progmem.data.Font_9x18_Mono_BoldGlyphs
+ .progmem.data.Font_9_Mono_BoldGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_9x18_Mono_BoldBitmaps
+ .progmem.data.Font_9_Mono_BoldBitmaps
                 0x00000000      0x3e8 main.o
- .progmem.data.Font_9x18_Mono
+ .progmem.data.Font_9_Mono
                 0x00000000        0x7 main.o
- .progmem.data.Font_9x18_MonoGlyphs
+ .progmem.data.Font_9_MonoGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_9x18_MonoBitmaps
+ .progmem.data.Font_9_MonoBitmaps
                 0x00000000      0x34c main.o
- .progmem.data.Font_8x16_Retro
+ .progmem.data.Font_8_Retro
                 0x00000000        0x7 main.o
- .progmem.data.Font_8x16_RetroGlyphs
+ .progmem.data.Font_8_RetroGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_8x16_RetroBitmaps
+ .progmem.data.Font_8_RetroBitmaps
                 0x00000000      0x321 main.o
- .progmem.data.Font_8x9_Myke
+ .progmem.data.Font_8_Myke
                 0x00000000        0x7 main.o
- .progmem.data.Font_8x9_MykeGlyphs
+ .progmem.data.Font_8_MykeGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_8x9_MykeBitmaps
+ .progmem.data.Font_8_MykeBitmaps
                 0x00000000      0x15d main.o
- .progmem.data.Font_8x8_Tiny
+ .progmem.data.Font_8_Tiny
                 0x00000000        0x7 main.o
- .progmem.data.Font_8x8_TinyGlyphs
+ .progmem.data.Font_8_TinyGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_8x8_TinyBitmaps
+ .progmem.data.Font_8_TinyBitmaps
                 0x00000000      0x20b main.o
- .progmem.data.Font_8x8_Sinclair_Inverted
+ .progmem.data.Font_8_Sinclair_Inverted
                 0x00000000        0x7 main.o
- .progmem.data.Font_8x8_Sinclair_InvertedGlyphs
+ .progmem.data.Font_8_Sinclair_InvertedGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_8x8_Sinclair_InvertedBitmaps
+ .progmem.data.Font_8_Sinclair_InvertedBitmaps
                 0x00000000      0x1e2 main.o
- .progmem.data.Font_8x8_Sinclair
+ .progmem.data.Font_8_Sinclair
                 0x00000000        0x7 main.o
- .progmem.data.Font_8x8_SinclairGlyphs
+ .progmem.data.Font_8_SinclairGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_8x8_SinclairBitmaps
+ .progmem.data.Font_8_SinclairBitmaps
                 0x00000000      0x175 main.o
- .progmem.data.Font_3x5_PicoPixel
+ .progmem.data.Font_3_PicoPixel
                 0x00000000        0x7 main.o
- .progmem.data.Font_3x5_PicoPixelGlyphs
+ .progmem.data.Font_3_PicoPixelGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_3x5_PicoPixelBitmaps
+ .progmem.data.Font_3_PicoPixelBitmaps
                 0x00000000       0xb4 main.o
- .progmem.data.Font_3x3_Tiny
+ .progmem.data.Font_3_Tiny
                 0x00000000        0x7 main.o
- .progmem.data.Font_3x3_TinyGlyphs
+ .progmem.data.Font_3_TinyGlyphs
                 0x00000000      0x299 main.o
- .progmem.data.Font_3x3_TinyBitmaps
+ .progmem.data.Font_3_TinyBitmaps
                 0x00000000       0x8e main.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
@@ -842,7 +836,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x3a02
+.text           0x00000000     0x3520
  *(.vectors)
  .vectors       0x00000000       0x68 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
                 0x00000000                __vector_default
@@ -858,81 +852,80 @@ END GROUP
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
  *(.progmem*)
- .progmem.data.Font_32x50_Segment_7_Num_Plus
+ .progmem.data.Font_32_Segment_7_Num_Plus
                 0x00000068        0x7 main.o
-                0x00000068                Font_32x50_Segment_7_Num_Plus
- .progmem.data.Font_32x50_Segment_7_Num_PlusGlyphs
+                0x00000068                Font_32_Segment_7_Num_Plus
+ .progmem.data.Font_32_Segment_7_Num_PlusGlyphs
                 0x0000006f       0x5b main.o
-                0x0000006f                Font_32x50_Segment_7_Num_PlusGlyphs
- .progmem.data.Font_32x50_Segment_7_Num_PlusBitmaps
+                0x0000006f                Font_32_Segment_7_Num_PlusGlyphs
+ .progmem.data.Font_32_Segment_7_Num_PlusBitmaps
                 0x000000ca      0x573 main.o
-                0x000000ca                Font_32x50_Segment_7_Num_PlusBitmaps
- .progmem.data.Font_9x22_Serif_Bold
+                0x000000ca                Font_32_Segment_7_Num_PlusBitmaps
+ .progmem.data.Font_9_Serif_Bold
                 0x0000063d        0x7 main.o
-                0x0000063d                Font_9x22_Serif_Bold
- .progmem.data.Font_9x22_Serif_BoldGlyphs
+                0x0000063d                Font_9_Serif_Bold
+ .progmem.data.Font_9_Serif_BoldGlyphs
                 0x00000644      0x299 main.o
-                0x00000644                Font_9x22_Serif_BoldGlyphs
- .progmem.data.Font_9x22_Serif_BoldBitmaps
+                0x00000644                Font_9_Serif_BoldGlyphs
+ .progmem.data.Font_9_Serif_BoldBitmaps
                 0x000008dd      0x48a main.o
-                0x000008dd                Font_9x22_Serif_BoldBitmaps
- .progmem.data.Font_8x12_Default
+                0x000008dd                Font_9_Serif_BoldBitmaps
+ .progmem.data.Font_8_Default
                 0x00000d67        0x7 main.o
-                0x00000d67                Font_8x12_Default
- .progmem.data.Font_8x12_DefaultGlyphs
+                0x00000d67                Font_8_Default
+ .progmem.data.Font_8_DefaultGlyphs
                 0x00000d6e      0x299 main.o
-                0x00000d6e                Font_8x12_DefaultGlyphs
- .progmem.data.Font_8x12_DefaultBitmaps
+                0x00000d6e                Font_8_DefaultGlyphs
+ .progmem.data.Font_8_DefaultBitmaps
                 0x00001007      0x19e main.o
-                0x00001007                Font_8x12_DefaultBitmaps
- .progmem.data.Font_5x5_Org
+                0x00001007                Font_8_DefaultBitmaps
+ .progmem.data.Font_5_Org
                 0x000011a5        0x7 main.o
-                0x000011a5                Font_5x5_Org
- .progmem.data.Font_5x5_OrgGlyphs
+                0x000011a5                Font_5_Org
+ .progmem.data.Font_5_OrgGlyphs
                 0x000011ac      0x299 main.o
-                0x000011ac                Font_5x5_OrgGlyphs
- .progmem.data.Font_5x5_OrgBitmaps
+                0x000011ac                Font_5_OrgGlyphs
+ .progmem.data.Font_5_OrgBitmaps
                 0x00001445      0x10f main.o
-                0x00001445                Font_5x5_OrgBitmaps
- .progmem.data.Font_3x5_TomThumb_Extended
+                0x00001445                Font_5_OrgBitmaps
+ .progmem.data.Font_3_TomThumb_Extended
                 0x00001554        0x7 main.o
-                0x00001554                Font_3x5_TomThumb_Extended
- .progmem.data.Font_3x5_TomThumb_ExtendedGlyphs
-                0x0000155b      0x594 main.o
-                0x0000155b                Font_3x5_TomThumb_ExtendedGlyphs
- .progmem.data.Font_3x5_TomThumb_ExtendedBitmaps
-                0x00001aef      0x388 main.o
-                0x00001aef                Font_3x5_TomThumb_ExtendedBitmaps
-                0x00001e78                . = ALIGN (0x2)
- *fill*         0x00001e77        0x1 
+                0x00001554                Font_3_TomThumb_Extended
+ .progmem.data.Font_3_TomThumb_ExtendedGlyphs
+                0x0000155b      0x299 main.o
+                0x0000155b                Font_3_TomThumb_ExtendedGlyphs
+ .progmem.data.Font_3_TomThumb_ExtendedBitmaps
+                0x000017f4      0x1a2 main.o
+                0x000017f4                Font_3_TomThumb_ExtendedBitmaps
+                0x00001996                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
  *(.lowtext*)
-                0x00001e78                __ctors_start = .
+                0x00001996                __ctors_start = .
  *(.ctors)
-                0x00001e78                __ctors_end = .
-                0x00001e78                __dtors_start = .
+                0x00001996                __ctors_end = .
+                0x00001996                __dtors_start = .
  *(.dtors)
-                0x00001e78                __dtors_end = .
+                0x00001996                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x00001e78        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
-                0x00001e78                __init
+ .init0         0x00001996        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
+                0x00001996                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x00001e78        0xc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .init2         0x00001996        0xc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x00001e84       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
-                0x00001e84                __do_copy_data
- .init4         0x00001e9a       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
-                0x00001e9a                __do_clear_bss
+ .init4         0x000019a2       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+                0x000019a2                __do_copy_data
+ .init4         0x000019b8       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+                0x000019b8                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -943,102 +936,102 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x00001eaa        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .init9         0x000019c8        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
  *(.init9)
  *(.text)
- .text          0x00001eb2        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
-                0x00001eb2                __vector_22
-                0x00001eb2                __vector_1
-                0x00001eb2                __vector_24
-                0x00001eb2                __vector_12
-                0x00001eb2                __bad_interrupt
-                0x00001eb2                __vector_6
-                0x00001eb2                __vector_3
-                0x00001eb2                __vector_23
-                0x00001eb2                __vector_25
-                0x00001eb2                __vector_11
-                0x00001eb2                __vector_13
-                0x00001eb2                __vector_17
-                0x00001eb2                __vector_19
-                0x00001eb2                __vector_7
-                0x00001eb2                __vector_5
-                0x00001eb2                __vector_4
-                0x00001eb2                __vector_9
-                0x00001eb2                __vector_2
-                0x00001eb2                __vector_21
-                0x00001eb2                __vector_15
-                0x00001eb2                __vector_8
-                0x00001eb2                __vector_14
-                0x00001eb2                __vector_10
-                0x00001eb2                __vector_16
-                0x00001eb2                __vector_18
-                0x00001eb2                __vector_20
-                0x00001eb6                . = ALIGN (0x2)
+ .text          0x000019d0        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
+                0x000019d0                __vector_22
+                0x000019d0                __vector_1
+                0x000019d0                __vector_24
+                0x000019d0                __vector_12
+                0x000019d0                __bad_interrupt
+                0x000019d0                __vector_6
+                0x000019d0                __vector_3
+                0x000019d0                __vector_23
+                0x000019d0                __vector_25
+                0x000019d0                __vector_11
+                0x000019d0                __vector_13
+                0x000019d0                __vector_17
+                0x000019d0                __vector_19
+                0x000019d0                __vector_7
+                0x000019d0                __vector_5
+                0x000019d0                __vector_4
+                0x000019d0                __vector_9
+                0x000019d0                __vector_2
+                0x000019d0                __vector_21
+                0x000019d0                __vector_15
+                0x000019d0                __vector_8
+                0x000019d0                __vector_14
+                0x000019d0                __vector_10
+                0x000019d0                __vector_16
+                0x000019d0                __vector_18
+                0x000019d0                __vector_20
+                0x000019d4                . = ALIGN (0x2)
  *(.text.*)
  .text.LCD_Rect_Fill
-                0x00001eb6      0x142 ili9341.o
-                0x00001eb6                LCD_Rect_Fill
+                0x000019d4      0x142 ili9341.o
+                0x000019d4                LCD_Rect_Fill
  .text.LCD_Line
-                0x00001ff8      0x156 ili9341.o
-                0x00001ff8                LCD_Line
+                0x00001b16      0x156 ili9341.o
+                0x00001b16                LCD_Line
  .text.LCD_Rect
-                0x0000214e       0x7e ili9341.o
-                0x0000214e                LCD_Rect
+                0x00001c6c       0x7e ili9341.o
+                0x00001c6c                LCD_Rect
  .text.LCD_Triangle
-                0x000021cc       0x9a ili9341.o
-                0x000021cc                LCD_Triangle
+                0x00001cea       0x9a ili9341.o
+                0x00001cea                LCD_Triangle
  .text.LCD_Ellipse
-                0x00002266      0x6a8 ili9341.o
-                0x00002266                LCD_Ellipse
+                0x00001d84      0x6a8 ili9341.o
+                0x00001d84                LCD_Ellipse
  .text.LCD_Circle
-                0x0000290e      0x23a ili9341.o
-                0x0000290e                LCD_Circle
+                0x0000242c      0x23a ili9341.o
+                0x0000242c                LCD_Circle
  .text.LCD_Circle_Helper
-                0x00002b48      0x20c ili9341.o
-                0x00002b48                LCD_Circle_Helper
+                0x00002666      0x20c ili9341.o
+                0x00002666                LCD_Circle_Helper
  .text.LCD_Rect_Round
-                0x00002d54      0x178 ili9341.o
-                0x00002d54                LCD_Rect_Round
+                0x00002872      0x178 ili9341.o
+                0x00002872                LCD_Rect_Round
  .text.LCD_Circle_Fill_Helper
-                0x00002ecc      0x1a4 ili9341.o
-                0x00002ecc                LCD_Circle_Fill_Helper
+                0x000029ea      0x1a4 ili9341.o
+                0x000029ea                LCD_Circle_Fill_Helper
  .text.LCD_Rect_Round_Fill
-                0x00003070       0xd6 ili9341.o
-                0x00003070                LCD_Rect_Round_Fill
+                0x00002b8e       0xd6 ili9341.o
+                0x00002b8e                LCD_Rect_Round_Fill
  .text.LCD_Font
-                0x00003146      0x2a2 ili9341.o
-                0x00003146                LCD_Font
- .text.LCD_SPI  0x000033e8       0x1a ili9341.o
-                0x000033e8                LCD_SPI
+                0x00002c64      0x2a2 ili9341.o
+                0x00002c64                LCD_Font
+ .text.LCD_SPI  0x00002f06       0x1a ili9341.o
+                0x00002f06                LCD_SPI
  .text.LCD_Reset
-                0x00003402       0x32 ili9341.o
-                0x00003402                LCD_Reset
+                0x00002f20       0x32 ili9341.o
+                0x00002f20                LCD_Reset
  .text.LCD_Orientation
-                0x00003434       0xca ili9341.o
-                0x00003434                LCD_Orientation
+                0x00002f52       0xca ili9341.o
+                0x00002f52                LCD_Orientation
  .text.LCD_Init
-                0x000034fe      0x1a2 ili9341.o
-                0x000034fe                LCD_Init
- .text.main     0x000036a0      0x30e main.o
-                0x000036a0                main
+                0x0000301c      0x1a2 ili9341.o
+                0x0000301c                LCD_Init
+ .text.main     0x000031be      0x30e main.o
+                0x000031be                main
  .text.libgcc.mul
-                0x000039ae       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
-                0x000039ae                __umulhisi3
+                0x000034cc       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+                0x000034cc                __umulhisi3
  .text.libgcc.mul
-                0x000039cc        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulshisi3.o)
-                0x000039cc                __mulshisi3
-                0x000039d0                __mulohisi3
+                0x000034ea        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulshisi3.o)
+                0x000034ea                __mulshisi3
+                0x000034ee                __mulohisi3
  .text.libgcc.mul
-                0x000039d8       0x14 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
-                0x000039d8                __muluhisi3
+                0x000034f6       0x14 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
+                0x000034f6                __muluhisi3
  .text.avr-libc
-                0x000039ec       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(memcpy_P.o)
-                0x000039ec                memcpy_P
-                0x000039fe                . = ALIGN (0x2)
+                0x0000350a       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(memcpy_P.o)
+                0x0000350a                memcpy_P
+                0x0000351c                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000039fe        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x000039fe                _exit
-                0x000039fe                exit
+ .fini9         0x0000351c        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x0000351c                _exit
+                0x0000351c                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -1057,11 +1050,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000039fe        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x0000351c        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00003a02                _etext = .
+                0x00003520                _etext = .
 
-.data           0x00800100       0x58 load address 0x00003a02
+.data           0x00800100       0x62 load address 0x00003520
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -1069,33 +1062,33 @@ END GROUP
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x00800100       0x57 main.o
+                0x00800100       0x61 main.o
  *(.gnu.linkonce.r*)
-                0x00800158                . = ALIGN (0x2)
- *fill*         0x00800157        0x1 
-                0x00800158                _edata = .
-                0x00800158                PROVIDE (__data_end, .)
+                0x00800162                . = ALIGN (0x2)
+ *fill*         0x00800161        0x1 
+                0x00800162                _edata = .
+                0x00800162                PROVIDE (__data_end, .)
 
-.bss            0x00800158        0x4
-                0x00800158                PROVIDE (__bss_start, .)
+.bss            0x00800162        0x4
+                0x00800162                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  .bss.LCD_Height
-                0x00800158        0x2 ili9341.o
-                0x00800158                LCD_Height
+                0x00800162        0x2 ili9341.o
+                0x00800162                LCD_Height
  .bss.LCD_Width
-                0x0080015a        0x2 ili9341.o
-                0x0080015a                LCD_Width
+                0x00800164        0x2 ili9341.o
+                0x00800164                LCD_Width
  *(COMMON)
-                0x0080015c                PROVIDE (__bss_end, .)
-                0x00003a02                __data_load_start = LOADADDR (.data)
-                0x00003a5a                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00800166                PROVIDE (__bss_end, .)
+                0x00003520                __data_load_start = LOADADDR (.data)
+                0x00003582                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0080015c        0x0
+.noinit         0x00800166        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x0080015c                _end = .
+                0x00800166                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -1171,11 +1164,11 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x5d6a
+.debug_info     0x00000000     0x5d07
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5f4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_info    0x000005f4     0x2c20 ili9341.o
- .debug_info    0x00003214     0x2b56 main.o
+ .debug_info    0x00003214     0x2af3 main.o
 
 .debug_abbrev   0x00000000      0xa82
  *(.debug_abbrev)
@@ -1183,24 +1176,24 @@ END GROUP
  .debug_abbrev  0x000005a2      0x35c ili9341.o
  .debug_abbrev  0x000008fe      0x184 main.o
 
-.debug_line     0x00000000     0x20ea
+.debug_line     0x00000000     0x1fa5
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x133 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_line    0x00000133     0x130e ili9341.o
- .debug_line    0x00001441      0xca9 main.o
+ .debug_line    0x00001441      0xb64 main.o
 
 .debug_frame    0x00000000      0x62c
  *(.debug_frame)
  .debug_frame   0x00000000      0x608 ili9341.o
  .debug_frame   0x00000608       0x24 main.o
 
-.debug_str      0x00000000     0x2639
+.debug_str      0x00000000     0x226c
  *(.debug_str)
  .debug_str     0x00000000      0x208 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_str     0x00000208      0x47d ili9341.o
                                 0x4d8 (size before relaxing)
- .debug_str     0x00000685     0x1fb4 main.o
-                               0x2239 (size before relaxing)
+ .debug_str     0x00000685     0x1be7 main.o
+                               0x1e6c (size before relaxing)
 
 .debug_loc      0x00000000     0x351f
  *(.debug_loc)

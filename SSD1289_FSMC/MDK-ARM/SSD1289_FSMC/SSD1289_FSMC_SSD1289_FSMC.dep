@@ -3,7 +3,7 @@ F (startup_stm32f407xx.s)(0x5AB559E8)(--cpu Cortex-M4.fp -g --apcs=interwork --p
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_hal_rcc.o --omf_browse ssd1289_fsmc\stm32f4xx_hal_rcc.crf --depend ssd1289_fsmc\stm32f4xx_hal_rcc.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -39,7 +39,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5AB559E8)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_hal_dma.o --omf_browse ssd1289_fsmc\stm32f4xx_hal_dma.crf --depend ssd1289_fsmc\stm32f4xx_hal_dma.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -75,7 +75,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5AB559E8)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_hal_pwr.o --omf_browse ssd1289_fsmc\stm32f4xx_hal_pwr.crf --depend ssd1289_fsmc\stm32f4xx_hal_pwr.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -111,7 +111,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5AB559E8)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fsmc.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_ll_fsmc.o --omf_browse ssd1289_fsmc\stm32f4xx_ll_fsmc.crf --depend ssd1289_fsmc\stm32f4xx_ll_fsmc.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -147,7 +147,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5AB559E8)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_hal_uart.o --omf_browse ssd1289_fsmc\stm32f4xx_hal_uart.crf --depend ssd1289_fsmc\stm32f4xx_hal_uart.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -183,7 +183,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5AB559E8)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_hal_spi.o --omf_browse ssd1289_fsmc\stm32f4xx_hal_spi.crf --depend ssd1289_fsmc\stm32f4xx_hal_spi.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -219,7 +219,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5AB559E8)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_hal_tim.o --omf_browse ssd1289_fsmc\stm32f4xx_hal_tim.crf --depend ssd1289_fsmc\stm32f4xx_hal_tim.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -255,7 +255,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5AB559E8)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_hal_gpio.o --omf_browse ssd1289_fsmc\stm32f4xx_hal_gpio.crf --depend ssd1289_fsmc\stm32f4xx_hal_gpio.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -291,7 +291,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5AB559E8)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_hal_cortex.o --omf_browse ssd1289_fsmc\stm32f4xx_hal_cortex.crf --depend ssd1289_fsmc\stm32f4xx_hal_cortex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -327,7 +327,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5AB559E8)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_hal.o --omf_browse ssd1289_fsmc\stm32f4xx_hal.crf --depend ssd1289_fsmc\stm32f4xx_hal.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -363,7 +363,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5AB559E8)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_hal_sram.o --omf_browse ssd1289_fsmc\stm32f4xx_hal_sram.crf --depend ssd1289_fsmc\stm32f4xx_hal_sram.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -399,7 +399,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5AB559E8)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_hal_i2c.o --omf_browse ssd1289_fsmc\stm32f4xx_hal_i2c.crf --depend ssd1289_fsmc\stm32f4xx_hal_i2c.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -435,7 +435,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5AB559E8)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_hal_flash.o --omf_browse ssd1289_fsmc\stm32f4xx_hal_flash.crf --depend ssd1289_fsmc\stm32f4xx_hal_flash.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -471,7 +471,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5AB559E8)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_hal_flash_ramfunc.o --omf_browse ssd1289_fsmc\stm32f4xx_hal_flash_ramfunc.crf --depend ssd1289_fsmc\stm32f4xx_hal_flash_ramfunc.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -507,7 +507,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5AB559E8)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_hal_flash_ex.o --omf_browse ssd1289_fsmc\stm32f4xx_hal_flash_ex.crf --depend ssd1289_fsmc\stm32f4xx_hal_flash_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -543,7 +543,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5AB559E8)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_hal_pwr_ex.o --omf_browse ssd1289_fsmc\stm32f4xx_hal_pwr_ex.crf --depend ssd1289_fsmc\stm32f4xx_hal_pwr_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -579,7 +579,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5AB559E8)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_hal_dma_ex.o --omf_browse ssd1289_fsmc\stm32f4xx_hal_dma_ex.crf --depend ssd1289_fsmc\stm32f4xx_hal_dma_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -615,7 +615,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5AB559E8)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_hal_rcc_ex.o --omf_browse ssd1289_fsmc\stm32f4xx_hal_rcc_ex.crf --depend ssd1289_fsmc\stm32f4xx_hal_rcc_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -651,7 +651,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5AB559E8)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_hal_tim_ex.o --omf_browse ssd1289_fsmc\stm32f4xx_hal_tim_ex.crf --depend ssd1289_fsmc\stm32f4xx_hal_tim_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -687,7 +687,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5AB559E8)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_hal_i2c_ex.o --omf_browse ssd1289_fsmc\stm32f4xx_hal_i2c_ex.crf --depend ssd1289_fsmc\stm32f4xx_hal_i2c_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -723,7 +723,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5AB559E8)
 F (../Src/stm32f4xx_it.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_it.o --omf_browse ssd1289_fsmc\stm32f4xx_it.crf --depend ssd1289_fsmc\stm32f4xx_it.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -760,7 +760,7 @@ I (../Inc/stm32f4xx_it.h)(0x5AB559E8)
 F (../Src/stm32f4xx_hal_msp.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\stm32f4xx_hal_msp.o --omf_browse ssd1289_fsmc\stm32f4xx_hal_msp.crf --depend ssd1289_fsmc\stm32f4xx_hal_msp.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -793,8 +793,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5AB559E8)
-F (../Src/main.c)(0x5B178CC2)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\main.o --omf_browse ssd1289_fsmc\main.crf --depend ssd1289_fsmc\main.d)
-I (../Inc/main.h)(0x5B178C47)
+F (../Src/main.c)(0x5B193288)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\main.o --omf_browse ssd1289_fsmc\main.crf --depend ssd1289_fsmc\main.d)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
@@ -833,112 +833,111 @@ I (../Inc/ssd1289_fsmc.h)(0x5AFF13DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599EE94C)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EE94C)
 I (../Inc/xpt2046.h)(0x5AB61744)
-I (../Inc/fonts/Font_3x3_Tiny.h)(0x5B17521A)
-I (../Inc/fonts/Font_3x5_PicoPixel.h)(0x5B178A70)
-I (../Inc/fonts/Font_3x5_TomThumb_Extended.h)(0x5B175433)
-I (../Inc/fonts/Font_5x5_Org.h)(0x5B1752D1)
-I (../Inc/fonts/Font_8x8_Sinclair.h)(0x5B16AD7C)
-I (../Inc/fonts/Font_8x8_Sinclair_Inverted.h)(0x5B16AD73)
-I (../Inc/fonts/Font_8x8_Tiny.h)(0x5B16ADA1)
-I (../Inc/fonts/Font_8x9_Myke.h)(0x5B16ADE3)
-I (../Inc/fonts/Font_8x12_Default.h)(0x5B16AE82)
-I (../Inc/fonts/Font_8x16_Retro.h)(0x5B16AEA6)
-I (../Inc/fonts/Font_9x18_Mono.h)(0x5B16AEC3)
-I (../Inc/fonts/Font_9x18_Mono_Bold.h)(0x5B16AEE6)
-I (../Inc/fonts/Font_9x18_Mono_Bold_Oblique.h)(0x5B16AF00)
-I (../Inc/fonts/Font_9x18_Mono_Oblique.h)(0x5B16AF17)
-I (../Inc/fonts/Font_9x22_Sans.h)(0x5B16AF2B)
-I (../Inc/fonts/Font_9x22_Sans_Bold.h)(0x5B16AF4A)
-I (../Inc/fonts/Font_9x22_Sans_Bold_Oblique.h)(0x5B16AF67)
-I (../Inc/fonts/Font_9x22_Sans_Oblique.h)(0x5B16AF7A)
-I (../Inc/fonts/Font_9x22_Serif.h)(0x5B16AF91)
-I (../Inc/fonts/Font_9x22_Serif_Bold.h)(0x5B16AFBD)
-I (../Inc/fonts/Font_9x22_Serif_Bold_Italic.h)(0x5B16AFDA)
-I (../Inc/fonts/Font_9x22_Serif_Italic.h)(0x5B16AFF9)
-I (../Inc/fonts/Font_12x24_Mono.h)(0x5B16B025)
-I (../Inc/fonts/Font_12x24_Mono_Bold.h)(0x5B16B03D)
-I (../Inc/fonts/Font_12x24_Mono_Bold_Oblique.h)(0x5B16B051)
-I (../Inc/fonts/Font_12x24_Mono_Oblique.h)(0x5B16B067)
-I (../Inc/fonts/Font_12x29_Sans.h)(0x5B16B07C)
-I (../Inc/fonts/Font_12x29_Sans_Bold.h)(0x5B16B0AD)
-I (../Inc/fonts/Font_12x29_Sans_Bold_Oblique.h)(0x5B16B0C8)
-I (../Inc/fonts/Font_12x29_Sans_Oblique.h)(0x5B16B0DF)
-I (../Inc/fonts/Font_12x29_Serif.h)(0x5B16B0FD)
-I (../Inc/fonts/Font_12x29_Serif_Bold.h)(0x5B16B115)
-I (../Inc/fonts/Font_12x29_Serif_Bold_Italic.h)(0x5B16B131)
-I (../Inc/fonts/Font_12x29_Serif_Italic.h)(0x5B16B147)
-I (../Inc/fonts/Font_16x16_Arial.h)(0x5B16B244)
-I (../Inc/fonts/Font_16x16_Arial_Bold.h)(0x5B16B1A5)
-I (../Inc/fonts/Font_16x16_Arial_Italic.h)(0x5B16B20D)
-I (../Inc/fonts/Font_16x16_Default.h)(0x5B16B268)
-I (../Inc/fonts/Font_16x16_FranklinGothic.h)(0x5B16B284)
-I (../Inc/fonts/Font_16x16_Hallfetica.h)(0x5B16B2A1)
-I (../Inc/fonts/Font_16x16_Nadianne.h)(0x5B16B2BE)
-I (../Inc/fonts/Font_16x16_Sinclair.h)(0x5B16B2D7)
-I (../Inc/fonts/Font_16x16_Sinclair_Inverted.h)(0x5B16B2F4)
-I (../Inc/fonts/Font_16x16_Swiss_Outline.h)(0x5B16B30D)
-I (../Inc/fonts/Font_16x22_Matrix_Full.h)(0x5B16B332)
-I (../Inc/fonts/Font_16x22_Matrix_Full_Slash.h)(0x5B16B34A)
-I (../Inc/fonts/Font_16x22_Matrix_Num.h)(0x5B16B363)
-I (../Inc/fonts/Font_16x24_Arial_Round.h)(0x5B16B38A)
-I (../Inc/fonts/Font_16x24_OCR.h)(0x5B16B3AB)
-I (../Inc/fonts/Font_16x24_Segment_16_Full.h)(0x5B16B3CA)
-I (../Inc/fonts/Font_16x32_Grotesk.h)(0x5B16B3F3)
-I (../Inc/fonts/Font_16x32_Grotesk_Bold.h)(0x5B16B40D)
-I (../Inc/fonts/Font_16x32_Retro.h)(0x5B16B446)
-I (../Inc/fonts/Font_18x35_Mono.h)(0x5B16B43F)
-I (../Inc/fonts/Font_18x35_Mono_Bold.h)(0x5B16B464)
-I (../Inc/fonts/Font_18x35_Mono_Bold_Oblique.h)(0x5B16B47E)
-I (../Inc/fonts/Font_18x35_Mono_Oblique.h)(0x5B16B493)
-I (../Inc/fonts/Font_18x42_Sans.h)(0x5B16B4A3)
-I (../Inc/fonts/Font_18x42_Sans_Bold.h)(0x5B16B4B6)
-I (../Inc/fonts/Font_18x42_Sans_Bold_Oblique.h)(0x5B16B4CB)
-I (../Inc/fonts/Font_18x42_Sans_Oblique.h)(0x5B16B4DC)
-I (../Inc/fonts/Font_18x42_Serif.h)(0x5B16B4ED)
-I (../Inc/fonts/Font_18x42_Serif_Bold.h)(0x5B16B506)
-I (../Inc/fonts/Font_18x42_Serif_Bold_Italic.h)(0x5B16B51E)
-I (../Inc/fonts/Font_18x42_Serif_Italic.h)(0x5B16B531)
-I (../Inc/fonts/Font_24x29_Matrix_Num.h)(0x5B16C0CD)
-I (../Inc/fonts/Font_24x32_Inconsola.h)(0x5B16C0E8)
-I (../Inc/fonts/Font_24x32_Ubuntu.h)(0x5B16C104)
-I (../Inc/fonts/Font_24x32_Ubuntu_Bold.h)(0x5B16C121)
-I (../Inc/fonts/Font_24x36_Segment_16_Full.h)(0x5B16C156)
-I (../Inc/fonts/Font_24x47_Mono.h)(0x5B175466)
-I (../Inc/fonts/Font_24x47_Mono_Bold.h)(0x5B17547A)
-I (../Inc/fonts/Font_24x47_Mono_Bold_Oblique.h)(0x5B175494)
-I (../Inc/fonts/Font_24x47_Mono_Oblique.h)(0x5B1754B2)
-I (../Inc/fonts/Font_24x48_Grotesk.h)(0x5B1754CC)
-I (../Inc/fonts/Font_24x48_Grotesk_Bold.h)(0x5B1754E9)
-I (../Inc/fonts/Font_24x56_Sans.h)(0x5B1754FD)
-I (../Inc/fonts/Font_24x56_Sans_Bold.h)(0x5B175513)
-I (../Inc/fonts/Font_24x56_Sans_Bold_Oblique.h)(0x5B175581)
-I (../Inc/fonts/Font_24x56_Sans_Oblique.h)(0x5B1755A5)
-I (../Inc/fonts/Font_24x56_Serif.h)(0x5B1755C4)
-I (../Inc/fonts/Font_24x56_Serif_Bold.h)(0x5B1755DA)
-I (../Inc/fonts/Font_24x56_Serif_Bold_Italic.h)(0x5B1755F3)
-I (../Inc/fonts/Font_24x56_SerifItalic.h)(0x5B17560D)
-I (../Inc/fonts/Font_32x24_Dingbats.h)(0x5B175636)
-I (../Inc/fonts/Font_32x32_Special.h)(0x5B175653)
-I (../Inc/fonts/Font_32x48_Calibri_Bold.h)(0x5B17566C)
-I (../Inc/fonts/Font_32x48_Segment_16_Full.h)(0x5B1756A1)
-I (../Inc/fonts/Font_32x50_Arial_Num_Plus.h)(0x5B1756C3)
-I (../Inc/fonts/Font_32x50_Matrix_Num.h)(0x5B1756DC)
-I (../Inc/fonts/Font_32x50_Segment_7_Full.h)(0x5B1756F9)
-I (../Inc/fonts/Font_32x50_Segment_7_Num_Plus.h)(0x5B1757BE)
-I (../Inc/fonts/Font_32x50_Segment_16_Full.h)(0x5B1757DD)
-I (../Inc/fonts/Font_32x52_Segment_18_Full.h)(0x5B175865)
-I (../Inc/fonts/Font_32x64_Grotesk.h)(0x5B175884)
-I (../Inc/fonts/Font_32x64_Grotesk_Bold.h)(0x5B17589C)
-I (../Inc/fonts/Font_40x60_Segment_16_Full.h)(0x5B1758B5)
-I (../Inc/fonts/Font_48x24_Battery.h)(0x5B1758CC)
-I (../Inc/fonts/Font_48x72_Segment_16_Num.h)(0x5B1758E5)
-I (../Inc/fonts/Font_64x96_Segment_16_Num.h)(0x5B175902)
-I (../Inc/fonts/Font_64x100_Segment_7_Num.h)(0x5B17591C)
+I (../Inc/fonts/Font_3_Tiny.h)(0x5B192DFD)
+I (../Inc/fonts/Font_3_PicoPixel.h)(0x5B192E01)
+I (../Inc/fonts/Font_3_TomThumb_Extended.h)(0x5B192DF3)
+I (../Inc/fonts/Font_5_Org.h)(0x5B192DD9)
+I (../Inc/fonts/Font_8_Sinclair.h)(0x5B192DAA)
+I (../Inc/fonts/Font_8_Sinclair_Inverted.h)(0x5B192DA7)
+I (../Inc/fonts/Font_8_Tiny.h)(0x5B192DA4)
+I (../Inc/fonts/Font_8_Myke.h)(0x5B192DBF)
+I (../Inc/fonts/Font_8_Default.h)(0x5B192DC9)
+I (../Inc/fonts/Font_8_Retro.h)(0x5B192DB4)
+I (../Inc/fonts/Font_9_Mono.h)(0x5B192D90)
+I (../Inc/fonts/Font_9_Mono_Bold.h)(0x5B192D87)
+I (../Inc/fonts/Font_9_Mono_Bold_Oblique.h)(0x5B192D7D)
+I (../Inc/fonts/Font_9_Mono_Oblique.h)(0x5B192D6E)
+I (../Inc/fonts/Font_9_Sans.h)(0x5B192D41)
+I (../Inc/fonts/Font_9_Sans_Bold.h)(0x5B192D3F)
+I (../Inc/fonts/Font_9_Sans_Bold_Oblique.h)(0x5B192D3C)
+I (../Inc/fonts/Font_9_Sans_Oblique.h)(0x5B192D3A)
+I (../Inc/fonts/Font_9_Serif.h)(0x5B192D37)
+I (../Inc/fonts/Font_9_Serif_Bold.h)(0x5B192D34)
+I (../Inc/fonts/Font_9_Serif_Bold_Italic.h)(0x5B192D32)
+I (../Inc/fonts/Font_9_Serif_Italic.h)(0x5B192D30)
+I (../Inc/fonts/Font_12_Mono.h)(0x5B192D1E)
+I (../Inc/fonts/Font_12_Mono_Bold.h)(0x5B192D1B)
+I (../Inc/fonts/Font_12_Mono_Bold_Oblique.h)(0x5B192D19)
+I (../Inc/fonts/Font_12_Mono_Oblique.h)(0x5B192D15)
+I (../Inc/fonts/Font_12_Sans.h)(0x5B192D0C)
+I (../Inc/fonts/Font_12_Sans_Bold.h)(0x5B192D09)
+I (../Inc/fonts/Font_12_Sans_Bold_Oblique.h)(0x5B192D06)
+I (../Inc/fonts/Font_12_Sans_Oblique.h)(0x5B192D03)
+I (../Inc/fonts/Font_12_Serif.h)(0x5B192D00)
+I (../Inc/fonts/Font_12_Serif_Bold.h)(0x5B192CFE)
+I (../Inc/fonts/Font_12_Serif_Bold_Italic.h)(0x5B192CFB)
+I (../Inc/fonts/Font_12_Serif_Italic.h)(0x5B192CF8)
+I (../Inc/fonts/Font_16_Arial.h)(0x5B192CE3)
+I (../Inc/fonts/Font_16_Arial_Bold.h)(0x5B192CE1)
+I (../Inc/fonts/Font_16_Arial_Italic.h)(0x5B192CDE)
+I (../Inc/fonts/Font_16_Default.h)(0x5B192CD9)
+I (../Inc/fonts/Font_16_FranklinGothic.h)(0x5B192CD7)
+I (../Inc/fonts/Font_16_Hallfetica.h)(0x5B192CCF)
+I (../Inc/fonts/Font_16_Nadianne.h)(0x5B192CBA)
+I (../Inc/fonts/Font_16_Sinclair.h)(0x5B192C9B)
+I (../Inc/fonts/Font_16_Sinclair_Inverted.h)(0x5B192C98)
+I (../Inc/fonts/Font_16_Swiss_Outline.h)(0x5B192C95)
+I (../Inc/fonts/Font_16_Matrix_Full.h)(0x5B192CCC)
+I (../Inc/fonts/Font_16_Matrix_Full_Slash.h)(0x5B192CC9)
+I (../Inc/fonts/Font_16_Matrix_Num.h)(0x5B192CC6)
+I (../Inc/fonts/Font_16_Arial_Round.h)(0x5B192CDC)
+I (../Inc/fonts/Font_16_OCR.h)(0x5B192CB7)
+I (../Inc/fonts/Font_16_Segment_16_Full.h)(0x5B192CA9)
+I (../Inc/fonts/Font_16_Grotesk.h)(0x5B192CD5)
+I (../Inc/fonts/Font_16_Grotesk_Bold.h)(0x5B192CD2)
+I (../Inc/fonts/Font_16_Retro.h)(0x5B192CB3)
+I (../Inc/fonts/Font_18_Mono.h)(0x5B192C7D)
+I (../Inc/fonts/Font_18_Mono_Bold.h)(0x5B192C7A)
+I (../Inc/fonts/Font_18_Mono_Bold_Oblique.h)(0x5B192C77)
+I (../Inc/fonts/Font_18_Mono_Oblique.h)(0x5B192C74)
+I (../Inc/fonts/Font_18_Sans.h)(0x5B192C64)
+I (../Inc/fonts/Font_18_Sans_Bold.h)(0x5B192C61)
+I (../Inc/fonts/Font_18_Sans_Bold_Oblique.h)(0x5B192C5D)
+I (../Inc/fonts/Font_18_Sans_Oblique.h)(0x5B192C5A)
+I (../Inc/fonts/Font_18_Serif.h)(0x5B192C57)
+I (../Inc/fonts/Font_18_Serif_Bold.h)(0x5B192C53)
+I (../Inc/fonts/Font_18_Serif_Bold_Italic.h)(0x5B192F3A)
+I (../Inc/fonts/Font_18_Serif_Italic.h)(0x5B192F37)
+I (../Inc/fonts/Font_24_Matrix_Num.h)(0x5B192F23)
+I (../Inc/fonts/Font_24_Inconsola.h)(0x5B192F26)
+I (../Inc/fonts/Font_24_Ubuntu.h)(0x5B192ED8)
+I (../Inc/fonts/Font_24_Ubuntu_Bold.h)(0x5B192ED4)
+I (../Inc/fonts/Font_24_Segment_16_Full.h)(0x5B192EF7)
+I (../Inc/fonts/Font_24_Mono.h)(0x5B192F15)
+I (../Inc/fonts/Font_24_Mono_Bold.h)(0x5B192B5A)
+I (../Inc/fonts/Font_24_Mono_Bold_Oblique.h)(0x5B192F12)
+I (../Inc/fonts/Font_24_Mono_Oblique.h)(0x5B192F10)
+I (../Inc/fonts/Font_24_Grotesk.h)(0x5B192F34)
+I (../Inc/fonts/Font_24_Grotesk_Bold.h)(0x5B192F31)
+I (../Inc/fonts/Font_24_Sans.h)(0x5B192F04)
+I (../Inc/fonts/Font_24_Sans_Bold.h)(0x5B192F02)
+I (../Inc/fonts/Font_24_Sans_Bold_Oblique.h)(0x5B192EFF)
+I (../Inc/fonts/Font_24_Sans_Oblique.h)(0x5B192EFA)
+I (../Inc/fonts/Font_24_Serif.h)(0x5B192EE9)
+I (../Inc/fonts/Font_24_Serif_Bold.h)(0x5B192EE7)
+I (../Inc/fonts/Font_24_Serif_Bold_Italic.h)(0x5B192EE4)
+I (../Inc/fonts/Font_24_SerifItalic.h)(0x5B192EE2)
+I (../Inc/fonts/Font_32_Dingbats.h)(0x5B192EB6)
+I (../Inc/fonts/Font_32_Special.h)(0x5B192E75)
+I (../Inc/fonts/Font_32_Calibri_Bold.h)(0x5B192EC1)
+I (../Inc/fonts/Font_32_Arial_Num_Plus.h)(0x5B192EC4)
+I (../Inc/fonts/Font_32_Matrix_Num.h)(0x5B192E95)
+I (../Inc/fonts/Font_32_Segment_7_Full.h)(0x5B192E92)
+I (../Inc/fonts/Font_32_Segment_7_Num_Plus.h)(0x5B192E90)
+I (../Inc/fonts/Font_32_Segment_16_Full.h)(0x5B192E8D)
+I (../Inc/fonts/Font_32_Segment_18_Full.h)(0x5B192E81)
+I (../Inc/fonts/Font_32_Grotesk.h)(0x5B192EA2)
+I (../Inc/fonts/Font_32_Grotesk_Bold.h)(0x5B192E9F)
+I (../Inc/fonts/Font_40_Segment_16_Full.h)(0x5B192E63)
+I (../Inc/fonts/Font_48_Battery.h)(0x5B192E55)
+I (../Inc/fonts/Font_48_Segment_16_Num.h)(0x5B192E4B)
+I (../Inc/fonts/Font_64_Segment_16_Num.h)(0x5B192E33)
+I (../Inc/fonts/Font_64_Segment_7_Num.h)(0x5B192E3E)
 F (..\Src\xpt2046.c)(0x5AB65FD8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include --C99-I.\RTE\_SSD1289_FSMC-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx --C99-o ssd1289_fsmc\xpt2046.o --omf_browse ssd1289_fsmc\xpt2046.crf --depend ssd1289_fsmc\xpt2046.d)
 I (../Inc/xpt2046.h)(0x5AB61744)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -975,7 +974,7 @@ F (..\Src\ssd1289_fsmc.c)(0x5AB559E8)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 
 I (../Inc/ssd1289_fsmc.h)(0x5AFF13DE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5AB559E8)
@@ -1022,7 +1021,7 @@ I (../Drivers/CMSIS/Include/core_cmSimd.h)(0x5AB559E8)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5AB559E8)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AB559E8)
-I (../Inc/main.h)(0x5B178C47)
+I (../Inc/main.h)(0x5B193288)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5AB559E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5AB559E8)
