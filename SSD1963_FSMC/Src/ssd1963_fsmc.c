@@ -87,6 +87,76 @@ void LCD_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t x
 	LCD_Line(x3, y3, x1, y1, size, color24);
 }
 
+#define ABS(x) ((x) > 0 ? (x) : -(x))
+
+void LCD_Triangle_Fill(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t x3, uint16_t y3, uint32_t color24)
+{
+	int16_t deltax = 0, deltay = 0, x = 0, y = 0, xinc1 = 0, xinc2 = 0, 
+	yinc1 = 0, yinc2 = 0, den = 0, num = 0, numadd = 0, numpixels = 0, 
+	curpixel = 0;
+	
+	deltax = ABS(x2 - x1);
+	deltay = ABS(y2 - y1);
+	x = x1;
+	y = y1;
+
+	if (x2 >= x1)
+	{
+		xinc1 = 1;
+		xinc2 = 1;
+	}
+	else
+	{
+		xinc1 = -1;
+		xinc2 = -1;
+	}
+
+	if (y2 >= y1)
+	{
+		yinc1 = 1;
+		yinc2 = 1;
+	}
+	else
+	{
+		yinc1 = -1;
+		yinc2 = -1;
+	}
+
+	if (deltax >= deltay)
+	{
+		xinc1 = 0;
+		yinc2 = 0;
+		den = deltax;
+		num = deltax / 2;
+		numadd = deltay;
+		numpixels = deltax;
+	}
+	else
+	{
+		xinc2 = 0;
+		yinc1 = 0;
+		den = deltay;
+		num = deltay / 2;
+		numadd = deltax;
+		numpixels = deltay;
+	}
+
+	for (curpixel = 0; curpixel <= numpixels; curpixel++)
+	{
+		LCD_Line(x, y, x3, y3, 1, color24);
+
+		num += numadd;
+		if (num >= den)
+		{
+			num -= den;
+			x += xinc1;
+			y += yinc1;
+		}
+		x += xinc2;
+		y += yinc2;
+	}
+}
+
 void LCD_Rect(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint8_t size, uint32_t color24)
 {
 	LCD_Line(x, y, x + w, y, size, color24);

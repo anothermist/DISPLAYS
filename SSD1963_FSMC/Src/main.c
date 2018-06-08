@@ -268,7 +268,8 @@ int main(void)
 	LCD_Font(45, 35, "SERIF BOLD", _9_Serif_Bold, 1, RED);
 	LCD_Circle(40, 90, 30, 0, 1, RED);
 	LCD_Circle(45, 90, 20, 1, 1, BLUE);
-	LCD_Triangle(5, 5, 5, 20, 25, 25, 2, BLUE);
+	LCD_Triangle_Fill(5, 5, 5, 20, 25, 25, BLUE);
+	LCD_Triangle(5, 5, 5, 20, 25, 25, 1, RED);
 	LCD_Rect(60, 45, 30, 20, 2, GREEN);
 	LCD_Rect_Round(80, 70, 60, 25, 10, 3, WHITE);
 	LCD_Rect_Round_Fill(80, 100, 60, 25, 10, WHITE);

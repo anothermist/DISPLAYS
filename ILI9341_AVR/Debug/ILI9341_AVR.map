@@ -836,7 +836,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x3520
+.text           0x00000000     0x372c
  *(.vectors)
  .vectors       0x00000000       0x68 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
                 0x00000000                __vector_default
@@ -980,58 +980,61 @@ END GROUP
  .text.LCD_Triangle
                 0x00001cea       0x9a ili9341.o
                 0x00001cea                LCD_Triangle
+ .text.LCD_Triangle_Fill
+                0x00001d84      0x1e6 ili9341.o
+                0x00001d84                LCD_Triangle_Fill
  .text.LCD_Ellipse
-                0x00001d84      0x6a8 ili9341.o
-                0x00001d84                LCD_Ellipse
+                0x00001f6a      0x6a8 ili9341.o
+                0x00001f6a                LCD_Ellipse
  .text.LCD_Circle
-                0x0000242c      0x23a ili9341.o
-                0x0000242c                LCD_Circle
+                0x00002612      0x23a ili9341.o
+                0x00002612                LCD_Circle
  .text.LCD_Circle_Helper
-                0x00002666      0x20c ili9341.o
-                0x00002666                LCD_Circle_Helper
+                0x0000284c      0x210 ili9341.o
+                0x0000284c                LCD_Circle_Helper
  .text.LCD_Rect_Round
-                0x00002872      0x178 ili9341.o
-                0x00002872                LCD_Rect_Round
+                0x00002a5c      0x17c ili9341.o
+                0x00002a5c                LCD_Rect_Round
  .text.LCD_Circle_Fill_Helper
-                0x000029ea      0x1a4 ili9341.o
-                0x000029ea                LCD_Circle_Fill_Helper
+                0x00002bd8      0x1a8 ili9341.o
+                0x00002bd8                LCD_Circle_Fill_Helper
  .text.LCD_Rect_Round_Fill
-                0x00002b8e       0xd6 ili9341.o
-                0x00002b8e                LCD_Rect_Round_Fill
+                0x00002d80       0xd6 ili9341.o
+                0x00002d80                LCD_Rect_Round_Fill
  .text.LCD_Font
-                0x00002c64      0x2a2 ili9341.o
-                0x00002c64                LCD_Font
- .text.LCD_SPI  0x00002f06       0x1a ili9341.o
-                0x00002f06                LCD_SPI
+                0x00002e56      0x2a2 ili9341.o
+                0x00002e56                LCD_Font
+ .text.LCD_SPI  0x000030f8       0x1a ili9341.o
+                0x000030f8                LCD_SPI
  .text.LCD_Reset
-                0x00002f20       0x32 ili9341.o
-                0x00002f20                LCD_Reset
+                0x00003112       0x32 ili9341.o
+                0x00003112                LCD_Reset
  .text.LCD_Orientation
-                0x00002f52       0xca ili9341.o
-                0x00002f52                LCD_Orientation
+                0x00003144       0xca ili9341.o
+                0x00003144                LCD_Orientation
  .text.LCD_Init
-                0x0000301c      0x1a2 ili9341.o
-                0x0000301c                LCD_Init
- .text.main     0x000031be      0x30e main.o
-                0x000031be                main
+                0x0000320e      0x1a2 ili9341.o
+                0x0000320e                LCD_Init
+ .text.main     0x000033b0      0x328 main.o
+                0x000033b0                main
  .text.libgcc.mul
-                0x000034cc       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
-                0x000034cc                __umulhisi3
+                0x000036d8       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+                0x000036d8                __umulhisi3
  .text.libgcc.mul
-                0x000034ea        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulshisi3.o)
-                0x000034ea                __mulshisi3
-                0x000034ee                __mulohisi3
+                0x000036f6        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulshisi3.o)
+                0x000036f6                __mulshisi3
+                0x000036fa                __mulohisi3
  .text.libgcc.mul
-                0x000034f6       0x14 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
-                0x000034f6                __muluhisi3
+                0x00003702       0x14 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
+                0x00003702                __muluhisi3
  .text.avr-libc
-                0x0000350a       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(memcpy_P.o)
-                0x0000350a                memcpy_P
-                0x0000351c                . = ALIGN (0x2)
+                0x00003716       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(memcpy_P.o)
+                0x00003716                memcpy_P
+                0x00003728                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000351c        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x0000351c                _exit
-                0x0000351c                exit
+ .fini9         0x00003728        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00003728                _exit
+                0x00003728                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -1050,11 +1053,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000351c        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x00003728        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00003520                _etext = .
+                0x0000372c                _etext = .
 
-.data           0x00800100       0x62 load address 0x00003520
+.data           0x00800100       0x62 load address 0x0000372c
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -1081,8 +1084,8 @@ END GROUP
                 0x00800164                LCD_Width
  *(COMMON)
                 0x00800166                PROVIDE (__bss_end, .)
-                0x00003520                __data_load_start = LOADADDR (.data)
-                0x00003582                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000372c                __data_load_start = LOADADDR (.data)
+                0x0000378e                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800166        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -1154,21 +1157,21 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000       0xe8
+.debug_aranges  0x00000000       0xf0
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0xc8 ili9341.o
+                0x00000000       0xd0 ili9341.o
  .debug_aranges
-                0x000000c8       0x20 main.o
+                0x000000d0       0x20 main.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x5d07
+.debug_info     0x00000000     0x5f15
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5f4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_info    0x000005f4     0x2c20 ili9341.o
- .debug_info    0x00003214     0x2af3 main.o
+ .debug_info    0x000005f4     0x2dc4 ili9341.o
+ .debug_info    0x000033b8     0x2b5d main.o
 
 .debug_abbrev   0x00000000      0xa82
  *(.debug_abbrev)
@@ -1176,29 +1179,29 @@ END GROUP
  .debug_abbrev  0x000005a2      0x35c ili9341.o
  .debug_abbrev  0x000008fe      0x184 main.o
 
-.debug_line     0x00000000     0x1fa5
+.debug_line     0x00000000     0x20f2
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x133 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_line    0x00000133     0x130e ili9341.o
- .debug_line    0x00001441      0xb64 main.o
+ .debug_line    0x00000133     0x1455 ili9341.o
+ .debug_line    0x00001588      0xb6a main.o
 
-.debug_frame    0x00000000      0x62c
+.debug_frame    0x00000000      0x69c
  *(.debug_frame)
- .debug_frame   0x00000000      0x608 ili9341.o
- .debug_frame   0x00000608       0x24 main.o
+ .debug_frame   0x00000000      0x678 ili9341.o
+ .debug_frame   0x00000678       0x24 main.o
 
-.debug_str      0x00000000     0x226c
+.debug_str      0x00000000     0x22be
  *(.debug_str)
  .debug_str     0x00000000      0x208 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_str     0x00000208      0x47d ili9341.o
-                                0x4d8 (size before relaxing)
- .debug_str     0x00000685     0x1be7 main.o
-                               0x1e6c (size before relaxing)
+ .debug_str     0x00000208      0x4cf ili9341.o
+                                0x52a (size before relaxing)
+ .debug_str     0x000006d7     0x1be7 main.o
+                               0x1e7e (size before relaxing)
 
-.debug_loc      0x00000000     0x351f
+.debug_loc      0x00000000     0x3e8a
  *(.debug_loc)
- .debug_loc     0x00000000     0x3363 ili9341.o
- .debug_loc     0x00003363      0x1bc main.o
+ .debug_loc     0x00000000     0x3cce ili9341.o
+ .debug_loc     0x00003cce      0x1bc main.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -1218,10 +1221,10 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0x188
+.debug_ranges   0x00000000      0x190
  *(.debug_ranges)
- .debug_ranges  0x00000000      0x178 ili9341.o
- .debug_ranges  0x00000178       0x10 main.o
+ .debug_ranges  0x00000000      0x180 ili9341.o
+ .debug_ranges  0x00000180       0x10 main.o
 
 .debug_macro
  *(.debug_macro)

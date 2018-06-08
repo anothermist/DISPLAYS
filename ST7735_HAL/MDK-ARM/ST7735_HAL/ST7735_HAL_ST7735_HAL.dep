@@ -51,7 +51,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x5AB7D81D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x5AB7D81D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x5AB7D81D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x5AB7D81D)
-F (../Src/main.c)(0x5B193337)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_ST7735_HAL-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o st7735_hal\main.o --omf_browse st7735_hal\main.crf --depend st7735_hal\main.d)
+F (../Src/main.c)(0x5B1A7A46)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_ST7735_HAL-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o st7735_hal\main.o --omf_browse st7735_hal\main.crf --depend st7735_hal\main.d)
 I (../Inc/main.h)(0x5B19332D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5AB7D81D)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5AB9430F)
@@ -76,7 +76,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x5AB7D81D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x5AB7D81D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x5AB7D81D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x5AB7D81D)
-I (../Inc/st7735.h)(0x5AFF141C)
+I (../Inc/st7735.h)(0x5B1A7A46)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_fsmc.h)(0x5AB7D81D)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599EE94C)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EE94C)
@@ -180,8 +180,8 @@ I (../Inc/fonts/Font_48_Battery.h)(0x5B192E55)
 I (../Inc/fonts/Font_48_Segment_16_Num.h)(0x5B192E4B)
 I (../Inc/fonts/Font_64_Segment_16_Num.h)(0x5B192E33)
 I (../Inc/fonts/Font_64_Segment_7_Num.h)(0x5B192E3E)
-F (..\Src\st7735.c)(0x5ABAB560)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_ST7735_HAL-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o st7735_hal\st7735.o --omf_browse st7735_hal\st7735.crf --depend st7735_hal\st7735.d)
-I (../Inc/st7735.h)(0x5AFF141C)
+F (..\Src\st7735.c)(0x5B1A827E)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_ST7735_HAL-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o st7735_hal\st7735.o --omf_browse st7735_hal\st7735.crf --depend st7735_hal\st7735.d)
+I (../Inc/st7735.h)(0x5B1A7A46)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5AB7D81D)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5AB9430F)
 I (../Inc/main.h)(0x5B19332D)
