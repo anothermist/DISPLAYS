@@ -104,17 +104,14 @@
 unsigned int out=0;
 float t=0;
 
-char buff[40];
-
-
 void main(void)
 {
 
 	TWI_Init();
 	SSD1306_Init();
 
-	//LCD_Rect_Fill(100, 50, 10, 10, 1);	
-	//LCD_Circle(100, 50, 15, 0, 3, 1);	
+	//LCD_Rect_Fill(100, 50, 10, 10, 1);
+	//LCD_Circle(100, 50, 15, 0, 3, 1);
 	//LCD_Rect_Round(100, 47, 15, 15, 3, 1);
 	
 	LCD_Ellipse(100, 47, 15, 10, 0, 1);
@@ -122,7 +119,7 @@ void main(void)
 	//LCD_Fill(1);
 	
 	LCD_Font(5, 25, "OLED Test", _8_Retro, 1, 1);
-	LCD_Font(5, 45, "DISPLAY DRIVER", _16_Default, 1, 1);
+	LCD_Font(5, 45, "DISPLAY", _16_Default, 1, 1);
 	LCD_Font(10, 60, "0123 Font", _9_Mono, 1, 1);
 	
 	LCD_UpdateScreen();

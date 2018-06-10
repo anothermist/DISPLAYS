@@ -496,11 +496,6 @@
               <FileType>5</FileType>
               <FilePath>..\Inc\ssd1306.h</FilePath>
             </File>
-            <File>
-              <FileName>fonts.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\fonts.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>

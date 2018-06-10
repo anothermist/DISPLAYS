@@ -18,7 +18,6 @@
 "ssd1306_hal\stm32f1xx_it.o"
 "ssd1306_hal\stm32f1xx_hal_msp.o"
 "ssd1306_hal\ssd1306.o"
-"ssd1306_hal\fonts.o"
 --library_type=microlib --strict --scatter "SSD1306_HAL\SSD1306_HAL.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

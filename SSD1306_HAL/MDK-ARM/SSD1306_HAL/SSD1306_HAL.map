@@ -240,59 +240,268 @@ Section Cross References
     main.o(i.main) refers to main.o(i.SystemClock_Config) for SystemClock_Config
     main.o(i.main) refers to main.o(i.MX_I2C1_Init) for MX_I2C1_Init
     main.o(i.main) refers to ssd1306.o(i.SSD1306_Init) for SSD1306_Init
-    main.o(i.main) refers to ssd1306.o(i.LCD_Fill) for LCD_Fill
+    main.o(i.main) refers to ssd1306.o(i.LCD_Ellipse) for LCD_Ellipse
+    main.o(i.main) refers to ssd1306.o(i.LCD_Font) for LCD_Font
     main.o(i.main) refers to ssd1306.o(i.LCD_UpdateScreen) for LCD_UpdateScreen
-    main.o(i.main) refers to ssd1306.o(i.LCD_String) for LCD_String
-    main.o(i.main) refers to fonts.o(.data) for Font_7x10
-    main.o(i.main) refers to fonts.o(.data) for Font_11x18
-    main.o(i.main) refers to fonts.o(.data) for Font_16x26
+    main.o(i.main) refers to stm32f1xx_hal.o(i.HAL_Delay) for HAL_Delay
+    main.o(i.main) refers to ssd1306.o(i.LCD_Battery) for LCD_Battery
+    main.o(i.main) refers to f2d.o(.text) for __aeabi_f2d
+    main.o(i.main) refers to dadd.o(.text) for __aeabi_dadd
+    main.o(i.main) refers to d2f.o(.text) for __aeabi_d2f
+    main.o(i.main) refers to main.o(.constdata) for .constdata
+    main.o(i.main) refers to main.o(.data) for .data
+    main.o(.constdata) refers to main.o(.constdata) for Font_3_TinyBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_3_TinyGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_3_PicoPixelBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_3_PicoPixelGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_3_TomThumb_ExtendedBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_3_TomThumb_ExtendedGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_5_OrgBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_5_OrgGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_8_SinclairBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_8_SinclairGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_8_Sinclair_InvertedBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_8_Sinclair_InvertedGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_8_TinyBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_8_TinyGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_8_MykeBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_8_MykeGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_8_DefaultBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_8_DefaultGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_8_RetroBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_8_RetroGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_MonoBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_MonoGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_DefaultBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_DefaultGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_Mono_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_Mono_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_Mono_Bold_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_Mono_Bold_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_Mono_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_Mono_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_SansBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_SansGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_Sans_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_Sans_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_Sans_Bold_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_Sans_Bold_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_Sans_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_Sans_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_SerifBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_SerifGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_Serif_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_Serif_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_Serif_Bold_ItalicBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_Serif_Bold_ItalicGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_Serif_ItalicBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_9_Serif_ItalicGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_MonoBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_MonoGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_Mono_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_Mono_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_Mono_Bold_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_Mono_Bold_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_Mono_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_Mono_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_SansBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_SansGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_Sans_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_Sans_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_Sans_Bold_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_Sans_Bold_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_Sans_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_Sans_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_SerifBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_SerifGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_Serif_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_Serif_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for FreeSerFont_12_Serif_Bold_ItalicBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for FreeSerFont_12_Serif_Bold_ItalicGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_Serif_ItalicBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_12_Serif_ItalicGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_ArialBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_ArialGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_Arial_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_Arial_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_Arial_ItalicBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_Arial_ItalicGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_FranklinGothicBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_FranklinGothicGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_HallfeticaBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_HallfeticaGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_NadianneBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_NadianneGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_SinclairBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_SinclairGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_Sinclair_InvertedBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_Sinclair_InvertedGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_Swiss_OutlineBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_Swiss_OutlineGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_Matrix_FullBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_Matrix_FullGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_Matrix_Full_SlashBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_Matrix_Full_SlashGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_Matrix_NumBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_Matrix_NumGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_Arial_RoundBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_Arial_RoundGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_OCRBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_OCRGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_Segment_16_FullBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_Segment_16_FullGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_GroteskBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_GroteskGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_Grotesk_Bold16x32Bitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_Grotesk_Bold16x32Glyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_RetroBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_16_RetroGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_MonoBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_MonoGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_Mono_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_Mono_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_Mono_Bold_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_Mono_Bold_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_Mono_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_Mono_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_SansBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_SansGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_Sans_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_Sans_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_Sans_Bold_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_Sans_Bold_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_Sans_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_Sans_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_SerifBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_SerifGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_Serif_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_Serif_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_Serif_Bold_ItalicBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_Serif_Bold_ItalicGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_Serif_ItalicBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_18_Serif_ItalicGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Matrix_NumBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Matrix_NumGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_InconsolaBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_InconsolaGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_UbuntuBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_UbuntuGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Ubuntu_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Ubuntu_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Segment_16_FullBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Segment_16_FullGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_MonoBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_MonoGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Mono_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Mono_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Mono_Bold_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Mono_Bold_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Mono_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Mono_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_GroteskBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_GroteskGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Grotesk_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Grotesk_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_SansBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_SansGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Sans_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Sans_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Sans_Bold_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Sans_Bold_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Sans_ObliqueBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Sans_ObliqueGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_SerifBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_SerifGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Serif_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Serif_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Serif_Bold_ItalicBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_Serif_Bold_ItalicGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_SerifItalicBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_24_SerifItalicGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_DingbatsBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_DingbatsGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_SpecialBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_SpecialGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_Calibri_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_Calibri_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_Arial_Num_PlusBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_Arial_Num_PlusGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_Matrix_NumBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_Matrix_NumGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_Segment_7_FullBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_Segment_7_FullGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_Segment_7_Num_PlusBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_Segment_7_Num_PlusGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_Segment_16_FullBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_Segment_16_FullGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_Segment_18_FullBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_Segment_18_FullGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_GroteskBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_GroteskGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_Grotesk_BoldBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_32_Grotesk_BoldGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_40_Segment_16_FullBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_40_Segment_16_FullGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_48_BatteryBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_48_BatteryGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_48_Segment_16_NumBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_48_Segment_16_NumGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_64_Segment_16_NumBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_64_Segment_16_NumGlyphs
+    main.o(.constdata) refers to main.o(.constdata) for Font_64_Segment_7_NumBitmaps
+    main.o(.constdata) refers to main.o(.constdata) for Font_64_Segment_7_NumGlyphs
     stm32f1xx_it.o(i.SysTick_Handler) refers to stm32f1xx_hal.o(i.HAL_IncTick) for HAL_IncTick
     stm32f1xx_it.o(i.SysTick_Handler) refers to stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_IRQHandler) for HAL_SYSTICK_IRQHandler
     stm32f1xx_hal_msp.o(i.HAL_I2C_MspDeInit) refers to stm32f1xx_hal_gpio.o(i.HAL_GPIO_DeInit) for HAL_GPIO_DeInit
     stm32f1xx_hal_msp.o(i.HAL_I2C_MspInit) refers to stm32f1xx_hal_gpio.o(i.HAL_GPIO_Init) for HAL_GPIO_Init
     stm32f1xx_hal_msp.o(i.HAL_MspInit) refers to stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping) for HAL_NVIC_SetPriorityGrouping
     stm32f1xx_hal_msp.o(i.HAL_MspInit) refers to stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriority) for HAL_NVIC_SetPriority
-    ssd1306.o(i.I2C_Write) refers to stm32f1xx_hal_i2c.o(i.HAL_I2C_Master_Transmit) for HAL_I2C_Master_Transmit
-    ssd1306.o(i.I2C_Write) refers to main.o(.bss) for hi2c1
-    ssd1306.o(i.I2C_WriteMulti) refers to malloc.o(i.malloc) for malloc
-    ssd1306.o(i.I2C_WriteMulti) refers to stm32f1xx_hal_i2c.o(i.HAL_I2C_Master_Transmit) for HAL_I2C_Master_Transmit
-    ssd1306.o(i.I2C_WriteMulti) refers to malloc.o(i.free) for free
-    ssd1306.o(i.I2C_WriteMulti) refers to main.o(.bss) for hi2c1
-    ssd1306.o(i.LCD_Char) refers to ssd1306.o(i.LCD_Pixel) for LCD_Pixel
-    ssd1306.o(i.LCD_Char) refers to ssd1306.o(.data) for .data
-    ssd1306.o(i.LCD_Circle) refers to ssd1306.o(i.LCD_Pixel) for LCD_Pixel
-    ssd1306.o(i.LCD_Circle_Fill) refers to ssd1306.o(i.LCD_Pixel) for LCD_Pixel
-    ssd1306.o(i.LCD_Circle_Fill) refers to ssd1306.o(i.LCD_Line) for LCD_Line
+    ssd1306.o(i.LCD_Battery) refers to ssd1306.o(i.LCD_Goto2X) for LCD_Goto2X
+    ssd1306.o(i.LCD_Battery) refers to ssd1306.o(i.SSD1306_Command) for SSD1306_Command
+    ssd1306.o(i.LCD_Char) refers to ssd1306.o(i.LCD_Rect_Fill) for LCD_Rect_Fill
+    ssd1306.o(i.LCD_Circle) refers to ssd1306.o(i.LCD_Rect_Fill) for LCD_Rect_Fill
+    ssd1306.o(i.LCD_Circle_Fill_Helper) refers to ssd1306.o(i.LCD_Line) for LCD_Line
+    ssd1306.o(i.LCD_Circle_Helper) refers to ssd1306.o(i.LCD_Pixel) for LCD_Pixel
+    ssd1306.o(i.LCD_Contrast) refers to ssd1306.o(i.SSD1306_Command) for SSD1306_Command
+    ssd1306.o(i.LCD_Contrast) refers to stm32f1xx_hal.o(i.HAL_Delay) for HAL_Delay
+    ssd1306.o(i.LCD_Ellipse) refers to ssd1306.o(i.LCD_Line) for LCD_Line
+    ssd1306.o(i.LCD_Ellipse) refers to ssd1306.o(i.LCD_Pixel) for LCD_Pixel
     ssd1306.o(i.LCD_Fill) refers to memseta.o(.text) for __aeabi_memset
     ssd1306.o(i.LCD_Fill) refers to ssd1306.o(.bss) for .bss
-    ssd1306.o(i.LCD_GotoXY) refers to ssd1306.o(.data) for .data
+    ssd1306.o(i.LCD_Font) refers to ssd1306.o(i.LCD_Char) for LCD_Char
+    ssd1306.o(i.LCD_Font) refers to strlen.o(.text) for strlen
+    ssd1306.o(i.LCD_Goto2X) refers to ssd1306.o(i.SSD1306_Command) for SSD1306_Command
+    ssd1306.o(i.LCD_Goto2X) refers to ssd1306.o(.data) for .data
     ssd1306.o(i.LCD_Line) refers to ssd1306.o(i.LCD_Pixel) for LCD_Pixel
-    ssd1306.o(i.LCD_OFF) refers to ssd1306.o(i.I2C_Write) for I2C_Write
-    ssd1306.o(i.LCD_ON) refers to ssd1306.o(i.I2C_Write) for I2C_Write
+    ssd1306.o(i.LCD_Mode) refers to ssd1306.o(i.SSD1306_Command) for SSD1306_Command
+    ssd1306.o(i.LCD_OFF) refers to ssd1306.o(i.SSD1306_Command) for SSD1306_Command
+    ssd1306.o(i.LCD_ON) refers to ssd1306.o(i.SSD1306_Command) for SSD1306_Command
     ssd1306.o(i.LCD_Pixel) refers to ssd1306.o(.data) for .data
     ssd1306.o(i.LCD_Pixel) refers to ssd1306.o(.bss) for .bss
-    ssd1306.o(i.LCD_Rectangle) refers to ssd1306.o(i.LCD_Line) for LCD_Line
-    ssd1306.o(i.LCD_Rectangle_Fill) refers to ssd1306.o(i.LCD_Line) for LCD_Line
-    ssd1306.o(i.LCD_String) refers to ssd1306.o(i.LCD_GotoXY) for LCD_GotoXY
-    ssd1306.o(i.LCD_String) refers to ssd1306.o(i.LCD_Char) for LCD_Char
+    ssd1306.o(i.LCD_Rect) refers to ssd1306.o(i.LCD_Line) for LCD_Line
+    ssd1306.o(i.LCD_Rect_Fill) refers to ssd1306.o(i.LCD_Line) for LCD_Line
+    ssd1306.o(i.LCD_Rect_Round) refers to ssd1306.o(i.LCD_Line) for LCD_Line
+    ssd1306.o(i.LCD_Rect_Round) refers to ssd1306.o(i.LCD_Circle_Helper) for LCD_Circle_Helper
+    ssd1306.o(i.LCD_Rect_Round_Fill) refers to ssd1306.o(i.LCD_Rect_Fill) for LCD_Rect_Fill
+    ssd1306.o(i.LCD_Rect_Round_Fill) refers to ssd1306.o(i.LCD_Circle_Fill_Helper) for LCD_Circle_Fill_Helper
+    ssd1306.o(i.LCD_Sleep) refers to ssd1306.o(i.SSD1306_Command) for SSD1306_Command
     ssd1306.o(i.LCD_ToggleInvert) refers to ssd1306.o(.data) for .data
     ssd1306.o(i.LCD_ToggleInvert) refers to ssd1306.o(.bss) for .bss
     ssd1306.o(i.LCD_Triangle) refers to ssd1306.o(i.LCD_Line) for LCD_Line
     ssd1306.o(i.LCD_Triangle_Fill) refers to ssd1306.o(i.LCD_Line) for LCD_Line
-    ssd1306.o(i.LCD_UpdateScreen) refers to ssd1306.o(i.I2C_Write) for I2C_Write
-    ssd1306.o(i.LCD_UpdateScreen) refers to ssd1306.o(i.I2C_WriteMulti) for I2C_WriteMulti
+    ssd1306.o(i.LCD_UpdateScreen) refers to ssd1306.o(i.SSD1306_Command) for SSD1306_Command
+    ssd1306.o(i.LCD_UpdateScreen) refers to malloc.o(i.malloc) for malloc
+    ssd1306.o(i.LCD_UpdateScreen) refers to stm32f1xx_hal_i2c.o(i.HAL_I2C_Master_Transmit) for HAL_I2C_Master_Transmit
+    ssd1306.o(i.LCD_UpdateScreen) refers to malloc.o(i.free) for free
     ssd1306.o(i.LCD_UpdateScreen) refers to ssd1306.o(.bss) for .bss
+    ssd1306.o(i.LCD_UpdateScreen) refers to main.o(.bss) for hi2c1
+    ssd1306.o(i.SSD1306_Command) refers to stm32f1xx_hal_i2c.o(i.HAL_I2C_Master_Transmit) for HAL_I2C_Master_Transmit
+    ssd1306.o(i.SSD1306_Command) refers to main.o(.bss) for hi2c1
     ssd1306.o(i.SSD1306_Init) refers to stm32f1xx_hal.o(i.HAL_Delay) for HAL_Delay
-    ssd1306.o(i.SSD1306_Init) refers to stm32f1xx_hal_i2c.o(i.HAL_I2C_IsDeviceReady) for HAL_I2C_IsDeviceReady
-    ssd1306.o(i.SSD1306_Init) refers to ssd1306.o(i.I2C_Write) for I2C_Write
+    ssd1306.o(i.SSD1306_Init) refers to ssd1306.o(i.SSD1306_Command) for SSD1306_Command
     ssd1306.o(i.SSD1306_Init) refers to ssd1306.o(i.LCD_Fill) for LCD_Fill
     ssd1306.o(i.SSD1306_Init) refers to ssd1306.o(i.LCD_UpdateScreen) for LCD_UpdateScreen
-    ssd1306.o(i.SSD1306_Init) refers to main.o(.bss) for hi2c1
     ssd1306.o(i.SSD1306_Init) refers to ssd1306.o(.data) for .data
-    fonts.o(i.FONTS_GetStringSize) refers to strlen.o(.text) for strlen
-    fonts.o(.data) refers to fonts.o(.constdata) for Font7x10
-    fonts.o(.data) refers to fonts.o(.constdata) for Font11x18
-    fonts.o(.data) refers to fonts.o(.constdata) for Font16x26
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
@@ -332,6 +541,13 @@ Section Cross References
     mallocra.o(i.__realloc$memalign) refers to mvars.o(.data) for __microlib_freelist
     mallocra.o(i.internal_alloc) refers to memcpya.o(.text) for __aeabi_memcpy
     mallocra.o(i.internal_alloc) refers to mvars.o(.data) for __microlib_freelist
+    dadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    f2d.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    d2f.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    d2f.o(.text) refers to fepilogue.o(.text) for _float_round
     entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
     entry2.o(.ARM.Collect$$$$00002712) refers to startup_stm32f103xb.o(STACK) for __initial_sp
     entry2.o(__vectab_stack_and_reset_area) refers to startup_stm32f103xb.o(STACK) for __initial_sp
@@ -339,6 +555,8 @@ Section Cross References
     entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
     entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(i.main) for main
     entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(i.main) for main
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
     init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
 
 
@@ -476,6 +694,7 @@ Removing Unused input sections from the image.
     Removing stm32f1xx_hal_i2c.o(i.HAL_I2C_GetError), (4 bytes).
     Removing stm32f1xx_hal_i2c.o(i.HAL_I2C_GetMode), (6 bytes).
     Removing stm32f1xx_hal_i2c.o(i.HAL_I2C_GetState), (6 bytes).
+    Removing stm32f1xx_hal_i2c.o(i.HAL_I2C_IsDeviceReady), (352 bytes).
     Removing stm32f1xx_hal_i2c.o(i.HAL_I2C_ListenCpltCallback), (2 bytes).
     Removing stm32f1xx_hal_i2c.o(i.HAL_I2C_MasterRxCpltCallback), (2 bytes).
     Removing stm32f1xx_hal_i2c.o(i.HAL_I2C_MasterTxCpltCallback), (2 bytes).
@@ -558,6 +777,298 @@ Removing Unused input sections from the image.
     Removing main.o(.revsh_text), (4 bytes).
     Removing main.o(.rrx_text), (6 bytes).
     Removing main.o(i._Error_Handler), (2 bytes).
+    Removing main.o(.bss), (40 bytes).
+    Removing main.o(.constdata), (142 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (180 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (418 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (271 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (373 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (482 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (523 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (349 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (414 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1000 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1167 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (982 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1150 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1230 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1464 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1369 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1080 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1162 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1310 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1163 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1460 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1730 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1966 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1707 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1969 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (2186 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (2535 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (2362 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1839 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1991 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (2238 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1984 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (905 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (996 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1021 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (930 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (937 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1278 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1314 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1807 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1091 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (2395 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (2395 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (335 bytes).
+    Removing main.o(.constdata), (80 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1875 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1820 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (2603 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3304 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3351 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3040 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3089 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3813 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (4256 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3514 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (4159 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (4503 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (5271 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (4951 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3886 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (4273 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (4738 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (4133 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (623 bytes).
+    Removing main.o(.constdata), (80 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3531 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3645 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (4036 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (6202 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (5658 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (6797 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (7635 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (6452 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (7290 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (7575 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (7464 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (8143 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (9447 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (8811 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (7010 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (7847 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (8245 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (7579 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3794 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (10985 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1477 bytes).
+    Removing main.o(.constdata), (80 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1565 bytes).
+    Removing main.o(.constdata), (88 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1639 bytes).
+    Removing main.o(.constdata), (80 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (10644 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1395 bytes).
+    Removing main.o(.constdata), (104 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (9297 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (12526 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (12803 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (13407 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (16558 bytes).
+    Removing main.o(.constdata), (760 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (1380 bytes).
+    Removing main.o(.constdata), (80 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (3535 bytes).
+    Removing main.o(.constdata), (80 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (6167 bytes).
+    Removing main.o(.constdata), (80 bytes).
+    Removing main.o(.constdata), (12 bytes).
+    Removing main.o(.constdata), (5396 bytes).
+    Removing main.o(.constdata), (80 bytes).
+    Removing main.o(.constdata), (12 bytes).
     Removing stm32f1xx_it.o(.rev16_text), (4 bytes).
     Removing stm32f1xx_it.o(.revsh_text), (4 bytes).
     Removing stm32f1xx_it.o(.rrx_text), (6 bytes).
@@ -568,22 +1079,22 @@ Removing Unused input sections from the image.
     Removing ssd1306.o(.rev16_text), (4 bytes).
     Removing ssd1306.o(.revsh_text), (4 bytes).
     Removing ssd1306.o(.rrx_text), (6 bytes).
-    Removing ssd1306.o(i.LCD_Circle), (272 bytes).
-    Removing ssd1306.o(i.LCD_Circle_Fill), (260 bytes).
-    Removing ssd1306.o(i.LCD_Line), (266 bytes).
-    Removing ssd1306.o(i.LCD_OFF), (36 bytes).
-    Removing ssd1306.o(i.LCD_ON), (36 bytes).
-    Removing ssd1306.o(i.LCD_Rectangle), (116 bytes).
-    Removing ssd1306.o(i.LCD_Rectangle_Fill), (86 bytes).
+    Removing ssd1306.o(i.LCD_Circle), (302 bytes).
+    Removing ssd1306.o(i.LCD_Circle_Fill_Helper), (220 bytes).
+    Removing ssd1306.o(i.LCD_Circle_Helper), (230 bytes).
+    Removing ssd1306.o(i.LCD_Contrast), (46 bytes).
+    Removing ssd1306.o(i.LCD_Mode), (20 bytes).
+    Removing ssd1306.o(i.LCD_OFF), (30 bytes).
+    Removing ssd1306.o(i.LCD_ON), (30 bytes).
+    Removing ssd1306.o(i.LCD_Rect), (116 bytes).
+    Removing ssd1306.o(i.LCD_Rect_Round), (206 bytes).
+    Removing ssd1306.o(i.LCD_Rect_Round_Fill), (102 bytes).
+    Removing ssd1306.o(i.LCD_Sleep), (20 bytes).
     Removing ssd1306.o(i.LCD_ToggleInvert), (48 bytes).
     Removing ssd1306.o(i.LCD_Triangle), (56 bytes).
     Removing ssd1306.o(i.LCD_Triangle_Fill), (186 bytes).
-    Removing fonts.o(.rev16_text), (4 bytes).
-    Removing fonts.o(.revsh_text), (4 bytes).
-    Removing fonts.o(.rrx_text), (6 bytes).
-    Removing fonts.o(i.FONTS_GetStringSize), (28 bytes).
 
-236 unused section(s) (total 17300 bytes) removed from the image.
+529 unused section(s) (total 444753 bytes) removed from the image.
 
 ==============================================================================
 
@@ -610,29 +1121,37 @@ Image Symbol Table
     ../Src/main.c                            0x00000000   Number         0  main.o ABSOLUTE
     ../Src/stm32f1xx_hal_msp.c               0x00000000   Number         0  stm32f1xx_hal_msp.o ABSOLUTE
     ../Src/stm32f1xx_it.c                    0x00000000   Number         0  stm32f1xx_it.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
-    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocra.o ABSOLUTE
-    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloca.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
     ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloc.o ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloca.o ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocra.o ABSOLUTE
     ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocr.o ABSOLUTE
     ../clib/microlib/malloc/mvars.c          0x00000000   Number         0  mvars.o ABSOLUTE
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
     ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
     ../clib/microlib/string/strlen.c         0x00000000   Number         0  strlen.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/d2f.c                  0x00000000   Number         0  d2f.o ABSOLUTE
+    ../fplib/microlib/f2d.c                  0x00000000   Number         0  f2d.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
     ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c 0x00000000   Number         0  stm32f1xx_hal.o ABSOLUTE
     ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c 0x00000000   Number         0  stm32f1xx_hal_cortex.o ABSOLUTE
     ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c 0x00000000   Number         0  stm32f1xx_hal_dma.o ABSOLUTE
@@ -646,12 +1165,10 @@ Image Symbol Table
     ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c 0x00000000   Number         0  stm32f1xx_hal_rcc_ex.o ABSOLUTE
     ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c 0x00000000   Number         0  stm32f1xx_hal_tim.o ABSOLUTE
     ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c 0x00000000   Number         0  stm32f1xx_hal_tim_ex.o ABSOLUTE
-    ..\Src\fonts.c                           0x00000000   Number         0  fonts.o ABSOLUTE
     ..\Src\main.c                            0x00000000   Number         0  main.o ABSOLUTE
     ..\Src\ssd1306.c                         0x00000000   Number         0  ssd1306.o ABSOLUTE
     ..\Src\stm32f1xx_hal_msp.c               0x00000000   Number         0  stm32f1xx_hal_msp.o ABSOLUTE
     ..\Src\stm32f1xx_it.c                    0x00000000   Number         0  stm32f1xx_it.o ABSOLUTE
-    ..\\Src\\fonts.c                         0x00000000   Number         0  fonts.o ABSOLUTE
     ..\\Src\\ssd1306.c                       0x00000000   Number         0  ssd1306.o ABSOLUTE
     ..\\Src\system_stm32f1xx.c               0x00000000   Number         0  system_stm32f1xx.o ABSOLUTE
     dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
@@ -670,97 +1187,114 @@ Image Symbol Table
     .ARM.Collect$$$$00002712                 0x080000fc   Section        4  entry2.o(.ARM.Collect$$$$00002712)
     __lit__00000000                          0x080000fc   Data           4  entry2.o(.ARM.Collect$$$$00002712)
     .text                                    0x08000100   Section       36  startup_stm32f103xb.o(.text)
-    .text                                    0x08000124   Section        0  memseta.o(.text)
-    .text                                    0x08000148   Section       36  init.o(.text)
-    i.BusFault_Handler                       0x0800016c   Section        0  stm32f1xx_it.o(i.BusFault_Handler)
-    i.DebugMon_Handler                       0x0800016e   Section        0  stm32f1xx_it.o(i.DebugMon_Handler)
-    i.HAL_Delay                              0x08000170   Section        0  stm32f1xx_hal.o(i.HAL_Delay)
-    i.HAL_GPIO_Init                          0x08000194   Section        0  stm32f1xx_hal_gpio.o(i.HAL_GPIO_Init)
-    i.HAL_GetTick                            0x08000350   Section        0  stm32f1xx_hal.o(i.HAL_GetTick)
-    i.HAL_I2C_Init                           0x0800035c   Section        0  stm32f1xx_hal_i2c.o(i.HAL_I2C_Init)
-    i.HAL_I2C_IsDeviceReady                  0x0800049c   Section        0  stm32f1xx_hal_i2c.o(i.HAL_I2C_IsDeviceReady)
-    i.HAL_I2C_Master_Transmit                0x080005fc   Section        0  stm32f1xx_hal_i2c.o(i.HAL_I2C_Master_Transmit)
-    i.HAL_I2C_MspInit                        0x08000734   Section        0  stm32f1xx_hal_msp.o(i.HAL_I2C_MspInit)
-    i.HAL_IncTick                            0x08000778   Section        0  stm32f1xx_hal.o(i.HAL_IncTick)
-    i.HAL_Init                               0x08000788   Section        0  stm32f1xx_hal.o(i.HAL_Init)
-    i.HAL_InitTick                           0x080007ac   Section        0  stm32f1xx_hal.o(i.HAL_InitTick)
-    i.HAL_MspInit                            0x080007ec   Section        0  stm32f1xx_hal_msp.o(i.HAL_MspInit)
-    i.HAL_NVIC_SetPriority                   0x0800086c   Section        0  stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriority)
-    i.HAL_NVIC_SetPriorityGrouping           0x080008ac   Section        0  stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping)
-    i.HAL_RCC_ClockConfig                    0x080008d0   Section        0  stm32f1xx_hal_rcc.o(i.HAL_RCC_ClockConfig)
-    i.HAL_RCC_GetHCLKFreq                    0x08000a24   Section        0  stm32f1xx_hal_rcc.o(i.HAL_RCC_GetHCLKFreq)
-    i.HAL_RCC_GetPCLK1Freq                   0x08000a30   Section        0  stm32f1xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq)
-    i.HAL_RCC_GetSysClockFreq                0x08000a50   Section        0  stm32f1xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq)
-    i.HAL_RCC_OscConfig                      0x08000abc   Section        0  stm32f1xx_hal_rcc.o(i.HAL_RCC_OscConfig)
-    i.HAL_SYSTICK_CLKSourceConfig            0x08000dc0   Section        0  stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_CLKSourceConfig)
-    i.HAL_SYSTICK_Callback                   0x08000dd8   Section        0  stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_Callback)
-    i.HAL_SYSTICK_Config                     0x08000dda   Section        0  stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_Config)
-    i.HAL_SYSTICK_IRQHandler                 0x08000e02   Section        0  stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_IRQHandler)
-    i.HardFault_Handler                      0x08000e0a   Section        0  stm32f1xx_it.o(i.HardFault_Handler)
-    i.I2C_IsAcknowledgeFailed                0x08000e0c   Section        0  stm32f1xx_hal_i2c.o(i.I2C_IsAcknowledgeFailed)
-    I2C_IsAcknowledgeFailed                  0x08000e0d   Thumb Code    40  stm32f1xx_hal_i2c.o(i.I2C_IsAcknowledgeFailed)
-    i.I2C_MasterRequestWrite                 0x08000e34   Section        0  stm32f1xx_hal_i2c.o(i.I2C_MasterRequestWrite)
-    I2C_MasterRequestWrite                   0x08000e35   Thumb Code   142  stm32f1xx_hal_i2c.o(i.I2C_MasterRequestWrite)
-    i.I2C_WaitOnBTFFlagUntilTimeout          0x08000ec8   Section        0  stm32f1xx_hal_i2c.o(i.I2C_WaitOnBTFFlagUntilTimeout)
-    I2C_WaitOnBTFFlagUntilTimeout            0x08000ec9   Thumb Code    78  stm32f1xx_hal_i2c.o(i.I2C_WaitOnBTFFlagUntilTimeout)
-    i.I2C_WaitOnFlagUntilTimeout             0x08000f16   Section        0  stm32f1xx_hal_i2c.o(i.I2C_WaitOnFlagUntilTimeout)
-    I2C_WaitOnFlagUntilTimeout               0x08000f17   Thumb Code    96  stm32f1xx_hal_i2c.o(i.I2C_WaitOnFlagUntilTimeout)
-    i.I2C_WaitOnMasterAddressFlagUntilTimeout 0x08000f78   Section        0  stm32f1xx_hal_i2c.o(i.I2C_WaitOnMasterAddressFlagUntilTimeout)
-    I2C_WaitOnMasterAddressFlagUntilTimeout  0x08000f79   Thumb Code   136  stm32f1xx_hal_i2c.o(i.I2C_WaitOnMasterAddressFlagUntilTimeout)
-    i.I2C_WaitOnTXEFlagUntilTimeout          0x08001000   Section        0  stm32f1xx_hal_i2c.o(i.I2C_WaitOnTXEFlagUntilTimeout)
-    I2C_WaitOnTXEFlagUntilTimeout            0x08001001   Thumb Code    78  stm32f1xx_hal_i2c.o(i.I2C_WaitOnTXEFlagUntilTimeout)
-    i.I2C_Write                              0x08001050   Section        0  ssd1306.o(i.I2C_Write)
-    i.I2C_WriteMulti                         0x08001070   Section        0  ssd1306.o(i.I2C_WriteMulti)
-    i.LCD_Char                               0x080010b8   Section        0  ssd1306.o(i.LCD_Char)
-    i.LCD_Fill                               0x08001158   Section        0  ssd1306.o(i.LCD_Fill)
-    i.LCD_GotoXY                             0x08001170   Section        0  ssd1306.o(i.LCD_GotoXY)
-    i.LCD_Pixel                              0x0800117c   Section        0  ssd1306.o(i.LCD_Pixel)
-    i.LCD_String                             0x080011bc   Section        0  ssd1306.o(i.LCD_String)
-    i.LCD_UpdateScreen                       0x080011e8   Section        0  ssd1306.o(i.LCD_UpdateScreen)
-    i.MX_I2C1_Init                           0x08001230   Section        0  main.o(i.MX_I2C1_Init)
-    MX_I2C1_Init                             0x08001231   Thumb Code    44  main.o(i.MX_I2C1_Init)
-    i.MemManage_Handler                      0x08001268   Section        0  stm32f1xx_it.o(i.MemManage_Handler)
-    i.NMI_Handler                            0x0800126a   Section        0  stm32f1xx_it.o(i.NMI_Handler)
-    i.NVIC_SetPriority                       0x0800126c   Section        0  stm32f1xx_hal_cortex.o(i.NVIC_SetPriority)
-    NVIC_SetPriority                         0x0800126d   Thumb Code    32  stm32f1xx_hal_cortex.o(i.NVIC_SetPriority)
-    i.PendSV_Handler                         0x0800128c   Section        0  stm32f1xx_it.o(i.PendSV_Handler)
-    i.SSD1306_Init                           0x08001290   Section        0  ssd1306.o(i.SSD1306_Init)
-    i.SVC_Handler                            0x080013c0   Section        0  stm32f1xx_it.o(i.SVC_Handler)
-    i.SysTick_Handler                        0x080013c2   Section        0  stm32f1xx_it.o(i.SysTick_Handler)
-    i.SystemClock_Config                     0x080013d0   Section        0  main.o(i.SystemClock_Config)
-    i.SystemInit                             0x08001438   Section        0  system_stm32f1xx.o(i.SystemInit)
-    i.UsageFault_Handler                     0x08001480   Section        0  stm32f1xx_it.o(i.UsageFault_Handler)
-    i.__scatterload_copy                     0x08001482   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x08001490   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x08001492   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.free                                   0x080014a0   Section        0  malloc.o(i.free)
-    i.main                                   0x080014f0   Section        0  main.o(i.main)
-    i.malloc                                 0x080015a0   Section        0  malloc.o(i.malloc)
-    .constdata                               0x0800160c   Section       16  system_stm32f1xx.o(.constdata)
-    .constdata                               0x0800161c   Section        8  system_stm32f1xx.o(.constdata)
-    .constdata                               0x08001624   Section     1900  fonts.o(.constdata)
-    .constdata                               0x08001d90   Section     3420  fonts.o(.constdata)
-    .constdata                               0x08002aec   Section     4940  fonts.o(.constdata)
+    .text                                    0x08000124   Section        0  llushr.o(.text)
+    .text                                    0x08000144   Section        0  memseta.o(.text)
+    .text                                    0x08000168   Section        0  strlen.o(.text)
+    .text                                    0x08000176   Section        0  dadd.o(.text)
+    .text                                    0x080002c4   Section        0  f2d.o(.text)
+    .text                                    0x080002ea   Section        0  d2f.o(.text)
+    .text                                    0x08000322   Section        0  llshl.o(.text)
+    .text                                    0x08000340   Section        0  llsshr.o(.text)
+    .text                                    0x08000364   Section        0  iusefp.o(.text)
+    .text                                    0x08000364   Section        0  fepilogue.o(.text)
+    .text                                    0x080003d2   Section        0  depilogue.o(.text)
+    .text                                    0x0800048c   Section       36  init.o(.text)
+    i.BusFault_Handler                       0x080004b0   Section        0  stm32f1xx_it.o(i.BusFault_Handler)
+    i.DebugMon_Handler                       0x080004b2   Section        0  stm32f1xx_it.o(i.DebugMon_Handler)
+    i.HAL_Delay                              0x080004b4   Section        0  stm32f1xx_hal.o(i.HAL_Delay)
+    i.HAL_GPIO_Init                          0x080004d8   Section        0  stm32f1xx_hal_gpio.o(i.HAL_GPIO_Init)
+    i.HAL_GetTick                            0x08000694   Section        0  stm32f1xx_hal.o(i.HAL_GetTick)
+    i.HAL_I2C_Init                           0x080006a0   Section        0  stm32f1xx_hal_i2c.o(i.HAL_I2C_Init)
+    i.HAL_I2C_Master_Transmit                0x080007e0   Section        0  stm32f1xx_hal_i2c.o(i.HAL_I2C_Master_Transmit)
+    i.HAL_I2C_MspInit                        0x08000918   Section        0  stm32f1xx_hal_msp.o(i.HAL_I2C_MspInit)
+    i.HAL_IncTick                            0x0800095c   Section        0  stm32f1xx_hal.o(i.HAL_IncTick)
+    i.HAL_Init                               0x0800096c   Section        0  stm32f1xx_hal.o(i.HAL_Init)
+    i.HAL_InitTick                           0x08000990   Section        0  stm32f1xx_hal.o(i.HAL_InitTick)
+    i.HAL_MspInit                            0x080009d0   Section        0  stm32f1xx_hal_msp.o(i.HAL_MspInit)
+    i.HAL_NVIC_SetPriority                   0x08000a50   Section        0  stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriority)
+    i.HAL_NVIC_SetPriorityGrouping           0x08000a90   Section        0  stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping)
+    i.HAL_RCC_ClockConfig                    0x08000ab4   Section        0  stm32f1xx_hal_rcc.o(i.HAL_RCC_ClockConfig)
+    i.HAL_RCC_GetHCLKFreq                    0x08000c08   Section        0  stm32f1xx_hal_rcc.o(i.HAL_RCC_GetHCLKFreq)
+    i.HAL_RCC_GetPCLK1Freq                   0x08000c14   Section        0  stm32f1xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq)
+    i.HAL_RCC_GetSysClockFreq                0x08000c34   Section        0  stm32f1xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq)
+    i.HAL_RCC_OscConfig                      0x08000ca0   Section        0  stm32f1xx_hal_rcc.o(i.HAL_RCC_OscConfig)
+    i.HAL_SYSTICK_CLKSourceConfig            0x08000fa4   Section        0  stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_CLKSourceConfig)
+    i.HAL_SYSTICK_Callback                   0x08000fbc   Section        0  stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_Callback)
+    i.HAL_SYSTICK_Config                     0x08000fbe   Section        0  stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_Config)
+    i.HAL_SYSTICK_IRQHandler                 0x08000fe6   Section        0  stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_IRQHandler)
+    i.HardFault_Handler                      0x08000fee   Section        0  stm32f1xx_it.o(i.HardFault_Handler)
+    i.I2C_IsAcknowledgeFailed                0x08000ff0   Section        0  stm32f1xx_hal_i2c.o(i.I2C_IsAcknowledgeFailed)
+    I2C_IsAcknowledgeFailed                  0x08000ff1   Thumb Code    40  stm32f1xx_hal_i2c.o(i.I2C_IsAcknowledgeFailed)
+    i.I2C_MasterRequestWrite                 0x08001018   Section        0  stm32f1xx_hal_i2c.o(i.I2C_MasterRequestWrite)
+    I2C_MasterRequestWrite                   0x08001019   Thumb Code   142  stm32f1xx_hal_i2c.o(i.I2C_MasterRequestWrite)
+    i.I2C_WaitOnBTFFlagUntilTimeout          0x080010ac   Section        0  stm32f1xx_hal_i2c.o(i.I2C_WaitOnBTFFlagUntilTimeout)
+    I2C_WaitOnBTFFlagUntilTimeout            0x080010ad   Thumb Code    78  stm32f1xx_hal_i2c.o(i.I2C_WaitOnBTFFlagUntilTimeout)
+    i.I2C_WaitOnFlagUntilTimeout             0x080010fa   Section        0  stm32f1xx_hal_i2c.o(i.I2C_WaitOnFlagUntilTimeout)
+    I2C_WaitOnFlagUntilTimeout               0x080010fb   Thumb Code    96  stm32f1xx_hal_i2c.o(i.I2C_WaitOnFlagUntilTimeout)
+    i.I2C_WaitOnMasterAddressFlagUntilTimeout 0x0800115c   Section        0  stm32f1xx_hal_i2c.o(i.I2C_WaitOnMasterAddressFlagUntilTimeout)
+    I2C_WaitOnMasterAddressFlagUntilTimeout  0x0800115d   Thumb Code   136  stm32f1xx_hal_i2c.o(i.I2C_WaitOnMasterAddressFlagUntilTimeout)
+    i.I2C_WaitOnTXEFlagUntilTimeout          0x080011e4   Section        0  stm32f1xx_hal_i2c.o(i.I2C_WaitOnTXEFlagUntilTimeout)
+    I2C_WaitOnTXEFlagUntilTimeout            0x080011e5   Thumb Code    78  stm32f1xx_hal_i2c.o(i.I2C_WaitOnTXEFlagUntilTimeout)
+    i.LCD_Battery                            0x08001232   Section        0  ssd1306.o(i.LCD_Battery)
+    i.LCD_Char                               0x080012c0   Section        0  ssd1306.o(i.LCD_Char)
+    LCD_Char                                 0x080012c1   Thumb Code   198  ssd1306.o(i.LCD_Char)
+    i.LCD_Ellipse                            0x08001388   Section        0  ssd1306.o(i.LCD_Ellipse)
+    i.LCD_Fill                               0x080015d8   Section        0  ssd1306.o(i.LCD_Fill)
+    i.LCD_Font                               0x080015f0   Section        0  ssd1306.o(i.LCD_Font)
+    i.LCD_Goto2X                             0x08001680   Section        0  ssd1306.o(i.LCD_Goto2X)
+    LCD_Goto2X                               0x08001681   Thumb Code    50  ssd1306.o(i.LCD_Goto2X)
+    i.LCD_Line                               0x080016b8   Section        0  ssd1306.o(i.LCD_Line)
+    i.LCD_Pixel                              0x080017c0   Section        0  ssd1306.o(i.LCD_Pixel)
+    i.LCD_Rect_Fill                          0x08001800   Section        0  ssd1306.o(i.LCD_Rect_Fill)
+    i.LCD_UpdateScreen                       0x08001858   Section        0  ssd1306.o(i.LCD_UpdateScreen)
+    i.MX_I2C1_Init                           0x080018dc   Section        0  main.o(i.MX_I2C1_Init)
+    MX_I2C1_Init                             0x080018dd   Thumb Code    44  main.o(i.MX_I2C1_Init)
+    i.MemManage_Handler                      0x08001914   Section        0  stm32f1xx_it.o(i.MemManage_Handler)
+    i.NMI_Handler                            0x08001916   Section        0  stm32f1xx_it.o(i.NMI_Handler)
+    i.NVIC_SetPriority                       0x08001918   Section        0  stm32f1xx_hal_cortex.o(i.NVIC_SetPriority)
+    NVIC_SetPriority                         0x08001919   Thumb Code    32  stm32f1xx_hal_cortex.o(i.NVIC_SetPriority)
+    i.PendSV_Handler                         0x08001938   Section        0  stm32f1xx_it.o(i.PendSV_Handler)
+    i.SSD1306_Command                        0x0800193c   Section        0  ssd1306.o(i.SSD1306_Command)
+    SSD1306_Command                          0x0800193d   Thumb Code    28  ssd1306.o(i.SSD1306_Command)
+    i.SSD1306_Init                           0x0800195c   Section        0  ssd1306.o(i.SSD1306_Init)
+    i.SVC_Handler                            0x08001a40   Section        0  stm32f1xx_it.o(i.SVC_Handler)
+    i.SysTick_Handler                        0x08001a42   Section        0  stm32f1xx_it.o(i.SysTick_Handler)
+    i.SystemClock_Config                     0x08001a50   Section        0  main.o(i.SystemClock_Config)
+    i.SystemInit                             0x08001ab8   Section        0  system_stm32f1xx.o(i.SystemInit)
+    i.UsageFault_Handler                     0x08001b00   Section        0  stm32f1xx_it.o(i.UsageFault_Handler)
+    i.__scatterload_copy                     0x08001b02   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08001b10   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08001b12   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.free                                   0x08001b20   Section        0  malloc.o(i.free)
+    i.main                                   0x08001b70   Section        0  main.o(i.main)
+    i.malloc                                 0x08001c88   Section        0  malloc.o(i.malloc)
+    .constdata                               0x08001cf4   Section       16  system_stm32f1xx.o(.constdata)
+    .constdata                               0x08001d04   Section        8  system_stm32f1xx.o(.constdata)
+    .constdata                               0x08001d0c   Section      801  main.o(.constdata)
+    .constdata                               0x0800202e   Section      760  main.o(.constdata)
+    .constdata                               0x08002328   Section       36  main.o(.constdata)
+    .constdata                               0x0800234c   Section      844  main.o(.constdata)
+    .constdata                               0x08002698   Section      760  main.o(.constdata)
+    .constdata                               0x08002990   Section     1198  main.o(.constdata)
+    .constdata                               0x08002e3e   Section      760  main.o(.constdata)
     .data                                    0x20000000   Section        4  system_stm32f1xx.o(.data)
     .data                                    0x20000004   Section       12  stm32f1xx_hal.o(.data)
-    .data                                    0x20000010   Section        6  ssd1306.o(.data)
-    SSD1306                                  0x20000010   Data           6  ssd1306.o(.data)
-    .data                                    0x20000018   Section        8  fonts.o(.data)
-    .data                                    0x20000020   Section        8  fonts.o(.data)
-    .data                                    0x20000028   Section        8  fonts.o(.data)
-    .data                                    0x20000030   Section        4  mvars.o(.data)
-    .data                                    0x20000034   Section        4  mvars.o(.data)
-    .bss                                     0x20000038   Section       84  main.o(.bss)
-    .bss                                     0x2000008c   Section     1032  ssd1306.o(.bss)
-    SSD1306_Buffer                           0x2000008c   Data        1032  ssd1306.o(.bss)
-    HEAP                                     0x20000498   Section      512  startup_stm32f103xb.o(HEAP)
-    STACK                                    0x20000698   Section     1024  startup_stm32f103xb.o(STACK)
+    .data                                    0x20000010   Section        8  main.o(.data)
+    .data                                    0x20000018   Section        8  ssd1306.o(.data)
+    SSD1306                                  0x2000001a   Data           6  ssd1306.o(.data)
+    .data                                    0x20000020   Section        4  mvars.o(.data)
+    .data                                    0x20000024   Section        4  mvars.o(.data)
+    .bss                                     0x20000028   Section       84  main.o(.bss)
+    .bss                                     0x2000007c   Section     1032  ssd1306.o(.bss)
+    SSD1306_Buffer                           0x2000007c   Data        1032  ssd1306.o(.bss)
+    HEAP                                     0x20000488   Section      512  startup_stm32f103xb.o(HEAP)
+    STACK                                    0x20000688   Section     1024  startup_stm32f103xb.o(STACK)
 
     Global Symbols
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
-    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
     __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
     __cpp_initialize__aeabi_                  - Undefined Weak Reference
     __cxa_finalize                            - Undefined Weak Reference
@@ -823,83 +1357,106 @@ Image Symbol Table
     USB_HP_CAN1_TX_IRQHandler                0x0800011b   Thumb Code     0  startup_stm32f103xb.o(.text)
     USB_LP_CAN1_RX0_IRQHandler               0x0800011b   Thumb Code     0  startup_stm32f103xb.o(.text)
     WWDG_IRQHandler                          0x0800011b   Thumb Code     0  startup_stm32f103xb.o(.text)
-    __aeabi_memset                           0x08000125   Thumb Code    14  memseta.o(.text)
-    __aeabi_memset4                          0x08000125   Thumb Code     0  memseta.o(.text)
-    __aeabi_memset8                          0x08000125   Thumb Code     0  memseta.o(.text)
-    __aeabi_memclr                           0x08000133   Thumb Code     4  memseta.o(.text)
-    __aeabi_memclr4                          0x08000133   Thumb Code     0  memseta.o(.text)
-    __aeabi_memclr8                          0x08000133   Thumb Code     0  memseta.o(.text)
-    _memset$wrapper                          0x08000137   Thumb Code    18  memseta.o(.text)
-    __scatterload                            0x08000149   Thumb Code    28  init.o(.text)
-    __scatterload_rt2                        0x08000149   Thumb Code     0  init.o(.text)
-    BusFault_Handler                         0x0800016d   Thumb Code     2  stm32f1xx_it.o(i.BusFault_Handler)
-    DebugMon_Handler                         0x0800016f   Thumb Code     2  stm32f1xx_it.o(i.DebugMon_Handler)
-    HAL_Delay                                0x08000171   Thumb Code    32  stm32f1xx_hal.o(i.HAL_Delay)
-    HAL_GPIO_Init                            0x08000195   Thumb Code   408  stm32f1xx_hal_gpio.o(i.HAL_GPIO_Init)
-    HAL_GetTick                              0x08000351   Thumb Code     6  stm32f1xx_hal.o(i.HAL_GetTick)
-    HAL_I2C_Init                             0x0800035d   Thumb Code   302  stm32f1xx_hal_i2c.o(i.HAL_I2C_Init)
-    HAL_I2C_IsDeviceReady                    0x0800049d   Thumb Code   344  stm32f1xx_hal_i2c.o(i.HAL_I2C_IsDeviceReady)
-    HAL_I2C_Master_Transmit                  0x080005fd   Thumb Code   304  stm32f1xx_hal_i2c.o(i.HAL_I2C_Master_Transmit)
-    HAL_I2C_MspInit                          0x08000735   Thumb Code    54  stm32f1xx_hal_msp.o(i.HAL_I2C_MspInit)
-    HAL_IncTick                              0x08000779   Thumb Code    12  stm32f1xx_hal.o(i.HAL_IncTick)
-    HAL_Init                                 0x08000789   Thumb Code    32  stm32f1xx_hal.o(i.HAL_Init)
-    HAL_InitTick                             0x080007ad   Thumb Code    54  stm32f1xx_hal.o(i.HAL_InitTick)
-    HAL_MspInit                              0x080007ed   Thumb Code   118  stm32f1xx_hal_msp.o(i.HAL_MspInit)
-    HAL_NVIC_SetPriority                     0x0800086d   Thumb Code    60  stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriority)
-    HAL_NVIC_SetPriorityGrouping             0x080008ad   Thumb Code    26  stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping)
-    HAL_RCC_ClockConfig                      0x080008d1   Thumb Code   322  stm32f1xx_hal_rcc.o(i.HAL_RCC_ClockConfig)
-    HAL_RCC_GetHCLKFreq                      0x08000a25   Thumb Code     6  stm32f1xx_hal_rcc.o(i.HAL_RCC_GetHCLKFreq)
-    HAL_RCC_GetPCLK1Freq                     0x08000a31   Thumb Code    20  stm32f1xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq)
-    HAL_RCC_GetSysClockFreq                  0x08000a51   Thumb Code    74  stm32f1xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq)
-    HAL_RCC_OscConfig                        0x08000abd   Thumb Code   750  stm32f1xx_hal_rcc.o(i.HAL_RCC_OscConfig)
-    HAL_SYSTICK_CLKSourceConfig              0x08000dc1   Thumb Code    24  stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_CLKSourceConfig)
-    HAL_SYSTICK_Callback                     0x08000dd9   Thumb Code     2  stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_Callback)
-    HAL_SYSTICK_Config                       0x08000ddb   Thumb Code    40  stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_Config)
-    HAL_SYSTICK_IRQHandler                   0x08000e03   Thumb Code     8  stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_IRQHandler)
-    HardFault_Handler                        0x08000e0b   Thumb Code     2  stm32f1xx_it.o(i.HardFault_Handler)
-    I2C_Write                                0x08001051   Thumb Code    28  ssd1306.o(i.I2C_Write)
-    I2C_WriteMulti                           0x08001071   Thumb Code    68  ssd1306.o(i.I2C_WriteMulti)
-    LCD_Char                                 0x080010b9   Thumb Code   156  ssd1306.o(i.LCD_Char)
-    LCD_Fill                                 0x08001159   Thumb Code    18  ssd1306.o(i.LCD_Fill)
-    LCD_GotoXY                               0x08001171   Thumb Code     8  ssd1306.o(i.LCD_GotoXY)
-    LCD_Pixel                                0x0800117d   Thumb Code    56  ssd1306.o(i.LCD_Pixel)
-    LCD_String                               0x080011bd   Thumb Code    44  ssd1306.o(i.LCD_String)
-    LCD_UpdateScreen                         0x080011e9   Thumb Code    68  ssd1306.o(i.LCD_UpdateScreen)
-    MemManage_Handler                        0x08001269   Thumb Code     2  stm32f1xx_it.o(i.MemManage_Handler)
-    NMI_Handler                              0x0800126b   Thumb Code     2  stm32f1xx_it.o(i.NMI_Handler)
-    PendSV_Handler                           0x0800128d   Thumb Code     2  stm32f1xx_it.o(i.PendSV_Handler)
-    SSD1306_Init                             0x08001291   Thumb Code   294  ssd1306.o(i.SSD1306_Init)
-    SVC_Handler                              0x080013c1   Thumb Code     2  stm32f1xx_it.o(i.SVC_Handler)
-    SysTick_Handler                          0x080013c3   Thumb Code    14  stm32f1xx_it.o(i.SysTick_Handler)
-    SystemClock_Config                       0x080013d1   Thumb Code   104  main.o(i.SystemClock_Config)
-    SystemInit                               0x08001439   Thumb Code    56  system_stm32f1xx.o(i.SystemInit)
-    UsageFault_Handler                       0x08001481   Thumb Code     2  stm32f1xx_it.o(i.UsageFault_Handler)
-    __scatterload_copy                       0x08001483   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x08001491   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x08001493   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    free                                     0x080014a1   Thumb Code    76  malloc.o(i.free)
-    main                                     0x080014f1   Thumb Code   128  main.o(i.main)
-    malloc                                   0x080015a1   Thumb Code    92  malloc.o(i.malloc)
-    AHBPrescTable                            0x0800160c   Data          16  system_stm32f1xx.o(.constdata)
-    APBPrescTable                            0x0800161c   Data           8  system_stm32f1xx.o(.constdata)
-    Font7x10                                 0x08001624   Data        1900  fonts.o(.constdata)
-    Font11x18                                0x08001d90   Data        3420  fonts.o(.constdata)
-    Font16x26                                0x08002aec   Data        4940  fonts.o(.constdata)
-    Region$$Table$$Base                      0x08003e38   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08003e58   Number         0  anon$$obj.o(Region$$Table)
+    __aeabi_llsr                             0x08000125   Thumb Code    32  llushr.o(.text)
+    _ll_ushift_r                             0x08000125   Thumb Code     0  llushr.o(.text)
+    __aeabi_memset                           0x08000145   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x08000145   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x08000145   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x08000153   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x08000153   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x08000153   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x08000157   Thumb Code    18  memseta.o(.text)
+    strlen                                   0x08000169   Thumb Code    14  strlen.o(.text)
+    __aeabi_dadd                             0x08000177   Thumb Code   322  dadd.o(.text)
+    __aeabi_dsub                             0x080002b9   Thumb Code     6  dadd.o(.text)
+    __aeabi_drsub                            0x080002bf   Thumb Code     6  dadd.o(.text)
+    __aeabi_f2d                              0x080002c5   Thumb Code    38  f2d.o(.text)
+    __aeabi_d2f                              0x080002eb   Thumb Code    56  d2f.o(.text)
+    __aeabi_llsl                             0x08000323   Thumb Code    30  llshl.o(.text)
+    _ll_shift_l                              0x08000323   Thumb Code     0  llshl.o(.text)
+    __aeabi_lasr                             0x08000341   Thumb Code    36  llsshr.o(.text)
+    _ll_sshift_r                             0x08000341   Thumb Code     0  llsshr.o(.text)
+    __I$use$fp                               0x08000365   Thumb Code     0  iusefp.o(.text)
+    _float_round                             0x08000365   Thumb Code    18  fepilogue.o(.text)
+    _float_epilogue                          0x08000377   Thumb Code    92  fepilogue.o(.text)
+    _double_round                            0x080003d3   Thumb Code    30  depilogue.o(.text)
+    _double_epilogue                         0x080003f1   Thumb Code   156  depilogue.o(.text)
+    __scatterload                            0x0800048d   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x0800048d   Thumb Code     0  init.o(.text)
+    BusFault_Handler                         0x080004b1   Thumb Code     2  stm32f1xx_it.o(i.BusFault_Handler)
+    DebugMon_Handler                         0x080004b3   Thumb Code     2  stm32f1xx_it.o(i.DebugMon_Handler)
+    HAL_Delay                                0x080004b5   Thumb Code    32  stm32f1xx_hal.o(i.HAL_Delay)
+    HAL_GPIO_Init                            0x080004d9   Thumb Code   408  stm32f1xx_hal_gpio.o(i.HAL_GPIO_Init)
+    HAL_GetTick                              0x08000695   Thumb Code     6  stm32f1xx_hal.o(i.HAL_GetTick)
+    HAL_I2C_Init                             0x080006a1   Thumb Code   302  stm32f1xx_hal_i2c.o(i.HAL_I2C_Init)
+    HAL_I2C_Master_Transmit                  0x080007e1   Thumb Code   304  stm32f1xx_hal_i2c.o(i.HAL_I2C_Master_Transmit)
+    HAL_I2C_MspInit                          0x08000919   Thumb Code    54  stm32f1xx_hal_msp.o(i.HAL_I2C_MspInit)
+    HAL_IncTick                              0x0800095d   Thumb Code    12  stm32f1xx_hal.o(i.HAL_IncTick)
+    HAL_Init                                 0x0800096d   Thumb Code    32  stm32f1xx_hal.o(i.HAL_Init)
+    HAL_InitTick                             0x08000991   Thumb Code    54  stm32f1xx_hal.o(i.HAL_InitTick)
+    HAL_MspInit                              0x080009d1   Thumb Code   118  stm32f1xx_hal_msp.o(i.HAL_MspInit)
+    HAL_NVIC_SetPriority                     0x08000a51   Thumb Code    60  stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriority)
+    HAL_NVIC_SetPriorityGrouping             0x08000a91   Thumb Code    26  stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping)
+    HAL_RCC_ClockConfig                      0x08000ab5   Thumb Code   322  stm32f1xx_hal_rcc.o(i.HAL_RCC_ClockConfig)
+    HAL_RCC_GetHCLKFreq                      0x08000c09   Thumb Code     6  stm32f1xx_hal_rcc.o(i.HAL_RCC_GetHCLKFreq)
+    HAL_RCC_GetPCLK1Freq                     0x08000c15   Thumb Code    20  stm32f1xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq)
+    HAL_RCC_GetSysClockFreq                  0x08000c35   Thumb Code    74  stm32f1xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq)
+    HAL_RCC_OscConfig                        0x08000ca1   Thumb Code   750  stm32f1xx_hal_rcc.o(i.HAL_RCC_OscConfig)
+    HAL_SYSTICK_CLKSourceConfig              0x08000fa5   Thumb Code    24  stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_CLKSourceConfig)
+    HAL_SYSTICK_Callback                     0x08000fbd   Thumb Code     2  stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_Callback)
+    HAL_SYSTICK_Config                       0x08000fbf   Thumb Code    40  stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_Config)
+    HAL_SYSTICK_IRQHandler                   0x08000fe7   Thumb Code     8  stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_IRQHandler)
+    HardFault_Handler                        0x08000fef   Thumb Code     2  stm32f1xx_it.o(i.HardFault_Handler)
+    LCD_Battery                              0x08001233   Thumb Code   142  ssd1306.o(i.LCD_Battery)
+    LCD_Ellipse                              0x08001389   Thumb Code   592  ssd1306.o(i.LCD_Ellipse)
+    LCD_Fill                                 0x080015d9   Thumb Code    18  ssd1306.o(i.LCD_Fill)
+    LCD_Font                                 0x080015f1   Thumb Code   144  ssd1306.o(i.LCD_Font)
+    LCD_Line                                 0x080016b9   Thumb Code   262  ssd1306.o(i.LCD_Line)
+    LCD_Pixel                                0x080017c1   Thumb Code    56  ssd1306.o(i.LCD_Pixel)
+    LCD_Rect_Fill                            0x08001801   Thumb Code    86  ssd1306.o(i.LCD_Rect_Fill)
+    LCD_UpdateScreen                         0x08001859   Thumb Code   122  ssd1306.o(i.LCD_UpdateScreen)
+    MemManage_Handler                        0x08001915   Thumb Code     2  stm32f1xx_it.o(i.MemManage_Handler)
+    NMI_Handler                              0x08001917   Thumb Code     2  stm32f1xx_it.o(i.NMI_Handler)
+    PendSV_Handler                           0x08001939   Thumb Code     2  stm32f1xx_it.o(i.PendSV_Handler)
+    SSD1306_Init                             0x0800195d   Thumb Code   224  ssd1306.o(i.SSD1306_Init)
+    SVC_Handler                              0x08001a41   Thumb Code     2  stm32f1xx_it.o(i.SVC_Handler)
+    SysTick_Handler                          0x08001a43   Thumb Code    14  stm32f1xx_it.o(i.SysTick_Handler)
+    SystemClock_Config                       0x08001a51   Thumb Code   104  main.o(i.SystemClock_Config)
+    SystemInit                               0x08001ab9   Thumb Code    56  system_stm32f1xx.o(i.SystemInit)
+    UsageFault_Handler                       0x08001b01   Thumb Code     2  stm32f1xx_it.o(i.UsageFault_Handler)
+    __scatterload_copy                       0x08001b03   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08001b11   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08001b13   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    free                                     0x08001b21   Thumb Code    76  malloc.o(i.free)
+    main                                     0x08001b71   Thumb Code   218  main.o(i.main)
+    malloc                                   0x08001c89   Thumb Code    92  malloc.o(i.malloc)
+    AHBPrescTable                            0x08001cf4   Data          16  system_stm32f1xx.o(.constdata)
+    APBPrescTable                            0x08001d04   Data           8  system_stm32f1xx.o(.constdata)
+    Font_8_RetroBitmaps                      0x08001d0c   Data         801  main.o(.constdata)
+    Font_8_RetroGlyphs                       0x0800202e   Data         760  main.o(.constdata)
+    Font_8_Retro                             0x08002328   Data          12  main.o(.constdata)
+    Font_9_Mono                              0x08002334   Data          12  main.o(.constdata)
+    Font_16_Default                          0x08002340   Data          12  main.o(.constdata)
+    Font_9_MonoBitmaps                       0x0800234c   Data         844  main.o(.constdata)
+    Font_9_MonoGlyphs                        0x08002698   Data         760  main.o(.constdata)
+    Font_16_DefaultBitmaps                   0x08002990   Data        1198  main.o(.constdata)
+    Font_16_DefaultGlyphs                    0x08002e3e   Data         760  main.o(.constdata)
+    Region$$Table$$Base                      0x08003138   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08003158   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x20000000   Data           4  system_stm32f1xx.o(.data)
     uwTickFreq                               0x20000004   Data           1  stm32f1xx_hal.o(.data)
     uwTickPrio                               0x20000008   Data           4  stm32f1xx_hal.o(.data)
     uwTick                                   0x2000000c   Data           4  stm32f1xx_hal.o(.data)
-    Font_7x10                                0x20000018   Data           8  fonts.o(.data)
-    Font_11x18                               0x20000020   Data           8  fonts.o(.data)
-    Font_16x26                               0x20000028   Data           8  fonts.o(.data)
-    __microlib_freelist                      0x20000030   Data           4  mvars.o(.data)
-    __microlib_freelist_initialised          0x20000034   Data           4  mvars.o(.data)
-    hi2c1                                    0x20000038   Data          84  main.o(.bss)
-    __heap_base                              0x20000498   Data           0  startup_stm32f103xb.o(HEAP)
-    __heap_limit                             0x20000698   Data           0  startup_stm32f103xb.o(HEAP)
-    __initial_sp                             0x20000a98   Data           0  startup_stm32f103xb.o(STACK)
+    out                                      0x20000010   Data           4  main.o(.data)
+    t                                        0x20000014   Data           4  main.o(.data)
+    LCD_X                                    0x20000018   Data           1  ssd1306.o(.data)
+    LCD_Y                                    0x20000019   Data           1  ssd1306.o(.data)
+    __microlib_freelist                      0x20000020   Data           4  mvars.o(.data)
+    __microlib_freelist_initialised          0x20000024   Data           4  mvars.o(.data)
+    hi2c1                                    0x20000028   Data          84  main.o(.bss)
+    __heap_base                              0x20000488   Data           0  startup_stm32f103xb.o(HEAP)
+    __heap_limit                             0x20000688   Data           0  startup_stm32f103xb.o(HEAP)
+    __initial_sp                             0x20000a88   Data           0  startup_stm32f103xb.o(STACK)
 
 
 
@@ -909,110 +1466,128 @@ Memory Map of the image
 
   Image Entry point : 0x080000ed
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00003e90, Max: 0x00010000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00003180, Max: 0x00010000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00003e58, Max: 0x00010000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00003158, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x000000ec   Data   RO            3    RESET               startup_stm32f103xb.o
-    0x080000ec   0x080000ec   0x00000000   Code   RO         1886  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x080000ec   0x080000ec   0x00000004   Code   RO         1923    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x080000f0   0x080000f0   0x00000004   Code   RO         1926    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x080000f4   0x080000f4   0x00000000   Code   RO         1928    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x080000f4   0x080000f4   0x00000000   Code   RO         1930    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x080000f4   0x080000f4   0x00000008   Code   RO         1931    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080000fc   0x080000fc   0x00000000   Code   RO         1933    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x080000fc   0x080000fc   0x00000000   Code   RO         1935    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x080000fc   0x080000fc   0x00000004   Code   RO         1924    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x080000ec   0x080000ec   0x00000000   Code   RO         2221  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080000ec   0x080000ec   0x00000004   Code   RO         2264    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080000f0   0x080000f0   0x00000004   Code   RO         2267    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO         2269    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO         2271    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080000f4   0x080000f4   0x00000008   Code   RO         2272    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080000fc   0x080000fc   0x00000000   Code   RO         2274    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x080000fc   0x080000fc   0x00000000   Code   RO         2276    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x080000fc   0x080000fc   0x00000004   Code   RO         2265    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x08000100   0x08000100   0x00000024   Code   RO            4    .text               startup_stm32f103xb.o
-    0x08000124   0x08000124   0x00000024   Code   RO         1891    .text               mc_w.l(memseta.o)
-    0x08000148   0x08000148   0x00000024   Code   RO         1943    .text               mc_w.l(init.o)
-    0x0800016c   0x0800016c   0x00000002   Code   RO         1610    i.BusFault_Handler  stm32f1xx_it.o
-    0x0800016e   0x0800016e   0x00000002   Code   RO         1611    i.DebugMon_Handler  stm32f1xx_it.o
-    0x08000170   0x08000170   0x00000024   Code   RO          152    i.HAL_Delay         stm32f1xx_hal.o
-    0x08000194   0x08000194   0x000001bc   Code   RO         1297    i.HAL_GPIO_Init     stm32f1xx_hal_gpio.o
-    0x08000350   0x08000350   0x0000000c   Code   RO          156    i.HAL_GetTick       stm32f1xx_hal.o
-    0x0800035c   0x0800035c   0x00000140   Code   RO          907    i.HAL_I2C_Init      stm32f1xx_hal_i2c.o
-    0x0800049c   0x0800049c   0x00000160   Code   RO          908    i.HAL_I2C_IsDeviceReady  stm32f1xx_hal_i2c.o
-    0x080005fc   0x080005fc   0x00000138   Code   RO          918    i.HAL_I2C_Master_Transmit  stm32f1xx_hal_i2c.o
-    0x08000734   0x08000734   0x00000044   Code   RO         1686    i.HAL_I2C_MspInit   stm32f1xx_hal_msp.o
-    0x08000778   0x08000778   0x00000010   Code   RO          160    i.HAL_IncTick       stm32f1xx_hal.o
-    0x08000788   0x08000788   0x00000024   Code   RO          161    i.HAL_Init          stm32f1xx_hal.o
-    0x080007ac   0x080007ac   0x00000040   Code   RO          162    i.HAL_InitTick      stm32f1xx_hal.o
-    0x080007ec   0x080007ec   0x00000080   Code   RO         1687    i.HAL_MspInit       stm32f1xx_hal_msp.o
-    0x0800086c   0x0800086c   0x00000040   Code   RO          312    i.HAL_NVIC_SetPriority  stm32f1xx_hal_cortex.o
-    0x080008ac   0x080008ac   0x00000024   Code   RO          313    i.HAL_NVIC_SetPriorityGrouping  stm32f1xx_hal_cortex.o
-    0x080008d0   0x080008d0   0x00000154   Code   RO          422    i.HAL_RCC_ClockConfig  stm32f1xx_hal_rcc.o
-    0x08000a24   0x08000a24   0x0000000c   Code   RO          427    i.HAL_RCC_GetHCLKFreq  stm32f1xx_hal_rcc.o
-    0x08000a30   0x08000a30   0x00000020   Code   RO          429    i.HAL_RCC_GetPCLK1Freq  stm32f1xx_hal_rcc.o
-    0x08000a50   0x08000a50   0x0000006c   Code   RO          431    i.HAL_RCC_GetSysClockFreq  stm32f1xx_hal_rcc.o
-    0x08000abc   0x08000abc   0x00000304   Code   RO          434    i.HAL_RCC_OscConfig  stm32f1xx_hal_rcc.o
-    0x08000dc0   0x08000dc0   0x00000018   Code   RO          315    i.HAL_SYSTICK_CLKSourceConfig  stm32f1xx_hal_cortex.o
-    0x08000dd8   0x08000dd8   0x00000002   Code   RO          316    i.HAL_SYSTICK_Callback  stm32f1xx_hal_cortex.o
-    0x08000dda   0x08000dda   0x00000028   Code   RO          317    i.HAL_SYSTICK_Config  stm32f1xx_hal_cortex.o
-    0x08000e02   0x08000e02   0x00000008   Code   RO          318    i.HAL_SYSTICK_IRQHandler  stm32f1xx_hal_cortex.o
-    0x08000e0a   0x08000e0a   0x00000002   Code   RO         1612    i.HardFault_Handler  stm32f1xx_it.o
-    0x08000e0c   0x08000e0c   0x00000028   Code   RO          945    i.I2C_IsAcknowledgeFailed  stm32f1xx_hal_i2c.o
-    0x08000e34   0x08000e34   0x00000094   Code   RO          949    i.I2C_MasterRequestWrite  stm32f1xx_hal_i2c.o
-    0x08000ec8   0x08000ec8   0x0000004e   Code   RO          958    i.I2C_WaitOnBTFFlagUntilTimeout  stm32f1xx_hal_i2c.o
-    0x08000f16   0x08000f16   0x00000060   Code   RO          959    i.I2C_WaitOnFlagUntilTimeout  stm32f1xx_hal_i2c.o
-    0x08000f76   0x08000f76   0x00000002   PAD
-    0x08000f78   0x08000f78   0x00000088   Code   RO          960    i.I2C_WaitOnMasterAddressFlagUntilTimeout  stm32f1xx_hal_i2c.o
-    0x08001000   0x08001000   0x0000004e   Code   RO          962    i.I2C_WaitOnTXEFlagUntilTimeout  stm32f1xx_hal_i2c.o
-    0x0800104e   0x0800104e   0x00000002   PAD
-    0x08001050   0x08001050   0x00000020   Code   RO         1721    i.I2C_Write         ssd1306.o
-    0x08001070   0x08001070   0x00000048   Code   RO         1722    i.I2C_WriteMulti    ssd1306.o
-    0x080010b8   0x080010b8   0x000000a0   Code   RO         1723    i.LCD_Char          ssd1306.o
-    0x08001158   0x08001158   0x00000018   Code   RO         1726    i.LCD_Fill          ssd1306.o
-    0x08001170   0x08001170   0x0000000c   Code   RO         1727    i.LCD_GotoXY        ssd1306.o
-    0x0800117c   0x0800117c   0x00000040   Code   RO         1731    i.LCD_Pixel         ssd1306.o
-    0x080011bc   0x080011bc   0x0000002c   Code   RO         1734    i.LCD_String        ssd1306.o
-    0x080011e8   0x080011e8   0x00000048   Code   RO         1738    i.LCD_UpdateScreen  ssd1306.o
-    0x08001230   0x08001230   0x00000038   Code   RO         1485    i.MX_I2C1_Init      main.o
-    0x08001268   0x08001268   0x00000002   Code   RO         1613    i.MemManage_Handler  stm32f1xx_it.o
-    0x0800126a   0x0800126a   0x00000002   Code   RO         1614    i.NMI_Handler       stm32f1xx_it.o
-    0x0800126c   0x0800126c   0x00000020   Code   RO          319    i.NVIC_SetPriority  stm32f1xx_hal_cortex.o
-    0x0800128c   0x0800128c   0x00000002   Code   RO         1615    i.PendSV_Handler    stm32f1xx_it.o
-    0x0800128e   0x0800128e   0x00000002   PAD
-    0x08001290   0x08001290   0x00000130   Code   RO         1739    i.SSD1306_Init      ssd1306.o
-    0x080013c0   0x080013c0   0x00000002   Code   RO         1616    i.SVC_Handler       stm32f1xx_it.o
-    0x080013c2   0x080013c2   0x0000000e   Code   RO         1617    i.SysTick_Handler   stm32f1xx_it.o
-    0x080013d0   0x080013d0   0x00000068   Code   RO         1486    i.SystemClock_Config  main.o
-    0x08001438   0x08001438   0x00000048   Code   RO           14    i.SystemInit        system_stm32f1xx.o
-    0x08001480   0x08001480   0x00000002   Code   RO         1618    i.UsageFault_Handler  stm32f1xx_it.o
-    0x08001482   0x08001482   0x0000000e   Code   RO         1947    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08001490   0x08001490   0x00000002   Code   RO         1948    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08001492   0x08001492   0x0000000e   Code   RO         1949    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x080014a0   0x080014a0   0x00000050   Code   RO         1895    i.free              mc_w.l(malloc.o)
-    0x080014f0   0x080014f0   0x000000b0   Code   RO         1488    i.main              main.o
-    0x080015a0   0x080015a0   0x0000006c   Code   RO         1896    i.malloc            mc_w.l(malloc.o)
-    0x0800160c   0x0800160c   0x00000010   Data   RO           15    .constdata          system_stm32f1xx.o
-    0x0800161c   0x0800161c   0x00000008   Data   RO           16    .constdata          system_stm32f1xx.o
-    0x08001624   0x08001624   0x0000076c   Data   RO         1855    .constdata          fonts.o
-    0x08001d90   0x08001d90   0x00000d5c   Data   RO         1856    .constdata          fonts.o
-    0x08002aec   0x08002aec   0x0000134c   Data   RO         1857    .constdata          fonts.o
-    0x08003e38   0x08003e38   0x00000020   Data   RO         1945    Region$$Table       anon$$obj.o
+    0x08000124   0x08000124   0x00000020   Code   RO         2224    .text               mc_w.l(llushr.o)
+    0x08000144   0x08000144   0x00000024   Code   RO         2226    .text               mc_w.l(memseta.o)
+    0x08000168   0x08000168   0x0000000e   Code   RO         2228    .text               mc_w.l(strlen.o)
+    0x08000176   0x08000176   0x0000014e   Code   RO         2258    .text               mf_w.l(dadd.o)
+    0x080002c4   0x080002c4   0x00000026   Code   RO         2260    .text               mf_w.l(f2d.o)
+    0x080002ea   0x080002ea   0x00000038   Code   RO         2262    .text               mf_w.l(d2f.o)
+    0x08000322   0x08000322   0x0000001e   Code   RO         2278    .text               mc_w.l(llshl.o)
+    0x08000340   0x08000340   0x00000024   Code   RO         2280    .text               mc_w.l(llsshr.o)
+    0x08000364   0x08000364   0x00000000   Code   RO         2288    .text               mc_w.l(iusefp.o)
+    0x08000364   0x08000364   0x0000006e   Code   RO         2289    .text               mf_w.l(fepilogue.o)
+    0x080003d2   0x080003d2   0x000000ba   Code   RO         2291    .text               mf_w.l(depilogue.o)
+    0x0800048c   0x0800048c   0x00000024   Code   RO         2293    .text               mc_w.l(init.o)
+    0x080004b0   0x080004b0   0x00000002   Code   RO         1938    i.BusFault_Handler  stm32f1xx_it.o
+    0x080004b2   0x080004b2   0x00000002   Code   RO         1939    i.DebugMon_Handler  stm32f1xx_it.o
+    0x080004b4   0x080004b4   0x00000024   Code   RO          152    i.HAL_Delay         stm32f1xx_hal.o
+    0x080004d8   0x080004d8   0x000001bc   Code   RO         1297    i.HAL_GPIO_Init     stm32f1xx_hal_gpio.o
+    0x08000694   0x08000694   0x0000000c   Code   RO          156    i.HAL_GetTick       stm32f1xx_hal.o
+    0x080006a0   0x080006a0   0x00000140   Code   RO          907    i.HAL_I2C_Init      stm32f1xx_hal_i2c.o
+    0x080007e0   0x080007e0   0x00000138   Code   RO          918    i.HAL_I2C_Master_Transmit  stm32f1xx_hal_i2c.o
+    0x08000918   0x08000918   0x00000044   Code   RO         2014    i.HAL_I2C_MspInit   stm32f1xx_hal_msp.o
+    0x0800095c   0x0800095c   0x00000010   Code   RO          160    i.HAL_IncTick       stm32f1xx_hal.o
+    0x0800096c   0x0800096c   0x00000024   Code   RO          161    i.HAL_Init          stm32f1xx_hal.o
+    0x08000990   0x08000990   0x00000040   Code   RO          162    i.HAL_InitTick      stm32f1xx_hal.o
+    0x080009d0   0x080009d0   0x00000080   Code   RO         2015    i.HAL_MspInit       stm32f1xx_hal_msp.o
+    0x08000a50   0x08000a50   0x00000040   Code   RO          312    i.HAL_NVIC_SetPriority  stm32f1xx_hal_cortex.o
+    0x08000a90   0x08000a90   0x00000024   Code   RO          313    i.HAL_NVIC_SetPriorityGrouping  stm32f1xx_hal_cortex.o
+    0x08000ab4   0x08000ab4   0x00000154   Code   RO          422    i.HAL_RCC_ClockConfig  stm32f1xx_hal_rcc.o
+    0x08000c08   0x08000c08   0x0000000c   Code   RO          427    i.HAL_RCC_GetHCLKFreq  stm32f1xx_hal_rcc.o
+    0x08000c14   0x08000c14   0x00000020   Code   RO          429    i.HAL_RCC_GetPCLK1Freq  stm32f1xx_hal_rcc.o
+    0x08000c34   0x08000c34   0x0000006c   Code   RO          431    i.HAL_RCC_GetSysClockFreq  stm32f1xx_hal_rcc.o
+    0x08000ca0   0x08000ca0   0x00000304   Code   RO          434    i.HAL_RCC_OscConfig  stm32f1xx_hal_rcc.o
+    0x08000fa4   0x08000fa4   0x00000018   Code   RO          315    i.HAL_SYSTICK_CLKSourceConfig  stm32f1xx_hal_cortex.o
+    0x08000fbc   0x08000fbc   0x00000002   Code   RO          316    i.HAL_SYSTICK_Callback  stm32f1xx_hal_cortex.o
+    0x08000fbe   0x08000fbe   0x00000028   Code   RO          317    i.HAL_SYSTICK_Config  stm32f1xx_hal_cortex.o
+    0x08000fe6   0x08000fe6   0x00000008   Code   RO          318    i.HAL_SYSTICK_IRQHandler  stm32f1xx_hal_cortex.o
+    0x08000fee   0x08000fee   0x00000002   Code   RO         1940    i.HardFault_Handler  stm32f1xx_it.o
+    0x08000ff0   0x08000ff0   0x00000028   Code   RO          945    i.I2C_IsAcknowledgeFailed  stm32f1xx_hal_i2c.o
+    0x08001018   0x08001018   0x00000094   Code   RO          949    i.I2C_MasterRequestWrite  stm32f1xx_hal_i2c.o
+    0x080010ac   0x080010ac   0x0000004e   Code   RO          958    i.I2C_WaitOnBTFFlagUntilTimeout  stm32f1xx_hal_i2c.o
+    0x080010fa   0x080010fa   0x00000060   Code   RO          959    i.I2C_WaitOnFlagUntilTimeout  stm32f1xx_hal_i2c.o
+    0x0800115a   0x0800115a   0x00000002   PAD
+    0x0800115c   0x0800115c   0x00000088   Code   RO          960    i.I2C_WaitOnMasterAddressFlagUntilTimeout  stm32f1xx_hal_i2c.o
+    0x080011e4   0x080011e4   0x0000004e   Code   RO          962    i.I2C_WaitOnTXEFlagUntilTimeout  stm32f1xx_hal_i2c.o
+    0x08001232   0x08001232   0x0000008e   Code   RO         2049    i.LCD_Battery       ssd1306.o
+    0x080012c0   0x080012c0   0x000000c6   Code   RO         2050    i.LCD_Char          ssd1306.o
+    0x08001386   0x08001386   0x00000002   PAD
+    0x08001388   0x08001388   0x00000250   Code   RO         2055    i.LCD_Ellipse       ssd1306.o
+    0x080015d8   0x080015d8   0x00000018   Code   RO         2056    i.LCD_Fill          ssd1306.o
+    0x080015f0   0x080015f0   0x00000090   Code   RO         2057    i.LCD_Font          ssd1306.o
+    0x08001680   0x08001680   0x00000038   Code   RO         2058    i.LCD_Goto2X        ssd1306.o
+    0x080016b8   0x080016b8   0x00000106   Code   RO         2059    i.LCD_Line          ssd1306.o
+    0x080017be   0x080017be   0x00000002   PAD
+    0x080017c0   0x080017c0   0x00000040   Code   RO         2063    i.LCD_Pixel         ssd1306.o
+    0x08001800   0x08001800   0x00000056   Code   RO         2065    i.LCD_Rect_Fill     ssd1306.o
+    0x08001856   0x08001856   0x00000002   PAD
+    0x08001858   0x08001858   0x00000084   Code   RO         2072    i.LCD_UpdateScreen  ssd1306.o
+    0x080018dc   0x080018dc   0x00000038   Code   RO         1485    i.MX_I2C1_Init      main.o
+    0x08001914   0x08001914   0x00000002   Code   RO         1941    i.MemManage_Handler  stm32f1xx_it.o
+    0x08001916   0x08001916   0x00000002   Code   RO         1942    i.NMI_Handler       stm32f1xx_it.o
+    0x08001918   0x08001918   0x00000020   Code   RO          319    i.NVIC_SetPriority  stm32f1xx_hal_cortex.o
+    0x08001938   0x08001938   0x00000002   Code   RO         1943    i.PendSV_Handler    stm32f1xx_it.o
+    0x0800193a   0x0800193a   0x00000002   PAD
+    0x0800193c   0x0800193c   0x00000020   Code   RO         2073    i.SSD1306_Command   ssd1306.o
+    0x0800195c   0x0800195c   0x000000e4   Code   RO         2074    i.SSD1306_Init      ssd1306.o
+    0x08001a40   0x08001a40   0x00000002   Code   RO         1944    i.SVC_Handler       stm32f1xx_it.o
+    0x08001a42   0x08001a42   0x0000000e   Code   RO         1945    i.SysTick_Handler   stm32f1xx_it.o
+    0x08001a50   0x08001a50   0x00000068   Code   RO         1486    i.SystemClock_Config  main.o
+    0x08001ab8   0x08001ab8   0x00000048   Code   RO           14    i.SystemInit        system_stm32f1xx.o
+    0x08001b00   0x08001b00   0x00000002   Code   RO         1946    i.UsageFault_Handler  stm32f1xx_it.o
+    0x08001b02   0x08001b02   0x0000000e   Code   RO         2297    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08001b10   0x08001b10   0x00000002   Code   RO         2298    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08001b12   0x08001b12   0x0000000e   Code   RO         2299    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08001b20   0x08001b20   0x00000050   Code   RO         2230    i.free              mc_w.l(malloc.o)
+    0x08001b70   0x08001b70   0x00000118   Code   RO         1488    i.main              main.o
+    0x08001c88   0x08001c88   0x0000006c   Code   RO         2231    i.malloc            mc_w.l(malloc.o)
+    0x08001cf4   0x08001cf4   0x00000010   Data   RO           15    .constdata          system_stm32f1xx.o
+    0x08001d04   0x08001d04   0x00000008   Data   RO           16    .constdata          system_stm32f1xx.o
+    0x08001d0c   0x08001d0c   0x00000321   Data   RO         1518    .constdata          main.o
+    0x0800202d   0x0800202d   0x00000001   PAD
+    0x0800202e   0x0800202e   0x000002f8   Data   RO         1519    .constdata          main.o
+    0x08002326   0x08002326   0x00000002   PAD
+    0x08002328   0x08002328   0x00000024   Data   RO         1520    .constdata          main.o
+    0x0800234c   0x0800234c   0x0000034c   Data   RO         1521    .constdata          main.o
+    0x08002698   0x08002698   0x000002f8   Data   RO         1522    .constdata          main.o
+    0x08002990   0x08002990   0x000004ae   Data   RO         1601    .constdata          main.o
+    0x08002e3e   0x08002e3e   0x000002f8   Data   RO         1602    .constdata          main.o
+    0x08003136   0x08003136   0x00000002   PAD
+    0x08003138   0x08003138   0x00000020   Data   RO         2295    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08003e58, Size: 0x00000a98, Max: 0x00005000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08003158, Size: 0x00000a88, Max: 0x00005000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08003e58   0x00000004   Data   RW           17    .data               system_stm32f1xx.o
-    0x20000004   0x08003e5c   0x0000000c   Data   RW          168    .data               stm32f1xx_hal.o
-    0x20000010   0x08003e68   0x00000006   Data   RW         1741    .data               ssd1306.o
-    0x20000016   0x08003e6e   0x00000002   PAD
-    0x20000018   0x08003e70   0x00000008   Data   RW         1858    .data               fonts.o
-    0x20000020   0x08003e78   0x00000008   Data   RW         1859    .data               fonts.o
-    0x20000028   0x08003e80   0x00000008   Data   RW         1860    .data               fonts.o
-    0x20000030   0x08003e88   0x00000004   Data   RW         1941    .data               mc_w.l(mvars.o)
-    0x20000034   0x08003e8c   0x00000004   Data   RW         1942    .data               mc_w.l(mvars.o)
-    0x20000038        -       0x00000054   Zero   RW         1489    .bss                main.o
-    0x2000008c        -       0x00000408   Zero   RW         1740    .bss                ssd1306.o
-    0x20000494   0x08003e90   0x00000004   PAD
-    0x20000498        -       0x00000200   Zero   RW            2    HEAP                startup_stm32f103xb.o
-    0x20000698        -       0x00000400   Zero   RW            1    STACK               startup_stm32f103xb.o
+    0x20000000   0x08003158   0x00000004   Data   RW           17    .data               system_stm32f1xx.o
+    0x20000004   0x0800315c   0x0000000c   Data   RW          168    .data               stm32f1xx_hal.o
+    0x20000010   0x08003168   0x00000008   Data   RW         1789    .data               main.o
+    0x20000018   0x08003170   0x00000008   Data   RW         2076    .data               ssd1306.o
+    0x20000020   0x08003178   0x00000004   Data   RW         2286    .data               mc_w.l(mvars.o)
+    0x20000024   0x0800317c   0x00000004   Data   RW         2287    .data               mc_w.l(mvars.o)
+    0x20000028        -       0x00000054   Zero   RW         1489    .bss                main.o
+    0x2000007c        -       0x00000408   Zero   RW         2075    .bss                ssd1306.o
+    0x20000484   0x08003180   0x00000004   PAD
+    0x20000488        -       0x00000200   Zero   RW            2    HEAP                startup_stm32f103xb.o
+    0x20000688        -       0x00000400   Zero   RW            1    STACK               startup_stm32f103xb.o
 
 
 ==============================================================================
@@ -1022,23 +1597,22 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-         0          0      10260         24          0       1171   fonts.o
-       336         60          0          0         84     397771   main.o
-       784         44          0          6       1032       6129   ssd1306.o
+       440         74       5159          8         84      47441   main.o
+      1960         38          0          8       1032      10175   ssd1306.o
         36          8        236          0       1536        780   startup_stm32f103xb.o
-       164         28          0         12          0       3693   stm32f1xx_hal.o
-       206         14          0          0          0      26588   stm32f1xx_hal_cortex.o
-       444         36          0          0          0       2212   stm32f1xx_hal_gpio.o
-      1560         40          0          0          0       9949   stm32f1xx_hal_i2c.o
-       196         24          0          0          0       1436   stm32f1xx_hal_msp.o
-      1264         92          0          0          0       4957   stm32f1xx_hal_rcc.o
-        30          0          0          0          0       3642   stm32f1xx_it.o
-        72         16         24          4          0     405259   system_stm32f1xx.o
+       164         28          0         12          0       3729   stm32f1xx_hal.o
+       206         14          0          0          0      26620   stm32f1xx_hal_cortex.o
+       444         36          0          0          0       2224   stm32f1xx_hal_gpio.o
+      1208         32          0          0          0       8657   stm32f1xx_hal_i2c.o
+       196         24          0          0          0       1448   stm32f1xx_hal_msp.o
+      1264         92          0          0          0       4981   stm32f1xx_hal_rcc.o
+        30          0          0          0          0       3686   stm32f1xx_it.o
+        72         16         24          4          0     405323   system_stm32f1xx.o
 
     ----------------------------------------------------------------------
-      5098        362      10552         48       2656     863587   Object Totals
+      6030        362       5456         32       2656     515064   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-         6          0          0          2          4          0   (incl. Padding)
+        10          0          5          0          4          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -1054,22 +1628,33 @@ Image component sizes
          8          4          0          0          0          0   entry9a.o
         30          0          0          0          0          0   handlers.o
         36          8          0          0          0         68   init.o
+         0          0          0          0          0          0   iusefp.o
+        30          0          0          0          0         68   llshl.o
+        36          0          0          0          0         68   llsshr.o
+        32          0          0          0          0         68   llushr.o
        188         20          0          0          0        160   malloc.o
         36          0          0          0          0        108   memseta.o
          0          0          0          8          0          0   mvars.o
+        14          0          0          0          0         68   strlen.o
+        56          0          0          0          0         88   d2f.o
+       334          0          0          0          0        148   dadd.o
+       186          0          0          0          0        176   depilogue.o
+        38          0          0          0          0         68   f2d.o
+       110          0          0          0          0        168   fepilogue.o
 
     ----------------------------------------------------------------------
-       310         36          0          8          0        336   Library Totals
+      1146         36          0          8          0       1256   Library Totals
          0          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
 
-       310         36          0          8          0        336   mc_w.l
+       422         36          0          8          0        608   mc_w.l
+       724          0          0          0          0        648   mf_w.l
 
     ----------------------------------------------------------------------
-       310         36          0          8          0        336   Library Totals
+      1146         36          0          8          0       1256   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -1078,15 +1663,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      5408        398      10552         56       2656     861579   Grand Totals
-      5408        398      10552         56       2656     861579   ELF Image Totals
-      5408        398      10552         56          0          0   ROM Totals
+      7176        398       5456         40       2656     513300   Grand Totals
+      7176        398       5456         40       2656     513300   ELF Image Totals
+      7176        398       5456         40          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                15960 (  15.59kB)
-    Total RW  Size (RW Data + ZI Data)              2712 (   2.65kB)
-    Total ROM Size (Code + RO Data + RW Data)      16016 (  15.64kB)
+    Total RO  Size (Code + RO Data)                12632 (  12.34kB)
+    Total RW  Size (RW Data + ZI Data)              2696 (   2.63kB)
+    Total ROM Size (Code + RO Data + RW Data)      12672 (  12.38kB)
 
 ==============================================================================
 

@@ -1,7 +1,5 @@
 #include "ssd1306.h"
 
-unsigned char LCD_X, LCD_Y;
-
 static uint8_t SSD1306_Buffer[(LCD_WIDTH + 1) * LCD_HEIGHT / 8];
 
 typedef struct {
@@ -13,16 +11,16 @@ typedef struct {
 
 static SSD1306_t SSD1306;
 
-inline static void TWI_Command(unsigned char ControByte, unsigned char DataByte)
+inline static void SSD1306_Command(uint8_t reg, uint8_t data)
 {
 	TWI_Start();
 	TWI_SendAddress(SSD1306_TWI_ADDRESS);
-	TWI_SendByte(ControByte);
-	TWI_SendByte(DataByte);
+	TWI_SendByte(reg);
+	TWI_SendByte(data);
 	TWI_Stop();
 }
 
-inline static void TWI_WriteMulti(uint8_t address, uint8_t reg, uint8_t* data, uint16_t count)
+inline static void SSD1306_Send_Multi(uint8_t address, uint8_t reg, uint8_t* data, uint16_t count)
 {
 	uint8_t dt[count + 1];
 	dt[0] = reg;
@@ -30,57 +28,48 @@ inline static void TWI_WriteMulti(uint8_t address, uint8_t reg, uint8_t* data, u
 	for(i = 1; i <= count; i++)
 	{
 		dt[i] = data[i-1];
-		TWI_Command(reg, dt[i]);
+		SSD1306_Command(reg, dt[i]);
 	}
 }
 
-inline static void LCD_Goto(unsigned char x, unsigned char y)
-{
-	LCD_X = x;
-	LCD_Y = y;
-	TWI_Command(COMAND, 0xB0 + y);
-	TWI_Command(COMAND, x & 0xf);
-	TWI_Command(COMAND,0x10 | (x >> 4));
-}
-
-inline static void LCD_Goto2X(unsigned char x, unsigned char y)
-{
-	LCD_X = x;
-	LCD_Y = y;
-	TWI_Command(COMAND, 0xB0 + y);
-	TWI_Command(COMAND, 2*x & 0xf);
-	TWI_Command(COMAND, 0x10 | (2*x >> 4));
-}
+//inline static void LCD_Goto(uint16_t x, uint16_t y)
+//{
+	//LCD_X = x;
+	//LCD_Y = y;
+	//SSD1306_Command(COMAND, 0xB0 + y);
+	//SSD1306_Command(COMAND, x & 0xf);
+	//SSD1306_Command(COMAND,0x10 | (x >> 4));
+//}
 
 void SSD1306_Init(void)
 {
 	_delay_ms(100);
-	TWI_Command(0x00, SSD1306_DISPLAYOFF);
-	TWI_Command(0x00, SSD1306_SETDISPLAYCLOCKDIV);
-	TWI_Command(0x00, 0x80);
-	TWI_Command(0x00, SSD1306_SETMULTIPLEX);
-	if (LCD_HEIGHT == 32) { TWI_Command(0x00, 0x1F); }
-	else { TWI_Command(0x00, 0x3F); }
-	TWI_Command(0x00, SSD1306_SETDISPLAYOFFSET);
-	TWI_Command(0x00, 0x00);
-	TWI_Command(0x00, SSD1306_SETSTARTLINE | 0x00);
-	TWI_Command(0x00, SSD1306_CHARGEPUMP);
-	TWI_Command(0x00, 0x14);
-	TWI_Command(0x00, SSD1306_MEMORYMODE);
-	TWI_Command(0x00, 0x00);
-	TWI_Command(0x00, SSD1306_SEGREMAP | 0x1);
-	TWI_Command(0x00, SSD1306_COMSCANDEC);
-	TWI_Command(0x00, SSD1306_SETCOMPINS);
-	if (LCD_HEIGHT == 32) { TWI_Command(0x00, 0x02); }
-	else { TWI_Command(0x00, 0x12); }
-	TWI_Command(0x00, SSD1306_SETCONTRAST);
-	TWI_Command(0x00, 0xCF);
-	TWI_Command(0x00, SSD1306_SETPRECHARGE);
-	TWI_Command(0x00, 0xF1);
-	TWI_Command(0x00, SSD1306_SETVCOMDETECT);
-	TWI_Command(0x00, 0x40);
-	TWI_Command(0x00, SSD1306_DISPLAYALLON_RESUME);
-	TWI_Command(0x00, SSD1306_DISPLAYON);
+	SSD1306_Command(0x00, SSD1306_DISPLAYOFF);
+	SSD1306_Command(0x00, SSD1306_SETDISPLAYCLOCKDIV);
+	SSD1306_Command(0x00, 0x80);
+	SSD1306_Command(0x00, SSD1306_SETMULTIPLEX);
+	if (LCD_HEIGHT == 32) { SSD1306_Command(0x00, 0x1F); }
+	else { SSD1306_Command(0x00, 0x3F); }
+	SSD1306_Command(0x00, SSD1306_SETDISPLAYOFFSET);
+	SSD1306_Command(0x00, 0x00);
+	SSD1306_Command(0x00, SSD1306_SETSTARTLINE | 0x00);
+	SSD1306_Command(0x00, SSD1306_CHARGEPUMP);
+	SSD1306_Command(0x00, 0x14);
+	SSD1306_Command(0x00, SSD1306_MEMORYMODE);
+	SSD1306_Command(0x00, 0x00);
+	SSD1306_Command(0x00, SSD1306_SEGREMAP | 0x1);
+	SSD1306_Command(0x00, SSD1306_COMSCANDEC);
+	SSD1306_Command(0x00, SSD1306_SETCOMPINS);
+	if (LCD_HEIGHT == 32) { SSD1306_Command(0x00, 0x02); }
+	else { SSD1306_Command(0x00, 0x12); }
+	SSD1306_Command(0x00, SSD1306_SETCONTRAST);
+	SSD1306_Command(0x00, 0xCF);
+	SSD1306_Command(0x00, SSD1306_SETPRECHARGE);
+	SSD1306_Command(0x00, 0xF1);
+	SSD1306_Command(0x00, SSD1306_SETVCOMDETECT);
+	SSD1306_Command(0x00, 0x40);
+	SSD1306_Command(0x00, SSD1306_DISPLAYALLON_RESUME);
+	SSD1306_Command(0x00, SSD1306_DISPLAYON);
 	
 	LCD_Fill(SSD1306_COLOR_BLACK);
 	LCD_UpdateScreen();
@@ -90,27 +79,27 @@ void SSD1306_Init(void)
 	SSD1306.Initialized = 1;
 }
 
-void LCD_Contrast(char set_contrast)
+void LCD_Contrast(uint8_t set_contrast)
 {
-	TWI_Command(COMAND, SSD1306_DISPLAYOFF);
+	SSD1306_Command(COMAND, SSD1306_DISPLAYOFF);
 	_delay_ms(10);
-	TWI_Command(COMAND, SSD1306_SETCONTRAST);
-	TWI_Command(COMAND, set_contrast);
-	TWI_Command(COMAND, SSD1306_DISPLAYON);
+	SSD1306_Command(COMAND, SSD1306_SETCONTRAST);
+	SSD1306_Command(COMAND, set_contrast);
+	SSD1306_Command(COMAND, SSD1306_DISPLAYON);
 }
 
 void LCD_ON(void)
 {
-	TWI_Command(0x00, 0x8D);
-	TWI_Command(0x00, 0x14);
-	TWI_Command(0x00, 0xAF);
+	SSD1306_Command(0x00, 0x8D);
+	SSD1306_Command(0x00, 0x14);
+	SSD1306_Command(0x00, 0xAF);
 }
 
 void LCD_OFF(void)
 {
-	TWI_Command(0x00, 0x8D);
-	TWI_Command(0x00, 0x10);
-	TWI_Command(0x00, 0xAE);
+	SSD1306_Command(0x00, 0x8D);
+	SSD1306_Command(0x00, 0x10);
+	SSD1306_Command(0x00, 0xAE);
 }
 
 void LCD_UpdateScreen(void)
@@ -118,23 +107,23 @@ void LCD_UpdateScreen(void)
 	uint8_t m;
 	for (m = 0; m < 8; m++)
 	{
-		TWI_Command(0x00, 0xB0 + m);
-		TWI_Command(0x00, 0x00);
-		TWI_Command(0x00, 0x10);
-		TWI_WriteMulti(SSD1306_TWI_ADDRESS, 0x40, &SSD1306_Buffer[(LCD_WIDTH + 1) * m], (LCD_WIDTH + 1));
+		SSD1306_Command(0x00, 0xB0 + m);
+		SSD1306_Command(0x00, 0x00);
+		SSD1306_Command(0x00, 0x10);
+		SSD1306_Send_Multi(SSD1306_TWI_ADDRESS, 0x40, &SSD1306_Buffer[(LCD_WIDTH + 1) * m], (LCD_WIDTH + 1));
 	}
 }
 
-void LCD_Mode(char set_mode)
+void LCD_Mode(uint8_t set_mode)
 {
-	if (set_mode == 0) { TWI_Command(COMAND, SSD1306_NORMALDISPLAY); }
-	if (set_mode == 1) { TWI_Command(COMAND, SSD1306_INVERTDISPLAY); }
+	if (set_mode == 0) { SSD1306_Command(COMAND, SSD1306_NORMALDISPLAY); }
+	if (set_mode == 1) { SSD1306_Command(COMAND, SSD1306_INVERTDISPLAY); }
 }
 
-void LCD_Sleep(char set)
+void LCD_Sleep(uint8_t set)
 {
-	if (set == 0) { TWI_Command(COMAND, SSD1306_DISPLAYOFF ); }
-	if (set == 1) { TWI_Command(COMAND, SSD1306_DISPLAYON); }
+	if (set == 0) { SSD1306_Command(COMAND, SSD1306_DISPLAYOFF ); }
+	if (set == 1) { SSD1306_Command(COMAND, SSD1306_DISPLAYON); }
 }
 
 void LCD_ToggleInvert(void)
@@ -160,7 +149,7 @@ void LCD_Pixel(uint16_t x, uint16_t y, SSD1306_COLOR_t color)
 
 void LCD_Line(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, SSD1306_COLOR_t color)
 {
-	int16_t dx, dy, sx, sy, err, e2, i, tmp;
+	uint16_t dx, dy, sx, sy, err, e2, i, tmp;
 
 	if (x0 >= (LCD_WIDTH + 1)) x0 = (LCD_WIDTH + 1) - 1;
 	if (x1 >= (LCD_WIDTH + 1)) x1 = (LCD_WIDTH + 1) - 1;
@@ -572,23 +561,34 @@ void LCD_Font(uint16_t x, uint16_t y, char *text, const GFXfont *p_font, uint8_t
 	}
 }
 
-void LCD_Battery(unsigned char y, unsigned char x, unsigned char z)
+unsigned char LCD_X, LCD_Y;
+
+inline static void LCD_Goto2X(uint16_t x, uint16_t y)
 {
-	unsigned char i = 0;
+	LCD_X = x;
+	LCD_Y = y;
+	SSD1306_Command(COMAND, 0xB0 + y);
+	SSD1306_Command(COMAND, 2*x & 0xf);
+	SSD1306_Command(COMAND, 0x10 | (2*x >> 4));
+}
+
+void LCD_Battery(uint16_t y, uint16_t x, uint8_t z)
+{
+	uint8_t i = 0;
 
 	LCD_Goto2X(x-1, y);
-	TWI_Command(DATA, 0xFF); TWI_Command(DATA, 0xFF);
+	SSD1306_Command(DATA, 0xFF); SSD1306_Command(DATA, 0xFF);
 	LCD_Goto2X(x + 2, y);
 	for (i = 0; i < 14; i++)
 	{
 		if(i < 11)
 		{
-			if(z >= i) { TWI_Command(DATA, 0xBD); }
-			else { TWI_Command(DATA, 0x81); TWI_Command(DATA, 0x81); }
+			if(z >= i) { SSD1306_Command(DATA, 0xBD); }
+			else { SSD1306_Command(DATA, 0x81); SSD1306_Command(DATA, 0x81); }
 		}
-		if (i == 11) { TWI_Command(DATA, 0xFF); TWI_Command(DATA, 0xFF); }
-		if (i == 12) { TWI_Command(DATA, 0x3C); TWI_Command(DATA, 0x3C); }
-		if (i == 13) { TWI_Command(DATA, 0x3C); TWI_Command(DATA, 0x3C); }
+		if (i == 11) { SSD1306_Command(DATA, 0xFF); SSD1306_Command(DATA, 0xFF); }
+		if (i == 12) { SSD1306_Command(DATA, 0x3C); SSD1306_Command(DATA, 0x3C); }
+		if (i == 13) { SSD1306_Command(DATA, 0x3C); SSD1306_Command(DATA, 0x3C); }
 		LCD_Goto2X(x + i, y);
 	}
 }

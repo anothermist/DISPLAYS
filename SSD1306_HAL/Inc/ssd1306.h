@@ -6,16 +6,17 @@ extern C {
 #endif
 
 #include "stm32f1xx_hal.h"
-#include "fonts.h"
+#include "stm32f1xx_hal_i2c.h"
 
 #include "stdlib.h"
 #include "string.h"
 
-#define SSD1306_HEIGHT           64 // 32 64
-#define SSD1306_WIDTH            128
+#define	SSD1306_I2C					   							hi2c1
 
-#define	SSD1306_I2C					   hi2c1
-#define SSD1306_I2C_ADDRESS         0x78 // 0x78 0x7A 0x3C
+#define LCD_HEIGHT							               64 // 32 64
+#define LCD_WIDTH						                  128
+#define SSD1306_DEFAULT_SPACE					          5
+#define SSD1306_TWI_ADDRESS					         0x78 // 0x78 0x7A 0x3C
 
 #define SSD1306_SETCONTRAST                  0x81
 #define SSD1306_DISPLAYALLON_RESUME          0xA4
@@ -58,27 +59,42 @@ typedef enum {
 	SSD1306_COLOR_WHITE = 0x01
 } SSD1306_COLOR_t;
 
-void I2C_Init(void);
-void I2C_Write(uint8_t address, uint8_t reg, uint8_t data);
-void I2C_WriteMulti(uint8_t address, uint8_t reg, uint8_t *data, uint16_t count);
+typedef struct { // Data stored PER GLYPH
+	uint16_t bitmapOffset;     // Pointer into GFXfont->bitmap
+	uint8_t  width, height;    // Bitmap dimensions in pixels
+	uint8_t  xAdvance;         // Distance to advance cursor (x axis)
+	int8_t   xOffset, yOffset; // Dist from cursor position to UL corner
+} GFXglyph;
 
-uint8_t SSD1306_Init(void);
+typedef struct { // Data stored for FONT AS A WHOLE:
+	uint8_t  *bitmap;      // Glyph bitmaps, concatenated
+	GFXglyph *glyph;       // Glyph array
+	uint8_t   first, last; // ASCII extents
+	uint8_t   yAdvance;    // Newline distance (y axis)
+} GFXfont;
+
+void SSD1306_Init(void);
+void LCD_Contrast(uint8_t set_contrast);
 void LCD_ON(void);
 void LCD_OFF(void);
 void LCD_UpdateScreen(void);
+void LCD_Mode(uint8_t set_mode);
+void LCD_Sleep(uint8_t set);
 void LCD_ToggleInvert(void);
 void LCD_Fill(SSD1306_COLOR_t color);
-void LCD_GotoXY(uint16_t x, uint16_t y);
 void LCD_Pixel(uint16_t x, uint16_t y, SSD1306_COLOR_t color);
-char LCD_Char(char ch, FontDef_t* Font, SSD1306_COLOR_t color);
-char LCD_String(uint16_t x, uint16_t y, char* str, FontDef_t* Font, SSD1306_COLOR_t color);
-void LCD_Line(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, SSD1306_COLOR_t c);
-void LCD_Rectangle(uint16_t x, uint16_t y, uint16_t w, uint16_t h, SSD1306_COLOR_t c);
-void LCD_Rectangle_Fill(uint16_t x, uint16_t y, uint16_t w, uint16_t h, SSD1306_COLOR_t c);
+void LCD_Line(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, SSD1306_COLOR_t color);
+void LCD_Rect(uint16_t x, uint16_t y, uint16_t w, uint16_t h, SSD1306_COLOR_t color);
+void LCD_Rect_Fill(uint16_t x, uint16_t y, uint16_t w, uint16_t h, SSD1306_COLOR_t color);
 void LCD_Triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t x3, uint16_t y3, SSD1306_COLOR_t color);
 void LCD_Triangle_Fill(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t x3, uint16_t y3, SSD1306_COLOR_t color);
-void LCD_Circle(int16_t x0, int16_t y0, int16_t r, SSD1306_COLOR_t c);
-void LCD_Circle_Fill(int16_t x0, int16_t y0, int16_t r, SSD1306_COLOR_t c);
+void LCD_Ellipse(int16_t x0, int16_t y0, int16_t rx, int16_t ry, uint8_t fill, SSD1306_COLOR_t color);
+void LCD_Circle(uint16_t x, uint16_t y, uint8_t radius, uint8_t fill, uint8_t size, SSD1306_COLOR_t color);
+void LCD_Rect_Round(uint16_t x, uint16_t y, uint16_t length, uint16_t width, uint16_t r, SSD1306_COLOR_t color);
+void LCD_Rect_Round_Fill(uint16_t x, uint16_t y, uint16_t length, uint16_t width, uint16_t r, uint32_t color);
+void LCD_Char(int16_t x, int16_t y, const GFXglyph *glyph, const GFXfont *font, uint8_t size, SSD1306_COLOR_t color);
+void LCD_Font(uint16_t x, uint16_t y, char *text, const GFXfont *p_font, uint8_t size, SSD1306_COLOR_t color);
+void LCD_Battery(uint16_t y, uint16_t x, uint8_t z);
 
 #ifdef __cplusplus
 }

@@ -15,13 +15,13 @@ void TWI_Stop(void){
 	TWCR = (1<<TWINT)|(1<<TWSTO)|(1<<TWEN);
 }
 
-void TWI_SendByte(int data){
+void TWI_SendByte(uint8_t data){
 	TWDR = data;
 	TWCR = (1<<TWINT)|(1<<TWEN);
 	while (!(TWCR & (1<<TWINT))){};
 }
 
-void TWI_SendAddress(int addr) {
+void TWI_SendAddress(uint8_t addr) {
 	TWDR = (addr<<1)|0;
 	TWCR = (1<<TWINT)|(1<<TWEN);
 	while (!(TWCR & (1<<TWINT))){};
