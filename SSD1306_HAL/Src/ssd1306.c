@@ -2,8 +2,8 @@
 
 extern I2C_HandleTypeDef SSD1306_I2C;
 
-#define SSD1306_WRITEDATA(data)       I2C_Write(SSD1306_I2C_ADDR, 0x40, (data))
-#define SSD1306_WRITECOMMAND(command) I2C_Write(SSD1306_I2C_ADDR, 0x00, (command))
+#define SSD1306_WRITEDATA(data)       I2C_Write(SSD1306_I2C_ADDRESS, 0x40, (data))
+#define SSD1306_WRITECOMMAND(command) I2C_Write(SSD1306_I2C_ADDRESS, 0x00, (command))
 
 static uint8_t SSD1306_Buffer[(SSD1306_WIDTH + 1) * SSD1306_HEIGHT / 8];
 
@@ -37,7 +37,7 @@ void I2C_WriteMulti(uint8_t address, uint8_t reg, uint8_t* data, uint16_t count)
 uint8_t SSD1306_Init(void)
 {
 	HAL_Delay(100);
-	if (HAL_I2C_IsDeviceReady(&SSD1306_I2C, SSD1306_I2C_ADDR, 1, 20000) != HAL_OK) return 0;
+	if (HAL_I2C_IsDeviceReady(&SSD1306_I2C, SSD1306_I2C_ADDRESS, 1, 20000) != HAL_OK) return 0;
 
 	SSD1306_WRITECOMMAND(SSD1306_DISPLAYOFF);
 	SSD1306_WRITECOMMAND(SSD1306_SETDISPLAYCLOCKDIV);
@@ -98,7 +98,7 @@ void LCD_UpdateScreen(void)
 		SSD1306_WRITECOMMAND(0xB0 + m);
 		SSD1306_WRITECOMMAND(0x00);
 		SSD1306_WRITECOMMAND(0x10);
-		I2C_WriteMulti(SSD1306_I2C_ADDR, 0x40, &SSD1306_Buffer[(SSD1306_WIDTH + 1) * m], (SSD1306_WIDTH + 1));
+		I2C_WriteMulti(SSD1306_I2C_ADDRESS, 0x40, &SSD1306_Buffer[(SSD1306_WIDTH + 1) * m], (SSD1306_WIDTH + 1));
 	}
 }
 

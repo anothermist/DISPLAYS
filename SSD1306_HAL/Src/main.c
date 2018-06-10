@@ -98,8 +98,6 @@ int main(void)
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
 	SSD1306_Init();
-	LCD_Fill (0);
-	LCD_UpdateScreen();
 
 	LCD_String (10, 0, "Font_7x10", &Font_7x10, 1);
 	LCD_String (10, 10, "Font_11x18", &Font_11x18, 1);

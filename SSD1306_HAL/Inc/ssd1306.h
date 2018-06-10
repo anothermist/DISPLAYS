@@ -15,7 +15,7 @@ extern C {
 #define SSD1306_WIDTH            128
 
 #define	SSD1306_I2C					   hi2c1
-#define SSD1306_I2C_ADDR         0x78 // 0x78 0x7A 0x3C
+#define SSD1306_I2C_ADDRESS         0x78 // 0x78 0x7A 0x3C
 
 #define SSD1306_SETCONTRAST                  0x81
 #define SSD1306_DISPLAYALLON_RESUME          0xA4

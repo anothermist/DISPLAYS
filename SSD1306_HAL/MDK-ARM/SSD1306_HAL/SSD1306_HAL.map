@@ -916,31 +916,31 @@ Memory Map of the image
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x000000ec   Data   RO            3    RESET               startup_stm32f103xb.o
-    0x080000ec   0x080000ec   0x00000000   Code   RO         1818  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x080000ec   0x080000ec   0x00000004   Code   RO         1855    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x080000f0   0x080000f0   0x00000004   Code   RO         1858    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x080000f4   0x080000f4   0x00000000   Code   RO         1860    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x080000f4   0x080000f4   0x00000000   Code   RO         1862    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x080000f4   0x080000f4   0x00000008   Code   RO         1863    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080000fc   0x080000fc   0x00000000   Code   RO         1865    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x080000fc   0x080000fc   0x00000000   Code   RO         1867    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x080000fc   0x080000fc   0x00000004   Code   RO         1856    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x080000ec   0x080000ec   0x00000000   Code   RO         1886  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080000ec   0x080000ec   0x00000004   Code   RO         1923    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080000f0   0x080000f0   0x00000004   Code   RO         1926    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO         1928    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO         1930    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080000f4   0x080000f4   0x00000008   Code   RO         1931    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080000fc   0x080000fc   0x00000000   Code   RO         1933    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x080000fc   0x080000fc   0x00000000   Code   RO         1935    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x080000fc   0x080000fc   0x00000004   Code   RO         1924    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x08000100   0x08000100   0x00000024   Code   RO            4    .text               startup_stm32f103xb.o
-    0x08000124   0x08000124   0x00000024   Code   RO         1823    .text               mc_w.l(memseta.o)
-    0x08000148   0x08000148   0x00000024   Code   RO         1875    .text               mc_w.l(init.o)
-    0x0800016c   0x0800016c   0x00000002   Code   RO         1542    i.BusFault_Handler  stm32f1xx_it.o
-    0x0800016e   0x0800016e   0x00000002   Code   RO         1543    i.DebugMon_Handler  stm32f1xx_it.o
+    0x08000124   0x08000124   0x00000024   Code   RO         1891    .text               mc_w.l(memseta.o)
+    0x08000148   0x08000148   0x00000024   Code   RO         1943    .text               mc_w.l(init.o)
+    0x0800016c   0x0800016c   0x00000002   Code   RO         1610    i.BusFault_Handler  stm32f1xx_it.o
+    0x0800016e   0x0800016e   0x00000002   Code   RO         1611    i.DebugMon_Handler  stm32f1xx_it.o
     0x08000170   0x08000170   0x00000024   Code   RO          152    i.HAL_Delay         stm32f1xx_hal.o
     0x08000194   0x08000194   0x000001bc   Code   RO         1297    i.HAL_GPIO_Init     stm32f1xx_hal_gpio.o
     0x08000350   0x08000350   0x0000000c   Code   RO          156    i.HAL_GetTick       stm32f1xx_hal.o
     0x0800035c   0x0800035c   0x00000140   Code   RO          907    i.HAL_I2C_Init      stm32f1xx_hal_i2c.o
     0x0800049c   0x0800049c   0x00000160   Code   RO          908    i.HAL_I2C_IsDeviceReady  stm32f1xx_hal_i2c.o
     0x080005fc   0x080005fc   0x00000138   Code   RO          918    i.HAL_I2C_Master_Transmit  stm32f1xx_hal_i2c.o
-    0x08000734   0x08000734   0x00000044   Code   RO         1618    i.HAL_I2C_MspInit   stm32f1xx_hal_msp.o
+    0x08000734   0x08000734   0x00000044   Code   RO         1686    i.HAL_I2C_MspInit   stm32f1xx_hal_msp.o
     0x08000778   0x08000778   0x00000010   Code   RO          160    i.HAL_IncTick       stm32f1xx_hal.o
     0x08000788   0x08000788   0x00000024   Code   RO          161    i.HAL_Init          stm32f1xx_hal.o
     0x080007ac   0x080007ac   0x00000040   Code   RO          162    i.HAL_InitTick      stm32f1xx_hal.o
-    0x080007ec   0x080007ec   0x00000080   Code   RO         1619    i.HAL_MspInit       stm32f1xx_hal_msp.o
+    0x080007ec   0x080007ec   0x00000080   Code   RO         1687    i.HAL_MspInit       stm32f1xx_hal_msp.o
     0x0800086c   0x0800086c   0x00000040   Code   RO          312    i.HAL_NVIC_SetPriority  stm32f1xx_hal_cortex.o
     0x080008ac   0x080008ac   0x00000024   Code   RO          313    i.HAL_NVIC_SetPriorityGrouping  stm32f1xx_hal_cortex.o
     0x080008d0   0x080008d0   0x00000154   Code   RO          422    i.HAL_RCC_ClockConfig  stm32f1xx_hal_rcc.o
@@ -952,7 +952,7 @@ Memory Map of the image
     0x08000dd8   0x08000dd8   0x00000002   Code   RO          316    i.HAL_SYSTICK_Callback  stm32f1xx_hal_cortex.o
     0x08000dda   0x08000dda   0x00000028   Code   RO          317    i.HAL_SYSTICK_Config  stm32f1xx_hal_cortex.o
     0x08000e02   0x08000e02   0x00000008   Code   RO          318    i.HAL_SYSTICK_IRQHandler  stm32f1xx_hal_cortex.o
-    0x08000e0a   0x08000e0a   0x00000002   Code   RO         1544    i.HardFault_Handler  stm32f1xx_it.o
+    0x08000e0a   0x08000e0a   0x00000002   Code   RO         1612    i.HardFault_Handler  stm32f1xx_it.o
     0x08000e0c   0x08000e0c   0x00000028   Code   RO          945    i.I2C_IsAcknowledgeFailed  stm32f1xx_hal_i2c.o
     0x08000e34   0x08000e34   0x00000094   Code   RO          949    i.I2C_MasterRequestWrite  stm32f1xx_hal_i2c.o
     0x08000ec8   0x08000ec8   0x0000004e   Code   RO          958    i.I2C_WaitOnBTFFlagUntilTimeout  stm32f1xx_hal_i2c.o
@@ -961,38 +961,38 @@ Memory Map of the image
     0x08000f78   0x08000f78   0x00000088   Code   RO          960    i.I2C_WaitOnMasterAddressFlagUntilTimeout  stm32f1xx_hal_i2c.o
     0x08001000   0x08001000   0x0000004e   Code   RO          962    i.I2C_WaitOnTXEFlagUntilTimeout  stm32f1xx_hal_i2c.o
     0x0800104e   0x0800104e   0x00000002   PAD
-    0x08001050   0x08001050   0x00000020   Code   RO         1653    i.I2C_Write         ssd1306.o
-    0x08001070   0x08001070   0x00000048   Code   RO         1654    i.I2C_WriteMulti    ssd1306.o
-    0x080010b8   0x080010b8   0x000000a0   Code   RO         1655    i.LCD_Char          ssd1306.o
-    0x08001158   0x08001158   0x00000018   Code   RO         1658    i.LCD_Fill          ssd1306.o
-    0x08001170   0x08001170   0x0000000c   Code   RO         1659    i.LCD_GotoXY        ssd1306.o
-    0x0800117c   0x0800117c   0x00000040   Code   RO         1663    i.LCD_Pixel         ssd1306.o
-    0x080011bc   0x080011bc   0x0000002c   Code   RO         1666    i.LCD_String        ssd1306.o
-    0x080011e8   0x080011e8   0x00000048   Code   RO         1670    i.LCD_UpdateScreen  ssd1306.o
+    0x08001050   0x08001050   0x00000020   Code   RO         1721    i.I2C_Write         ssd1306.o
+    0x08001070   0x08001070   0x00000048   Code   RO         1722    i.I2C_WriteMulti    ssd1306.o
+    0x080010b8   0x080010b8   0x000000a0   Code   RO         1723    i.LCD_Char          ssd1306.o
+    0x08001158   0x08001158   0x00000018   Code   RO         1726    i.LCD_Fill          ssd1306.o
+    0x08001170   0x08001170   0x0000000c   Code   RO         1727    i.LCD_GotoXY        ssd1306.o
+    0x0800117c   0x0800117c   0x00000040   Code   RO         1731    i.LCD_Pixel         ssd1306.o
+    0x080011bc   0x080011bc   0x0000002c   Code   RO         1734    i.LCD_String        ssd1306.o
+    0x080011e8   0x080011e8   0x00000048   Code   RO         1738    i.LCD_UpdateScreen  ssd1306.o
     0x08001230   0x08001230   0x00000038   Code   RO         1485    i.MX_I2C1_Init      main.o
-    0x08001268   0x08001268   0x00000002   Code   RO         1545    i.MemManage_Handler  stm32f1xx_it.o
-    0x0800126a   0x0800126a   0x00000002   Code   RO         1546    i.NMI_Handler       stm32f1xx_it.o
+    0x08001268   0x08001268   0x00000002   Code   RO         1613    i.MemManage_Handler  stm32f1xx_it.o
+    0x0800126a   0x0800126a   0x00000002   Code   RO         1614    i.NMI_Handler       stm32f1xx_it.o
     0x0800126c   0x0800126c   0x00000020   Code   RO          319    i.NVIC_SetPriority  stm32f1xx_hal_cortex.o
-    0x0800128c   0x0800128c   0x00000002   Code   RO         1547    i.PendSV_Handler    stm32f1xx_it.o
+    0x0800128c   0x0800128c   0x00000002   Code   RO         1615    i.PendSV_Handler    stm32f1xx_it.o
     0x0800128e   0x0800128e   0x00000002   PAD
-    0x08001290   0x08001290   0x00000130   Code   RO         1671    i.SSD1306_Init      ssd1306.o
-    0x080013c0   0x080013c0   0x00000002   Code   RO         1548    i.SVC_Handler       stm32f1xx_it.o
-    0x080013c2   0x080013c2   0x0000000e   Code   RO         1549    i.SysTick_Handler   stm32f1xx_it.o
+    0x08001290   0x08001290   0x00000130   Code   RO         1739    i.SSD1306_Init      ssd1306.o
+    0x080013c0   0x080013c0   0x00000002   Code   RO         1616    i.SVC_Handler       stm32f1xx_it.o
+    0x080013c2   0x080013c2   0x0000000e   Code   RO         1617    i.SysTick_Handler   stm32f1xx_it.o
     0x080013d0   0x080013d0   0x00000068   Code   RO         1486    i.SystemClock_Config  main.o
     0x08001438   0x08001438   0x00000048   Code   RO           14    i.SystemInit        system_stm32f1xx.o
-    0x08001480   0x08001480   0x00000002   Code   RO         1550    i.UsageFault_Handler  stm32f1xx_it.o
-    0x08001482   0x08001482   0x0000000e   Code   RO         1879    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08001490   0x08001490   0x00000002   Code   RO         1880    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08001492   0x08001492   0x0000000e   Code   RO         1881    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x080014a0   0x080014a0   0x00000050   Code   RO         1827    i.free              mc_w.l(malloc.o)
+    0x08001480   0x08001480   0x00000002   Code   RO         1618    i.UsageFault_Handler  stm32f1xx_it.o
+    0x08001482   0x08001482   0x0000000e   Code   RO         1947    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08001490   0x08001490   0x00000002   Code   RO         1948    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08001492   0x08001492   0x0000000e   Code   RO         1949    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x080014a0   0x080014a0   0x00000050   Code   RO         1895    i.free              mc_w.l(malloc.o)
     0x080014f0   0x080014f0   0x000000b0   Code   RO         1488    i.main              main.o
-    0x080015a0   0x080015a0   0x0000006c   Code   RO         1828    i.malloc            mc_w.l(malloc.o)
+    0x080015a0   0x080015a0   0x0000006c   Code   RO         1896    i.malloc            mc_w.l(malloc.o)
     0x0800160c   0x0800160c   0x00000010   Data   RO           15    .constdata          system_stm32f1xx.o
     0x0800161c   0x0800161c   0x00000008   Data   RO           16    .constdata          system_stm32f1xx.o
-    0x08001624   0x08001624   0x0000076c   Data   RO         1787    .constdata          fonts.o
-    0x08001d90   0x08001d90   0x00000d5c   Data   RO         1788    .constdata          fonts.o
-    0x08002aec   0x08002aec   0x0000134c   Data   RO         1789    .constdata          fonts.o
-    0x08003e38   0x08003e38   0x00000020   Data   RO         1877    Region$$Table       anon$$obj.o
+    0x08001624   0x08001624   0x0000076c   Data   RO         1855    .constdata          fonts.o
+    0x08001d90   0x08001d90   0x00000d5c   Data   RO         1856    .constdata          fonts.o
+    0x08002aec   0x08002aec   0x0000134c   Data   RO         1857    .constdata          fonts.o
+    0x08003e38   0x08003e38   0x00000020   Data   RO         1945    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08003e58, Size: 0x00000a98, Max: 0x00005000, ABSOLUTE)
@@ -1001,15 +1001,15 @@ Memory Map of the image
 
     0x20000000   0x08003e58   0x00000004   Data   RW           17    .data               system_stm32f1xx.o
     0x20000004   0x08003e5c   0x0000000c   Data   RW          168    .data               stm32f1xx_hal.o
-    0x20000010   0x08003e68   0x00000006   Data   RW         1673    .data               ssd1306.o
+    0x20000010   0x08003e68   0x00000006   Data   RW         1741    .data               ssd1306.o
     0x20000016   0x08003e6e   0x00000002   PAD
-    0x20000018   0x08003e70   0x00000008   Data   RW         1790    .data               fonts.o
-    0x20000020   0x08003e78   0x00000008   Data   RW         1791    .data               fonts.o
-    0x20000028   0x08003e80   0x00000008   Data   RW         1792    .data               fonts.o
-    0x20000030   0x08003e88   0x00000004   Data   RW         1873    .data               mc_w.l(mvars.o)
-    0x20000034   0x08003e8c   0x00000004   Data   RW         1874    .data               mc_w.l(mvars.o)
+    0x20000018   0x08003e70   0x00000008   Data   RW         1858    .data               fonts.o
+    0x20000020   0x08003e78   0x00000008   Data   RW         1859    .data               fonts.o
+    0x20000028   0x08003e80   0x00000008   Data   RW         1860    .data               fonts.o
+    0x20000030   0x08003e88   0x00000004   Data   RW         1941    .data               mc_w.l(mvars.o)
+    0x20000034   0x08003e8c   0x00000004   Data   RW         1942    .data               mc_w.l(mvars.o)
     0x20000038        -       0x00000054   Zero   RW         1489    .bss                main.o
-    0x2000008c        -       0x00000408   Zero   RW         1672    .bss                ssd1306.o
+    0x2000008c        -       0x00000408   Zero   RW         1740    .bss                ssd1306.o
     0x20000494   0x08003e90   0x00000004   PAD
     0x20000498        -       0x00000200   Zero   RW            2    HEAP                startup_stm32f103xb.o
     0x20000698        -       0x00000400   Zero   RW            1    STACK               startup_stm32f103xb.o
@@ -1022,9 +1022,9 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-         0          0      10260         24          0       1155   fonts.o
-       336         60          0          0         84       4423   main.o
-       784         44          0          6       1032       6069   ssd1306.o
+         0          0      10260         24          0       1171   fonts.o
+       336         60          0          0         84     397771   main.o
+       784         44          0          6       1032       6129   ssd1306.o
         36          8        236          0       1536        780   startup_stm32f103xb.o
        164         28          0         12          0       3693   stm32f1xx_hal.o
        206         14          0          0          0      26588   stm32f1xx_hal_cortex.o
@@ -1036,7 +1036,7 @@ Image component sizes
         72         16         24          4          0     405259   system_stm32f1xx.o
 
     ----------------------------------------------------------------------
-      5098        362      10552         48       2656     470163   Object Totals
+      5098        362      10552         48       2656     863587   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          6          0          0          2          4          0   (incl. Padding)
 
@@ -1078,8 +1078,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      5408        398      10552         56       2656     468155   Grand Totals
-      5408        398      10552         56       2656     468155   ELF Image Totals
+      5408        398      10552         56       2656     861579   Grand Totals
+      5408        398      10552         56       2656     861579   ELF Image Totals
       5408        398      10552         56          0          0   ROM Totals
 
 ==============================================================================

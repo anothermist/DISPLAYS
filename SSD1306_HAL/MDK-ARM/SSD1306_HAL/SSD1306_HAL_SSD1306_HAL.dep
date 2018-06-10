@@ -350,7 +350,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x5B0415B8)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x5B0415B8)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x5B0415B8)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x5B0415B8)
-F (../Src/main.c)(0x5B1AA9C5)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SSD1306_HAL-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o ssd1306_hal\main.o --omf_browse ssd1306_hal\main.crf --depend ssd1306_hal\main.d)
+F (../Src/main.c)(0x5B1C176C)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SSD1306_HAL-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o ssd1306_hal\main.o --omf_browse ssd1306_hal\main.crf --depend ssd1306_hal\main.d)
 I (../Inc/main.h)(0x5B1A90B6)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5B0415B8)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5B1A90B5)
@@ -375,7 +375,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x5B0415B8)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x5B0415B8)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x5B0415B8)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x5B0415B8)
-I (../Inc/ssd1306.h)(0x5B1AA9C5)
+I (../Inc/ssd1306.h)(0x5B1C739F)
 I (../Inc/fonts.h)(0x5B1AA899)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EE94C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599EE94C)
@@ -430,8 +430,8 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x5B0415B8)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x5B0415B8)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x5B0415B8)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x5B0415B8)
-F (..\Src\ssd1306.c)(0x5B1AA9C5)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SSD1306_HAL-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o ssd1306_hal\ssd1306.o --omf_browse ssd1306_hal\ssd1306.crf --depend ssd1306_hal\ssd1306.d)
-I (../Inc/ssd1306.h)(0x5B1AA9C5)
+F (..\Src\ssd1306.c)(0x5B1C739F)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SSD1306_HAL-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o ssd1306_hal\ssd1306.o --omf_browse ssd1306_hal\ssd1306.crf --depend ssd1306_hal\ssd1306.d)
+I (../Inc/ssd1306.h)(0x5B1C739F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5B0415B8)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5B1A90B5)
 I (../Inc/main.h)(0x5B1A90B6)
@@ -459,8 +459,8 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x5B0415B8)
 I (../Inc/fonts.h)(0x5B1AA899)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EE94C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599EE94C)
-F (..\Inc\ssd1306.h)(0x5B1AA9C5)()
-F (..\Src\fonts.c)(0x5B1AA899)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SSD1306_HAL-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o ssd1306_hal\fonts.o --omf_browse ssd1306_hal\fonts.crf --depend ssd1306_hal\fonts.d)
+F (..\Inc\ssd1306.h)(0x5B1C739F)()
+F (..\Src\fonts.c)(0x5B1C0D01)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SSD1306_HAL-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o ssd1306_hal\fonts.o --omf_browse ssd1306_hal\fonts.crf --depend ssd1306_hal\fonts.d)
 I (../Inc/fonts.h)(0x5B1AA899)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5B0415B8)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5B1A90B5)
