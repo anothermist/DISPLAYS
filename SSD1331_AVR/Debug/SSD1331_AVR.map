@@ -1131,11 +1131,11 @@ END GROUP
  .debug_abbrev  0x000005a2      0x182 main.o
  .debug_abbrev  0x00000724      0x335 ssd1331.o
 
-.debug_line     0x00000000     0x20ce
+.debug_line     0x00000000     0x20cc
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x133 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_line    0x00000133      0xb11 main.o
- .debug_line    0x00000c44     0x148a ssd1331.o
+ .debug_line    0x00000c44     0x1488 ssd1331.o
 
 .debug_frame    0x00000000      0x66c
  *(.debug_frame)

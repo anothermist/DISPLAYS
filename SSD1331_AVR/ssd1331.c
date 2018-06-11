@@ -34,14 +34,6 @@ inline static void LCD_Data_8(uint8_t data)
 
 void SSD1331_Frame(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint32_t outColor, uint32_t fillColor)
 {
-	if((x0 < 0) || (y0 < 0) || (x1 < 0) || (y1 < 0))
-	return;
-
-	//if (x0 >= LCD_WIDTH)  x0 = LCD_WIDTH - 1;
-	//if (y0 >= LCD_HEIGHT) y0 = LCD_HEIGHT - 1;
-	//if (x1 >= LCD_WIDTH)  x1 = LCD_WIDTH - 1;
-	//if (y1 >= LCD_HEIGHT) y1 = LCD_HEIGHT - 1;
-
 	LCD_Command(CMD_FILL_WINDOW);//fill window
 	LCD_Command(ENABLE_FILL);
 	LCD_Command(CMD_DRAW_RECTANGLE);//draw rectangle
@@ -420,23 +412,6 @@ void LCD_Font(uint16_t x, uint16_t y, char *text, const GFXfont *p_font, uint8_t
 		}
 	}
 }
-
-
-
-//
-//inline static void SSD1306_Send_Multi(uint8_t address, uint8_t reg, uint8_t* data, uint16_t count)
-//{
-//uint8_t dt[count + 1];
-//dt[0] = reg;
-//uint8_t i;
-//for(i = 1; i <= count; i++)
-//{
-//dt[i] = data[i-1];
-//LCD_Command(/*reg, */dt[i]);
-//}
-//}
-
-
 
 void SSD1331_IMG(const unsigned char *img, uint16_t x, uint16_t y, uint16_t width, uint16_t height)
 {
