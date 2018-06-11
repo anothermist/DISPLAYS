@@ -17,7 +17,7 @@ inline static uint16_t H24_RGB565(uint8_t reverse, uint32_t color24)
 inline static void LCD_Command(uint8_t cmd)
 {
 	LCD_U_CS
-//	LCD_U_DC
+	LCD_U_DC
 	SPDR = cmd;
 	while(!(SPSR & (1 << SPIF)));
 	LCD_S_CS
@@ -26,7 +26,7 @@ inline static void LCD_Command(uint8_t cmd)
 inline static void LCD_Data_8(uint8_t data)
 {
 	LCD_U_CS
-//	LCD_S_DC
+	LCD_S_DC
 	SPDR = data;
 	while(!(SPSR & (1 << SPIF)));
 	LCD_S_CS
@@ -417,7 +417,8 @@ void SSD1331_IMG(const unsigned char *img, uint16_t x, uint16_t y, uint16_t widt
 {
 	uint16_t xx, yy;
 
-	if ( (x + width > LCD_WIDTH) | (y+height > LCD_HEIGHT) ){
+	if ((x + width > LCD_WIDTH) | (y+height > LCD_HEIGHT))
+	{
 		return;
 	}
 
@@ -430,10 +431,11 @@ void SSD1331_IMG(const unsigned char *img, uint16_t x, uint16_t y, uint16_t widt
 		LCD_Command(CMD_SET_ROW_ADDRESS);
 		LCD_Command(y + yy);
 		LCD_Command(LCD_HEIGHT-1);
-		LCD_S_DC	//GPIO_SetBits(GPIOB, GPIO_Pin_0); //dc
-		LCD_U_CS	//GPIO_ResetBits(GPIOB, GPIO_Pin_1); //cs
+		LCD_S_DC
+		LCD_U_CS
 
-		for (xx=0; xx<width*2; xx++) {
+		for (xx=0; xx<width*2; xx++) 
+		{
 			LCD_Data_8(img[yy*width*2 + xx]);
 		}
 	}

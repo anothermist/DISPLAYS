@@ -27,7 +27,6 @@ ili9341_hal\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
 ili9341_hal\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 ili9341_hal\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 ili9341_hal\main.o: ../Inc/ili9341.h
-ili9341_hal\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_fsmc.h
 ili9341_hal\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ili9341_hal\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ili9341_hal\main.o: ../Inc/xpt2046.h

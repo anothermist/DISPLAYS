@@ -3,7 +3,7 @@
 <title>Static Call Graph - [ILI9341_HAL\ILI9341_HAL.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ILI9341_HAL\ILI9341_HAL.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Fri Jun 08 19:17:20 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue Jun 12 02:59:12 2018
 <BR><P>
 <H3>Maximum Stack Usage =        328 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -239,9 +239,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_round
 <LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
+<BR>[Called By]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_frsub
+<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;remap
-<LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_frsub
 </UL>
 
 <P><STRONG><a name="[3d]"></a>__aeabi_fsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, fadd.o(.text))
@@ -632,8 +632,8 @@ Global Symbols
 <P><STRONG><a name="[73]"></a>LCD_Font</STRONG> (Thumb, 144 bytes, Stack size 64 bytes, ili9341.o(i.LCD_Font))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = LCD_Font &rArr; LCD_Char &rArr; LCD_Rect_Fill &rArr; LCD_Window &rArr; LCD_Data_16 &rArr; LCD_Data_8 &rArr; HAL_SPI_Transmit &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Char
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Char
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>

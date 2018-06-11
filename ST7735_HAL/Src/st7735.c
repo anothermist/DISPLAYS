@@ -18,27 +18,27 @@ inline static uint16_t H24_RGB565(uint8_t reverse, uint32_t color24)
 
 inline static void LCD_Command(uint8_t cmd)
 {
-	if (SOFT_CS) LCD_CS_U
-	LCD_DC_U
+	if (SOFT_CS) LCD_U_CS
+	LCD_U_DC
 	HAL_SPI_Transmit(&LCD_SPI, &cmd, 1, 0);
-	if (SOFT_CS) 	LCD_CS_S
+	if (SOFT_CS) 	LCD_S_CS
 }
 
 inline static void LCD_Data_8(uint8_t data)
 {
-	if (SOFT_CS) LCD_CS_U
-	LCD_DC_S
+	if (SOFT_CS) LCD_U_CS
+	LCD_S_DC
 	HAL_SPI_Transmit(&LCD_SPI, &data, 1, 0);
-	if (SOFT_CS) LCD_CS_S
+	if (SOFT_CS) LCD_S_CS
 }
 
 inline static void LCD_Data_16(uint16_t word)
 {
-	if (SOFT_CS) LCD_CS_U
-	LCD_DC_S
+	if (SOFT_CS) LCD_U_CS
+	LCD_S_DC
 	LCD_Data_8((word >> 8) & 0x00FF);
 	LCD_Data_8(word & 0x00FF);
-	if (SOFT_CS) LCD_CS_S
+	if (SOFT_CS) LCD_S_CS
 }
 
 inline static void LCD_Window(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2)
@@ -459,7 +459,7 @@ void LCD_Bitmap_Mono(uint16_t x, uint16_t y, const char *bitmap, uint32_t color2
 
 void LCD_Reset(void)
 {
-		if (SOFT_CS) LCD_CS_U
+		if (SOFT_CS) LCD_U_CS
 //	LCD_RST_S
 //	HAL_Delay(150);
 //	LCD_RST_U

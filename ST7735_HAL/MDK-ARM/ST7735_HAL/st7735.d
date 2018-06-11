@@ -25,6 +25,5 @@ st7735_hal\st7735.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 st7735_hal\st7735.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 st7735_hal\st7735.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 st7735_hal\st7735.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
-st7735_hal\st7735.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_fsmc.h
 st7735_hal\st7735.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 st7735_hal\st7735.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

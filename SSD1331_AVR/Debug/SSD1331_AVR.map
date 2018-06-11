@@ -625,15 +625,15 @@ Discarded input sections
  .text.LCD_Rect_Round_Fill
                 0x00000000       0xda ssd1331.o
  .text.SSD1331_IMG
-                0x00000000       0xf2 ssd1331.o
+                0x00000000      0x102 ssd1331.o
  .text.SSD1331_copyWindow
-                0x00000000       0x60 ssd1331.o
+                0x00000000       0x6e ssd1331.o
  .text.SSD1331_dimWindow
-                0x00000000       0x40 ssd1331.o
+                0x00000000       0x4a ssd1331.o
  .text.SSD1331_setDisplayMode
-                0x00000000        0xe ssd1331.o
+                0x00000000       0x10 ssd1331.o
  .text.SSD1331_setDisplayPower
-                0x00000000        0xe ssd1331.o
+                0x00000000       0x10 ssd1331.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
@@ -843,7 +843,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x200c
+.text           0x00000000     0x208e
  *(.vectors)
  .vectors       0x00000000       0x68 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
                 0x00000000                __vector_default
@@ -959,40 +959,40 @@ END GROUP
  .text.main     0x00001498      0x15e main.o
                 0x00001498                main
  .text.SSD1331_Frame
-                0x000015f6      0x194 ssd1331.o
+                0x000015f6      0x1ae ssd1331.o
                 0x000015f6                SSD1331_Frame
  .text.LCD_Rect_Fill
-                0x0000178a       0x32 ssd1331.o
-                0x0000178a                LCD_Rect_Fill
+                0x000017a4       0x32 ssd1331.o
+                0x000017a4                LCD_Rect_Fill
  .text.LCD_Circle
-                0x000017bc      0x24e ssd1331.o
-                0x000017bc                LCD_Circle
+                0x000017d6      0x24e ssd1331.o
+                0x000017d6                LCD_Circle
  .text.LCD_Font
-                0x00001a0a      0x2a6 ssd1331.o
-                0x00001a0a                LCD_Font
+                0x00001a24      0x2a6 ssd1331.o
+                0x00001a24                LCD_Font
  .text.SSD1331_clearWindow
-                0x00001cb0       0x40 ssd1331.o
-                0x00001cb0                SSD1331_clearWindow
+                0x00001cca       0x4a ssd1331.o
+                0x00001cca                SSD1331_clearWindow
  .text.SSD1331_setScrolling
-                0x00001cf0       0x7c ssd1331.o
-                0x00001cf0                SSD1331_setScrolling
+                0x00001d14       0x8a ssd1331.o
+                0x00001d14                SSD1331_setScrolling
  .text.SSD1331_enableScrolling
-                0x00001d6c       0x24 ssd1331.o
-                0x00001d6c                SSD1331_enableScrolling
+                0x00001d9e       0x28 ssd1331.o
+                0x00001d9e                SSD1331_enableScrolling
  .text.SPI_Init
-                0x00001d90       0x1a ssd1331.o
-                0x00001d90                SPI_Init
+                0x00001dc6       0x1a ssd1331.o
+                0x00001dc6                SPI_Init
  .text.SSD1331_Init
-                0x00001daa      0x24c ssd1331.o
-                0x00001daa                SSD1331_Init
+                0x00001de0      0x298 ssd1331.o
+                0x00001de0                SSD1331_Init
  .text.avr-libc
-                0x00001ff6       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(memcpy_P.o)
-                0x00001ff6                memcpy_P
-                0x00002008                . = ALIGN (0x2)
+                0x00002078       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(memcpy_P.o)
+                0x00002078                memcpy_P
+                0x0000208a                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00002008        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x00002008                _exit
-                0x00002008                exit
+ .fini9         0x0000208a        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x0000208a                _exit
+                0x0000208a                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -1011,11 +1011,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00002008        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x0000208a        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000200c                _etext = .
+                0x0000208e                _etext = .
 
-.data           0x00800100       0x16 load address 0x0000200c
+.data           0x00800100       0x16 load address 0x0000208e
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -1036,8 +1036,8 @@ END GROUP
  *(.bss*)
  *(COMMON)
                 [!provide]                PROVIDE (__bss_end, .)
-                0x0000200c                __data_load_start = LOADADDR (.data)
-                0x00002022                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000208e                __data_load_start = LOADADDR (.data)
+                0x000020a4                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800116        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -1131,11 +1131,11 @@ END GROUP
  .debug_abbrev  0x000005a2      0x182 main.o
  .debug_abbrev  0x00000724      0x335 ssd1331.o
 
-.debug_line     0x00000000     0x1ec4
+.debug_line     0x00000000     0x20cc
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x133 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_line    0x00000133      0xb11 main.o
- .debug_line    0x00000c44     0x1280 ssd1331.o
+ .debug_line    0x00000c44     0x1488 ssd1331.o
 
 .debug_frame    0x00000000      0x66c
  *(.debug_frame)
