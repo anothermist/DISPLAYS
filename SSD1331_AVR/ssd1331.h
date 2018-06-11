@@ -8,7 +8,7 @@
 
 #define LCD_PORT PORTB
 #define LCD_DDR  DDRB
-#define LCD_DC	 PB1 // PB1 | PB3
+#define LCD_DC	 PB1 // PB1 | PB3 // REALLY NOT NEEDED !
 #define LCD_CS	 PB2 // PB2 | PB4
 #define LCD_MOSI PB5 // PB3 | PB5
 #define LCD_SCK	 PB7 // PB5 | PB7

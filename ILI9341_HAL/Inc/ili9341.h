@@ -8,7 +8,7 @@
 #include "stm32f1xx_hal.h"
 #include "stm32f1xx_hal_gpio.h"
 #include "stm32f1xx_hal_rcc.h"
-#include "stm32f1xx_ll_fsmc.h"
+#include "stm32f1xx_hal_spi.h"
 
 #include <stdlib.h>
 #include <string.h>
