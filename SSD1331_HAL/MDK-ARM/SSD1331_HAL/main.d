@@ -27,6 +27,7 @@ ssd1331_hal\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
 ssd1331_hal\main.o: ../Inc/ssd1331.h
 ssd1331_hal\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ssd1331_hal\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+ssd1331_hal\main.o: ../Inc/fonts/_images.h
 ssd1331_hal\main.o: ../Inc/fonts/Font_3_Tiny.h
 ssd1331_hal\main.o: ../Inc/fonts/Font_3_PicoPixel.h
 ssd1331_hal\main.o: ../Inc/fonts/Font_3_TomThumb_Extended.h

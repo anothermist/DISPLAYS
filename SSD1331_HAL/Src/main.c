@@ -43,6 +43,8 @@
 /* USER CODE BEGIN Includes */
 #include "ssd1331.h"
 
+#include "fonts/_images.h"
+
 #include "fonts/Font_3_Tiny.h"
 #include "fonts/Font_3_PicoPixel.h"
 #include "fonts/Font_3_TomThumb_Extended.h"
@@ -208,18 +210,37 @@ int main(void)
 	LCD_Circle(48, 32, 20, 0, 1, YELLOW);
 	LCD_Circle(48, 32, 25, 0, 1, BLUE);
 	LCD_Circle(48, 32, 30, 0, 1, YELLOW);
-
+	
 	HAL_Delay(1000);
 
 	SSD1331_Frame(0, 0, 95, 63, BLUE, BLACK); HAL_Delay(1);
+	
+	SSD1331_IMG(IMG0, 0, 0, 96, 64);
+	HAL_Delay(1000); SSD1331_Frame(0, 0, 95, 63, BLUE, BLACK); HAL_Delay(1);
+
+	SSD1331_IMG(IMG1, 16,0, 64, 64);
+	HAL_Delay(1000); SSD1331_Frame(0, 0, 95, 63, BLUE, BLACK); HAL_Delay(1);
+
+	SSD1331_IMG(IMG3, 32, 16, 32, 32);
+	SSD1331_copyWindow(32, 16, 64, 48, 0, 0);
+	HAL_Delay(1000); SSD1331_Frame(0, 0, 95, 63, BLUE, BLACK); HAL_Delay(1);
+
+	SSD1331_IMG(IMG2, 23, 7, 50,50);
+	SSD1331_setScrolling(Horizontal, 0, 64, 1);
+	SSD1331_enableScrolling(1);
+
+	HAL_Delay(1000); SSD1331_Frame(0, 0, 95, 63, BLUE, BLACK); HAL_Delay(1);
+	SSD1331_enableScrolling(0);
 
 	LCD_Font(5, 25, "SSD1331", _8_Retro, 1, RED);
 	LCD_Font(5, 45, "OLED", _12_Mono, 1, GREEN);
 	LCD_Font(10, 60, "0123456", _9_Mono, 1, BLUE);
 	
 	HAL_Delay(1000);
+	
 	SSD1331_setScrolling(Horizontal, 0, 64, 1);
 	SSD1331_enableScrolling(1);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */

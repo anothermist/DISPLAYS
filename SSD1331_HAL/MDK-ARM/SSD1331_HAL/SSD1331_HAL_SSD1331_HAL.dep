@@ -400,7 +400,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x5B0415B8)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x5B0415B8)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x5B0415B8)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x5B0415B8)
-F (../Src/main.c)(0x5B1EE3E2)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SSD1331_HAL-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o ssd1331_hal\main.o --omf_browse ssd1331_hal\main.crf --depend ssd1331_hal\main.d)
+F (../Src/main.c)(0x5B1F002A)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SSD1331_HAL-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o ssd1331_hal\main.o --omf_browse ssd1331_hal\main.crf --depend ssd1331_hal\main.d)
 I (../Inc/main.h)(0x5B1EE3E2)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5B0415B8)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5B1EE3E2)
@@ -428,6 +428,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x5B0415B8)
 I (../Inc/ssd1331.h)(0x5B1EE3B3)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599EE94C)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EE94C)
+I (../Inc/fonts/_images.h)(0x5A43E667)
 I (../Inc/fonts/Font_3_Tiny.h)(0x5B1AA58E)
 I (../Inc/fonts/Font_3_PicoPixel.h)(0x5B1AA58E)
 I (../Inc/fonts/Font_3_TomThumb_Extended.h)(0x5B1AA58E)
