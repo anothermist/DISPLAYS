@@ -18,27 +18,27 @@ inline static uint16_t H24_RGB565(uint8_t reverse, uint32_t color24)
 
 inline static void LCD_Command(uint8_t cmd)
 {
-	if (SOFT_CS) LCD_CS_U
+	LCD_CS_U
 	LCD_DC_U
 	HAL_SPI_Transmit(&LCD_SPI, &cmd, 1, 0);
-	if (SOFT_CS) 	LCD_CS_S
+	LCD_CS_S
 }
 
 inline static void LCD_Data_8(uint8_t data)
 {
-	if (SOFT_CS) LCD_CS_U
+	LCD_CS_U
 	LCD_DC_S
 	HAL_SPI_Transmit(&LCD_SPI, &data, 1, 0);
-	if (SOFT_CS) LCD_CS_S
+	LCD_CS_S
 }
 
 inline static void LCD_Data_16(uint16_t word)
 {
-	if (SOFT_CS) LCD_CS_U
+	LCD_CS_U
 	LCD_DC_S
 	LCD_Data_8((word >> 8) & 0x00FF);
 	LCD_Data_8(word & 0x00FF);
-	if (SOFT_CS) LCD_CS_S
+	LCD_CS_S
 }
 
 inline static void LCD_Window(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2)
