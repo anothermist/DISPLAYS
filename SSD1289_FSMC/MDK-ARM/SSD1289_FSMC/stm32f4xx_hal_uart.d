@@ -1,7 +1,6 @@
 ssd1289_fsmc\stm32f4xx_hal_uart.o: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
 ssd1289_fsmc\stm32f4xx_hal_uart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 ssd1289_fsmc\stm32f4xx_hal_uart.o: ../Inc/stm32f4xx_hal_conf.h
-ssd1289_fsmc\stm32f4xx_hal_uart.o: ../Inc/main.h
 ssd1289_fsmc\stm32f4xx_hal_uart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
 ssd1289_fsmc\stm32f4xx_hal_uart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 ssd1289_fsmc\stm32f4xx_hal_uart.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h

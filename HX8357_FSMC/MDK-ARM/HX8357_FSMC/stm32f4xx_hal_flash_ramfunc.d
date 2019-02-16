@@ -1,7 +1,6 @@
 hx8357_fsmc\stm32f4xx_hal_flash_ramfunc.o: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c
 hx8357_fsmc\stm32f4xx_hal_flash_ramfunc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 hx8357_fsmc\stm32f4xx_hal_flash_ramfunc.o: ../Inc/stm32f4xx_hal_conf.h
-hx8357_fsmc\stm32f4xx_hal_flash_ramfunc.o: ../Inc/main.h
 hx8357_fsmc\stm32f4xx_hal_flash_ramfunc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
 hx8357_fsmc\stm32f4xx_hal_flash_ramfunc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 hx8357_fsmc\stm32f4xx_hal_flash_ramfunc.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h

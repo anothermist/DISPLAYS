@@ -19,7 +19,7 @@
 #define LCD_RST_SET   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
 #define LCD_RST_RESET HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
 											
-#define BGR 0
+#define BGR 1
 
 #define DEFAULT_ORIENTATION 2
 
