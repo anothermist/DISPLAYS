@@ -1,11 +1,11 @@
 #include "ssd1963_fsmc.h"
 
-inline uint16_t RGB(uint8_t r, uint8_t g, uint8_t b)
+uint16_t RGB(uint8_t r, uint8_t g, uint8_t b)
 {
 	return ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | (b >> 3);
 }
 
-inline static uint16_t H24_RGB565(uint8_t reverse, uint32_t color24)
+uint16_t H24_RGB565(uint8_t reverse, uint32_t color24)
 {
 	uint8_t b = (color24 >> 16) & 0xFF;
 	uint8_t g = (color24 >> 8) & 0xFF;
@@ -14,17 +14,18 @@ inline static uint16_t H24_RGB565(uint8_t reverse, uint32_t color24)
 	else return ((r / 8) << 11) | ((g / 4) << 5) | (b / 8);
 }
 
-inline static void LCD_Send_Cmd(uint16_t cmd)
+void LCD_Send_Cmd(uint16_t cmd)
 {
 	CMD = cmd;
 }
 
-inline static void LCD_Send_Dat(uint16_t dat)
+void LCD_Send_Dat(uint16_t dat)
 {
+	for (uint8_t i = 0; i < 1; i++)
 	DAT = dat;
 }
 
-inline static void LCD_Window(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2)
+void LCD_Window(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2)
 {
 	LCD_Send_Cmd(LCD_COLUMN_ADDR);
 	LCD_Send_Dat(y1 >> 8);

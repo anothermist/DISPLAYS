@@ -2,7 +2,6 @@ ssd1963_fsmc\xpt2046.o: ..\Src\xpt2046.c
 ssd1963_fsmc\xpt2046.o: ../Inc/xpt2046.h
 ssd1963_fsmc\xpt2046.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 ssd1963_fsmc\xpt2046.o: ../Inc/stm32f4xx_hal_conf.h
-ssd1963_fsmc\xpt2046.o: ../Inc/main.h
 ssd1963_fsmc\xpt2046.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
 ssd1963_fsmc\xpt2046.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 ssd1963_fsmc\xpt2046.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h

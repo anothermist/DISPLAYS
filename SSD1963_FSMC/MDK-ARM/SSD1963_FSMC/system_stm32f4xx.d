@@ -10,7 +10,6 @@ ssd1963_fsmc\system_stm32f4xx.o: ../Drivers/CMSIS/Include/core_cmSimd.h
 ssd1963_fsmc\system_stm32f4xx.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
 ssd1963_fsmc\system_stm32f4xx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 ssd1963_fsmc\system_stm32f4xx.o: ../Inc/stm32f4xx_hal_conf.h
-ssd1963_fsmc\system_stm32f4xx.o: ../Inc/main.h
 ssd1963_fsmc\system_stm32f4xx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
 ssd1963_fsmc\system_stm32f4xx.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 ssd1963_fsmc\system_stm32f4xx.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
