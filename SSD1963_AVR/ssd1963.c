@@ -329,15 +329,15 @@ void LCD_Circle_Helper(int16_t x0, int16_t y0, int16_t r, uint8_t cornername, ui
 
 void LCD_Rect_Round(uint16_t x, uint16_t y, uint16_t length, uint16_t width, uint16_t r, uint8_t size, uint32_t color24)
 {
-	LCD_Line(x + r, y, x + length + size - r, y, size, color24);
-	LCD_Line(x + r, y + width - 1, x + length + size - r, y + width - 1, size, color24);
-	LCD_Line(x, y + r, x, y + width - size - r, size, color24);
-	LCD_Line(x + length - 1, y + r, x + length - 1, y + width - size - r, size, color24);
+	LCD_Line(x + (r + 2), y, x + length + size - (r + 2), y, size, color24);
+	LCD_Line(x + (r + 2), y + width - 1, x + length + size - (r + 2), y + width - 1, size, color24);
+	LCD_Line(x, y + (r + 2), x, y + width - size - (r + 2), size, color24);
+	LCD_Line(x + length - 1, y + (r + 2), x + length - 1, y + width - size - (r + 2), size, color24);
 
-	LCD_Circle_Helper(x + r, y + r, r, 1, size, color24);
-	LCD_Circle_Helper(x + length - r - 1, y + r, r, 2, size, color24);
-	LCD_Circle_Helper(x + length - r - 1, y + width - r - 1, r, 4, size, color24);
-	LCD_Circle_Helper(x + r, y + width - r - 1, r, 8, size, color24);
+	LCD_Circle_Helper(x + (r + 2), y + (r + 2), (r + 2), 1, size, color24);
+	LCD_Circle_Helper(x + length - (r + 2) - 1, y + (r + 2), (r + 2), 2, size, color24);
+	LCD_Circle_Helper(x + length - (r + 2) - 1, y + width - (r + 2) - 1, (r + 2), 4, size, color24);
+	LCD_Circle_Helper(x + (r + 2), y + width - (r + 2) - 1, (r + 2), 8, size, color24);
 }
 
 void LCD_Circle_Fill_Helper(int16_t x0, int16_t y0, int16_t r, uint8_t cornername, int16_t delta, uint32_t color24)
