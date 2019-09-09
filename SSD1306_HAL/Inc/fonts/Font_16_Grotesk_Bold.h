@@ -1,4 +1,4 @@
-const uint8_t Font_16_Grotesk_Bold16x32Bitmaps[] = {
+const uint8_t Font_16_Grotesk_BoldBitmaps[] = {
   0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0x66,0x60,0x00,0xFF,0xFF,0xF0,	// char33
   0x38,0x73,0x87,0x78,0xF7,0x8E,0x71,0xEF,0x1E,0xF1,0xEF,0x1E,0xF1,0xEF,0x1E,0xF1,
   0xE0,	// char34
@@ -253,7 +253,7 @@ const uint8_t Font_16_Grotesk_Bold16x32Bitmaps[] = {
   0x00,0xFC,0x00,0x78	// char126
 };
 
-const GFXglyph Font_16_Grotesk_Bold16x32Glyphs[] = {
+const GFXglyph Font_16_Grotesk_BoldGlyphs[] = {
   { 0, 0, 0, 16, 0, 0 },	// char32
   { 0, 4, 25, 16, 6, -28 },	// char33
   { 13, 12, 11, 16, 2, -29 },	// char34
@@ -351,7 +351,7 @@ const GFXglyph Font_16_Grotesk_Bold16x32Glyphs[] = {
   { 3331, 16, 10, 16, 0, -21 }	// char126
 };
 
-const GFXfont Font_16_Grotesk_Bold16x32 = {
- (uint8_t *)Font_16_Grotesk_Bold16x32Bitmaps,
- (GFXglyph *)Font_16_Grotesk_Bold16x32Glyphs,
+const GFXfont Font_16_Grotesk_Bold = {
+ (uint8_t *)Font_16_Grotesk_BoldBitmaps,
+ (GFXglyph *)Font_16_Grotesk_BoldGlyphs,
  32, 126, 32};
