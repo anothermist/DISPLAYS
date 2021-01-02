@@ -48,10 +48,10 @@
 #define DB_12_PORT GPIOA
 #define DB_13_PIN  GPIO_PIN_10
 #define DB_13_PORT GPIOA
-#define DB_14_PIN  GPIO_PIN_11
-#define DB_14_PORT GPIOA
-#define DB_15_PIN  GPIO_PIN_12
-#define DB_15_PORT GPIOA
+#define DB_14_PIN  GPIO_PIN_14
+#define DB_14_PORT GPIOC
+#define DB_15_PIN  GPIO_PIN_15
+#define DB_15_PORT GPIOC
 #define LCD_RD_PIN  GPIO_PIN_12
 #define LCD_RD_PORT GPIOB
 #define LCD_WR_PIN  GPIO_PIN_10

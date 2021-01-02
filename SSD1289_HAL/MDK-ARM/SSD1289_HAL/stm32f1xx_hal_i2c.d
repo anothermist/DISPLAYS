@@ -27,3 +27,6 @@ ssd1289_hal\stm32f1xx_hal_i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_h
 ssd1289_hal\stm32f1xx_hal_i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 ssd1289_hal\stm32f1xx_hal_i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
 ssd1289_hal\stm32f1xx_hal_i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
+ssd1289_hal\stm32f1xx_hal_i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h
+ssd1289_hal\stm32f1xx_hal_i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h
+ssd1289_hal\stm32f1xx_hal_i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h

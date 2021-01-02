@@ -171,6 +171,8 @@ SPI_HandleTypeDef hspi1;
 
 UART_HandleTypeDef huart1;
 
+PCD_HandleTypeDef hpcd_USB_FS;
+
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -181,6 +183,7 @@ static void MX_GPIO_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_USART1_UART_Init(void);
 static void MX_SPI1_Init(void);
+static void MX_USB_PCD_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -221,6 +224,7 @@ int main(void)
   MX_I2C1_Init();
   MX_USART1_UART_Init();
   MX_SPI1_Init();
+  MX_USB_PCD_Init();
   /* USER CODE BEGIN 2 */
 	
 	LCD_Init();
@@ -289,6 +293,7 @@ void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
 
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
@@ -314,6 +319,12 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USB;
+  PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_PLL_DIV1_5;
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();
   }
@@ -425,6 +436,37 @@ static void MX_USART1_UART_Init(void)
 }
 
 /**
+  * @brief USB Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USB_PCD_Init(void)
+{
+
+  /* USER CODE BEGIN USB_Init 0 */
+
+  /* USER CODE END USB_Init 0 */
+
+  /* USER CODE BEGIN USB_Init 1 */
+
+  /* USER CODE END USB_Init 1 */
+  hpcd_USB_FS.Instance = USB;
+  hpcd_USB_FS.Init.dev_endpoints = 8;
+  hpcd_USB_FS.Init.speed = PCD_SPEED_FULL;
+  hpcd_USB_FS.Init.low_power_enable = DISABLE;
+  hpcd_USB_FS.Init.lpm_enable = DISABLE;
+  hpcd_USB_FS.Init.battery_charging_enable = DISABLE;
+  if (HAL_PCD_Init(&hpcd_USB_FS) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USB_Init 2 */
+
+  /* USER CODE END USB_Init 2 */
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -440,42 +482,39 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, LED_Pin|LCD_DB14_Pin|LCD_DB15_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, DB00_Pin|DB01_Pin|DB02_Pin|DB03_Pin
-                          |DB04_Pin|DB05_Pin|DB06_Pin|DB07_Pin
-                          |DB11_Pin|DB12_Pin|DB13_Pin|DB14_Pin
-                          |DB15_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, LCD_DB00_Pin|LCD_DB01_Pin|LCD_DB02_Pin|LCD_DB03_Pin
+                          |LCD_DB04_Pin|LCD_DB05_Pin|LCD_DB06_Pin|LCD_DB07_Pin
+                          |LCD_DB11_Pin|LCD_DB12_Pin|LCD_DB13_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, LCD_RST_Pin|LCD_CS_Pin|LCD_WR_Pin|LCD_RS_Pin
-                          |LSD_RD_Pin|DB08_Pin|DB09_Pin|DB10_Pin, GPIO_PIN_RESET);
+                          |LSD_RD_Pin|LCD_DB08_Pin|LCD_DB09_Pin|LCD_DB10_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : LED_Pin */
-  GPIO_InitStruct.Pin = LED_Pin;
+  /*Configure GPIO pins : LED_Pin LCD_DB14_Pin LCD_DB15_Pin */
+  GPIO_InitStruct.Pin = LED_Pin|LCD_DB14_Pin|LCD_DB15_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(LED_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : DB00_Pin DB01_Pin DB02_Pin DB03_Pin
-                           DB04_Pin DB05_Pin DB06_Pin DB07_Pin
-                           DB11_Pin DB12_Pin DB13_Pin DB14_Pin
-                           DB15_Pin */
-  GPIO_InitStruct.Pin = DB00_Pin|DB01_Pin|DB02_Pin|DB03_Pin
-                          |DB04_Pin|DB05_Pin|DB06_Pin|DB07_Pin
-                          |DB11_Pin|DB12_Pin|DB13_Pin|DB14_Pin
-                          |DB15_Pin;
+  /*Configure GPIO pins : LCD_DB00_Pin LCD_DB01_Pin LCD_DB02_Pin LCD_DB03_Pin
+                           LCD_DB04_Pin LCD_DB05_Pin LCD_DB06_Pin LCD_DB07_Pin
+                           LCD_DB11_Pin LCD_DB12_Pin LCD_DB13_Pin */
+  GPIO_InitStruct.Pin = LCD_DB00_Pin|LCD_DB01_Pin|LCD_DB02_Pin|LCD_DB03_Pin
+                          |LCD_DB04_Pin|LCD_DB05_Pin|LCD_DB06_Pin|LCD_DB07_Pin
+                          |LCD_DB11_Pin|LCD_DB12_Pin|LCD_DB13_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LCD_RST_Pin LCD_CS_Pin LCD_WR_Pin LCD_RS_Pin
-                           LSD_RD_Pin DB08_Pin DB09_Pin DB10_Pin */
+                           LSD_RD_Pin LCD_DB08_Pin LCD_DB09_Pin LCD_DB10_Pin */
   GPIO_InitStruct.Pin = LCD_RST_Pin|LCD_CS_Pin|LCD_WR_Pin|LCD_RS_Pin
-                          |LSD_RD_Pin|DB08_Pin|DB09_Pin|DB10_Pin;
+                          |LSD_RD_Pin|LCD_DB08_Pin|LCD_DB09_Pin|LCD_DB10_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

@@ -20,6 +20,9 @@
 "ssd1963_hal\stm32f1xx_hal_tim.o"
 "ssd1963_hal\stm32f1xx_hal_tim_ex.o"
 "ssd1963_hal\stm32f1xx_hal_uart.o"
+"ssd1963_hal\stm32f1xx_hal_pcd.o"
+"ssd1963_hal\stm32f1xx_hal_pcd_ex.o"
+"ssd1963_hal\stm32f1xx_ll_usb.o"
 "ssd1963_hal\system_stm32f1xx.o"
 --library_type=microlib --strict --scatter "SSD1963_HAL\SSD1963_HAL.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
