@@ -16,11 +16,11 @@
 #define CMD *(uint16_t *)0x60000000
 #define DAT *(uint16_t *)0x60020000
 
-#define MIRROR_V 0
-#define MIRROR_H 0
-
 #define LCD_RST_SET   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
 #define LCD_RST_RESET HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+
+#define MIRROR_V 0
+#define MIRROR_H 0
 											
 #define LSHIFT 0
 
@@ -80,36 +80,36 @@ void LCD_Rect_Round(uint16_t x, uint16_t y, uint16_t length, uint16_t width, uin
 void LCD_Rect_Round_Fill(uint16_t x, uint16_t y, uint16_t length, uint16_t width, uint16_t r, uint32_t color24);
 void LCD_Font(uint16_t x, uint16_t y, char *text, const GFXfont *p_font, uint8_t size, uint32_t color24);
 
-#define LCD_RESET			 		  0x0001
-#define LCD_SLEEP_OUT		  	0x0011
-#define LCD_GAMMA			    	0x0026
-#define LCD_DISPLAY_OFF			0x0028
-#define LCD_DISPLAY_ON			0x0029
-#define LCD_COLUMN_ADDR			0x002A
-#define LCD_PAGE_ADDR			  0x002B
-#define LCD_GRAM				    0x002C
-#define LCD_MAC			        0x0036
+#define LCD_RESET			0x0001
+#define LCD_SLEEP_OUT		0x0011
+#define LCD_GAMMA			0x0026
+#define LCD_DISPLAY_OFF		0x0028
+#define LCD_DISPLAY_ON		0x0029
+#define LCD_COLUMN_ADDR		0x002A
+#define LCD_PAGE_ADDR		0x002B
+#define LCD_GRAM			0x002C
+#define LCD_MAC			    0x0036
 #define LCD_PIXEL_FORMAT    0x003A
-#define LCD_WDB			    	  0x0051
-#define LCD_WCD				      0x0053
+#define LCD_WDB			    0x0051
+#define LCD_WCD				0x0053
 #define LCD_RGB_INTERFACE   0x00B0
-#define LCD_FRC					    0x00B1
-#define LCD_BPC					    0x00B5
-#define LCD_DFC				 	    0x00B6
-#define LCD_POWER1					0x00C0
-#define LCD_POWER2					0x00C1
-#define LCD_VCOM1						0x00C5
-#define LCD_VCOM2						0x00C7
-#define LCD_POWERA					0x00CB
-#define LCD_POWERB					0x00CF
-#define LCD_PGAMMA					0x00E0
-#define LCD_NGAMMA					0x00E1
-#define LCD_DTCA						0x00E8
-#define LCD_DTCB						0x00EA
-#define LCD_POWER_SEQ				0x00ED
-#define LCD_3GAMMA_EN				0x00F2
-#define LCD_INTERFACE				0x00F6
-#define LCD_PRC				   	  0x00F7
+#define LCD_FRC				0x00B1
+#define LCD_BPC				0x00B5
+#define LCD_DFC				0x00B6
+#define LCD_POWER1			0x00C0
+#define LCD_POWER2			0x00C1
+#define LCD_VCOM1			0x00C5
+#define LCD_VCOM2			0x00C7
+#define LCD_POWERA			0x00CB
+#define LCD_POWERB			0x00CF
+#define LCD_PGAMMA			0x00E0
+#define LCD_NGAMMA			0x00E1
+#define LCD_DTCA			0x00E8
+#define LCD_DTCB			0x00EA
+#define LCD_POWER_SEQ		0x00ED
+#define LCD_3GAMMA_EN		0x00F2
+#define LCD_INTERFACE		0x00F6
+#define LCD_PRC				0x00F7
 #define LCD_VERTICAL_SCROLL 0x0033 
 
 #ifdef __cplusplus

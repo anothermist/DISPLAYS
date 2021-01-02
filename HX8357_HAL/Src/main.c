@@ -37,7 +37,6 @@
   ******************************************************************************
   */
 /* USER CODE END Header */
-
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
@@ -291,7 +290,8 @@ void SystemClock_Config(void)
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
-  /**Initializes the CPU, AHB and APB busses clocks 
+  /** Initializes the RCC Oscillators according to the specified parameters
+  * in the RCC_OscInitTypeDef structure.
   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
@@ -304,7 +304,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  /**Initializes the CPU, AHB and APB busses clocks 
+  /** Initializes the CPU, AHB and APB buses clocks
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
@@ -443,13 +443,13 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, DB0_Pin|DB1_Pin|DB2_Pin|DB3_Pin 
-                          |DB4_Pin|DB5_Pin|DB6_Pin|DB7_Pin 
-                          |DB8_Pin|DB9_Pin|DB10_Pin|DB11_Pin 
+  HAL_GPIO_WritePin(GPIOA, DB0_Pin|DB1_Pin|DB2_Pin|DB3_Pin
+                          |DB4_Pin|DB5_Pin|DB6_Pin|DB7_Pin
+                          |DB8_Pin|DB9_Pin|DB10_Pin|DB11_Pin
                           |DB12_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, LCD_RST_Pin|LCD_CS_Pin|LCD_WR_Pin|LCD_RS_Pin 
+  HAL_GPIO_WritePin(GPIOB, LCD_RST_Pin|LCD_CS_Pin|LCD_WR_Pin|LCD_RS_Pin
                           |DB13_Pin|DB14_Pin|DB15_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : LED_Pin */
@@ -459,22 +459,22 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LED_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : DB0_Pin DB1_Pin DB2_Pin DB3_Pin 
-                           DB4_Pin DB5_Pin DB6_Pin DB7_Pin 
-                           DB8_Pin DB9_Pin DB10_Pin DB11_Pin 
+  /*Configure GPIO pins : DB0_Pin DB1_Pin DB2_Pin DB3_Pin
+                           DB4_Pin DB5_Pin DB6_Pin DB7_Pin
+                           DB8_Pin DB9_Pin DB10_Pin DB11_Pin
                            DB12_Pin */
-  GPIO_InitStruct.Pin = DB0_Pin|DB1_Pin|DB2_Pin|DB3_Pin 
-                          |DB4_Pin|DB5_Pin|DB6_Pin|DB7_Pin 
-                          |DB8_Pin|DB9_Pin|DB10_Pin|DB11_Pin 
+  GPIO_InitStruct.Pin = DB0_Pin|DB1_Pin|DB2_Pin|DB3_Pin
+                          |DB4_Pin|DB5_Pin|DB6_Pin|DB7_Pin
+                          |DB8_Pin|DB9_Pin|DB10_Pin|DB11_Pin
                           |DB12_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : LCD_RST_Pin LCD_CS_Pin LCD_WR_Pin LCD_RS_Pin 
+  /*Configure GPIO pins : LCD_RST_Pin LCD_CS_Pin LCD_WR_Pin LCD_RS_Pin
                            DB13_Pin DB14_Pin DB15_Pin */
-  GPIO_InitStruct.Pin = LCD_RST_Pin|LCD_CS_Pin|LCD_WR_Pin|LCD_RS_Pin 
+  GPIO_InitStruct.Pin = LCD_RST_Pin|LCD_CS_Pin|LCD_WR_Pin|LCD_RS_Pin
                           |DB13_Pin|DB14_Pin|DB15_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
@@ -508,7 +508,7 @@ void Error_Handler(void)
   * @retval None
   */
 void assert_failed(uint8_t *file, uint32_t line)
-{ 
+{
   /* USER CODE BEGIN 6 */
   /* User can add his own implementation to report the file name and line number,
      tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
