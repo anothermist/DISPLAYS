@@ -30,7 +30,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h)(0x5FE8F896)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x5FE8F896)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x5FE8F896)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FE8F896)
-I (../Inc/ssd1289_hal.h)(0x5FF02D02)
+I (../Inc/ssd1289_hal.h)(0x5FF02D1C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E58E2)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E58E2)
 I (../Inc/fonts/Font_3_Tiny.h)(0x5FEFCA95)
@@ -193,7 +193,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x5FE8F896)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x5FE8F896)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5FE8F896)
 F (..\Src\ssd1289_hal.c)(0x5FF02CC0)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_SSD1289_HAL-IC:\Users\USER\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\USER\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o ssd1289_hal\ssd1289_hal.o --omf_browse ssd1289_hal\ssd1289_hal.crf --depend ssd1289_hal\ssd1289_hal.d)
-I (../Inc/ssd1289_hal.h)(0x5FF02D02)
+I (../Inc/ssd1289_hal.h)(0x5FF02D1C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5FE8F896)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5FF0210C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x5FE8F896)
