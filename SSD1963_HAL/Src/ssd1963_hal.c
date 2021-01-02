@@ -40,8 +40,6 @@ inline static void LCD_Send_Cmd(uint16_t cmd)
 	LCD_RD_S
 	LCD_CS_R
 	LCD_Bus(cmd);
-
-	LCD_Bus(cmd);
 	LCD_WR_R
 	LCD_WR_S
 	LCD_CS_S
@@ -52,7 +50,6 @@ inline static void LCD_Send_Dat(uint16_t dat)
 	LCD_RS_S
 	LCD_RD_S
 	LCD_CS_R
-	LCD_Bus(dat);
 	LCD_Bus(dat);
 	LCD_WR_R
 	LCD_WR_S

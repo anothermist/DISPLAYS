@@ -228,8 +228,8 @@ int main(void)
 	uint8_t uartTransmit[] = "UART OK\r\n";
 	HAL_UART_Transmit(&huart1, uartTransmit, sizeof(uartTransmit), 100);
 	
-	LCD_Rect_Fill(0, 0, 800, 480, BLUE);
-	LCD_Rect_Fill(1, 1, 798, 478, BLACK);
+	LCD_Rect_Fill(0, 0, 800, 480, BLACK);
+	LCD_Rect(0, 0, 799, 479, 1, BLUE);
 	
 //	HAL_Delay(1000);
 	LCD_Rect_Fill(0, 0, 160, 128, BLACK);
@@ -251,7 +251,7 @@ int main(void)
 		w += 20;
 	}
 	HAL_Delay(250);
-	LCD_Rect_Fill(0, 0, 160, 128, BLUE);
+	LCD_Rect_Fill(0, 0, 160, 128, BLACK);
 	LCD_Rect_Fill(1, 1, 158, 126, BLACK);
 	LCD_Font(5, 40, "This is\n just a Test\n TomThumb Ext\n", _3_TomThumb_Extended, 1, YELLOW);
 	LCD_Line(23, 20, 137, 20, 1, MAGENTA);

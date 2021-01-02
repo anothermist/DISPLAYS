@@ -3,7 +3,7 @@
 <title>Static Call Graph - [SSD1963_HAL\SSD1963_HAL.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image SSD1963_HAL\SSD1963_HAL.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sat Jan 02 11:37:18 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sat Jan 02 13:22:42 2021
 <BR><P>
 <H3>Maximum Stack Usage =        272 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -652,7 +652,7 @@ Global Symbols
 
 <P><STRONG><a name="[7d]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[35]"></a>main</STRONG> (Thumb, 658 bytes, Stack size 32 bytes, main.o(i.main))
+<P><STRONG><a name="[35]"></a>main</STRONG> (Thumb, 672 bytes, Stack size 32 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = main &rArr; LCD_Rect_Round_Fill &rArr; LCD_Circle_Fill_Helper &rArr; LCD_Line &rArr; LCD_Rect_Fill &rArr; LCD_Window &rArr; LCD_Send_Dat &rArr; LCD_Bus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI1_Init
@@ -701,7 +701,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Font
 </UL>
 
-<P><STRONG><a name="[61]"></a>LCD_Send_Cmd</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, ssd1963_hal.o(i.LCD_Send_Cmd))
+<P><STRONG><a name="[61]"></a>LCD_Send_Cmd</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, ssd1963_hal.o(i.LCD_Send_Cmd))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = LCD_Send_Cmd &rArr; LCD_Bus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
@@ -711,7 +711,7 @@ Local Symbols
 <LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
 </UL>
 
-<P><STRONG><a name="[62]"></a>LCD_Send_Dat</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, ssd1963_hal.o(i.LCD_Send_Dat))
+<P><STRONG><a name="[62]"></a>LCD_Send_Dat</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, ssd1963_hal.o(i.LCD_Send_Dat))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = LCD_Send_Dat &rArr; LCD_Bus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin

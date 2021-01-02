@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"ssd1289_hal\startup_stm32f103xb.o"
+"ssd1289_hal\main.o"
+"ssd1289_hal\stm32f1xx_it.o"
+"ssd1289_hal\stm32f1xx_hal_msp.o"
+"ssd1289_hal\ssd1289_hal.o"
+"ssd1289_hal\stm32f1xx_hal_gpio_ex.o"
+"ssd1289_hal\stm32f1xx_hal_i2c.o"
+"ssd1289_hal\stm32f1xx_hal.o"
+"ssd1289_hal\stm32f1xx_hal_rcc.o"
+"ssd1289_hal\stm32f1xx_hal_rcc_ex.o"
+"ssd1289_hal\stm32f1xx_hal_gpio.o"
+"ssd1289_hal\stm32f1xx_hal_dma.o"
+"ssd1289_hal\stm32f1xx_hal_cortex.o"
+"ssd1289_hal\stm32f1xx_hal_pwr.o"
+"ssd1289_hal\stm32f1xx_hal_flash.o"
+"ssd1289_hal\stm32f1xx_hal_flash_ex.o"
+"ssd1289_hal\stm32f1xx_hal_exti.o"
+"ssd1289_hal\stm32f1xx_hal_spi.o"
+"ssd1289_hal\stm32f1xx_hal_tim.o"
+"ssd1289_hal\stm32f1xx_hal_tim_ex.o"
+"ssd1289_hal\stm32f1xx_hal_uart.o"
+"ssd1289_hal\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "SSD1289_HAL\SSD1289_HAL.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "SSD1289_HAL.map" -o SSD1289_HAL\SSD1289_HAL.axf

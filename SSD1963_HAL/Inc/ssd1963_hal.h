@@ -12,9 +12,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define CMD *(uint16_t *)0x60000000
-#define DAT *(uint16_t *)0x60020000
-
 #define MIRROR_V 1
 #define MIRROR_H 0
 											
