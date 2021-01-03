@@ -41,6 +41,7 @@ inline static void LCD_Send_Cmd(uint16_t cmd)
 	LCD_CS_R
 	LCD_Bus(cmd);
 	LCD_WR_R
+//	delay
 	LCD_WR_S
 	LCD_CS_S
 }
@@ -52,6 +53,7 @@ inline static void LCD_Send_Dat(uint16_t dat)
 	LCD_CS_R
 	LCD_Bus(dat);
 	LCD_WR_R
+//	delay
 	LCD_WR_S
 	LCD_CS_S
 }
@@ -448,8 +450,8 @@ void LCD_Font(uint16_t x, uint16_t y, char *text, const GFXfont *p_font, uint8_t
 
 void LCD_Init(void)
 {
-	HAL_Delay(100);
-	LCD_RST_S
+//	HAL_Delay(100);
+//	LCD_RST_S
 	LCD_Send_Reg(0x0007, 0x0021);
 	LCD_Send_Reg(0x0000, 0x0001);
 	LCD_Send_Reg(0x0007, 0x0023);
@@ -459,4 +461,59 @@ void LCD_Init(void)
 	LCD_Send_Reg(0x0011, 0x6838); //	0x6838 0x6058
 	LCD_Send_Reg(0x0002, 0x0600);
 	HAL_Delay(10);
+	
+//		                    // REGISTER           | value description
+//		LCD_Send_Reg(0x0007, 0x0021);	// display control    |
+//		LCD_Send_Reg(0x0000, 0x0001);	// oscillation start  |
+//		LCD_Send_Reg(0x0007, 0x0023);	// display control
+//		LCD_Send_Reg(0x0010, 0x0000); // sleep mode
+//		LCD_Send_Reg(0x0007, 0x0033); // display control
+
+
+
+//		LCD_Send_Reg(0x0011, 0x6800);	// entry mode			//
+
+//		LCD_Send_Reg(0x0002, 0x0600);	// lcd drive ac ctrl
+//		LCD_Send_Reg(0x0012, 0x6CEB);	// opt access speed 3
+//		LCD_Send_Reg(0x0003, 0xA8A4);	// power control 1
+//		LCD_Send_Reg(0x000C, 0x0000);	// power control 2
+//		LCD_Send_Reg(0x000D, 0x080C);	// power control 3
+//		LCD_Send_Reg(0x000E, 0x2B00); // power control 4
+//		LCD_Send_Reg(0x001E, 0x00B0); // power control 5
+//		LCD_Send_Reg(0x0001, 0x2B3F); // driver output ctrl	// portrait
+
+//		//		LCD_Send_Reg(0x0001, 0x293F }, // driver output ctrl	// ?landscape
+
+//		LCD_Send_Reg(0x0005, 0x0000); // compare register 1
+//		LCD_Send_Reg(0x0006, 0x0000); // compare register 2
+//		LCD_Send_Reg(0x0016, 0xEF1C); // horizontal porch
+//		LCD_Send_Reg(0x0017, 0x0103);	// vertical porch
+//		LCD_Send_Reg(0x000B, 0x0000); // frame cycle control
+//		LCD_Send_Reg(0x000F, 0x0000);	// gate scan start position
+//		LCD_Send_Reg(0x0041, 0x0000);	// vertical scroll control 1
+//		LCD_Send_Reg(0x0042, 0x0000);	// vertical scroll control 2
+//		LCD_Send_Reg(0x0048, 0x0000); // first window start
+//		LCD_Send_Reg(0x0049, 0x013F); // first window end
+//		LCD_Send_Reg(0x004A, 0x0000); // second window start
+//		LCD_Send_Reg(0x004B, 0x0000); // second window end
+//		LCD_Send_Reg(0x0044, 0xEF00); // h ram address position
+//		LCD_Send_Reg(0x0045, 0x0000); // v ram address position
+//		LCD_Send_Reg(0x0046, 0x013F); // v ram end position
+//		LCD_Send_Reg(0x0030, 0x0707); // gamma control 1
+//		LCD_Send_Reg(0x0031, 0x0204); // gamma control 2
+//		LCD_Send_Reg(0x0032, 0x0204); // gamma control 3
+//		LCD_Send_Reg(0x0033, 0x0502); // gamma control 4
+//		LCD_Send_Reg(0x0034, 0x0507); // gamma control 5
+//		LCD_Send_Reg(0x0035, 0x0204); // gamma control 6
+//		LCD_Send_Reg(0x0036, 0x0204); // gamma control 7
+//		LCD_Send_Reg(0x0037, 0x0502); // gamma control 8
+//		LCD_Send_Reg(0x003A, 0x0302); // gamma control 9
+//		LCD_Send_Reg(0x002F, 0x12BE); // optimize access speed 2
+//		LCD_Send_Reg(0x003B, 0x0302); // gamma control 10
+//		LCD_Send_Reg(0x0023, 0x0000); // ram write data mask 1
+//		LCD_Send_Reg(0x0024, 0x0000); // ram write data mask 2
+//		LCD_Send_Reg(0x0025, 0x8000); // frame frequency
+//		LCD_Send_Reg(0x004e, 0x0000);	// X-counter
+//		LCD_Send_Reg(0x004f, 0x0000);	// Y-counter
+
 }

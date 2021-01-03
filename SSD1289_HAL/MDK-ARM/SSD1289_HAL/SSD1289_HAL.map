@@ -26,9 +26,8 @@ Section Cross References
     ssd1289_hal.o(i.LCD_Ellipse) refers to ssd1289_hal.o(i.LCD_Rect_Fill) for LCD_Rect_Fill
     ssd1289_hal.o(i.LCD_Font) refers to ssd1289_hal.o(i.LCD_Char) for LCD_Char
     ssd1289_hal.o(i.LCD_Font) refers to strlen.o(.text) for strlen
-    ssd1289_hal.o(i.LCD_Init) refers to stm32f1xx_hal.o(i.HAL_Delay) for HAL_Delay
-    ssd1289_hal.o(i.LCD_Init) refers to stm32f1xx_hal_gpio.o(i.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
     ssd1289_hal.o(i.LCD_Init) refers to ssd1289_hal.o(i.LCD_Send_Reg) for LCD_Send_Reg
+    ssd1289_hal.o(i.LCD_Init) refers to stm32f1xx_hal.o(i.HAL_Delay) for HAL_Delay
     ssd1289_hal.o(i.LCD_Line) refers to ssd1289_hal.o(i.LCD_Rect_Fill) for LCD_Rect_Fill
     ssd1289_hal.o(i.LCD_Pixel) refers to ssd1289_hal.o(i.LCD_Window) for LCD_Window
     ssd1289_hal.o(i.LCD_Pixel) refers to ssd1289_hal.o(i.H24_RGB565) for H24_RGB565
@@ -1621,59 +1620,59 @@ Image Symbol Table
     i.LCD_Ellipse                            0x08001590   Section        0  ssd1289_hal.o(i.LCD_Ellipse)
     i.LCD_Font                               0x08001828   Section        0  ssd1289_hal.o(i.LCD_Font)
     i.LCD_Init                               0x080018b8   Section        0  ssd1289_hal.o(i.LCD_Init)
-    i.LCD_Line                               0x0800191c   Section        0  ssd1289_hal.o(i.LCD_Line)
-    i.LCD_Rect                               0x08001996   Section        0  ssd1289_hal.o(i.LCD_Rect)
-    i.LCD_Rect_Fill                          0x080019e8   Section        0  ssd1289_hal.o(i.LCD_Rect_Fill)
-    i.LCD_Rect_Round                         0x08001a24   Section        0  ssd1289_hal.o(i.LCD_Rect_Round)
-    i.LCD_Rect_Round_Fill                    0x08001b10   Section        0  ssd1289_hal.o(i.LCD_Rect_Round_Fill)
-    i.LCD_Send_Cmd                           0x08001b74   Section        0  ssd1289_hal.o(i.LCD_Send_Cmd)
-    LCD_Send_Cmd                             0x08001b75   Thumb Code    80  ssd1289_hal.o(i.LCD_Send_Cmd)
-    i.LCD_Send_Dat                           0x08001bc8   Section        0  ssd1289_hal.o(i.LCD_Send_Dat)
-    LCD_Send_Dat                             0x08001bc9   Thumb Code    78  ssd1289_hal.o(i.LCD_Send_Dat)
-    i.LCD_Send_Reg                           0x08001c1c   Section        0  ssd1289_hal.o(i.LCD_Send_Reg)
-    LCD_Send_Reg                             0x08001c1d   Thumb Code    44  ssd1289_hal.o(i.LCD_Send_Reg)
-    i.LCD_Triangle                           0x08001c4c   Section        0  ssd1289_hal.o(i.LCD_Triangle)
-    i.LCD_Triangle_Fill                      0x08001c8c   Section        0  ssd1289_hal.o(i.LCD_Triangle_Fill)
-    i.LCD_Window                             0x08001d4e   Section        0  ssd1289_hal.o(i.LCD_Window)
-    LCD_Window                               0x08001d4f   Thumb Code    62  ssd1289_hal.o(i.LCD_Window)
-    i.MX_GPIO_Init                           0x08001d8c   Section        0  main.o(i.MX_GPIO_Init)
-    MX_GPIO_Init                             0x08001d8d   Thumb Code   196  main.o(i.MX_GPIO_Init)
-    i.MX_SPI1_Init                           0x08001e60   Section        0  main.o(i.MX_SPI1_Init)
-    MX_SPI1_Init                             0x08001e61   Thumb Code    44  main.o(i.MX_SPI1_Init)
-    i.MemManage_Handler                      0x08001e94   Section        0  stm32f1xx_it.o(i.MemManage_Handler)
-    i.NMI_Handler                            0x08001e96   Section        0  stm32f1xx_it.o(i.NMI_Handler)
-    i.PendSV_Handler                         0x08001e98   Section        0  stm32f1xx_it.o(i.PendSV_Handler)
-    i.SVC_Handler                            0x08001e9a   Section        0  stm32f1xx_it.o(i.SVC_Handler)
-    i.SysTick_Handler                        0x08001e9c   Section        0  stm32f1xx_it.o(i.SysTick_Handler)
-    i.SystemClock_Config                     0x08001ea0   Section        0  main.o(i.SystemClock_Config)
-    i.SystemInit                             0x08001f04   Section        0  system_stm32f1xx.o(i.SystemInit)
-    i.UART_SetConfig                         0x08001f4c   Section        0  stm32f1xx_hal_uart.o(i.UART_SetConfig)
-    UART_SetConfig                           0x08001f4d   Thumb Code   178  stm32f1xx_hal_uart.o(i.UART_SetConfig)
-    i.USB_CoreInit                           0x08002004   Section        0  stm32f1xx_ll_usb.o(i.USB_CoreInit)
-    i.USB_DevDisconnect                      0x08002008   Section        0  stm32f1xx_ll_usb.o(i.USB_DevDisconnect)
-    i.USB_DevInit                            0x0800200c   Section        0  stm32f1xx_ll_usb.o(i.USB_DevInit)
-    i.USB_DisableGlobalInt                   0x0800201e   Section        0  stm32f1xx_ll_usb.o(i.USB_DisableGlobalInt)
-    i.USB_SetCurrentMode                     0x0800202c   Section        0  stm32f1xx_ll_usb.o(i.USB_SetCurrentMode)
-    i.UsageFault_Handler                     0x08002030   Section        0  stm32f1xx_it.o(i.UsageFault_Handler)
-    i.__NVIC_SetPriority                     0x08002032   Section        0  stm32f1xx_hal_cortex.o(i.__NVIC_SetPriority)
-    __NVIC_SetPriority                       0x08002033   Thumb Code    32  stm32f1xx_hal_cortex.o(i.__NVIC_SetPriority)
-    i.__scatterload_copy                     0x08002052   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x08002060   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x08002062   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.main                                   0x08002070   Section        0  main.o(i.main)
-    .constdata                               0x08002388   Section      418  main.o(.constdata)
-    .constdata                               0x0800252a   Section      760  main.o(.constdata)
-    .constdata                               0x08002824   Section       60  main.o(.constdata)
-    .constdata                               0x08002860   Section      271  main.o(.constdata)
-    .constdata                               0x08002970   Section      760  main.o(.constdata)
-    .constdata                               0x08002c68   Section      414  main.o(.constdata)
-    .constdata                               0x08002e06   Section      760  main.o(.constdata)
-    .constdata                               0x080030fe   Section     1162  main.o(.constdata)
-    .constdata                               0x08003588   Section      760  main.o(.constdata)
-    .constdata                               0x08003880   Section     1395  main.o(.constdata)
-    .constdata                               0x08003df4   Section      104  main.o(.constdata)
-    .constdata                               0x08003e5c   Section       16  system_stm32f1xx.o(.constdata)
-    .constdata                               0x08003e6c   Section        8  system_stm32f1xx.o(.constdata)
+    i.LCD_Line                               0x08001906   Section        0  ssd1289_hal.o(i.LCD_Line)
+    i.LCD_Rect                               0x08001980   Section        0  ssd1289_hal.o(i.LCD_Rect)
+    i.LCD_Rect_Fill                          0x080019d2   Section        0  ssd1289_hal.o(i.LCD_Rect_Fill)
+    i.LCD_Rect_Round                         0x08001a0e   Section        0  ssd1289_hal.o(i.LCD_Rect_Round)
+    i.LCD_Rect_Round_Fill                    0x08001afa   Section        0  ssd1289_hal.o(i.LCD_Rect_Round_Fill)
+    i.LCD_Send_Cmd                           0x08001b60   Section        0  ssd1289_hal.o(i.LCD_Send_Cmd)
+    LCD_Send_Cmd                             0x08001b61   Thumb Code    80  ssd1289_hal.o(i.LCD_Send_Cmd)
+    i.LCD_Send_Dat                           0x08001bb4   Section        0  ssd1289_hal.o(i.LCD_Send_Dat)
+    LCD_Send_Dat                             0x08001bb5   Thumb Code    78  ssd1289_hal.o(i.LCD_Send_Dat)
+    i.LCD_Send_Reg                           0x08001c08   Section        0  ssd1289_hal.o(i.LCD_Send_Reg)
+    LCD_Send_Reg                             0x08001c09   Thumb Code    44  ssd1289_hal.o(i.LCD_Send_Reg)
+    i.LCD_Triangle                           0x08001c38   Section        0  ssd1289_hal.o(i.LCD_Triangle)
+    i.LCD_Triangle_Fill                      0x08001c78   Section        0  ssd1289_hal.o(i.LCD_Triangle_Fill)
+    i.LCD_Window                             0x08001d3a   Section        0  ssd1289_hal.o(i.LCD_Window)
+    LCD_Window                               0x08001d3b   Thumb Code    62  ssd1289_hal.o(i.LCD_Window)
+    i.MX_GPIO_Init                           0x08001d78   Section        0  main.o(i.MX_GPIO_Init)
+    MX_GPIO_Init                             0x08001d79   Thumb Code   196  main.o(i.MX_GPIO_Init)
+    i.MX_SPI1_Init                           0x08001e4c   Section        0  main.o(i.MX_SPI1_Init)
+    MX_SPI1_Init                             0x08001e4d   Thumb Code    44  main.o(i.MX_SPI1_Init)
+    i.MemManage_Handler                      0x08001e80   Section        0  stm32f1xx_it.o(i.MemManage_Handler)
+    i.NMI_Handler                            0x08001e82   Section        0  stm32f1xx_it.o(i.NMI_Handler)
+    i.PendSV_Handler                         0x08001e84   Section        0  stm32f1xx_it.o(i.PendSV_Handler)
+    i.SVC_Handler                            0x08001e86   Section        0  stm32f1xx_it.o(i.SVC_Handler)
+    i.SysTick_Handler                        0x08001e88   Section        0  stm32f1xx_it.o(i.SysTick_Handler)
+    i.SystemClock_Config                     0x08001e8c   Section        0  main.o(i.SystemClock_Config)
+    i.SystemInit                             0x08001ef0   Section        0  system_stm32f1xx.o(i.SystemInit)
+    i.UART_SetConfig                         0x08001f38   Section        0  stm32f1xx_hal_uart.o(i.UART_SetConfig)
+    UART_SetConfig                           0x08001f39   Thumb Code   178  stm32f1xx_hal_uart.o(i.UART_SetConfig)
+    i.USB_CoreInit                           0x08001ff0   Section        0  stm32f1xx_ll_usb.o(i.USB_CoreInit)
+    i.USB_DevDisconnect                      0x08001ff4   Section        0  stm32f1xx_ll_usb.o(i.USB_DevDisconnect)
+    i.USB_DevInit                            0x08001ff8   Section        0  stm32f1xx_ll_usb.o(i.USB_DevInit)
+    i.USB_DisableGlobalInt                   0x0800200a   Section        0  stm32f1xx_ll_usb.o(i.USB_DisableGlobalInt)
+    i.USB_SetCurrentMode                     0x08002018   Section        0  stm32f1xx_ll_usb.o(i.USB_SetCurrentMode)
+    i.UsageFault_Handler                     0x0800201c   Section        0  stm32f1xx_it.o(i.UsageFault_Handler)
+    i.__NVIC_SetPriority                     0x0800201e   Section        0  stm32f1xx_hal_cortex.o(i.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x0800201f   Thumb Code    32  stm32f1xx_hal_cortex.o(i.__NVIC_SetPriority)
+    i.__scatterload_copy                     0x0800203e   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x0800204c   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x0800204e   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.main                                   0x0800205c   Section        0  main.o(i.main)
+    .constdata                               0x08002374   Section      418  main.o(.constdata)
+    .constdata                               0x08002516   Section      760  main.o(.constdata)
+    .constdata                               0x08002810   Section       60  main.o(.constdata)
+    .constdata                               0x0800284c   Section      271  main.o(.constdata)
+    .constdata                               0x0800295c   Section      760  main.o(.constdata)
+    .constdata                               0x08002c54   Section      414  main.o(.constdata)
+    .constdata                               0x08002df2   Section      760  main.o(.constdata)
+    .constdata                               0x080030ea   Section     1162  main.o(.constdata)
+    .constdata                               0x08003574   Section      760  main.o(.constdata)
+    .constdata                               0x0800386c   Section     1395  main.o(.constdata)
+    .constdata                               0x08003de0   Section      104  main.o(.constdata)
+    .constdata                               0x08003e48   Section       16  system_stm32f1xx.o(.constdata)
+    .constdata                               0x08003e58   Section        8  system_stm32f1xx.o(.constdata)
     .data                                    0x20000000   Section       12  stm32f1xx_hal.o(.data)
     .data                                    0x2000000c   Section        4  system_stm32f1xx.o(.data)
     .bss                                     0x20000010   Section      984  main.o(.bss)
@@ -1794,50 +1793,50 @@ Image Symbol Table
     LCD_Circle_Helper                        0x08001479   Thumb Code   280  ssd1289_hal.o(i.LCD_Circle_Helper)
     LCD_Ellipse                              0x08001591   Thumb Code   664  ssd1289_hal.o(i.LCD_Ellipse)
     LCD_Font                                 0x08001829   Thumb Code   144  ssd1289_hal.o(i.LCD_Font)
-    LCD_Init                                 0x080018b9   Thumb Code    94  ssd1289_hal.o(i.LCD_Init)
-    LCD_Line                                 0x0800191d   Thumb Code   122  ssd1289_hal.o(i.LCD_Line)
-    LCD_Rect                                 0x08001997   Thumb Code    82  ssd1289_hal.o(i.LCD_Rect)
-    LCD_Rect_Fill                            0x080019e9   Thumb Code    60  ssd1289_hal.o(i.LCD_Rect_Fill)
-    LCD_Rect_Round                           0x08001a25   Thumb Code   236  ssd1289_hal.o(i.LCD_Rect_Round)
-    LCD_Rect_Round_Fill                      0x08001b11   Thumb Code   100  ssd1289_hal.o(i.LCD_Rect_Round_Fill)
-    LCD_Triangle                             0x08001c4d   Thumb Code    64  ssd1289_hal.o(i.LCD_Triangle)
-    LCD_Triangle_Fill                        0x08001c8d   Thumb Code   194  ssd1289_hal.o(i.LCD_Triangle_Fill)
-    MemManage_Handler                        0x08001e95   Thumb Code     2  stm32f1xx_it.o(i.MemManage_Handler)
-    NMI_Handler                              0x08001e97   Thumb Code     2  stm32f1xx_it.o(i.NMI_Handler)
-    PendSV_Handler                           0x08001e99   Thumb Code     2  stm32f1xx_it.o(i.PendSV_Handler)
-    SVC_Handler                              0x08001e9b   Thumb Code     2  stm32f1xx_it.o(i.SVC_Handler)
-    SysTick_Handler                          0x08001e9d   Thumb Code     4  stm32f1xx_it.o(i.SysTick_Handler)
-    SystemClock_Config                       0x08001ea1   Thumb Code    98  main.o(i.SystemClock_Config)
-    SystemInit                               0x08001f05   Thumb Code    56  system_stm32f1xx.o(i.SystemInit)
-    USB_CoreInit                             0x08002005   Thumb Code     4  stm32f1xx_ll_usb.o(i.USB_CoreInit)
-    USB_DevDisconnect                        0x08002009   Thumb Code     4  stm32f1xx_ll_usb.o(i.USB_DevDisconnect)
-    USB_DevInit                              0x0800200d   Thumb Code    18  stm32f1xx_ll_usb.o(i.USB_DevInit)
-    USB_DisableGlobalInt                     0x0800201f   Thumb Code    14  stm32f1xx_ll_usb.o(i.USB_DisableGlobalInt)
-    USB_SetCurrentMode                       0x0800202d   Thumb Code     4  stm32f1xx_ll_usb.o(i.USB_SetCurrentMode)
-    UsageFault_Handler                       0x08002031   Thumb Code     2  stm32f1xx_it.o(i.UsageFault_Handler)
-    __scatterload_copy                       0x08002053   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x08002061   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x08002063   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    main                                     0x08002071   Thumb Code   664  main.o(i.main)
-    Font_3_TomThumb_ExtendedBitmaps          0x08002388   Data         418  main.o(.constdata)
-    Font_3_TomThumb_ExtendedGlyphs           0x0800252a   Data         760  main.o(.constdata)
-    Font_3_TomThumb_Extended                 0x08002824   Data          12  main.o(.constdata)
-    Font_5_Org                               0x08002830   Data          12  main.o(.constdata)
-    Font_8_Default                           0x0800283c   Data          12  main.o(.constdata)
-    Font_9_Serif_Bold                        0x08002848   Data          12  main.o(.constdata)
-    Font_32_Segment_7_Num_Plus               0x08002854   Data          12  main.o(.constdata)
-    Font_5_OrgBitmaps                        0x08002860   Data         271  main.o(.constdata)
-    Font_5_OrgGlyphs                         0x08002970   Data         760  main.o(.constdata)
-    Font_8_DefaultBitmaps                    0x08002c68   Data         414  main.o(.constdata)
-    Font_8_DefaultGlyphs                     0x08002e06   Data         760  main.o(.constdata)
-    Font_9_Serif_BoldBitmaps                 0x080030fe   Data        1162  main.o(.constdata)
-    Font_9_Serif_BoldGlyphs                  0x08003588   Data         760  main.o(.constdata)
-    Font_32_Segment_7_Num_PlusBitmaps        0x08003880   Data        1395  main.o(.constdata)
-    Font_32_Segment_7_Num_PlusGlyphs         0x08003df4   Data         104  main.o(.constdata)
-    AHBPrescTable                            0x08003e5c   Data          16  system_stm32f1xx.o(.constdata)
-    APBPrescTable                            0x08003e6c   Data           8  system_stm32f1xx.o(.constdata)
-    Region$$Table$$Base                      0x08003e74   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08003e94   Number         0  anon$$obj.o(Region$$Table)
+    LCD_Init                                 0x080018b9   Thumb Code    78  ssd1289_hal.o(i.LCD_Init)
+    LCD_Line                                 0x08001907   Thumb Code   122  ssd1289_hal.o(i.LCD_Line)
+    LCD_Rect                                 0x08001981   Thumb Code    82  ssd1289_hal.o(i.LCD_Rect)
+    LCD_Rect_Fill                            0x080019d3   Thumb Code    60  ssd1289_hal.o(i.LCD_Rect_Fill)
+    LCD_Rect_Round                           0x08001a0f   Thumb Code   236  ssd1289_hal.o(i.LCD_Rect_Round)
+    LCD_Rect_Round_Fill                      0x08001afb   Thumb Code   100  ssd1289_hal.o(i.LCD_Rect_Round_Fill)
+    LCD_Triangle                             0x08001c39   Thumb Code    64  ssd1289_hal.o(i.LCD_Triangle)
+    LCD_Triangle_Fill                        0x08001c79   Thumb Code   194  ssd1289_hal.o(i.LCD_Triangle_Fill)
+    MemManage_Handler                        0x08001e81   Thumb Code     2  stm32f1xx_it.o(i.MemManage_Handler)
+    NMI_Handler                              0x08001e83   Thumb Code     2  stm32f1xx_it.o(i.NMI_Handler)
+    PendSV_Handler                           0x08001e85   Thumb Code     2  stm32f1xx_it.o(i.PendSV_Handler)
+    SVC_Handler                              0x08001e87   Thumb Code     2  stm32f1xx_it.o(i.SVC_Handler)
+    SysTick_Handler                          0x08001e89   Thumb Code     4  stm32f1xx_it.o(i.SysTick_Handler)
+    SystemClock_Config                       0x08001e8d   Thumb Code    98  main.o(i.SystemClock_Config)
+    SystemInit                               0x08001ef1   Thumb Code    56  system_stm32f1xx.o(i.SystemInit)
+    USB_CoreInit                             0x08001ff1   Thumb Code     4  stm32f1xx_ll_usb.o(i.USB_CoreInit)
+    USB_DevDisconnect                        0x08001ff5   Thumb Code     4  stm32f1xx_ll_usb.o(i.USB_DevDisconnect)
+    USB_DevInit                              0x08001ff9   Thumb Code    18  stm32f1xx_ll_usb.o(i.USB_DevInit)
+    USB_DisableGlobalInt                     0x0800200b   Thumb Code    14  stm32f1xx_ll_usb.o(i.USB_DisableGlobalInt)
+    USB_SetCurrentMode                       0x08002019   Thumb Code     4  stm32f1xx_ll_usb.o(i.USB_SetCurrentMode)
+    UsageFault_Handler                       0x0800201d   Thumb Code     2  stm32f1xx_it.o(i.UsageFault_Handler)
+    __scatterload_copy                       0x0800203f   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x0800204d   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x0800204f   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    main                                     0x0800205d   Thumb Code   664  main.o(i.main)
+    Font_3_TomThumb_ExtendedBitmaps          0x08002374   Data         418  main.o(.constdata)
+    Font_3_TomThumb_ExtendedGlyphs           0x08002516   Data         760  main.o(.constdata)
+    Font_3_TomThumb_Extended                 0x08002810   Data          12  main.o(.constdata)
+    Font_5_Org                               0x0800281c   Data          12  main.o(.constdata)
+    Font_8_Default                           0x08002828   Data          12  main.o(.constdata)
+    Font_9_Serif_Bold                        0x08002834   Data          12  main.o(.constdata)
+    Font_32_Segment_7_Num_Plus               0x08002840   Data          12  main.o(.constdata)
+    Font_5_OrgBitmaps                        0x0800284c   Data         271  main.o(.constdata)
+    Font_5_OrgGlyphs                         0x0800295c   Data         760  main.o(.constdata)
+    Font_8_DefaultBitmaps                    0x08002c54   Data         414  main.o(.constdata)
+    Font_8_DefaultGlyphs                     0x08002df2   Data         760  main.o(.constdata)
+    Font_9_Serif_BoldBitmaps                 0x080030ea   Data        1162  main.o(.constdata)
+    Font_9_Serif_BoldGlyphs                  0x08003574   Data         760  main.o(.constdata)
+    Font_32_Segment_7_Num_PlusBitmaps        0x0800386c   Data        1395  main.o(.constdata)
+    Font_32_Segment_7_Num_PlusGlyphs         0x08003de0   Data         104  main.o(.constdata)
+    AHBPrescTable                            0x08003e48   Data          16  system_stm32f1xx.o(.constdata)
+    APBPrescTable                            0x08003e58   Data           8  system_stm32f1xx.o(.constdata)
+    Region$$Table$$Base                      0x08003e60   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08003e80   Number         0  anon$$obj.o(Region$$Table)
     uwTickFreq                               0x20000000   Data           1  stm32f1xx_hal.o(.data)
     uwTickPrio                               0x20000004   Data           4  stm32f1xx_hal.o(.data)
     uwTick                                   0x20000008   Data           4  stm32f1xx_hal.o(.data)
@@ -1856,9 +1855,9 @@ Memory Map of the image
 
   Image Entry point : 0x080000ed
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00003ea4, Max: 0x00010000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00003e90, Max: 0x00010000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00003e94, Max: 0x00010000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00003e80, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1921,65 +1920,66 @@ Memory Map of the image
     0x08001478   0x08001478   0x00000118   Code   RO           18    i.LCD_Circle_Helper  ssd1289_hal.o
     0x08001590   0x08001590   0x00000298   Code   RO           19    i.LCD_Ellipse       ssd1289_hal.o
     0x08001828   0x08001828   0x00000090   Code   RO           20    i.LCD_Font          ssd1289_hal.o
-    0x080018b8   0x080018b8   0x00000064   Code   RO           21    i.LCD_Init          ssd1289_hal.o
-    0x0800191c   0x0800191c   0x0000007a   Code   RO           22    i.LCD_Line          ssd1289_hal.o
-    0x08001996   0x08001996   0x00000052   Code   RO           24    i.LCD_Rect          ssd1289_hal.o
-    0x080019e8   0x080019e8   0x0000003c   Code   RO           25    i.LCD_Rect_Fill     ssd1289_hal.o
-    0x08001a24   0x08001a24   0x000000ec   Code   RO           26    i.LCD_Rect_Round    ssd1289_hal.o
-    0x08001b10   0x08001b10   0x00000064   Code   RO           27    i.LCD_Rect_Round_Fill  ssd1289_hal.o
-    0x08001b74   0x08001b74   0x00000054   Code   RO           28    i.LCD_Send_Cmd      ssd1289_hal.o
-    0x08001bc8   0x08001bc8   0x00000054   Code   RO           29    i.LCD_Send_Dat      ssd1289_hal.o
-    0x08001c1c   0x08001c1c   0x00000030   Code   RO           30    i.LCD_Send_Reg      ssd1289_hal.o
-    0x08001c4c   0x08001c4c   0x00000040   Code   RO           31    i.LCD_Triangle      ssd1289_hal.o
-    0x08001c8c   0x08001c8c   0x000000c2   Code   RO           32    i.LCD_Triangle_Fill  ssd1289_hal.o
-    0x08001d4e   0x08001d4e   0x0000003e   Code   RO           33    i.LCD_Window        ssd1289_hal.o
-    0x08001d8c   0x08001d8c   0x000000d4   Code   RO          255    i.MX_GPIO_Init      main.o
-    0x08001e60   0x08001e60   0x00000034   Code   RO          256    i.MX_SPI1_Init      main.o
-    0x08001e94   0x08001e94   0x00000002   Code   RO          705    i.MemManage_Handler  stm32f1xx_it.o
-    0x08001e96   0x08001e96   0x00000002   Code   RO          706    i.NMI_Handler       stm32f1xx_it.o
-    0x08001e98   0x08001e98   0x00000002   Code   RO          707    i.PendSV_Handler    stm32f1xx_it.o
-    0x08001e9a   0x08001e9a   0x00000002   Code   RO          708    i.SVC_Handler       stm32f1xx_it.o
-    0x08001e9c   0x08001e9c   0x00000004   Code   RO          709    i.SysTick_Handler   stm32f1xx_it.o
-    0x08001ea0   0x08001ea0   0x00000062   Code   RO          257    i.SystemClock_Config  main.o
-    0x08001f02   0x08001f02   0x00000002   PAD
-    0x08001f04   0x08001f04   0x00000048   Code   RO         3420    i.SystemInit        system_stm32f1xx.o
-    0x08001f4c   0x08001f4c   0x000000b8   Code   RO         2696    i.UART_SetConfig    stm32f1xx_hal_uart.o
-    0x08002004   0x08002004   0x00000004   Code   RO         3242    i.USB_CoreInit      stm32f1xx_ll_usb.o
-    0x08002008   0x08002008   0x00000004   Code   RO         3246    i.USB_DevDisconnect  stm32f1xx_ll_usb.o
-    0x0800200c   0x0800200c   0x00000012   Code   RO         3247    i.USB_DevInit       stm32f1xx_ll_usb.o
-    0x0800201e   0x0800201e   0x0000000e   Code   RO         3248    i.USB_DisableGlobalInt  stm32f1xx_ll_usb.o
-    0x0800202c   0x0800202c   0x00000004   Code   RO         3262    i.USB_SetCurrentMode  stm32f1xx_ll_usb.o
-    0x08002030   0x08002030   0x00000002   Code   RO          710    i.UsageFault_Handler  stm32f1xx_it.o
-    0x08002032   0x08002032   0x00000020   Code   RO         1800    i.__NVIC_SetPriority  stm32f1xx_hal_cortex.o
-    0x08002052   0x08002052   0x0000000e   Code   RO         3487    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08002060   0x08002060   0x00000002   Code   RO         3488    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08002062   0x08002062   0x0000000e   Code   RO         3489    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x08002070   0x08002070   0x00000318   Code   RO          258    i.main              main.o
-    0x08002388   0x08002388   0x000001a2   Data   RO          266    .constdata          main.o
-    0x0800252a   0x0800252a   0x000002f8   Data   RO          267    .constdata          main.o
-    0x08002822   0x08002822   0x00000002   PAD
-    0x08002824   0x08002824   0x0000003c   Data   RO          268    .constdata          main.o
-    0x08002860   0x08002860   0x0000010f   Data   RO          269    .constdata          main.o
-    0x0800296f   0x0800296f   0x00000001   PAD
-    0x08002970   0x08002970   0x000002f8   Data   RO          270    .constdata          main.o
-    0x08002c68   0x08002c68   0x0000019e   Data   RO          283    .constdata          main.o
-    0x08002e06   0x08002e06   0x000002f8   Data   RO          284    .constdata          main.o
-    0x080030fe   0x080030fe   0x0000048a   Data   RO          315    .constdata          main.o
-    0x08003588   0x08003588   0x000002f8   Data   RO          316    .constdata          main.o
-    0x08003880   0x08003880   0x00000573   Data   RO          527    .constdata          main.o
-    0x08003df3   0x08003df3   0x00000001   PAD
-    0x08003df4   0x08003df4   0x00000068   Data   RO          528    .constdata          main.o
-    0x08003e5c   0x08003e5c   0x00000010   Data   RO         3421    .constdata          system_stm32f1xx.o
-    0x08003e6c   0x08003e6c   0x00000008   Data   RO         3422    .constdata          system_stm32f1xx.o
-    0x08003e74   0x08003e74   0x00000020   Data   RO         3485    Region$$Table       anon$$obj.o
+    0x080018b8   0x080018b8   0x0000004e   Code   RO           21    i.LCD_Init          ssd1289_hal.o
+    0x08001906   0x08001906   0x0000007a   Code   RO           22    i.LCD_Line          ssd1289_hal.o
+    0x08001980   0x08001980   0x00000052   Code   RO           24    i.LCD_Rect          ssd1289_hal.o
+    0x080019d2   0x080019d2   0x0000003c   Code   RO           25    i.LCD_Rect_Fill     ssd1289_hal.o
+    0x08001a0e   0x08001a0e   0x000000ec   Code   RO           26    i.LCD_Rect_Round    ssd1289_hal.o
+    0x08001afa   0x08001afa   0x00000064   Code   RO           27    i.LCD_Rect_Round_Fill  ssd1289_hal.o
+    0x08001b5e   0x08001b5e   0x00000002   PAD
+    0x08001b60   0x08001b60   0x00000054   Code   RO           28    i.LCD_Send_Cmd      ssd1289_hal.o
+    0x08001bb4   0x08001bb4   0x00000054   Code   RO           29    i.LCD_Send_Dat      ssd1289_hal.o
+    0x08001c08   0x08001c08   0x00000030   Code   RO           30    i.LCD_Send_Reg      ssd1289_hal.o
+    0x08001c38   0x08001c38   0x00000040   Code   RO           31    i.LCD_Triangle      ssd1289_hal.o
+    0x08001c78   0x08001c78   0x000000c2   Code   RO           32    i.LCD_Triangle_Fill  ssd1289_hal.o
+    0x08001d3a   0x08001d3a   0x0000003e   Code   RO           33    i.LCD_Window        ssd1289_hal.o
+    0x08001d78   0x08001d78   0x000000d4   Code   RO          255    i.MX_GPIO_Init      main.o
+    0x08001e4c   0x08001e4c   0x00000034   Code   RO          256    i.MX_SPI1_Init      main.o
+    0x08001e80   0x08001e80   0x00000002   Code   RO          705    i.MemManage_Handler  stm32f1xx_it.o
+    0x08001e82   0x08001e82   0x00000002   Code   RO          706    i.NMI_Handler       stm32f1xx_it.o
+    0x08001e84   0x08001e84   0x00000002   Code   RO          707    i.PendSV_Handler    stm32f1xx_it.o
+    0x08001e86   0x08001e86   0x00000002   Code   RO          708    i.SVC_Handler       stm32f1xx_it.o
+    0x08001e88   0x08001e88   0x00000004   Code   RO          709    i.SysTick_Handler   stm32f1xx_it.o
+    0x08001e8c   0x08001e8c   0x00000062   Code   RO          257    i.SystemClock_Config  main.o
+    0x08001eee   0x08001eee   0x00000002   PAD
+    0x08001ef0   0x08001ef0   0x00000048   Code   RO         3420    i.SystemInit        system_stm32f1xx.o
+    0x08001f38   0x08001f38   0x000000b8   Code   RO         2696    i.UART_SetConfig    stm32f1xx_hal_uart.o
+    0x08001ff0   0x08001ff0   0x00000004   Code   RO         3242    i.USB_CoreInit      stm32f1xx_ll_usb.o
+    0x08001ff4   0x08001ff4   0x00000004   Code   RO         3246    i.USB_DevDisconnect  stm32f1xx_ll_usb.o
+    0x08001ff8   0x08001ff8   0x00000012   Code   RO         3247    i.USB_DevInit       stm32f1xx_ll_usb.o
+    0x0800200a   0x0800200a   0x0000000e   Code   RO         3248    i.USB_DisableGlobalInt  stm32f1xx_ll_usb.o
+    0x08002018   0x08002018   0x00000004   Code   RO         3262    i.USB_SetCurrentMode  stm32f1xx_ll_usb.o
+    0x0800201c   0x0800201c   0x00000002   Code   RO          710    i.UsageFault_Handler  stm32f1xx_it.o
+    0x0800201e   0x0800201e   0x00000020   Code   RO         1800    i.__NVIC_SetPriority  stm32f1xx_hal_cortex.o
+    0x0800203e   0x0800203e   0x0000000e   Code   RO         3487    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0800204c   0x0800204c   0x00000002   Code   RO         3488    i.__scatterload_null  mc_w.l(handlers.o)
+    0x0800204e   0x0800204e   0x0000000e   Code   RO         3489    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0800205c   0x0800205c   0x00000318   Code   RO          258    i.main              main.o
+    0x08002374   0x08002374   0x000001a2   Data   RO          266    .constdata          main.o
+    0x08002516   0x08002516   0x000002f8   Data   RO          267    .constdata          main.o
+    0x0800280e   0x0800280e   0x00000002   PAD
+    0x08002810   0x08002810   0x0000003c   Data   RO          268    .constdata          main.o
+    0x0800284c   0x0800284c   0x0000010f   Data   RO          269    .constdata          main.o
+    0x0800295b   0x0800295b   0x00000001   PAD
+    0x0800295c   0x0800295c   0x000002f8   Data   RO          270    .constdata          main.o
+    0x08002c54   0x08002c54   0x0000019e   Data   RO          283    .constdata          main.o
+    0x08002df2   0x08002df2   0x000002f8   Data   RO          284    .constdata          main.o
+    0x080030ea   0x080030ea   0x0000048a   Data   RO          315    .constdata          main.o
+    0x08003574   0x08003574   0x000002f8   Data   RO          316    .constdata          main.o
+    0x0800386c   0x0800386c   0x00000573   Data   RO          527    .constdata          main.o
+    0x08003ddf   0x08003ddf   0x00000001   PAD
+    0x08003de0   0x08003de0   0x00000068   Data   RO          528    .constdata          main.o
+    0x08003e48   0x08003e48   0x00000010   Data   RO         3421    .constdata          system_stm32f1xx.o
+    0x08003e58   0x08003e58   0x00000008   Data   RO         3422    .constdata          system_stm32f1xx.o
+    0x08003e60   0x08003e60   0x00000020   Data   RO         3485    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08003e94, Size: 0x000007e8, Max: 0x00005000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08003e80, Size: 0x000007e8, Max: 0x00005000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08003e94   0x0000000c   Data   RW         1337    .data               stm32f1xx_hal.o
-    0x2000000c   0x08003ea0   0x00000004   Data   RW         3423    .data               system_stm32f1xx.o
+    0x20000000   0x08003e80   0x0000000c   Data   RW         1337    .data               stm32f1xx_hal.o
+    0x2000000c   0x08003e8c   0x00000004   Data   RW         3423    .data               system_stm32f1xx.o
     0x20000010        -       0x000003d8   Zero   RW          259    .bss                main.o
     0x200003e8        -       0x00000400   Zero   RW            1    STACK               startup_stm32f103xb.o
 
@@ -1992,7 +1992,7 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
       1154        152       6864          0        984      47871   main.o
-      3430         34          0          0          0     440816   ssd1289_hal.o
+      3408         28          0          0          0     440616   ssd1289_hal.o
         36          8        236          0       1024        800   startup_stm32f103xb.o
        164         28          0         12          0       5869   stm32f1xx_hal.o
        172         14          0          0          0      28270   stm32f1xx_hal_cortex.o
@@ -2009,9 +2009,9 @@ Image component sizes
         72         16         24          4          0       1151   system_stm32f1xx.o
 
     ----------------------------------------------------------------------
-      8682        492       7160         16       2008     552540   Object Totals
+      8662        486       7160         16       2008     552340   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        14          0          4          0          0          0   (incl. Padding)
+        16          0          4          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -2052,15 +2052,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      8860        508       7160         16       2008     549780   Grand Totals
-      8860        508       7160         16       2008     549780   ELF Image Totals
-      8860        508       7160         16          0          0   ROM Totals
+      8840        502       7160         16       2008     549580   Grand Totals
+      8840        502       7160         16       2008     549580   ELF Image Totals
+      8840        502       7160         16          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                16020 (  15.64kB)
+    Total RO  Size (Code + RO Data)                16000 (  15.63kB)
     Total RW  Size (RW Data + ZI Data)              2024 (   1.98kB)
-    Total ROM Size (Code + RO Data + RW Data)      16036 (  15.66kB)
+    Total ROM Size (Code + RO Data + RW Data)      16016 (  15.64kB)
 
 ==============================================================================
 

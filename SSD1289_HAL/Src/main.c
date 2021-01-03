@@ -490,8 +490,8 @@ static void MX_GPIO_Init(void)
                           |LCD_DB11_Pin|LCD_DB12_Pin|LCD_DB13_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, LCD_RST_Pin|LCD_CS_Pin|LCD_WR_Pin|LCD_RS_Pin
-                          |LSD_RD_Pin|LCD_DB08_Pin|LCD_DB09_Pin|LCD_DB10_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, LCD_CS_Pin|LCD_WR_Pin|LCD_RS_Pin|LSD_RD_Pin
+                          |LCD_DB08_Pin|LCD_DB09_Pin|LCD_DB10_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : LED_Pin LCD_DB14_Pin LCD_DB15_Pin */
   GPIO_InitStruct.Pin = LED_Pin|LCD_DB14_Pin|LCD_DB15_Pin;
@@ -511,10 +511,10 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : LCD_RST_Pin LCD_CS_Pin LCD_WR_Pin LCD_RS_Pin
-                           LSD_RD_Pin LCD_DB08_Pin LCD_DB09_Pin LCD_DB10_Pin */
-  GPIO_InitStruct.Pin = LCD_RST_Pin|LCD_CS_Pin|LCD_WR_Pin|LCD_RS_Pin
-                          |LSD_RD_Pin|LCD_DB08_Pin|LCD_DB09_Pin|LCD_DB10_Pin;
+  /*Configure GPIO pins : LCD_CS_Pin LCD_WR_Pin LCD_RS_Pin LSD_RD_Pin
+                           LCD_DB08_Pin LCD_DB09_Pin LCD_DB10_Pin */
+  GPIO_InitStruct.Pin = LCD_CS_Pin|LCD_WR_Pin|LCD_RS_Pin|LSD_RD_Pin
+                          |LCD_DB08_Pin|LCD_DB09_Pin|LCD_DB10_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

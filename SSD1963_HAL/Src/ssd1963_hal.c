@@ -446,12 +446,12 @@ void LCD_Font(uint16_t x, uint16_t y, char *text, const GFXfont *p_font, uint8_t
 void LCD_Init(void)
 {
 	//1. Power up the system platform and assert the RESET# signal (‘L’ state) for a minimum of 100us to reset the controller. 
-			LCD_RST_S
-	    HAL_Delay (100);
-	    LCD_RST_R
-	    HAL_Delay (120);
-	    LCD_RST_S
-	HAL_Delay(150);
+//			LCD_RST_S
+//	    HAL_Delay (100);
+//	    LCD_RST_R
+//	    HAL_Delay (120);
+//	    LCD_RST_S
+//	HAL_Delay(150);
 	/*	2. Configure SSD1961’s PLL frequency
 	VCO = Input clock x (M + 1)
 	PLL frequency  = VCO / (N + 1)
