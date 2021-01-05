@@ -21,7 +21,7 @@
 #define OUT_MAX_X	239
 
 #define RAW_MIN_Y	200
-#define RAW_MAX_Y	3750
+#define RAW_MAX_Y	4000
 #define OUT_MIN_Y	0
 #define OUT_MAX_Y	319
 
