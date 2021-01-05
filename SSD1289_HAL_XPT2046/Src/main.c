@@ -22,7 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "ssd1963_hal.h"
+#include "ssd1289_hal.h"
 #include "xpt2046.h"
 
 #include "fonts/Font_3_Tiny.h"
@@ -200,9 +200,10 @@ int main(void)
 	XPT2046_Init();
 	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
 
-	LCD_Rect_Fill(0, 0, 800, 480, BLUE);
-	LCD_Rect_Fill(1, 1, 798, 478, BLACK);
+	LCD_Rect_Fill(0, 0, 320, 240, BLUE);
+	LCD_Rect_Fill(1, 1, 318, 238, BLACK);
 	
+	HAL_Delay(250);
 	LCD_Rect_Fill(0, 0, 160, 128, BLACK);
 	for(uint8_t x = 8; x <= 160; x += 8)
 	{
@@ -211,6 +212,7 @@ int main(void)
 	for(uint8_t y = 8; y <= 128; y += 8) {
 		LCD_Line(0, 0, 160, y, 1, GREEN);
 	}
+	HAL_Delay(250);
 
 	uint8_t h = 16;
 	uint8_t w = 20;
@@ -220,7 +222,7 @@ int main(void)
 		h += 16;
 		w += 20;
 	}
-
+	HAL_Delay(250);
 	LCD_Rect_Fill(0, 0, 160, 128, BLUE);
 	LCD_Rect_Fill(1, 1, 158, 126, BLACK);
 	LCD_Font(5, 40, "This is\n just a Test\n TomThumb Ext\n", _3_TomThumb_Extended, 1, YELLOW);
