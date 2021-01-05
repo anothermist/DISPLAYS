@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"ssd1963_hal_xpt2046\startup_stm32f103xb.o"
+"ssd1963_hal_xpt2046\xpt2046.o"
+"ssd1963_hal_xpt2046\ssd1963_hal.o"
+"ssd1963_hal_xpt2046\main.o"
+"ssd1963_hal_xpt2046\stm32f1xx_it.o"
+"ssd1963_hal_xpt2046\stm32f1xx_hal_msp.o"
+"ssd1963_hal_xpt2046\stm32f1xx_hal_gpio_ex.o"
+"ssd1963_hal_xpt2046\stm32f1xx_hal_spi.o"
+"ssd1963_hal_xpt2046\stm32f1xx_hal.o"
+"ssd1963_hal_xpt2046\stm32f1xx_hal_rcc.o"
+"ssd1963_hal_xpt2046\stm32f1xx_hal_rcc_ex.o"
+"ssd1963_hal_xpt2046\stm32f1xx_hal_gpio.o"
+"ssd1963_hal_xpt2046\stm32f1xx_hal_dma.o"
+"ssd1963_hal_xpt2046\stm32f1xx_hal_cortex.o"
+"ssd1963_hal_xpt2046\stm32f1xx_hal_pwr.o"
+"ssd1963_hal_xpt2046\stm32f1xx_hal_flash.o"
+"ssd1963_hal_xpt2046\stm32f1xx_hal_flash_ex.o"
+"ssd1963_hal_xpt2046\stm32f1xx_hal_exti.o"
+"ssd1963_hal_xpt2046\stm32f1xx_hal_tim.o"
+"ssd1963_hal_xpt2046\stm32f1xx_hal_tim_ex.o"
+"ssd1963_hal_xpt2046\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "SSD1963_HAL_XPT2046\SSD1963_HAL_XPT2046.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "SSD1963_HAL_XPT2046.map" -o SSD1963_HAL_XPT2046\SSD1963_HAL_XPT2046.axf
