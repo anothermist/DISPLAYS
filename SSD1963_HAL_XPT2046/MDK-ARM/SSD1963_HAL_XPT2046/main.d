@@ -24,8 +24,15 @@ ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dm
 ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
 ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
+ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h
 ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
+ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
+ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
+ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h
+ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h
+ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
 ssd1963_hal_xpt2046\main.o: ../Inc/ssd1963_hal.h
 ssd1963_hal_xpt2046\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ssd1963_hal_xpt2046\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

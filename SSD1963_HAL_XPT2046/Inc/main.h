@@ -58,8 +58,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define LED_Pin GPIO_PIN_13
-#define LED_GPIO_Port GPIOC
+#define XPT2046_IRQ_Pin GPIO_PIN_13
+#define XPT2046_IRQ_GPIO_Port GPIOC
 #define LCD_DB14_Pin GPIO_PIN_14
 #define LCD_DB14_GPIO_Port GPIOC
 #define LCD_DB15_Pin GPIO_PIN_15
@@ -80,28 +80,26 @@ void Error_Handler(void);
 #define LCD_DB06_GPIO_Port GPIOA
 #define LCD_DB07_Pin GPIO_PIN_7
 #define LCD_DB07_GPIO_Port GPIOA
-#define TOUCH_IRQ_Pin GPIO_PIN_0
-#define TOUCH_IRQ_GPIO_Port GPIOB
-#define LCD_CS_Pin GPIO_PIN_1
-#define LCD_CS_GPIO_Port GPIOB
-#define LCD_WR_Pin GPIO_PIN_10
-#define LCD_WR_GPIO_Port GPIOB
-#define LCD_RS_Pin GPIO_PIN_11
-#define LCD_RS_GPIO_Port GPIOB
-#define LCD_RD_Pin GPIO_PIN_12
-#define LCD_RD_GPIO_Port GPIOB
-#define LCD_DB08_Pin GPIO_PIN_13
+#define LCD_DB08_Pin GPIO_PIN_0
 #define LCD_DB08_GPIO_Port GPIOB
-#define LCD_DB09_Pin GPIO_PIN_14
+#define LCD_DB09_Pin GPIO_PIN_1
 #define LCD_DB09_GPIO_Port GPIOB
-#define LCD_DB10_Pin GPIO_PIN_15
+#define LCD_DB10_Pin GPIO_PIN_12
 #define LCD_DB10_GPIO_Port GPIOB
-#define LCD_DB11_Pin GPIO_PIN_8
-#define LCD_DB11_GPIO_Port GPIOA
-#define LCD_DB12_Pin GPIO_PIN_9
-#define LCD_DB12_GPIO_Port GPIOA
-#define LCD_DB13_Pin GPIO_PIN_10
-#define LCD_DB13_GPIO_Port GPIOA
+#define LCD_DB11_Pin GPIO_PIN_13
+#define LCD_DB11_GPIO_Port GPIOB
+#define LCD_DB12_Pin GPIO_PIN_14
+#define LCD_DB12_GPIO_Port GPIOB
+#define LCD_DB13_Pin GPIO_PIN_15
+#define LCD_DB13_GPIO_Port GPIOB
+#define LCD_CS_Pin GPIO_PIN_6
+#define LCD_CS_GPIO_Port GPIOB
+#define LCD_RD_Pin GPIO_PIN_7
+#define LCD_RD_GPIO_Port GPIOB
+#define LCD_WR_Pin GPIO_PIN_8
+#define LCD_WR_GPIO_Port GPIOB
+#define LCD_RS_Pin GPIO_PIN_9
+#define LCD_RS_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 #define _3_Tiny                &Font_3_Tiny
 #define _3_PicoPixel           &Font_3_PicoPixel
