@@ -1,4 +1,4 @@
-const uint8_t Open_Sans_Regular_16Bitmaps[] = {
+const uint8_t Open_Sans_16Bitmaps[] = {
 
 	// Bitmap Data:
 	0x00, // ' '
@@ -96,7 +96,7 @@ const uint8_t Open_Sans_Regular_16Bitmaps[] = {
 	0xAA,0xAA,0xAA,0xAA,0x80, // '|'
 	0x81,0x06,0x18,0x61,0x82,0x06,0x21,0x86,0x18,0x61,0x0C,0x00 // '}'
 };
-const GFXglyph Open_Sans_Regular_16Glyphs[] = {
+const GFXglyph Open_Sans_16Glyphs[] = {
 // bitmapOffset, width, height, xAdvance, xOffset, yOffset
 	  {     0,   1,   1,   5,    0,    0 }, // ' '
 	  {     1,   3,  12,   5,    1,  -12 }, // '!'
@@ -193,5 +193,5 @@ const GFXglyph Open_Sans_Regular_16Glyphs[] = {
 	  {  1033,   2,  17,  10,    4,  -13 }, // '|'
 	  {  1038,   6,  15,   7,    1,  -12 } // '}'
 };
-const GFXfont Open_Sans_Regular_16 = {
-(uint8_t  *)Open_Sans_Regular_16Bitmaps,(GFXglyph *)Open_Sans_Regular_16Glyphs,0x20, 0x7E, 23};
+const GFXfont Open_Sans_16 = {
+(uint8_t  *)Open_Sans_16Bitmaps,(GFXglyph *)Open_Sans_16Glyphs,0x20, 0x7E, 23};
