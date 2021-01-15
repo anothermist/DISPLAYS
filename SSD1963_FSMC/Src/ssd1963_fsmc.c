@@ -1,8 +1,8 @@
 #include "ssd1963_fsmc.h"
 
-uint16_t RGB(uint8_t r, uint8_t g, uint8_t b)
-{
-	return ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | (b >> 3);
+uint32_t RGB(uint8_t r, uint8_t g, uint8_t b)
+{   
+    return ((r & 0xFF) << 16) + ((g & 0xFF) << 8) + (b & 0xFF);
 }
 
 uint16_t H24_RGB565(uint8_t reverse, uint32_t color24)
