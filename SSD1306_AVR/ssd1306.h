@@ -87,7 +87,7 @@ extern C {
 	void LCD_Rect_Round(uint16_t x, uint16_t y, uint16_t length, uint16_t width, uint16_t r, SSD1306_COLOR_t color);
 	void LCD_Rect_Round_Fill(uint16_t x, uint16_t y, uint16_t length, uint16_t width, uint16_t r, uint32_t color);
 	void LCD_Char(int16_t x, int16_t y, const GFXglyph *glyph, const GFXfont *font, uint8_t size, SSD1306_COLOR_t color);
-	void LCD_Font(uint16_t x, uint16_t y, char *text, const GFXfont *p_font, uint8_t size, SSD1306_COLOR_t color);
+	void LCD_Font(uint16_t x, uint16_t y, const char *text, const GFXfont *p_font, uint8_t size, SSD1306_COLOR_t color);
 	void LCD_Battery(uint16_t y, uint16_t x, uint8_t z);
 
 	#ifdef __cplusplus

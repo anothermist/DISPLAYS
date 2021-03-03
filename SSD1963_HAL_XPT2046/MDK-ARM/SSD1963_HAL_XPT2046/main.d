@@ -7,14 +7,14 @@ ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_de
 ssd1963_hal_xpt2046\main.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 ssd1963_hal_xpt2046\main.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
 ssd1963_hal_xpt2046\main.o: ../Drivers/CMSIS/Include/core_cm3.h
-ssd1963_hal_xpt2046\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+ssd1963_hal_xpt2046\main.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 ssd1963_hal_xpt2046\main.o: ../Drivers/CMSIS/Include/cmsis_version.h
 ssd1963_hal_xpt2046\main.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 ssd1963_hal_xpt2046\main.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 ssd1963_hal_xpt2046\main.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-ssd1963_hal_xpt2046\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+ssd1963_hal_xpt2046\main.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stddef.h
 ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
@@ -34,8 +34,8 @@ ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pc
 ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h
 ssd1963_hal_xpt2046\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h
 ssd1963_hal_xpt2046\main.o: ../Inc/ssd1963_hal.h
-ssd1963_hal_xpt2046\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-ssd1963_hal_xpt2046\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+ssd1963_hal_xpt2046\main.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
+ssd1963_hal_xpt2046\main.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
 ssd1963_hal_xpt2046\main.o: ../Inc/xpt2046.h
 ssd1963_hal_xpt2046\main.o: ../Inc/fonts/Font_3_Tiny.h
 ssd1963_hal_xpt2046\main.o: ../Inc/fonts/Font_3_PicoPixel.h

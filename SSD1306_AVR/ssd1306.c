@@ -32,15 +32,6 @@ inline static void SSD1306_Send_Multi(uint8_t address, uint8_t reg, uint8_t* dat
 	}
 }
 
-//inline static void LCD_Goto(uint16_t x, uint16_t y)
-//{
-	//LCD_X = x;
-	//LCD_Y = y;
-	//SSD1306_Command(COMAND, 0xB0 + y);
-	//SSD1306_Command(COMAND, x & 0xf);
-	//SSD1306_Command(COMAND,0x10 | (x >> 4));
-//}
-
 void SSD1306_Init(void)
 {
 	_delay_ms(100);
@@ -537,7 +528,7 @@ void LCD_Char(int16_t x, int16_t y, const GFXglyph *glyph, const GFXfont *font, 
 	}
 }
 
-void LCD_Font(uint16_t x, uint16_t y, char *text, const GFXfont *p_font, uint8_t size, SSD1306_COLOR_t color)
+void LCD_Font(uint16_t x, uint16_t y, const char *text, const GFXfont *p_font, uint8_t size, SSD1306_COLOR_t color)
 {
 	int16_t cursor_x = x;
 	int16_t cursor_y = y;

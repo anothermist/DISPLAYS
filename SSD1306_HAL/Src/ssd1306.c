@@ -527,7 +527,7 @@ static void LCD_Char(int16_t x, int16_t y, const GFXglyph *glyph, const GFXfont 
 	}
 }
 
-void LCD_Font(uint16_t x, uint16_t y, char *text, const GFXfont *p_font, uint8_t size, SSD1306_COLOR_t color)
+void LCD_Font(uint16_t x, uint16_t y, const char *text, const GFXfont *p_font, uint8_t size, SSD1306_COLOR_t color)
 {
 	int16_t cursor_x = x;
 	int16_t cursor_y = y;
