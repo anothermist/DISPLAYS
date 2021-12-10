@@ -2,38 +2,21 @@
   ******************************************************************************
   * @file    stm32f1xx_ll_gpio.c
   * @author  MCD Application Team
-  * @version V1.1.1
-  * @date    12-May-2017
   * @brief   GPIO LL module driver.
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; COPYRIGHT(c) 2016 STMicroelectronics</center></h2>
+  * <h2><center>&copy; Copyright (c) 2016 STMicroelectronics.
+  * All rights reserved.</center></h2>
   *
-  * Redistribution and use in source and binary forms, with or without modification,
-  * are permitted provided that the following conditions are met:
-  *   1. Redistributions of source code must retain the above copyright notice,
-  *      this list of conditions and the following disclaimer.
-  *   2. Redistributions in binary form must reproduce the above copyright notice,
-  *      this list of conditions and the following disclaimer in the documentation
-  *      and/or other materials provided with the distribution.
-  *   3. Neither the name of STMicroelectronics nor the names of its contributors
-  *      may be used to endorse or promote products derived from this software
-  *      without specific prior written permission.
-  *
-  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-  * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-  * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-  * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-  * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  * This software component is licensed by ST under BSD 3-Clause license,
+  * the "License"; You may not use this file except in compliance with the
+  * License. You may obtain a copy of the License at:
+  *                        opensource.org/licenses/BSD-3-Clause
   *
   ******************************************************************************
   */
+
 #if defined(USE_FULL_LL_DRIVER)
 
 /* Includes ------------------------------------------------------------------*/
@@ -62,24 +45,26 @@
 /** @addtogroup GPIO_LL_Private_Macros
   * @{
   */
-#define IS_LL_GPIO_PIN(__VALUE__)          ((((uint32_t)0x00000000U) < (__VALUE__)) && ((__VALUE__) <= (LL_GPIO_PIN_ALL)))
+
+#define IS_LL_GPIO_PIN(__VALUE__)          ((((__VALUE__) & LL_GPIO_PIN_ALL)!= 0u) &&\
+                                            (((__VALUE__) & (~LL_GPIO_PIN_ALL))== 0u))
 
 #define IS_LL_GPIO_MODE(__VALUE__)         (((__VALUE__) == LL_GPIO_MODE_ANALOG)       ||\
                                             ((__VALUE__) == LL_GPIO_MODE_FLOATING)     ||\
                                             ((__VALUE__) == LL_GPIO_MODE_INPUT)        ||\
                                             ((__VALUE__) == LL_GPIO_MODE_OUTPUT)       ||\
-                                            ((__VALUE__) == LL_GPIO_MODE_ALTERNATE))    
+                                            ((__VALUE__) == LL_GPIO_MODE_ALTERNATE))
 
 #define IS_LL_GPIO_SPEED(__VALUE__)        (((__VALUE__) == LL_GPIO_SPEED_FREQ_LOW)       ||\
                                             ((__VALUE__) == LL_GPIO_SPEED_FREQ_MEDIUM)    ||\
                                             ((__VALUE__) == LL_GPIO_SPEED_FREQ_HIGH))
-											
+
 #define IS_LL_GPIO_OUTPUT_TYPE(__VALUE__)  (((__VALUE__) == LL_GPIO_OUTPUT_PUSHPULL)  ||\
                                             ((__VALUE__) == LL_GPIO_OUTPUT_OPENDRAIN))
-											
+
 #define IS_LL_GPIO_PULL(__VALUE__)         (((__VALUE__) == LL_GPIO_PULL_DOWN)   ||\
                                             ((__VALUE__) == LL_GPIO_PULL_UP))
-											
+
 /**
   * @}
   */
@@ -144,7 +129,7 @@ ErrorStatus LL_GPIO_DeInit(GPIO_TypeDef *GPIOx)
     LL_APB2_GRP1_ReleaseReset(LL_APB2_GRP1_PERIPH_GPIOF);
   }
 #endif
-#if defined(GPIOG)  
+#if defined(GPIOG)
   else if (GPIOx == GPIOG)
   {
     LL_APB2_GRP1_ForceReset(LL_APB2_GRP1_PERIPH_GPIOG);
@@ -170,56 +155,65 @@ ErrorStatus LL_GPIO_DeInit(GPIO_TypeDef *GPIOx)
   */
 ErrorStatus LL_GPIO_Init(GPIO_TypeDef *GPIOx, LL_GPIO_InitTypeDef *GPIO_InitStruct)
 {
-  uint32_t pinpos     = 0x00000000U;
-  uint32_t currentpin = 0x00000000U;
+  uint32_t pinmask;
+  uint32_t pinpos;
+  uint32_t currentpin;
 
   /* Check the parameters */
   assert_param(IS_GPIO_ALL_INSTANCE(GPIOx));
   assert_param(IS_LL_GPIO_PIN(GPIO_InitStruct->Pin));
-  assert_param(IS_LL_GPIO_MODE(GPIO_InitStruct->Mode));
-  assert_param(IS_LL_GPIO_PULL(GPIO_InitStruct->Pull));
-  
+
   /* ------------------------- Configure the port pins ---------------- */
   /* Initialize  pinpos on first pin set */
-  pinpos = POSITION_VAL(GPIO_InitStruct->Pin);
+
+  pinmask = ((GPIO_InitStruct->Pin) << GPIO_PIN_MASK_POS) >> GPIO_PIN_NB;
+  pinpos = POSITION_VAL(pinmask);
 
   /* Configure the port pins */
-  while ((((GPIO_InitStruct->Pin) & 0x0000FFFFU) >> pinpos) != 0x00000000U)
+  while ((pinmask  >> pinpos) != 0u)
   {
-    /* Get current io position */
-    if(pinpos <8 )
+    /* skip if bit is not set */
+    if ((pinmask & (1u << pinpos)) != 0u)
     {
-      currentpin = (GPIO_InitStruct->Pin) & (0x00000101U << pinpos);
-    }
-    else
-    {
-      currentpin = (GPIO_InitStruct->Pin) & ((0x00010001U << (pinpos-8)) | 0x04000000U);
-    }
+      /* Get current io position */
+      if (pinpos < GPIO_PIN_MASK_POS)
+      {
+        currentpin = (0x00000101uL << pinpos);
+      }
+      else
+      {
+        currentpin = ((0x00010001u << (pinpos - GPIO_PIN_MASK_POS)) | 0x04000000u);
+      }
 
-    if (currentpin)
-    {
+      if (GPIO_InitStruct->Mode == LL_GPIO_MODE_INPUT)
+      {
+        /* Check The Pull parameter */
+        assert_param(IS_LL_GPIO_PULL(GPIO_InitStruct->Pull));
+
+        /* Pull-up Pull-down resistor configuration*/
+        LL_GPIO_SetPinPull(GPIOx, currentpin, GPIO_InitStruct->Pull);
+      }
+      
+      /* Check Pin Mode parameters */
+      assert_param(IS_LL_GPIO_MODE(GPIO_InitStruct->Mode));
+      
       /* Pin Mode configuration */
       LL_GPIO_SetPinMode(GPIOx, currentpin, GPIO_InitStruct->Mode);
-	  
-      /* Pull-up Pull down resistor configuration*/
-      LL_GPIO_SetPinPull(GPIOx, currentpin, GPIO_InitStruct->Pull);
-	  
-      if ((GPIO_InitStruct->Mode == LL_GPIO_MODE_OUTPUT) || (GPIO_InitStruct->Mode == LL_GPIO_MODE_FLOATING))
+
+      if ((GPIO_InitStruct->Mode == LL_GPIO_MODE_OUTPUT) || (GPIO_InitStruct->Mode == LL_GPIO_MODE_ALTERNATE))
       {
+        /* Check speed and Output mode parameters */
+        assert_param(IS_LL_GPIO_SPEED(GPIO_InitStruct->Speed));
+        assert_param(IS_LL_GPIO_OUTPUT_TYPE(GPIO_InitStruct->OutputType));
+
         /* Speed mode configuration */
         LL_GPIO_SetPinSpeed(GPIOx, currentpin, GPIO_InitStruct->Speed);
+
+        /* Output mode configuration*/
+        LL_GPIO_SetPinOutputType(GPIOx, currentpin, GPIO_InitStruct->OutputType);
       }
     }
     pinpos++;
-  }
-  
-  if ((GPIO_InitStruct->Mode == LL_GPIO_MODE_OUTPUT) || (GPIO_InitStruct->Mode == LL_GPIO_MODE_FLOATING))
-  {
-    /* Check Output mode parameters */
-    assert_param(IS_LL_GPIO_OUTPUT_TYPE(GPIO_InitStruct->OutputType));
-
-    /* Output mode configuration*/
-    LL_GPIO_SetPinOutputType(GPIOx, GPIO_InitStruct->Pin, GPIO_InitStruct->OutputType);
   }
   return (SUCCESS);
 }
@@ -236,7 +230,7 @@ void LL_GPIO_StructInit(LL_GPIO_InitTypeDef *GPIO_InitStruct)
   /* Reset GPIO init structure parameters values */
   GPIO_InitStruct->Pin        = LL_GPIO_PIN_ALL;
   GPIO_InitStruct->Mode       = LL_GPIO_MODE_FLOATING;
-  GPIO_InitStruct->Speed      = 0x00000000U;
+  GPIO_InitStruct->Speed      = LL_GPIO_SPEED_FREQ_LOW;
   GPIO_InitStruct->OutputType = LL_GPIO_OUTPUT_OPENDRAIN;
   GPIO_InitStruct->Pull       = LL_GPIO_PULL_DOWN;
 }
@@ -262,4 +256,3 @@ void LL_GPIO_StructInit(LL_GPIO_InitTypeDef *GPIO_InitStruct)
 #endif /* USE_FULL_LL_DRIVER */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
-
