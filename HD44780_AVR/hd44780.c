@@ -7,8 +7,8 @@ uint8_t UserSymbol[8][8] =
 	{ 0x1C, 0x1E, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F },
 	{ 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x0F, 0x07 },
 	{ 0x00, 0x00, 0x00, 0x00, 0x00, 0x1F, 0x1F, 0x1F },
-	{ 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F },
-	{ 0x1F, 0x1F, 0x1F, 0x00, 0x00, 0x00, 0x1F, 0x1F },
+	{ 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1E, 0x1C },
+	{ 0x1F, 0x1F, 0x1F, 0x00, 0x00, 0x00, 0x1F, 0x1F },	
 	{ 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F },
 };
 
@@ -65,7 +65,7 @@ void LCD_Init(void)
 	else Cbit(bus_data, 2);
 	BusLinesState(&bus_data, 0);
 	
-	for (uint8_t i = 0; i < 7; i++)
+	for (uint8_t i = 0; i < 8; i++)
 	LCD_UserSymbolsWrite(i, &UserSymbol[i][0]);
 }
 
@@ -150,7 +150,7 @@ void LCD_Init(void)
 	
 	BusLinesState(&bus_data, 0);
 	
-	for (uint8_t i = 0; i < 7; i++)
+	for (uint8_t i = 0; i < 8; i++)
 	LCD_UserSymbolsWrite(i, &UserSymbol[i][0]);
 }
 
@@ -255,96 +255,96 @@ void LCD_String(char str1[], uint8_t y, uint8_t x)
 
 void drawBigDigits(uint8_t digit, uint8_t place)
 {
+		switch (digit) {
+			case 0:
 
-	switch (digit) {
-		case 0:
-		LCD_Show(0, 0, place);
-		LCD_Show(1, 0, place + 1);
-		LCD_Show(2, 0, place + 2);
-		LCD_Show(3, 1, place);
-		LCD_Show(4, 1, place + 1);
-		LCD_Show(5, 1, place + 2);
-		break;
-		
-		case 1:
-		LCD_Show(1, 0, place);
-		LCD_Show(2, 0, place + 1);
-		LCD_String(" ", 0, place + 2);
-		LCD_Show(4, 1, place);
-		LCD_Show(7, 1, place + 1);
-		LCD_Show(4, 1, place + 2);
-		break;
-		
-		case 2:
-		LCD_Show(6, 0, place);
-		LCD_Show(6, 0, place + 1);
-		LCD_Show(2, 0, place + 2);
-		LCD_Show(3, 1, place);
-		LCD_Show(4, 1, place + 1);
-		LCD_Show(4, 1, place + 2);
-		break;
-		
-		case 3:
-		LCD_Show(6, 0, place);
-		LCD_Show(6, 0, place + 1);
-		LCD_Show(2, 0, place + 2);
-		LCD_Show(4, 1, place);
-		LCD_Show(4, 1, place + 1);
-		LCD_Show(5, 1, place + 2);
-		break;
-		
-		case 4:
-		LCD_Show(3, 0, place);
-		LCD_Show(4, 0, place + 1);
-		LCD_Show(7, 0, place + 2);
-		LCD_String(" ", 1, place);
-		LCD_String(" ", 1, place + 1);
-		LCD_Show(7, 1, place + 2);
-		break;
-		
-		case 5:
-		LCD_Show(3, 0, place);
-		LCD_Show(6, 0, place + 1);
-		LCD_Show(6, 0, place + 2);
-		LCD_Show(4, 1, place);
-		LCD_Show(4, 1, place + 1);
-		LCD_Show(5, 1, place + 2);
-		break;
-		
-		case 6:
-		LCD_Show(0, 0, place);
-		LCD_Show(6, 0, place + 1);
-		LCD_Show(6, 0, place + 2);
-		LCD_Show(3, 1, place);
-		LCD_Show(4, 1, place + 1);
-		LCD_Show(5, 1, place + 2);
-		break;
-		
-		case 7:
-		LCD_Show(1, 0, place);
-		LCD_Show(1, 0, place + 1);
-		LCD_Show(2, 0, place + 2);
-		LCD_String(" ", 1, place);
-		LCD_String(" ", 1, place + 2);
-		LCD_Show(7, 1, place + 2);
-		break;
-		
-		case 8:
-		LCD_Show(0, 0, place);
-		LCD_Show(6, 0, place + 1);
-		LCD_Show(2, 0, place + 2);
-		LCD_Show(3, 1, place);
-		LCD_Show(4, 1, place + 1);
-		LCD_Show(5, 1, place + 2);
-		break;
-		
-		case 9:
-		LCD_Show(0, 0, place);
-		LCD_Show(6, 0, place + 1);
-		LCD_Show(2, 0, place + 2);
-		LCD_Show(4, 1, place);
-		LCD_Show(4, 1, place + 1);
-		LCD_Show(5, 1, place + 2);
-		break;
-	}
+			LCD_Show(0, 0, place);
+			LCD_Show(1, 0, place + 1);
+			LCD_Show(2, 0, place + 2);
+			LCD_Show(3, 1, place);
+			LCD_Show(4, 1, place + 1);
+			LCD_Show(5, 1, place + 2);
+			break;
+			
+			case 1:
+			LCD_Show(1, 0, place);
+			LCD_Show(2, 0, place + 1);
+			LCD_String(" ", 0, place + 2);
+			LCD_Show(4, 1, place);
+			LCD_Show(7, 1, place + 1);
+			LCD_Show(4, 1, place + 2);
+			break;
+			
+			case 2:
+			LCD_Show(6, 0, place);
+			LCD_Show(6, 0, place + 1);
+			LCD_Show(2, 0, place + 2);
+			LCD_Show(3, 1, place);
+			LCD_Show(4, 1, place + 1);
+			LCD_Show(4, 1, place + 2);
+			break;
+			
+			case 3:
+			LCD_Show(6, 0, place);
+			LCD_Show(6, 0, place + 1);
+			LCD_Show(2, 0, place + 2);
+			LCD_Show(4, 1, place);
+			LCD_Show(4, 1, place + 1);
+			LCD_Show(5, 1, place + 2);
+			break;
+			
+			case 4:
+			LCD_Show(3, 0, place);
+			LCD_Show(4, 0, place + 1);
+			LCD_Show(7, 0, place + 2);
+			LCD_String(" ", 1, place);
+			LCD_String(" ", 1, place + 1);
+			LCD_Show(7, 1, place + 2);
+			break;
+			
+			case 5:
+			LCD_Show(3, 0, place);
+			LCD_Show(6, 0, place + 1);
+			LCD_Show(6, 0, place + 2);
+			LCD_Show(4, 1, place);
+			LCD_Show(4, 1, place + 1);
+			LCD_Show(5, 1, place + 2);
+			break;
+			
+			case 6:
+			LCD_Show(0, 0, place);
+			LCD_Show(6, 0, place + 1);
+			LCD_Show(6, 0, place + 2);
+			LCD_Show(3, 1, place);
+			LCD_Show(4, 1, place + 1);
+			LCD_Show(5, 1, place + 2);
+			break;
+			
+			case 7:
+			LCD_Show(1, 0, place);
+			LCD_Show(1, 0, place + 1);
+			LCD_Show(2, 0, place + 2);
+			LCD_String(" ", 1, place);
+			LCD_String(" ", 1, place + 2);
+			LCD_Show(7, 1, place + 2);
+			break;
+			
+			case 8:
+			LCD_Show(0, 0, place);
+			LCD_Show(6, 0, place + 1);
+			LCD_Show(2, 0, place + 2);
+			LCD_Show(3, 1, place);
+			LCD_Show(4, 1, place + 1);
+			LCD_Show(5, 1, place + 2);
+			break;
+			
+			case 9:
+			LCD_Show(0, 0, place);
+			LCD_Show(6, 0, place + 1);
+			LCD_Show(2, 0, place + 2);
+			LCD_Show(4, 1, place);
+			LCD_Show(4, 1, place + 1);
+			LCD_Show(5, 1, place + 2);
+			break;
+		}
 }

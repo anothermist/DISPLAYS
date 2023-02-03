@@ -16,7 +16,7 @@ int main(void)
 	drawBigDigits(3, 13);
 	
 	while (1)
-	{	
+	{
 		LCD_String("+ ", 0, 7);
 		LCD_String(" +", 1, 7);
 		LCD_String("+", 1, 3);
