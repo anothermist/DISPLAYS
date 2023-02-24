@@ -1,38 +1,38 @@
 #include "main.h"
 
-int main(void)
-{
-	DDRD = 0xFF; PORTD = 0x00;
-	
-	LCD_Init();
-	LCD_DisplEnable_CursOnOffBlink(1, 0, 0);
-	
-	LCD_String("                ", 0, 0);
-	LCD_String("                ", 1, 0);
+int main(void) {
 
-	drawBigDigits(0, 0);
-	drawBigDigits(1, 4);
-	drawBigDigits(2, 9);
-	drawBigDigits(3, 13);
+	TWI_Init();
+	lcd_init();  lcd_twi_init();
+
+	lcd_string("LCD STRING 0 3", 0, 3);   lcd_twi_string("LCD STRING 0 3", 0, 3);
+	lcd_string("LCD STRING 1 3", 1, 3);   lcd_twi_string("LCD STRING 1 3", 1, 3);
+
+	_delay_ms(3000);
+	lcd_clear(); lcd_twi_clear();
 	
-	while (1)
-	{
-		LCD_String("+ ", 0, 7);
-		LCD_String(" +", 1, 7);
-		LCD_String("+", 1, 3);
-		LCD_String("+", 0, 12);
-		LCD_String(" ", 0, 3);
-		LCD_String(" ", 1, 12);
+	unsigned int rtc_Hrs = 12;
+	unsigned int rtc_Min = 45;
+	
+	lcd_drawBigDigits(rtc_Hrs/10, 0);    lcd_twi_drawBigDigits(rtc_Hrs/10, 0);
+	lcd_drawBigDigits(rtc_Hrs % 10, 4);  lcd_twi_drawBigDigits(rtc_Hrs % 10, 4);
+	lcd_drawBigDigits(rtc_Min/10, 9);    lcd_twi_drawBigDigits(rtc_Min/10, 9);
+	lcd_drawBigDigits(rtc_Min % 10, 13); lcd_twi_drawBigDigits(rtc_Min % 10, 13);
+	
+	while (1) {
 		
+		
+		lcd_string("* ", 0, 7); lcd_twi_string("* ", 0, 7);
+		lcd_string(" *", 1, 7); lcd_twi_string(" *", 1, 7);
+		_delay_ms(1000);
+		lcd_string(" *", 0, 7); lcd_twi_string(" *", 0, 7);
+		lcd_string("* ", 1, 7); lcd_twi_string("* ", 1, 7);
 		_delay_ms(1000);
 		
-		LCD_String(" +", 0, 7);
-		LCD_String("+ ", 1, 7);
-		LCD_String("+", 1, 3);
-		LCD_String("+", 0, 12);
-		LCD_String(" ", 0, 3);
-		LCD_String(" ", 1, 12);
 		
-		_delay_ms(1000);
+		
 	}
+	
+
 }
+
