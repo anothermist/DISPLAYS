@@ -101,26 +101,35 @@
 #include "fonts/Font_64_Segment_16_Num.h"
 #include "fonts/Font_64_Segment_7_Num.h"
 
-unsigned int out=0;
-float t=0;
+unsigned int out = 0;
+float t = 0;
 
-void main(void)
-{
-
-	TWI_Init();
+int main(void) {
+	twi_init();
 	SSD1306_Init();
-
-	//LCD_Rect_Fill(100, 50, 10, 10, 1);
+	LCD_Fill(1);
+	_delay_ms(1000);
+	LCD_Rect(1, 1, 125, 61, 1);
+	//LCD_Rect_Fill(1, 1, 125, 29, 0);
+	
+	LCD_Rect_Fill(1, 1, 125, 61, 0);
+	//_delay_ms(1000);
 	//LCD_Circle(100, 50, 15, 0, 3, 1);
+	//_delay_ms(1000);
 	//LCD_Rect_Round(100, 47, 15, 15, 3, 1);
-	
-	LCD_Ellipse(100, 47, 15, 10, 0, 1);
-	
+	//_delay_ms(1000);
+	//LCD_Ellipse(100, 47, 15, 10, 0, 1);
+	//
 	//LCD_Fill(1);
+	//_delay_ms(2000);
+	//LCD_Fill(0);
 	
-	LCD_Font(5, 25, "OLED Test", _8_Retro, 1, 1);
-	LCD_Font(5, 45, "DISPLAY", _16_Default, 1, 1);
-	LCD_Font(10, 60, "0123 Font", _9_Mono, 1, 1);
+	//LCD_Font(5, 25, "OLED Test", _8_Retro, 1, 1);
+	//LCD_Font(5, 45, "DISPLAY", _16_Default, 1, 1);
+	//LCD_Font(10, 60, "0123 Font", _9_Mono, 1, 1);
+	
+	LCD_Font(4, 60, "01:23", _24_Segment_16_Full, 1, 1);
+	_delay_ms(1000);
 	
 	LCD_UpdateScreen();
 
@@ -128,7 +137,7 @@ void main(void)
 	{
 		_delay_ms(500);
 
-		LCD_Battery(0, 110, out);
+		LCD_Battery(1, 110, out);
 
 		out++; t = t + 0.1;
 		if (t > 9.9) { t = 0.1; }
