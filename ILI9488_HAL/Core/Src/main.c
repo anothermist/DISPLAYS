@@ -153,7 +153,6 @@ SPI_HandleTypeDef hspi2;
 /* Private variables ---------------------------------------------------------*/
 uint8_t touchIRQ = 0;
 uint16_t touchX = 0, touchY = 0;
-uint64_t millis = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/

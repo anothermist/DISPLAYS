@@ -568,6 +568,7 @@ void LCD_Init(void) {
 //	LCD_Command(COLMOD_PIXEL_FORMAT_SET);
 //	LCD_Data_8(0x55);
 	LCD_Command(SLEEP_OUT);
+	HAL_Delay(120);
 	LCD_Command(DISPLAY_ON);
 	LCD_Orientation(DEFAULT_ORIENTATION);
 	LCD_Rect_Fill(0, 0, LCD_WIDTH, LCD_HEIGHT, BLACK);
