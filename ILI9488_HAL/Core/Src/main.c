@@ -263,8 +263,6 @@ int main(void)
 		if ((HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_3) == GPIO_PIN_SET))
 			touchIRQ = 1;
 
-		touchIRQ = 1;
-
 		if (touchIRQ) {
 			touchX = getX();
 			touchY = getY();
