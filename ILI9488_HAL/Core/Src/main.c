@@ -1,4 +1,4 @@
-/* USER CODE BEGIN Header */
+r`/* USER CODE BEGIN Header */
 /**
  ******************************************************************************
  * @file           : main.c
@@ -260,7 +260,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		if ((HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_3) == GPIO_PIN_SET))
+		if ((HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_3) == GPIO_PIN_RESET))
 			touchIRQ = 1;
 
 		if (touchIRQ) {
