@@ -40,7 +40,7 @@ inline static void LCD_Send_Cmd(uint16_t cmd)
 	LCD_CS_R
 	LCD_Bus(cmd);
 	LCD_WR_R
-	//_delay_us(5);
+//	_delay_us(5);
 	LCD_WR_S
 	LCD_CS_S
 }
