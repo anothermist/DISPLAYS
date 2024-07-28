@@ -1,5 +1,5 @@
-#ifndef _HX8357_FSMC_H_
-#define _HX8357_FSMC_H_
+#ifndef _HX8357_H_
+#define _HX8357_H_
 
 #ifdef __cplusplus
  extern "C" {
@@ -8,7 +8,6 @@
 #include "stm32f1xx_hal.h"
 #include "stm32f1xx_hal_gpio.h"
 #include "stm32f1xx_hal_rcc.h"
-#include "stm32f1xx_ll_fsmc.h"
 
 #include <stdlib.h>
 #include <string.h>
@@ -218,4 +217,4 @@ void LCD_Font(uint16_t x, uint16_t y, const char *text, const GFXfont *p_font, u
 }
 #endif
 
-#endif /* _HX8357_FSMC_H_ */
+#endif /* _HX8357_H_ */
