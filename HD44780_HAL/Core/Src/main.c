@@ -6,7 +6,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2025 STMicroelectronics.
+  * Copyright (c) 2022 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "hd44780_twi.h"
+#include "hd44780_i2c.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -31,7 +31,6 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -90,12 +89,50 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-	HD44780_Init();
-	HD44780_Clear();
-	HD44780_SetPos(0, 0);
-	HD44780_String("*** STRING 0 ***");
-	HD44780_SetPos(1, 0);
-	HD44780_String("*** STRING 1 ***");
+
+  lcd_init ();
+  lcd_put_cur(0, 0);
+  lcd_send_string("*** STRING 0 ***");
+
+  char cc[] = {
+  		0x00, 0x00, 0x0A, 0x00, 0x11, 0x0E, 0x00, 0x00,  // smiley
+  		0x0E, 0x0E, 0x04, 0x0E, 0x15, 0x04, 0x0A, 0x0A,  // Robo
+  		0x08, 0x0C, 0x0E, 0x0F, 0x0E, 0x0C, 0x08, 0x00,  // arrow
+  		0x00, 0x04, 0x0E, 0x0E, 0x0E, 0x1F, 0x04, 0x00,  // bell
+  		0x00, 0x00, 0x0A, 0x15, 0x11, 0x0E, 0x04, 0x00,  // Heart
+  		0x00, 0x0E, 0x11, 0x11, 0x11, 0x0A, 0x1B, 0x00,  // omega
+  		0x0E, 0x10, 0x17, 0x12, 0x12, 0x12, 0x10, 0x0E,  // CT
+  		0x04, 0x04, 0x1F, 0x04, 0x04, 0x00, 0x1F, 0x00  // +-
+  };
+  lcd_send_cmd(0x40);
+  for (int i=0; i<64; i++) lcd_send_data(cc[i]);
+
+
+  lcd_put_cur(1, 1);
+  lcd_send_data(0);
+
+  lcd_put_cur(1, 3);
+  lcd_send_data(1);
+
+  lcd_put_cur(1, 5);
+  lcd_send_data(2);
+
+  lcd_put_cur(1, 7);
+  lcd_send_data(3);
+
+  lcd_put_cur(1, 9);
+  lcd_send_data(4);
+
+  lcd_put_cur(1, 11);
+  lcd_send_data(5);
+
+  lcd_put_cur(1, 13);
+  lcd_send_data(6);
+
+  lcd_put_cur(1, 15);
+  lcd_send_data(7);
+
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
