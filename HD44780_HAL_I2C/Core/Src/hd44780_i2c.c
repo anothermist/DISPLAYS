@@ -1,4 +1,4 @@
-#include "hd44780_twi.h"
+#include "hd44780_i2c.h"
 
 extern I2C_HandleTypeDef HD44780_INTERFACE;
 

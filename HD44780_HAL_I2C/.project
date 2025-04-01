@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>HD44780_HAL</name>
+	<name>HD44780_HAL_I2C</name>
 	<comment></comment>
 	<projects>
 	</projects>

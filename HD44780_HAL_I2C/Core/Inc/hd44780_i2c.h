@@ -1,5 +1,5 @@
-#ifndef HD44780_TWI_H_
-#define HD44780_TWI_H_
+#ifndef HD44780_I2C_H_
+#define HD44780_I2C_H_
 
 #include "stm32f1xx_hal.h"
 
@@ -14,4 +14,4 @@ void HD44780_Position(int row, int col); // put cursor at the entered position r
 void HD44780_Clear(void);
 void HD44780_drawBigDigits(unsigned char digit, unsigned char place);
 
-#endif /* HD44780_TWI_H_ */
+#endif /* HD44780_I2C_H_ */
