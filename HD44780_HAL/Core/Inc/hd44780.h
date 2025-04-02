@@ -78,4 +78,16 @@ void lcd16x2_shiftLeft(uint8_t offset);
  */
 void lcd16x2_printf(const char* str, ...);
 
+
+
+void HD44780_Init(void);   // initialize lcd
+void HD44780_Command(char cmd);  // send command to the lcd
+void HD44780_Data(char data);  // send data to the lcd
+void HD44780_String(char *str);  // send string to the lcd
+void HD44780_Position(int row, int col); // put cursor at the entered position row (0 or 1), col (0-15);
+void HD44780_Clear(void);
+void HD44780_drawBigDigits(unsigned char digit, unsigned char place);
+
 #endif /* LCD16X2_H_ */
+
+

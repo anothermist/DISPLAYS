@@ -102,6 +102,13 @@ int main(void)
   lcd16x2_setCursor(1, 2);
   lcd16x2_printf("8-bit connection");
 
+  HAL_Delay(500);
+
+	HD44780_Clear();
+
+	HD44780_SetPos(0, 0); HD44780_String("*** STRING 0 ***");
+	HD44780_SetPos(1, 0); HD44780_String("*** STRING 1 ***");
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
