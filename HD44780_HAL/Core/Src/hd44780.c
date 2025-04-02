@@ -373,7 +373,7 @@ void HD44780_Data(char data) {
 
 void HD44780_Clear(void) {
 	HD44780_Command(0x80);
-	for (int i = 0; i < 70; i++)
+	for (int i = 0; i < 80; i++)
 		HD44780_Data(' ');
 }
 
@@ -385,8 +385,13 @@ void HD44780_SetPos(int row, int col) {
 	case 1:
 		col |= 0xC0;
 		break;
+	case 2:
+		col |= 0x80 + 0x14;
+		break;
+	case 3:
+		col |= 0xC0 + 0x14;
+		break;
 	}
-
 	HD44780_Command(col);
 }
 

@@ -103,31 +103,38 @@ int main(void) {
 	lcd16x2_setCursor(1, 2);
 	lcd16x2_printf("8-bit connection");
 
-	HAL_Delay(500);
+	HAL_Delay(1000);
 
 	HD44780_Clear();
 
 	HD44780_SetPos(0, 0);
-	HD44780_String("*** STRING 0 ***");
+	HD44780_String("***** STRING 0 *****");
+	HAL_Delay(500);
 	HD44780_SetPos(1, 0);
-	HD44780_String("*** STRING 1 ***");
+	HD44780_String("***** STRING 1 *****");
+	HAL_Delay(500);
+	HD44780_SetPos(2, 0);
+	HD44780_String("***** STRING 2 *****");
+	HAL_Delay(500);
+	HD44780_SetPos(3, 0);
+	HD44780_String("***** STRING 3 *****");
 
 	HAL_Delay(1000);
 	HD44780_Clear();
 
-	HD44780_drawBigDigits(0, 0);
-	HD44780_drawBigDigits(1, 3);
-	HD44780_drawBigDigits(3, 6);
-	HD44780_drawBigDigits(4, 9);
-	HD44780_drawBigDigits(5, 12);
-
-	HAL_Delay(2000);
-	HD44780_Clear();
-
-	HD44780_drawBigDigits(6, 0);
-	HD44780_drawBigDigits(7, 4);
-	HD44780_drawBigDigits(8, 8);
-	HD44780_drawBigDigits(9, 12);
+//	HD44780_drawBigDigits(0, 0);
+//	HD44780_drawBigDigits(1, 3);
+//	HD44780_drawBigDigits(3, 6);
+//	HD44780_drawBigDigits(4, 9);
+//	HD44780_drawBigDigits(5, 12);
+//
+//	HAL_Delay(2000);
+//	HD44780_Clear();
+//
+//	HD44780_drawBigDigits(6, 0);
+//	HD44780_drawBigDigits(7, 4);
+//	HD44780_drawBigDigits(8, 8);
+//	HD44780_drawBigDigits(9, 12);
 
 	/* USER CODE END 2 */
 
