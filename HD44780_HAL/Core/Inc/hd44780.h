@@ -13,19 +13,20 @@
  * @param[in] *port_4_7 D4 to D7 GPIO Port
  * @param[in] x_pin GPIO pin (e.g. GPIO_PIN_1)
  */
-void lcd16x2_init_8bits(
-    GPIO_TypeDef* port_rs_e, uint16_t rs_pin, uint16_t e_pin,
-    GPIO_TypeDef* port_0_3, uint16_t d0_pin, uint16_t d1_pin, uint16_t d2_pin, uint16_t d3_pin,
-    GPIO_TypeDef* port_4_7, uint16_t d4_pin, uint16_t d5_pin, uint16_t d6_pin, uint16_t d7_pin);
+void lcd16x2_init_8bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
+		uint16_t e_pin, GPIO_TypeDef *port_0_3, uint16_t d0_pin,
+		uint16_t d1_pin, uint16_t d2_pin, uint16_t d3_pin,
+		GPIO_TypeDef *port_4_7, uint16_t d4_pin, uint16_t d5_pin,
+		uint16_t d6_pin, uint16_t d7_pin);
 
 /**
  * @brief Initialise LCD on 4-bits mode
  * @param[in] *port_4_7 D4 to D7 GPIO Port
  * @param[in] x_pin GPIO pin (e.g. GPIO_PIN_1)
  */
-void lcd16x2_init_4bits(
-    GPIO_TypeDef* port_rs_e, uint16_t rs_pin, uint16_t e_pin,
-    GPIO_TypeDef* port_4_7, uint16_t d4_pin, uint16_t d5_pin, uint16_t d6_pin, uint16_t d7_pin);
+void lcd16x2_init_4bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
+		uint16_t e_pin, GPIO_TypeDef *port_4_7, uint16_t d4_pin,
+		uint16_t d5_pin, uint16_t d6_pin, uint16_t d7_pin);
 
 /**
  * @brief Set cursor position
@@ -76,9 +77,7 @@ void lcd16x2_shiftLeft(uint8_t offset);
 /**
  * @brief Print to display any datatype (e.g. lcd16x2_printf("Value1 = %.1f", 123.45))
  */
-void lcd16x2_printf(const char* str, ...);
-
-
+void lcd16x2_printf(const char *str, ...);
 
 void HD44780_Init(void);   // initialize lcd
 void HD44780_Command(char cmd);  // send command to the lcd
@@ -89,5 +88,4 @@ void HD44780_Clear(void);
 void HD44780_drawBigDigits(unsigned char digit, unsigned char place);
 
 #endif /* LCD16X2_H_ */
-
 
