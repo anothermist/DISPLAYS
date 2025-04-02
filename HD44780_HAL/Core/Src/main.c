@@ -105,7 +105,9 @@ int main(void) {
 
 	HAL_Delay(1000);
 
-	HD44780_Clear();
+//	HD44780_Clear();
+	lcd16x2_clear();
+	HAL_Delay(1000);
 
 	HD44780_SetPos(0, 0);
 	HD44780_String("***** STRING 0 *****");
@@ -120,7 +122,8 @@ int main(void) {
 	HD44780_String("***** STRING 3 *****");
 
 	HAL_Delay(1000);
-	HD44780_Clear();
+	lcd16x2_clear();
+
 
 //	HD44780_drawBigDigits(0, 0);
 //	HD44780_drawBigDigits(1, 3);
