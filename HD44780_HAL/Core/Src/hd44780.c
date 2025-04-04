@@ -6,35 +6,6 @@
 //Milisecond function
 #define LCD_MS_DELAY(X) (HAL_Delay(X))
 
-/* List of COMMANDS */
-#define LCD_CLEARDISPLAY      0x01
-#define LCD_RETURNHOME        0x02
-#define LCD_ENTRYMODESET      0x04
-#define LCD_DISPLAYCONTROL    0x08
-#define LCD_CURSORSHIFT       0x10
-#define LCD_FUNCTIONSET       0x20
-#define LCD_SETCGRAMADDR      0x40
-#define LCD_SETDDRAMADDR      0x80
-
-/* List of commands Bitfields */
-//1) Entry mode Bitfields
-#define LCD_ENTRY_SH          0x01
-#define LCD_ENTRY_ID          0x02
-//2) Entry mode Bitfields
-#define LCD_ENTRY_SH          0x01
-#define LCD_ENTRY_ID          0x02
-//3) Display control
-#define LCD_DISPLAY_B         0x01
-#define LCD_DISPLAY_C         0x02
-#define LCD_DISPLAY_D         0x04
-//4) Shift control
-#define LCD_SHIFT_RL          0x04
-#define LCD_SHIFT_SC          0x08
-//5) Function set control
-#define LCD_FUNCTION_F        0x04
-#define LCD_FUNCTION_N        0x08
-#define LCD_FUNCTION_DL       0x10
-
 /* LCD Library Variables */
 static bool is8BitsMode = true;
 static GPIO_TypeDef *PORT_RS_and_E;               // RS and E PORT
@@ -84,7 +55,7 @@ __STATIC_INLINE void DWT_Delay_us(volatile uint32_t usec) {
 /**
  * @brief Enable Pulse function
  */
-static void lcd16x2_enablePulse(void) {
+static void HD44780_enablePulse(void) {
 	HAL_GPIO_WritePin(PORT_RS_and_E, PIN_E, GPIO_PIN_SET);
 	DWT_Delay_us(T_CONST);
 	HAL_GPIO_WritePin(PORT_RS_and_E, PIN_E, GPIO_PIN_RESET);
@@ -94,14 +65,14 @@ static void lcd16x2_enablePulse(void) {
 /**
  * @brief RS control
  */
-static void lcd16x2_rs(bool state) {
+static void HD44780_rs(bool state) {
 	HAL_GPIO_WritePin(PORT_RS_and_E, PIN_RS, (GPIO_PinState) state);
 }
 
 /**
  * @brief Write parallel signal to lcd
  */
-static void lcd16x2_write(uint8_t wbyte) {
+static void HD44780_write(uint8_t wbyte) {
 	uint8_t LSB_nibble = wbyte & 0xF, MSB_nibble = (wbyte >> 4) & 0xF;
 	if (is8BitsMode) {
 		//LSB data
@@ -114,51 +85,51 @@ static void lcd16x2_write(uint8_t wbyte) {
 		HAL_GPIO_WritePin(PORT_MSB, D5_PIN, (GPIO_PinState) (MSB_nibble & 0x2));
 		HAL_GPIO_WritePin(PORT_MSB, D6_PIN, (GPIO_PinState) (MSB_nibble & 0x4));
 		HAL_GPIO_WritePin(PORT_MSB, D7_PIN, (GPIO_PinState) (MSB_nibble & 0x8));
-		lcd16x2_enablePulse();
+		HD44780_enablePulse();
 	} else {
 		//MSB data
 		HAL_GPIO_WritePin(PORT_MSB, D4_PIN, (GPIO_PinState) (MSB_nibble & 0x1));
 		HAL_GPIO_WritePin(PORT_MSB, D5_PIN, (GPIO_PinState) (MSB_nibble & 0x2));
 		HAL_GPIO_WritePin(PORT_MSB, D6_PIN, (GPIO_PinState) (MSB_nibble & 0x4));
 		HAL_GPIO_WritePin(PORT_MSB, D7_PIN, (GPIO_PinState) (MSB_nibble & 0x8));
-		lcd16x2_enablePulse();
+		HD44780_enablePulse();
 		//LSB data
 		HAL_GPIO_WritePin(PORT_MSB, D4_PIN, (GPIO_PinState) (LSB_nibble & 0x1));
 		HAL_GPIO_WritePin(PORT_MSB, D5_PIN, (GPIO_PinState) (LSB_nibble & 0x2));
 		HAL_GPIO_WritePin(PORT_MSB, D6_PIN, (GPIO_PinState) (LSB_nibble & 0x4));
 		HAL_GPIO_WritePin(PORT_MSB, D7_PIN, (GPIO_PinState) (LSB_nibble & 0x8));
-		lcd16x2_enablePulse();
+		HD44780_enablePulse();
 	}
 }
 
 /**
  * @brief Write command
  */
-static void lcd16x2_writeCommand(uint8_t cmd) {
-	lcd16x2_rs(false);
-	lcd16x2_write(cmd);
+static void HD44780_writeCommand(uint8_t cmd) {
+	HD44780_rs(false);
+	HD44780_write(cmd);
 }
 
 /**
  * @brief Write data
  */
-static void lcd16x2_writeData(uint8_t data) {
-	lcd16x2_rs(true);
-	lcd16x2_write(data);
+static void HD44780_writeData(uint8_t data) {
+	HD44780_rs(true);
+	HD44780_write(data);
 }
 
 /**
  * @brief 4-bits write
  */
-static void lcd16x2_write4(uint8_t nib) {
+static void HD44780_write4(uint8_t nib) {
 	nib &= 0xF;
-	lcd16x2_rs(false);
+	HD44780_rs(false);
 	//LSB data
 	HAL_GPIO_WritePin(PORT_MSB, D4_PIN, (GPIO_PinState) (nib & 0x1));
 	HAL_GPIO_WritePin(PORT_MSB, D5_PIN, (GPIO_PinState) (nib & 0x2));
 	HAL_GPIO_WritePin(PORT_MSB, D6_PIN, (GPIO_PinState) (nib & 0x4));
 	HAL_GPIO_WritePin(PORT_MSB, D7_PIN, (GPIO_PinState) (nib & 0x8));
-	lcd16x2_enablePulse();
+	HD44780_enablePulse();
 }
 
 /* Public functions definitions */
@@ -170,7 +141,7 @@ static void lcd16x2_write4(uint8_t nib) {
  * @param[in] *port_4_7 D4 to D7 GPIO Port
  * @param[in] x_pin GPIO pin (e.g. GPIO_PIN_1)
  */
-void lcd16x2_init_8bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
+void HD44780_init_8bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
 		uint16_t e_pin, GPIO_TypeDef *port_0_3, uint16_t d0_pin,
 		uint16_t d1_pin, uint16_t d2_pin, uint16_t d3_pin,
 		GPIO_TypeDef *port_4_7, uint16_t d4_pin, uint16_t d5_pin,
@@ -197,19 +168,19 @@ void lcd16x2_init_8bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
 	//1. Wait at least 15ms
 	LCD_MS_DELAY(20);
 	//2. Attentions sequence
-	lcd16x2_writeCommand(0x30);
+	HD44780_writeCommand(0x30);
 	LCD_MS_DELAY(5);
-	lcd16x2_writeCommand(0x30);
+	HD44780_writeCommand(0x30);
 	LCD_MS_DELAY(1);
-	lcd16x2_writeCommand(0x30);
+	HD44780_writeCommand(0x30);
 	LCD_MS_DELAY(1);
 	//3. Function set; Enable 2 lines, Data length to 8 bits
-	lcd16x2_writeCommand(LCD_FUNCTIONSET | LCD_FUNCTION_N | LCD_FUNCTION_DL);
+	HD44780_writeCommand(LCD_FUNCTIONSET | LCD_FUNCTION_N | LCD_FUNCTION_DL);
 	//4. Display control (Display ON, Cursor ON, blink cursor)
-	lcd16x2_writeCommand(
+	HD44780_writeCommand(
 			LCD_DISPLAYCONTROL | LCD_DISPLAY_B | LCD_DISPLAY_C | LCD_DISPLAY_D);
 	//5. Clear LCD and return home
-	lcd16x2_writeCommand(LCD_CLEARDISPLAY);
+	HD44780_writeCommand(LCD_CLEARDISPLAY);
 	LCD_MS_DELAY(2);
 }
 
@@ -218,7 +189,7 @@ void lcd16x2_init_8bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
  * @param[in] *port_4_7 D4 to D7 GPIO Port
  * @param[in] x_pin GPIO pin (e.g. GPIO_PIN_1)
  */
-void lcd16x2_init_4bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
+void HD44780_init_4bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
 		uint16_t e_pin, GPIO_TypeDef *port_4_7, uint16_t d4_pin,
 		uint16_t d5_pin, uint16_t d6_pin, uint16_t d7_pin) {
 	DWT_Delay_Init();
@@ -238,21 +209,21 @@ void lcd16x2_init_4bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
 	//1. Wait at least 15ms
 	LCD_MS_DELAY(20);
 	//2. Attentions sequence
-	lcd16x2_write4(0x3);
+	HD44780_write4(0x3);
 	LCD_MS_DELAY(5);
-	lcd16x2_write4(0x3);
+	HD44780_write4(0x3);
 	LCD_MS_DELAY(1);
-	lcd16x2_write4(0x3);
+	HD44780_write4(0x3);
 	LCD_MS_DELAY(1);
-	lcd16x2_write4(0x2);  //4 bit mode
+	HD44780_write4(0x2);  //4 bit mode
 	LCD_MS_DELAY(1);
 	//4. Function set; Enable 2 lines, Data length to 4 bits
-	lcd16x2_writeCommand(LCD_FUNCTIONSET | LCD_FUNCTION_N);
+	HD44780_writeCommand(LCD_FUNCTIONSET | LCD_FUNCTION_N);
 	//3. Display control (Display ON, Cursor ON, blink cursor)
-	lcd16x2_writeCommand(
+	HD44780_writeCommand(
 			LCD_DISPLAYCONTROL | LCD_DISPLAY_B | LCD_DISPLAY_C | LCD_DISPLAY_D);
 	//4. Clear LCD and return home
-	lcd16x2_writeCommand(LCD_CLEARDISPLAY);
+	HD44780_writeCommand(LCD_CLEARDISPLAY);
 	LCD_MS_DELAY(3);
 }
 
@@ -261,123 +232,17 @@ void lcd16x2_init_4bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
  * @param[in] row - 0 or 1 for line1 or line2
  * @param[in] col - 0 - 15 (16 columns LCD)
  */
-void lcd16x2_setCursor(uint8_t row, uint8_t col) {
-	uint8_t maskData;
-	maskData = (col) & 0x0F;
-	if (row == 0) {
-		maskData |= (0x80);
-		lcd16x2_writeCommand(maskData);
-	} else {
-		maskData |= (0xc0);
-		lcd16x2_writeCommand(maskData);
-	}
-}
-/**
- * @brief Move to beginning of 1st line
- */
-void lcd16x2_1stLine(void) {
-	lcd16x2_setCursor(0, 0);
-}
-/**
- * @brief Move to beginning of 2nd line
- */
-void lcd16x2_2ndLine(void) {
-	lcd16x2_setCursor(1, 0);
-}
+void HD44780_setCursor(uint8_t row, uint8_t col) {
+//	uint8_t maskData;
+//	maskData = (col) & 0x0F;
+//	if (row == 0) {
+//		maskData |= (0x80);
+//		HD44780_writeCommand(maskData);
+//	} else {
+//		maskData |= (0xc0);
+//		HD44780_writeCommand(maskData);
+//	}
 
-/**
- * @brief Select LCD Number of lines mode
- */
-void lcd16x2_twoLines(void) {
-	FunctionSet |= (0x08);
-	lcd16x2_writeCommand(FunctionSet);
-}
-void lcd16x2_oneLine(void) {
-	FunctionSet &= ~(0x08);
-	lcd16x2_writeCommand(FunctionSet);
-}
-
-/**
- * @brief Cursor ON/OFF
- */
-void lcd16x2_cursorShow(bool state) {
-	if (state) {
-		DisplayControl |= (0x03);
-		lcd16x2_writeCommand(DisplayControl);
-	} else {
-		DisplayControl &= ~(0x03);
-		lcd16x2_writeCommand(DisplayControl);
-	}
-}
-
-/**
- * @brief Display clear
- */
-void lcd16x2_clear(void) {
-	lcd16x2_writeCommand(LCD_CLEARDISPLAY);
-	LCD_MS_DELAY(3);
-}
-
-/**
- * @brief Display ON/OFF, to hide all characters, but not clear
- */
-void lcd16x2_display(bool state) {
-	if (state) {
-		DisplayControl |= (0x04);
-		lcd16x2_writeCommand(DisplayControl);
-	} else {
-		DisplayControl &= ~(0x04);
-		lcd16x2_writeCommand(DisplayControl);
-	}
-}
-
-/**
- * @brief Shift content to right
- */
-void lcd16x2_shiftRight(uint8_t offset) {
-	for (uint8_t i = 0; i < offset; i++) {
-		lcd16x2_writeCommand(0x1c);
-	}
-}
-
-/**
- * @brief Shift content to left
- */
-void lcd16x2_shiftLeft(uint8_t offset) {
-	for (uint8_t i = 0; i < offset; i++) {
-		lcd16x2_writeCommand(0x18);
-	}
-}
-
-/**
- * @brief Print to display any datatype (e.g. lcd16x2_printf("Value1 = %.1f", 123.45))
- */
-void lcd16x2_printf(const char *str, ...) {
-	char stringArray[20];
-	va_list args;
-	va_start(args, str);
-	vsprintf(stringArray, str, args);
-	va_end(args);
-	for (uint8_t i = 0; i < strlen(stringArray) && i < 16; i++) {
-		lcd16x2_writeData((uint8_t) stringArray[i]);
-	}
-}
-
-void HD44780_Command(char cmd) {
-	lcd16x2_writeCommand(cmd);
-}
-
-void HD44780_Data(char data) {
-	lcd16x2_writeData(data);
-}
-
-void HD44780_Clear(void) {
-	HD44780_Command(0x80);
-	for (int i = 0; i < 80; i++)
-		HD44780_Data(' ');
-}
-
-void HD44780_SetPos(int row, int col) {
 	switch (row) {
 	case 0:
 		col |= 0x80;
@@ -392,12 +257,99 @@ void HD44780_SetPos(int row, int col) {
 		col |= 0xC0 + 0x14;
 		break;
 	}
-	HD44780_Command(col);
+	HD44780_writeCommand(col);
 }
 
-void HD44780_String(char *str) {
-	while (*str)
-		HD44780_Data(*str++);
+/**
+ * @brief Move to beginning of 1st line
+ */
+void HD44780_1stLine(void) {
+	HD44780_setCursor(0, 0);
+}
+/**
+ * @brief Move to beginning of 2nd line
+ */
+void HD44780_2ndLine(void) {
+	HD44780_setCursor(1, 0);
+}
+
+/**
+ * @brief Select LCD Number of lines mode
+ */
+void HD44780_twoLines(void) {
+	FunctionSet |= (0x08);
+	HD44780_writeCommand(FunctionSet);
+}
+
+void HD44780_oneLine(void) {
+	FunctionSet &= ~(0x08);
+	HD44780_writeCommand(FunctionSet);
+}
+
+/**
+ * @brief Cursor ON/OFF
+ */
+void HD44780_cursorShow(bool state) {
+	if (state) {
+		DisplayControl |= (0x03);
+		HD44780_writeCommand(DisplayControl);
+	} else {
+		DisplayControl &= ~(0x03);
+		HD44780_writeCommand(DisplayControl);
+	}
+}
+
+/**
+ * @brief Display clear
+ */
+void HD44780_clear(void) {
+	HD44780_writeCommand(LCD_CLEARDISPLAY);
+	LCD_MS_DELAY(3);
+}
+
+/**
+ * @brief Display ON/OFF, to hide all characters, but not clear
+ */
+void HD44780_display(bool state) {
+	if (state) {
+		DisplayControl |= (0x04);
+		HD44780_writeCommand(DisplayControl);
+	} else {
+		DisplayControl &= ~(0x04);
+		HD44780_writeCommand(DisplayControl);
+	}
+}
+
+/**
+ * @brief Shift content to right
+ */
+void HD44780_shiftRight(uint8_t offset) {
+	for (uint8_t i = 0; i < offset; i++) {
+		HD44780_writeCommand(0x1c);
+	}
+}
+
+/**
+ * @brief Shift content to left
+ */
+void HD44780_shiftLeft(uint8_t offset) {
+	for (uint8_t i = 0; i < offset; i++) {
+		HD44780_writeCommand(0x18);
+	}
+}
+
+/**
+ * @brief Print to display any datatype (e.g. HD44780_printf("Value1 = %.1f", 123.45))
+ */
+void HD44780_printf(const char *str, ...) {
+	char stringArray[20];
+	va_list args;
+	va_start(args, str);
+	vsprintf(stringArray, str, args);
+	va_end(args);
+	for (uint8_t i = 0; i < strlen(stringArray) && i < 20; i++) {
+		HD44780_writeData((uint8_t) stringArray[i]);
+	}
 }
 
 char cc[] = { 0x07, 0x0F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F,
@@ -408,9 +360,9 @@ char cc[] = { 0x07, 0x0F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F,
 		0x1F, 0x1F, 0x1F, 0x1F, 0x1F };
 
 void HD44780_PutSpecialSymbols() {
-	HD44780_Command(0x40);
+	HD44780_writeCommand(0x40);
 	for (int i = 0; i < 64; i++)
-		HD44780_Data(cc[i]);
+		HD44780_writeData(cc[i]);
 }
 
 void HD44780_drawBigDigits(unsigned char digit, unsigned char place) {
@@ -418,182 +370,154 @@ void HD44780_drawBigDigits(unsigned char digit, unsigned char place) {
 	switch (digit) {
 
 	case 0:
-		HD44780_SetPos(0, place);
-		HD44780_Data(0);
-		HD44780_SetPos(0, place + 1);
-		HD44780_Data(1);
-		HD44780_SetPos(0, place + 2);
-		HD44780_Data(2);
-		HD44780_SetPos(1, place);
-		HD44780_Data(3);
-		HD44780_SetPos(1, place + 1);
-		HD44780_Data(4);
-		HD44780_SetPos(1, place + 2);
-		HD44780_Data(5);
+		HD44780_setCursor(0, place);
+		HD44780_writeData(0);
+		HD44780_setCursor(0, place + 1);
+		HD44780_writeData(1);
+		HD44780_setCursor(0, place + 2);
+		HD44780_writeData(2);
+		HD44780_setCursor(1, place);
+		HD44780_writeData(3);
+		HD44780_setCursor(1, place + 1);
+		HD44780_writeData(4);
+		HD44780_setCursor(1, place + 2);
+		HD44780_writeData(5);
 		break;
 
 	case 1:
-		HD44780_SetPos(0, place);
-		HD44780_Data(1);
-		HD44780_SetPos(0, place + 1);
-		HD44780_Data(2);
-		HD44780_SetPos(0, place + 2);
-		HD44780_String(' ');
-		HD44780_SetPos(1, place);
-		HD44780_Data(4);
-		HD44780_SetPos(1, place + 1);
-		HD44780_Data(7);
-		HD44780_SetPos(1, place + 2);
-		HD44780_Data(4);
+		HD44780_setCursor(0, place);
+		HD44780_writeData(1);
+		HD44780_setCursor(0, place + 1);
+		HD44780_writeData(2);
+		HD44780_setCursor(0, place + 2);
+		HD44780_printf(" ");
+		HD44780_setCursor(1, place);
+		HD44780_writeData(4);
+		HD44780_setCursor(1, place + 1);
+		HD44780_writeData(7);
+		HD44780_setCursor(1, place + 2);
+		HD44780_writeData(4);
 		break;
 
 	case 2:
-		HD44780_SetPos(0, place);
-		HD44780_Data(6);
-		HD44780_SetPos(0, place + 1);
-		HD44780_Data(6);
-		HD44780_SetPos(0, place + 2);
-		HD44780_Data(2);
-		HD44780_SetPos(1, place);
-		HD44780_Data(3);
-		HD44780_SetPos(1, place + 1);
-		HD44780_Data(4);
-		HD44780_SetPos(1, place + 2);
-		HD44780_Data(4);
+		HD44780_setCursor(0, place);
+		HD44780_writeData(6);
+		HD44780_setCursor(0, place + 1);
+		HD44780_writeData(6);
+		HD44780_setCursor(0, place + 2);
+		HD44780_writeData(2);
+		HD44780_setCursor(1, place);
+		HD44780_writeData(3);
+		HD44780_setCursor(1, place + 1);
+		HD44780_writeData(4);
+		HD44780_setCursor(1, place + 2);
+		HD44780_writeData(4);
 		break;
 
 	case 3:
-		HD44780_SetPos(0, place);
-		HD44780_Data(6);
-		HD44780_SetPos(0, place + 1);
-		HD44780_Data(6);
-		HD44780_SetPos(0, place + 2);
-		HD44780_Data(2);
-		HD44780_SetPos(1, place);
-		HD44780_Data(4);
-		HD44780_SetPos(1, place + 1);
-		HD44780_Data(4);
-		HD44780_SetPos(1, place + 2);
-		HD44780_Data(5);
+		HD44780_setCursor(0, place);
+		HD44780_writeData(6);
+		HD44780_setCursor(0, place + 1);
+		HD44780_writeData(6);
+		HD44780_setCursor(0, place + 2);
+		HD44780_writeData(2);
+		HD44780_setCursor(1, place);
+		HD44780_writeData(4);
+		HD44780_setCursor(1, place + 1);
+		HD44780_writeData(4);
+		HD44780_setCursor(1, place + 2);
+		HD44780_writeData(5);
 		break;
 
 	case 4:
-		HD44780_SetPos(0, place);
-		HD44780_Data(3);
-		HD44780_SetPos(0, place + 1);
-		HD44780_Data(4);
-		HD44780_SetPos(0, place + 2);
-		HD44780_Data(7);
-		HD44780_SetPos(1, place);
-		HD44780_String(' ');
-		HD44780_SetPos(1, place + 1);
-		HD44780_String(' ');
-		HD44780_SetPos(1, place + 2);
-		HD44780_Data(7);
+		HD44780_setCursor(0, place);
+		HD44780_writeData(3);
+		HD44780_setCursor(0, place + 1);
+		HD44780_writeData(4);
+		HD44780_setCursor(0, place + 2);
+		HD44780_writeData(7);
+		HD44780_setCursor(1, place);
+		HD44780_printf(" ");
+		HD44780_setCursor(1, place + 1);
+		HD44780_printf(" ");
+		HD44780_setCursor(1, place + 2);
+		HD44780_writeData(7);
 		break;
 
 	case 5:
-		HD44780_SetPos(0, place);
-		HD44780_Data(3);
-		HD44780_SetPos(0, place + 1);
-		HD44780_Data(6);
-		HD44780_SetPos(0, place + 2);
-		HD44780_Data(6);
-		HD44780_SetPos(1, place);
-		HD44780_Data(4);
-		HD44780_SetPos(1, place + 1);
-		HD44780_Data(4);
-		HD44780_SetPos(1, place + 2);
-		HD44780_Data(5);
+		HD44780_setCursor(0, place);
+		HD44780_writeData(3);
+		HD44780_setCursor(0, place + 1);
+		HD44780_writeData(6);
+		HD44780_setCursor(0, place + 2);
+		HD44780_writeData(6);
+		HD44780_setCursor(1, place);
+		HD44780_writeData(4);
+		HD44780_setCursor(1, place + 1);
+		HD44780_writeData(4);
+		HD44780_setCursor(1, place + 2);
+		HD44780_writeData(5);
 		break;
 
 	case 6:
-		HD44780_SetPos(0, place);
-		HD44780_Data(0);
-		HD44780_SetPos(0, place + 1);
-		HD44780_Data(6);
-		HD44780_SetPos(0, place + 2);
-		HD44780_Data(6);
-		HD44780_SetPos(1, place);
-		HD44780_Data(3);
-		HD44780_SetPos(1, place + 1);
-		HD44780_Data(4);
-		HD44780_SetPos(1, place + 2);
-		HD44780_Data(5);
+		HD44780_setCursor(0, place);
+		HD44780_writeData(0);
+		HD44780_setCursor(0, place + 1);
+		HD44780_writeData(6);
+		HD44780_setCursor(0, place + 2);
+		HD44780_writeData(6);
+		HD44780_setCursor(1, place);
+		HD44780_writeData(3);
+		HD44780_setCursor(1, place + 1);
+		HD44780_writeData(4);
+		HD44780_setCursor(1, place + 2);
+		HD44780_writeData(5);
 		break;
 
 	case 7:
-		HD44780_SetPos(0, place);
-		HD44780_Data(1);
-		HD44780_SetPos(0, place + 1);
-		HD44780_Data(1);
-		HD44780_SetPos(0, place + 2);
-		HD44780_Data(2);
-		HD44780_SetPos(1, place);
-		HD44780_String(' ');
-		HD44780_SetPos(1, place + 1);
-		HD44780_String(' ');
-		HD44780_SetPos(1, place + 2);
-		HD44780_Data(7);
+		HD44780_setCursor(0, place);
+		HD44780_writeData(1);
+		HD44780_setCursor(0, place + 1);
+		HD44780_writeData(1);
+		HD44780_setCursor(0, place + 2);
+		HD44780_writeData(2);
+		HD44780_setCursor(1, place);
+		HD44780_printf(" ");
+		HD44780_setCursor(1, place + 1);
+		HD44780_printf(" ");
+		HD44780_setCursor(1, place + 2);
+		HD44780_writeData(7);
 		break;
 
+
 	case 8:
-		HD44780_SetPos(0, place);
-		HD44780_Data(0);
-		HD44780_SetPos(0, place + 1);
-		HD44780_Data(6);
-		HD44780_SetPos(0, place + 2);
-		HD44780_Data(2);
-		HD44780_SetPos(1, place);
-		HD44780_Data(3);
-		HD44780_SetPos(1, place + 1);
-		HD44780_Data(4);
-		HD44780_SetPos(1, place + 2);
-		HD44780_Data(5);
+		HD44780_setCursor(0, place);
+		HD44780_writeData(0);
+		HD44780_setCursor(0, place + 1);
+		HD44780_writeData(6);
+		HD44780_setCursor(0, place + 2);
+		HD44780_writeData(2);
+		HD44780_setCursor(1, place);
+		HD44780_writeData(3);
+		HD44780_setCursor(1, place + 1);
+		HD44780_writeData(4);
+		HD44780_setCursor(1, place + 2);
+		HD44780_writeData(5);
 		break;
 
 	case 9:
-		HD44780_SetPos(0, place);
-		HD44780_Data(0);
-		HD44780_SetPos(0, place + 1);
-		HD44780_Data(6);
-		HD44780_SetPos(0, place + 2);
-		HD44780_Data(2);
-		HD44780_SetPos(1, place);
-		HD44780_Data(4);
-		HD44780_SetPos(1, place + 1);
-		HD44780_Data(4);
-		HD44780_SetPos(1, place + 2);
-		HD44780_Data(5);
+		HD44780_setCursor(0, place);
+		HD44780_writeData(0);
+		HD44780_setCursor(0, place + 1);
+		HD44780_writeData(6);
+		HD44780_setCursor(0, place + 2);
+		HD44780_writeData(2);
+		HD44780_setCursor(1, place);
+		HD44780_writeData(4);
+		HD44780_setCursor(1, place + 1);
+		HD44780_writeData(4);
+		HD44780_setCursor(1, place + 2);
+		HD44780_writeData(5);
 		break;
 	}
-}
-
-void HD44780_Init(void) {
-	// 4 bit initialisation
-//	HAL_Delay(50);  // wait for >40ms
-//	HD44780_Command(0x30);
-//	HAL_Delay(5);  // wait for >4.1ms
-//	HD44780_Command(0x30);
-//	HAL_Delay(1);  // wait for >100us
-//	HD44780_Command(0x30);
-//	HAL_Delay(10);
-//	HD44780_Command(0x20);  // 4bit mode
-//	HAL_Delay(10);
-
-	// dislay initialisation
-//	HD44780_Command(0x28); // Function set --> DL=0 (4 bit mode), N = 1 (2 line display) F = 0 (5x8 characters)
-//	HAL_Delay(1);
-//	HD44780_Command(0x08); //Display on/off control --> D=0,C=0, B=0  ---> display off
-//	HAL_Delay(1);
-//	HD44780_Command(0x01);  // clear display
-//	HAL_Delay(1);
-//	HAL_Delay(1);
-	HD44780_Command(0x06); //Entry mode set --> I/D = 1 (increment cursor) & S = 0 (no shift)
-	HAL_Delay(1);
-	HD44780_Command(0x0C); //Display on/off control --> D = 1, C and B = 0. (Cursor and blink, last two bits)
-
-	HD44780_PutSpecialSymbols();
-	HD44780_Clear();
-
 }

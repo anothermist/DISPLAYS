@@ -1,8 +1,37 @@
-#ifndef LCD16X2_H_
-#define LCD16X2_H_
+#ifndef HD44780_H_
+#define HD44780_H_
 
 #include <stdbool.h>
 #include "main.h"
+
+/* List of COMMANDS */
+#define LCD_CLEARDISPLAY      0x01
+#define LCD_RETURNHOME        0x02
+#define LCD_ENTRYMODESET      0x04
+#define LCD_DISPLAYCONTROL    0x08
+#define LCD_CURSORSHIFT       0x10
+#define LCD_FUNCTIONSET       0x20
+#define LCD_SETCGRAMADDR      0x40
+#define LCD_SETDDRAMADDR      0x80
+
+/* List of commands Bitfields */
+//1) Entry mode Bitfields
+#define LCD_ENTRY_SH          0x01
+#define LCD_ENTRY_ID          0x02
+//2) Entry mode Bitfields
+#define LCD_ENTRY_SH          0x01
+#define LCD_ENTRY_ID          0x02
+//3) Display control
+#define LCD_DISPLAY_B         0x01
+#define LCD_DISPLAY_C         0x02
+#define LCD_DISPLAY_D         0x04
+//4) Shift control
+#define LCD_SHIFT_RL          0x04
+#define LCD_SHIFT_SC          0x08
+//5) Function set control
+#define LCD_FUNCTION_F        0x04
+#define LCD_FUNCTION_N        0x08
+#define LCD_FUNCTION_DL       0x10
 
 //Floating point linker flag: -u _printf_float
 
@@ -13,7 +42,7 @@
  * @param[in] *port_4_7 D4 to D7 GPIO Port
  * @param[in] x_pin GPIO pin (e.g. GPIO_PIN_1)
  */
-void lcd16x2_init_8bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
+void HD44780_init_8bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
 		uint16_t e_pin, GPIO_TypeDef *port_0_3, uint16_t d0_pin,
 		uint16_t d1_pin, uint16_t d2_pin, uint16_t d3_pin,
 		GPIO_TypeDef *port_4_7, uint16_t d4_pin, uint16_t d5_pin,
@@ -24,7 +53,7 @@ void lcd16x2_init_8bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
  * @param[in] *port_4_7 D4 to D7 GPIO Port
  * @param[in] x_pin GPIO pin (e.g. GPIO_PIN_1)
  */
-void lcd16x2_init_4bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
+void HD44780_init_4bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
 		uint16_t e_pin, GPIO_TypeDef *port_4_7, uint16_t d4_pin,
 		uint16_t d5_pin, uint16_t d6_pin, uint16_t d7_pin);
 
@@ -33,59 +62,54 @@ void lcd16x2_init_4bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
  * @param[in] row - 0 or 1 for line1 or line2
  * @param[in] col - 0 - 15 (16 columns LCD)
  */
-void lcd16x2_setCursor(uint8_t row, uint8_t col);
+void HD44780_setCursor(uint8_t row, uint8_t col);
 /**
  * @brief Move to beginning of 1st line
  */
-void lcd16x2_1stLine(void);
+void HD44780_1stLine(void);
 /**
  * @brief Move to beginning of 2nd line
  */
-void lcd16x2_2ndLine(void);
+void HD44780_2ndLine(void);
 
 /**
  * @brief Select LCD Number of lines mode
  */
-void lcd16x2_twoLines(void);
-void lcd16x2_oneLine(void);
+void HD44780_twoLines(void);
+void HD44780_oneLine(void);
 
 /**
  * @brief Cursor ON/OFF
  */
-void lcd16x2_cursorShow(bool state);
+void HD44780_cursorShow(bool state);
 
 /**
  * @brief Display clear
  */
-void lcd16x2_clear(void);
+void HD44780_clear(void);
 
 /**
  * @brief Display ON/OFF, to hide all characters, but not clear
  */
-void lcd16x2_display(bool state);
+void HD44780_display(bool state);
 
 /**
  * @brief Shift content to right
  */
-void lcd16x2_shiftRight(uint8_t offset);
+void HD44780_shiftRight(uint8_t offset);
 
 /**
  * @brief Shift content to left
  */
-void lcd16x2_shiftLeft(uint8_t offset);
+void HD44780_shiftLeft(uint8_t offset);
 
 /**
- * @brief Print to display any datatype (e.g. lcd16x2_printf("Value1 = %.1f", 123.45))
+ * @brief Print to display any datatype (e.g. HD44780_printf("Value1 = %.1f", 123.45))
  */
-void lcd16x2_printf(const char *str, ...);
+void HD44780_printf(const char *str, ...);
 
-void HD44780_Init(void);   // initialize lcd
-void HD44780_Command(char cmd);  // send command to the lcd
-void HD44780_Data(char data);  // send data to the lcd
-void HD44780_String(char *str);  // send string to the lcd
-void HD44780_Position(int row, int col); // put cursor at the entered position row (0 or 1), col (0-15);
-void HD44780_Clear(void);
+
 void HD44780_drawBigDigits(unsigned char digit, unsigned char place);
 
-#endif /* LCD16X2_H_ */
+#endif /* HD44780_H_ */
 

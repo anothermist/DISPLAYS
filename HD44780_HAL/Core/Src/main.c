@@ -88,56 +88,51 @@ int main(void) {
 	MX_GPIO_Init();
 	/* USER CODE BEGIN 2 */
 
-	lcd16x2_init_8bits(RS_GPIO_Port, RS_Pin, E_Pin,
+	HD44780_init_8bits(RS_GPIO_Port, RS_Pin, E_Pin,
 	D0_GPIO_Port, D0_Pin, D1_Pin, D2_Pin, D3_Pin,
 	D4_GPIO_Port, D4_Pin, D5_Pin, D6_Pin, D7_Pin);
+	HD44780_cursorShow(0);
 
-	HD44780_Init();
-
-	lcd16x2_clear();
+	HD44780_clear();
 	HAL_Delay(1000);
 
-	lcd16x2_setCursor(0, 5);
-	lcd16x2_printf("Fuck Yeah !");
+	HD44780_setCursor(0, 5);
+	HD44780_printf("Fuck Yeah !");
 
-	lcd16x2_setCursor(1, 2);
-	lcd16x2_printf("8-bit connection");
+	HD44780_setCursor(1, 2);
+	HD44780_printf("8-bit connection");
 
 	HAL_Delay(1000);
 
-//	HD44780_Clear();
-	lcd16x2_clear();
+	HD44780_clear();
 	HAL_Delay(1000);
 
-	HD44780_SetPos(0, 0);
-	HD44780_String("***** STRING 0 *****");
+	HD44780_setCursor(0, 0);
+	HD44780_printf("***** STRING 0 *****");
 	HAL_Delay(500);
-	HD44780_SetPos(1, 0);
-	HD44780_String("***** STRING 1 *****");
+	HD44780_setCursor(1, 0);
+	HD44780_printf("***** STRING 1 *****");
 	HAL_Delay(500);
-	HD44780_SetPos(2, 0);
-	HD44780_String("***** STRING 2 *****");
+	HD44780_setCursor(2, 0);
+	HD44780_printf("***** STRING 2 *****");
 	HAL_Delay(500);
-	HD44780_SetPos(3, 0);
-	HD44780_String("***** STRING 3 *****");
+	HD44780_setCursor(3, 0);
+	HD44780_printf("***** STRING 3 *****");
 
-	HAL_Delay(1000);
-	lcd16x2_clear();
+	HAL_Delay(2000);
+	HD44780_clear();
 
+	HD44780_drawBigDigits(0, 0);
+	HD44780_drawBigDigits(1, 4);
+	HD44780_drawBigDigits(2, 8);
+	HD44780_drawBigDigits(3, 12);
+	HD44780_drawBigDigits(4, 16);
 
-//	HD44780_drawBigDigits(0, 0);
-//	HD44780_drawBigDigits(1, 3);
-//	HD44780_drawBigDigits(3, 6);
-//	HD44780_drawBigDigits(4, 9);
-//	HD44780_drawBigDigits(5, 12);
-//
-//	HAL_Delay(2000);
-//	HD44780_Clear();
-//
-//	HD44780_drawBigDigits(6, 0);
-//	HD44780_drawBigDigits(7, 4);
-//	HD44780_drawBigDigits(8, 8);
-//	HD44780_drawBigDigits(9, 12);
+	HD44780_drawBigDigits(5, 20);
+	HD44780_drawBigDigits(6, 24);
+	HD44780_drawBigDigits(7, 28);
+	HD44780_drawBigDigits(8, 32);
+	HD44780_drawBigDigits(9, 36);
 
 	/* USER CODE END 2 */
 
