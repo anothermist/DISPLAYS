@@ -2,7 +2,7 @@
 #define HD44780_H_
 
 #include <stdbool.h>
-#include "main.h"
+#include <main.h>
 
 /* List of COMMANDS */
 #define LCD_CLEARDISPLAY      0x01
@@ -107,7 +107,6 @@ void HD44780_shiftLeft(uint8_t offset);
  * @brief Print to display any datatype (e.g. HD44780_printf("Value1 = %.1f", 123.45))
  */
 void HD44780_printf(const char *str, ...);
-
 
 void HD44780_drawBigDigits(unsigned char digit, unsigned char place);
 

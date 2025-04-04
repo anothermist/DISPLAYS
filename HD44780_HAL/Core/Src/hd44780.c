@@ -178,7 +178,7 @@ void HD44780_init_8bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
 	HD44780_writeCommand(LCD_FUNCTIONSET | LCD_FUNCTION_N | LCD_FUNCTION_DL);
 	//4. Display control (Display ON, Cursor ON, blink cursor)
 	HD44780_writeCommand(
-			LCD_DISPLAYCONTROL | LCD_DISPLAY_B | LCD_DISPLAY_C | LCD_DISPLAY_D);
+	LCD_DISPLAYCONTROL | LCD_DISPLAY_B | LCD_DISPLAY_C | LCD_DISPLAY_D);
 	//5. Clear LCD and return home
 	HD44780_writeCommand(LCD_CLEARDISPLAY);
 	LCD_MS_DELAY(2);
@@ -221,7 +221,7 @@ void HD44780_init_4bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
 	HD44780_writeCommand(LCD_FUNCTIONSET | LCD_FUNCTION_N);
 	//3. Display control (Display ON, Cursor ON, blink cursor)
 	HD44780_writeCommand(
-			LCD_DISPLAYCONTROL | LCD_DISPLAY_B | LCD_DISPLAY_C | LCD_DISPLAY_D);
+	LCD_DISPLAYCONTROL | LCD_DISPLAY_B | LCD_DISPLAY_C | LCD_DISPLAY_D);
 	//4. Clear LCD and return home
 	HD44780_writeCommand(LCD_CLEARDISPLAY);
 	LCD_MS_DELAY(3);
@@ -229,20 +229,10 @@ void HD44780_init_4bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
 
 /**
  * @brief Set cursor position
- * @param[in] row - 0 or 1 for line1 or line2
- * @param[in] col - 0 - 15 (16 columns LCD)
+ * @param[in] row - 0 ~ 3 for line1 or line2
+ * @param[in] col - 0 - 20 (20 columns LCD)
  */
 void HD44780_setCursor(uint8_t row, uint8_t col) {
-//	uint8_t maskData;
-//	maskData = (col) & 0x0F;
-//	if (row == 0) {
-//		maskData |= (0x80);
-//		HD44780_writeCommand(maskData);
-//	} else {
-//		maskData |= (0xc0);
-//		HD44780_writeCommand(maskData);
-//	}
-
 	switch (row) {
 	case 0:
 		col |= 0x80;
@@ -488,7 +478,6 @@ void HD44780_drawBigDigits(unsigned char digit, unsigned char place) {
 		HD44780_setCursor(1, place + 2);
 		HD44780_writeData(7);
 		break;
-
 
 	case 8:
 		HD44780_setCursor(0, place);

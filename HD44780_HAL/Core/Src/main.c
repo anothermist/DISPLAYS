@@ -18,7 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include <hd44780.h>
-#include "main.h"
+#include <main.h>
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -119,7 +119,7 @@ int main(void) {
 	HD44780_setCursor(3, 0);
 	HD44780_printf("***** STRING 3 *****");
 
-	HAL_Delay(2000);
+	HAL_Delay(1000);
 	HD44780_clear();
 
 	HD44780_drawBigDigits(0, 0);
@@ -200,8 +200,8 @@ static void MX_GPIO_Init(void) {
 
 	/*Configure GPIO pin Output Level */
 	HAL_GPIO_WritePin(GPIOA,
-			D0_Pin | D1_Pin | D2_Pin | D3_Pin | D4_Pin | D5_Pin | D6_Pin
-					| D7_Pin, GPIO_PIN_RESET);
+	D0_Pin | D1_Pin | D2_Pin | D3_Pin | D4_Pin | D5_Pin | D6_Pin | D7_Pin,
+			GPIO_PIN_RESET);
 
 	/*Configure GPIO pin Output Level */
 	HAL_GPIO_WritePin(GPIOB, RS_Pin | E_Pin, GPIO_PIN_RESET);
