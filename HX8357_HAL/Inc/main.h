@@ -120,6 +120,7 @@ void Error_Handler(void);
 #define DB11_GPIO_Port GPIOA
 #define DB12_Pin GPIO_PIN_12
 #define DB12_GPIO_Port GPIOA
+
 /* USER CODE BEGIN Private defines */
 #define _3_Tiny                &Font_3_Tiny
 #define _3_PicoPixel           &Font_3_PicoPixel
@@ -231,5 +232,3 @@ void Error_Handler(void);
 #endif
 
 #endif /* __MAIN_H */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

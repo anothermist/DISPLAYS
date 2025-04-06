@@ -3863,7 +3863,7 @@ inline static void LCD_Send_Cmd(uint16_t cmd)
  80017f2:	f44f 6180 	mov.w	r1, #1024	@ 0x400
  80017f6:	4809      	ldr	r0, [pc, #36]	@ (800181c <LCD_Send_Cmd+0x54>)
  80017f8:	f7fe ff9e 	bl	8000738 <HAL_GPIO_WritePin>
-	//_delay_us(5);
+//	_delay_us(5);
 	LCD_WR_S
  80017fc:	2201      	movs	r2, #1
  80017fe:	f44f 6180 	mov.w	r1, #1024	@ 0x400
