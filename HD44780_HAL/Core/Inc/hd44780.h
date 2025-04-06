@@ -1,8 +1,8 @@
 #ifndef HD44780_H_
 #define HD44780_H_
 
-#include <stdbool.h>
-#include <main.h>
+#include "stdbool.h"
+#include "main.h"
 
 /* List of COMMANDS */
 #define LCD_CLEARDISPLAY      0x01
