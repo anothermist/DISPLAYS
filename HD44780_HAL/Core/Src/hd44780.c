@@ -3,10 +3,8 @@
 #include "stdio.h"
 #include "stdarg.h"
 
-//Milisecond function
 #define LCD_MS_DELAY(X) (HAL_Delay(X))
 
-/* LCD Library Variables */
 static bool is8BitsMode = true;
 static GPIO_TypeDef *PORT_RS_and_E;               // RS and E PORT
 static uint16_t PIN_RS, PIN_E;                    // RS and E pins
@@ -18,10 +16,6 @@ static uint16_t D4_PIN, D5_PIN, D6_PIN, D7_PIN;   // MSBs D5, D6, D7 and D8 pins
 static uint8_t DisplayControl = 0x0F;
 static uint8_t FunctionSet = 0x38;
 
-/* private functions prototypes */
-/**
- * @brief DWT Cortex Tick counter for Microsecond delay
- */
 static uint32_t DWT_Delay_Init(void) {
 	/* Disable TRC */
 	CoreDebug->DEMCR &= ~CoreDebug_DEMCR_TRCENA_Msk;
@@ -52,9 +46,6 @@ __STATIC_INLINE void DWT_Delay_us(volatile uint32_t usec) {
 		;
 }
 
-/**
- * @brief Enable Pulse function
- */
 static void HD44780_enablePulse(void) {
 	HAL_GPIO_WritePin(PORT_RS_and_E, PIN_E, GPIO_PIN_SET);
 	DWT_Delay_us(T_CONST);
@@ -62,16 +53,10 @@ static void HD44780_enablePulse(void) {
 	DWT_Delay_us(60);
 }
 
-/**
- * @brief RS control
- */
 static void HD44780_rs(bool state) {
 	HAL_GPIO_WritePin(PORT_RS_and_E, PIN_RS, (GPIO_PinState) state);
 }
 
-/**
- * @brief Write parallel signal to lcd
- */
 static void HD44780_write(uint8_t wbyte) {
 	uint8_t LSB_nibble = wbyte & 0xF, MSB_nibble = (wbyte >> 4) & 0xF;
 	if (is8BitsMode) {
@@ -102,25 +87,16 @@ static void HD44780_write(uint8_t wbyte) {
 	}
 }
 
-/**
- * @brief Write command
- */
 static void HD44780_writeCommand(uint8_t cmd) {
 	HD44780_rs(false);
 	HD44780_write(cmd);
 }
 
-/**
- * @brief Write data
- */
 static void HD44780_writeData(uint8_t data) {
 	HD44780_rs(true);
 	HD44780_write(data);
 }
 
-/**
- * @brief 4-bits write
- */
 static void HD44780_write4(uint8_t nib) {
 	nib &= 0xF;
 	HD44780_rs(false);
@@ -132,15 +108,6 @@ static void HD44780_write4(uint8_t nib) {
 	HD44780_enablePulse();
 }
 
-/* Public functions definitions */
-
-/**
- * @brief Initialise LCD on 8-bits mode
- * @param[in] *port_rs_e RS and EN GPIO Port (e.g. GPIOB)
- * @param[in] *port_0_3 D0 to D3 GPIO Port
- * @param[in] *port_4_7 D4 to D7 GPIO Port
- * @param[in] x_pin GPIO pin (e.g. GPIO_PIN_1)
- */
 void HD44780_init_8bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
 		uint16_t e_pin, GPIO_TypeDef *port_0_3, uint16_t d0_pin,
 		uint16_t d1_pin, uint16_t d2_pin, uint16_t d3_pin,
@@ -184,11 +151,6 @@ void HD44780_init_8bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
 	LCD_MS_DELAY(2);
 }
 
-/**
- * @brief Initialise LCD on 4-bits mode
- * @param[in] *port_4_7 D4 to D7 GPIO Port
- * @param[in] x_pin GPIO pin (e.g. GPIO_PIN_1)
- */
 void HD44780_init_4bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
 		uint16_t e_pin, GPIO_TypeDef *port_4_7, uint16_t d4_pin,
 		uint16_t d5_pin, uint16_t d6_pin, uint16_t d7_pin) {
@@ -227,11 +189,6 @@ void HD44780_init_4bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
 	LCD_MS_DELAY(3);
 }
 
-/**
- * @brief Set cursor position
- * @param[in] row - 0 ~ 3 for line1 or line2
- * @param[in] col - 0 - 20 (20 columns LCD)
- */
 void HD44780_setCursor(uint8_t row, uint8_t col) {
 	switch (row) {
 	case 0:
@@ -250,22 +207,15 @@ void HD44780_setCursor(uint8_t row, uint8_t col) {
 	HD44780_writeCommand(col);
 }
 
-/**
- * @brief Move to beginning of 1st line
- */
 void HD44780_1stLine(void) {
 	HD44780_setCursor(0, 0);
 }
-/**
- * @brief Move to beginning of 2nd line
- */
+
 void HD44780_2ndLine(void) {
 	HD44780_setCursor(1, 0);
 }
 
-/**
- * @brief Select LCD Number of lines mode
- */
+
 void HD44780_twoLines(void) {
 	FunctionSet |= (0x08);
 	HD44780_writeCommand(FunctionSet);
@@ -276,9 +226,6 @@ void HD44780_oneLine(void) {
 	HD44780_writeCommand(FunctionSet);
 }
 
-/**
- * @brief Cursor ON/OFF
- */
 void HD44780_cursorShow(bool state) {
 	if (state) {
 		DisplayControl |= (0x03);
@@ -289,17 +236,11 @@ void HD44780_cursorShow(bool state) {
 	}
 }
 
-/**
- * @brief Display clear
- */
 void HD44780_clear(void) {
 	HD44780_writeCommand(LCD_CLEARDISPLAY);
 	LCD_MS_DELAY(3);
 }
 
-/**
- * @brief Display ON/OFF, to hide all characters, but not clear
- */
 void HD44780_display(bool state) {
 	if (state) {
 		DisplayControl |= (0x04);
@@ -310,27 +251,18 @@ void HD44780_display(bool state) {
 	}
 }
 
-/**
- * @brief Shift content to right
- */
 void HD44780_shiftRight(uint8_t offset) {
 	for (uint8_t i = 0; i < offset; i++) {
 		HD44780_writeCommand(0x1c);
 	}
 }
 
-/**
- * @brief Shift content to left
- */
 void HD44780_shiftLeft(uint8_t offset) {
 	for (uint8_t i = 0; i < offset; i++) {
 		HD44780_writeCommand(0x18);
 	}
 }
 
-/**
- * @brief Print to display any datatype (e.g. HD44780_printf("Value1 = %.1f", 123.45))
- */
 void HD44780_printf(const char *str, ...) {
 	char stringArray[20];
 	va_list args;
