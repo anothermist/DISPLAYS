@@ -149,6 +149,8 @@ void HD44780_init_8bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
 	//5. Clear LCD and return home
 	HD44780_writeCommand(LCD_CLEARDISPLAY);
 	LCD_MS_DELAY(2);
+	HD44780_cursorShow(0);
+	HD44780_PutSpecialSymbols();
 }
 
 void HD44780_init_4bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
@@ -187,6 +189,8 @@ void HD44780_init_4bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
 	//4. Clear LCD and return home
 	HD44780_writeCommand(LCD_CLEARDISPLAY);
 	LCD_MS_DELAY(3);
+	HD44780_cursorShow(0);
+	HD44780_PutSpecialSymbols();
 }
 
 void HD44780_setCursor(uint8_t row, uint8_t col) {
