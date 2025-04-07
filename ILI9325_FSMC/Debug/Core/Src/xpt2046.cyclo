@@ -1,0 +1,7 @@
+../Core/Src/xpt2046.c:5:21:remap	1
+../Core/Src/xpt2046.c:10:6:XPT2046_Init	1
+../Core/Src/xpt2046.c:19:10:getRaw	1
+../Core/Src/xpt2046.c:36:24:X	3
+../Core/Src/xpt2046.c:45:24:Y	3
+../Core/Src/xpt2046.c:54:10:getX	2
+../Core/Src/xpt2046.c:69:10:getY	2

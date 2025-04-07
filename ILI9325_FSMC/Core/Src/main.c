@@ -124,7 +124,7 @@
 #include "fonts/Font_48_Segment_16_Num.h"
 #include "fonts/Font_64_Segment_16_Num.h"
 #include "fonts/Font_64_Segment_7_Num.h"
-//#include "fonts/Font_96_Segment_7_Num.h"
+#include "fonts/Font_96_Segment_7_Num.h"
 //#include "fonts/Font_96_Segment_16_Num.h"
 //#include "fonts/Font_128_Segment_16_Num.h"
 /* USER CODE END Includes */
@@ -177,6 +177,7 @@ static void MX_USART1_UART_Init(void);
   */
 int main(void)
 {
+
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -234,12 +235,12 @@ int main(void)
 	HAL_Delay(250);
 	LCD_Rect_Fill(0, 0, 160, 128, BLUE);
 	LCD_Rect_Fill(1, 1, 158, 126, BLACK);
-	LCD_Font(5, 40, "This is\n just a Test\n TomThumb Ext\n", _3_TomThumb_Extended, 1, YELLOW);
+	LCD_Font(5, 40, "This is\n just a Test\n TomThumb Ext\n", &Font_3_TomThumb_Extended, 1, YELLOW);
 	LCD_Line(23, 20, 137, 20, 1, MAGENTA);
 	LCD_Line(23, 21, 137, 21, 1, BLUE);
 	LCD_Line(23, 21, 137, 21, 1, BLUE);
-	LCD_Font(41, 10, "DISPLAY DRIVER", _5_Org, 1, MAGENTA);
-	LCD_Font(45, 35, "SERIF BOLD", _9_Serif_Bold, 1, RED);
+	LCD_Font(41, 10, "DISPLAY DRIVER", &Font_5_Org, 1, MAGENTA);
+	LCD_Font(45, 35, "SERIF BOLD", &Font_9_Serif_Bold, 1, RED);
 	LCD_Circle(40, 90, 30, 0, 1, RED);
 	LCD_Circle(45, 90, 20, 1, 1, BLUE);
 	LCD_Triangle_Fill(5, 5, 5, 20, 25, 25, BLUE);
@@ -249,8 +250,8 @@ int main(void)
 	LCD_Rect_Round_Fill(80, 100, 60, 25, 10, WHITE);
 	LCD_Ellipse(60, 100, 30, 20, 0, 2, YELLOW);
 	LCD_Ellipse(125, 60, 25, 15, 1, 1, YELLOW);
-	LCD_Font(0, 200, "1234567890", _32_Segment_7_Num_Plus, 1, RED);
-	LCD_Font(10, 220, "1234567890 Default Font", _8_Default, 1, RED);
+	LCD_Font(0, 200, "1234567890", &Font_32_Segment_7_Num_Plus, 1, RED);
+	LCD_Font(10, 220, "1234567890 Default Font", &Font_8_Default, 1, RED);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -306,6 +307,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+
   /** Initializes the CPU, AHB and APB buses clocks
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
@@ -400,6 +402,9 @@ static void MX_USART1_UART_Init(void)
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+
+  /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOA_CLK_ENABLE();
@@ -423,6 +428,9 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(TOUCH_IRQ_GPIO_Port, &GPIO_InitStruct);
 
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+
+  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* FSMC initialization function */
@@ -525,4 +533,3 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
-
