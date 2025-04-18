@@ -100,16 +100,19 @@ int main(void)
 	HD44780_setCursor(1, 2);
 	HD44780_printf("8-bit connection");
 
-	HAL_Delay(1000);
+	HAL_Delay(2000);
 
 	HD44780_clear();
 
 	HD44780_setCursor(0, 0);
 	HD44780_printf("***** STRING 0 *****");
+  HAL_Delay(1000);
 	HD44780_setCursor(1, 0);
 	HD44780_printf("***** STRING 1 *****");
+  HAL_Delay(1000);
 	HD44780_setCursor(2, 0);
 	HD44780_printf("***** STRING 2 *****");
+  HAL_Delay(1000);
 	HD44780_setCursor(3, 0);
 	HD44780_printf("***** STRING 3 *****");
 

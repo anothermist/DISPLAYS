@@ -15,7 +15,7 @@ void HD44780_writeCommand(char cmd) {
 	data_t[2] = data_l | 0x0C;  //en=1, rs=0
 	data_t[3] = data_l | 0x08;  //en=0, rs=0
 	HAL_I2C_Master_Transmit(&HD44780_INTERFACE, HD44780_ADDRESS,
-			(uint8_t*) data_t, 4, 100);
+			(uint8_t*) data_t, 4, 1000);
 }
 
 void HD44780_writeData(char data) {
@@ -28,7 +28,7 @@ void HD44780_writeData(char data) {
 	data_t[2] = data_l | 0x0D;  //en=1, rs=0
 	data_t[3] = data_l | 0x09;  //en=0, rs=0
 	HAL_I2C_Master_Transmit(&HD44780_INTERFACE, HD44780_ADDRESS,
-			(uint8_t*) data_t, 4, 100);
+			(uint8_t*) data_t, 4, 1000);
 }
 
 #define LCD_MS_DELAY(X) (HAL_Delay(X))
@@ -37,30 +37,59 @@ void HD44780_writeData(char data) {
 static uint8_t DisplayControl = 0x0F;
 static uint8_t FunctionSet = 0x38;
 
+static uint32_t DWT_Delay_Init(void) {
+	/* Disable TRC */
+	CoreDebug->DEMCR &= ~CoreDebug_DEMCR_TRCENA_Msk;
+	/* Enable TRC */
+	CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
+	/* Disable clock cycle counter */
+	DWT->CTRL &= ~DWT_CTRL_CYCCNTENA_Msk;
+	/* Enable clock cycle counter */
+	DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
+	/* Reset the clock cycle counter value */
+	DWT->CYCCNT = 0;
+	/* 3 NO OPERATION instructions */
+	__NOP();
+	__NOP();
+	__NOP();
+	/* Check if clock cycle counter has started */
+	if (DWT->CYCCNT) {
+		return 0;
+	} else {
+		return 1;
+	}
+}
+
+__STATIC_INLINE void DWT_Delay_us(volatile uint32_t usec) {
+	uint32_t clk_cycle_start = DWT->CYCCNT;
+	usec *= (HAL_RCC_GetHCLKFreq() / 1000000);
+	while ((DWT->CYCCNT - clk_cycle_start) < usec)
+		;
+}
+
 void HD44780_init_i2c(void){
-	// 4 bit initialisation
-	HAL_Delay(50);  // wait for >40ms
-	HD44780_writeCommand(0x30);
-	HAL_Delay(5);  // wait for >4.1ms
-	HD44780_writeCommand(0x30);
-	HAL_Delay(1);  // wait for >100us
-	HD44780_writeCommand(0x30);
-	HAL_Delay(10);
-	HD44780_writeCommand(0x20);  // 4bit mode
-	HAL_Delay(10);
-
-	// dislay initialisation
-	HD44780_writeCommand(0x28); // Function set --> DL=0 (4 bit mode), N = 1 (2 line display) F = 0 (5x8 characters)
-	HAL_Delay(1);
-	HD44780_writeCommand(0x08); //Display on/off control --> D=0,C=0, B=0  ---> display off
-	HAL_Delay(1);
-	HD44780_writeCommand(0x01);  // clear display
-	HAL_Delay(1);
-	HAL_Delay(1);
-	HD44780_writeCommand(0x06); //Entry mode set --> I/D = 1 (increment cursor) & S = 0 (no shift)
-	HAL_Delay(1);
-	HD44780_writeCommand(0x0C); //Display on/off control --> D = 1, C and B = 0. (Cursor and blink, last two bits)
-
+	DWT_Delay_Init();
+	//Initialise LCD
+	//1. Wait at least 15ms
+	LCD_MS_DELAY(20);
+	//2. Attentions sequence
+	HD44780_writeData(0x3);
+	LCD_MS_DELAY(5);
+	HD44780_writeData(0x3);
+	LCD_MS_DELAY(1);
+	HD44780_writeData(0x3);
+	LCD_MS_DELAY(1);
+	HD44780_writeData(0x2);  //4 bit mode
+	LCD_MS_DELAY(1);
+	//4. Function set; Enable 2 lines, Data length to 4 bits
+	HD44780_writeCommand(LCD_FUNCTIONSET | LCD_FUNCTION_N);
+	//3. Display control (Display ON, Cursor ON, blink cursor)
+	HD44780_writeCommand(
+	LCD_DISPLAYCONTROL | LCD_DISPLAY_B | LCD_DISPLAY_C | LCD_DISPLAY_D);
+	//4. Clear LCD and return home
+	HD44780_writeCommand(LCD_CLEARDISPLAY);
+	LCD_MS_DELAY(3);
+	HD44780_cursorShow(0);
 	HD44780_PutSpecialSymbols();
 }
 
