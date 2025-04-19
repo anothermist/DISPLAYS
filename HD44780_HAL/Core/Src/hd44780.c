@@ -114,7 +114,6 @@ void HD44780_init_8bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
 		GPIO_TypeDef *port_4_7, uint16_t d4_pin, uint16_t d5_pin,
 		uint16_t d6_pin, uint16_t d7_pin) {
 	DWT_Delay_Init();
-	//Set GPIO Ports and Pins data
 	PORT_RS_and_E = port_rs_e;
 	PIN_RS = rs_pin;
 	PIN_E = e_pin;
@@ -131,22 +130,16 @@ void HD44780_init_8bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
 	is8BitsMode = true;
 	FunctionSet = 0x38;
 
-	//Initialise LCD
-	//1. Wait at least 15ms
 	LCD_MS_DELAY(20);
-	//2. Attentions sequence
 	HD44780_writeCommand(0x30);
 	LCD_MS_DELAY(5);
 	HD44780_writeCommand(0x30);
 	LCD_MS_DELAY(1);
 	HD44780_writeCommand(0x30);
 	LCD_MS_DELAY(1);
-	//3. Function set; Enable 2 lines, Data length to 8 bits
 	HD44780_writeCommand(LCD_FUNCTIONSET | LCD_FUNCTION_N | LCD_FUNCTION_DL);
-	//4. Display control (Display ON, Cursor ON, blink cursor)
 	HD44780_writeCommand(
 	LCD_DISPLAYCONTROL | LCD_DISPLAY_B | LCD_DISPLAY_C | LCD_DISPLAY_D);
-	//5. Clear LCD and return home
 	HD44780_writeCommand(LCD_CLEARDISPLAY);
 	LCD_MS_DELAY(2);
 	HD44780_cursorShow(0);
@@ -157,7 +150,6 @@ void HD44780_init_4bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
 		uint16_t e_pin, GPIO_TypeDef *port_4_7, uint16_t d4_pin,
 		uint16_t d5_pin, uint16_t d6_pin, uint16_t d7_pin) {
 	DWT_Delay_Init();
-	//Set GPIO Ports and Pins data
 	PORT_RS_and_E = port_rs_e;
 	PIN_RS = rs_pin;
 	PIN_E = e_pin;
@@ -169,24 +161,18 @@ void HD44780_init_4bits(GPIO_TypeDef *port_rs_e, uint16_t rs_pin,
 	is8BitsMode = false;
 	FunctionSet = 0x28;
 
-	//Initialise LCD
-	//1. Wait at least 15ms
 	LCD_MS_DELAY(20);
-	//2. Attentions sequence
 	HD44780_write4(0x3);
 	LCD_MS_DELAY(5);
 	HD44780_write4(0x3);
 	LCD_MS_DELAY(1);
 	HD44780_write4(0x3);
 	LCD_MS_DELAY(1);
-	HD44780_write4(0x2);  //4 bit mode
+	HD44780_write4(0x2);
 	LCD_MS_DELAY(1);
-	//4. Function set; Enable 2 lines, Data length to 4 bits
 	HD44780_writeCommand(LCD_FUNCTIONSET | LCD_FUNCTION_N);
-	//3. Display control (Display ON, Cursor ON, blink cursor)
 	HD44780_writeCommand(
 	LCD_DISPLAYCONTROL | LCD_DISPLAY_B | LCD_DISPLAY_C | LCD_DISPLAY_D);
-	//4. Clear LCD and return home
 	HD44780_writeCommand(LCD_CLEARDISPLAY);
 	LCD_MS_DELAY(3);
 	HD44780_cursorShow(0);
